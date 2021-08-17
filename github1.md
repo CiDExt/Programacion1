@@ -47,15 +47,6 @@ Trabajermos según el libro [Pro Git](https://git-scm.com/book/en/v2) utilizando
 
 Para la instalación seleccionamos nuestro sistema operativo y en el link escogemos una versión adecuada y actualizada. Posterior a la instalación, hacemos una configuración desde la línea de comandos. Si ya fue instalado Anaconda podemos utilizar `Anaconda Prompt` para hacer la configuración. Se recomienda que cada vez que se instale alguno de estos programas se haga un reinicio del equipo con el fin de que el instalador haga todas los ajustes necesarios para su correcto uso.
 
-## Instalación Git y uso con la línea de comandos
-
-Trabajermos según el libro [Pro Git](https://git-scm.com/book/en/v2) utilizando la línea de comandos, así mismo le damos continuidad al primer capítulo de nuestro curso, si bien no hacemos un recorrido exhaustivo sobre la fortaleza de este software por lo menos trabajaremos en sus aspectos básicos. Iniciamos con la instalación, siguiendo la guía de este pequeño tutoríal: 
-
-***
-[Instalación de Git](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
-***
-
-Para la instalación seleccionamos nuestro sistema operativo y en el link escogemos una versión adecuada y actualizada. Posterior a la instalación, hacemos una configuración desde la línea de comandos. Si ya fue instalado Anaconda podemos utilizar `Anaconda Prompt` para hacer la configuración. Se recomienda que cada vez que se instale alguno de estos programas se haga un reinicio del equipo con el fin de que el instalador haga todas los ajustes necesarios para su correcto uso.
 
 ## Github
 
