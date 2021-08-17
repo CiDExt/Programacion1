@@ -1,0 +1,12 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: Consola
+- file: github1
+- file: github2
+- file: var_fun
+- file: if
+- file: while

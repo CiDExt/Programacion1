@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programación en consola &#8212; My sample book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Controlador de versiones" href="github1.html" />
+    <link rel="prev" title="Programación I" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Programación I
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Programación en consola
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="github2.html">
+   Comandos básicos de git - Proyecto 1 - Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="var_fun.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="if.html">
+   Condicionales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="while.html">
+   Ciclos
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Consola.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FConsola.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Consola.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="programacion-en-consola">
+<h1>Programación en consola<a class="headerlink" href="#programacion-en-consola" title="Permalink to this headline">¶</a></h1>
+<p>Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una <strong>interfaz gráfica de usuario</strong> o <strong>GUI</strong> (<strong>Graphical User Inteface</strong>). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o <strong>CLI</strong> (<strong>Command-Line Interface</strong>).</p>
+<p>Algunas de las ventajas que las interfaces de línea de comandos ofrecen son:</p>
+<ol class="simple">
+<li><p>Ejecución de tareas asignando parámetros específicos.</p></li>
+<li><p>Automatización de tareas por medio de scripts.</p></li>
+<li><p>Es ideal para la administración de sistemas para toda una empresa.</p></li>
+</ol>
+<p>En vista de tal importancia, lo primero que haremos es abrir la <em>terminal</em>, esto depende del sistema operativo, en <em>OS X</em> o <em>Linux</em>, abriremos la <strong>terminal</strong> mientras que, en <em>Windows</em> podremos abrir <em>PowerShell</em> o en su defecto <a class="reference external" href="https://git-scm.com/downloads">GitBash</a>.</p>
+<p>De modo que, nuestro primer acercamiento con nuestra CLI, será para aprender a navegar por el sistema de archivos de nuestra computadora:</p>
+<p>Para ello escribe el comando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (<em>print work directory</em>) y luego pulsa <em>Enter</em>, esto nos permitirá ver el directorio actual en el que estamos trabajando. En <em>OS X</em> o en <em>Linux</em> el resultado debería ser como el siguiente: <code class="docutils literal notranslate"><span class="pre">/usuarios/nombre-de-usuario</span></code>; mientras que, en <em>Windows</em> sería <code class="docutils literal notranslate"><span class="pre">C:\usuarios\nombre-de-usuario</span></code>.</p>
+<p>Como puedes observar hay diferencias, pero son pocas y no afectarán el desarrollo del resto del cuaderno.</p>
+<p>Para conocer los archivos y carpetas que hay en el directorio en el cual estamos ubicados, podemos utilizar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>, el cuál listará todos y cada uno de los elementos antes mencionados.</p>
+<hr class="docutils" />
+<p>En <em>OS X</em> y en <em>Linux</em> el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code> arroja la lista únicamente, mientras que, en <em>Windows</em> arroja la lista acompañado de la última vez que se modificó el archivo/directorio, su peso y el tipo  (<code class="docutils literal notranslate"><span class="pre">l</span></code> (link), <code class="docutils literal notranslate"><span class="pre">d</span></code> (directory), <code class="docutils literal notranslate"><span class="pre">a</span></code> (archive), <code class="docutils literal notranslate"><span class="pre">r</span></code> (read-only), <code class="docutils literal notranslate"><span class="pre">h</span></code> (hidden),
+<code class="docutils literal notranslate"><span class="pre">s</span></code> (system)).</p>
+<hr class="docutils" />
+<p>Para tener el mismo manejo en los diferentes sistemas operativos, a la hora de trabajar en la consola, en <em>Windows</em> usaremos el GitBash o instalaremos la consola de Ubuntu en  nuestro sistema, de la siguiente manera:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Configuración</span> <span class="pre">-&gt;</span> <span class="pre">Actialización</span> <span class="pre">y</span> <span class="pre">Seguridad</span> <span class="pre">-&gt;</span> <span class="pre">Para</span> <span class="pre">programadores</span></code>
+Allí debemos habilitar el <em>Modo de programador</em>. Debemos aceptar, los cambios.
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i1.PNG?raw=true"  width="600"></p></li>
+<li><p>Luego, en el menú de inicio buscaremos “activar o desactivar las características de Windows”, y allí habilitaremos el <em>Subsistema de Windows para Linux</em>. Nos pedirá reiniciar el computador.
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i2.png?raw=true" width="400"></p></li>
+<li><p>En la Tienda de Microsoft, buscaremos “Ubuntu”, para descargar la opción que deseemos.
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i3.png?raw=true" width="400"></p></li>
+<li><p>Abrimos el PowerShell y ejecutamos el comando <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p></li>
+</ol>
+<p>De estamanera tendremos la consola de Ubuntu en Windows.</p>
+<hr class="docutils" />
+<p>Si estabas en el <em>PowerShell</em> y ahora ejecutas <code class="docutils literal notranslate"><span class="pre">ls</span></code> verás que la presentación de la lista es diferente, es como lo ven tus compañeros de <em>OS X</em> y  <em>Ubuntu</em>.</p>
+<p>Para ver todas las opciones de los comandos y la mejor forma de usarlos, empleamos <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">'comando'</span></code>, por ejemplo,<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code> nos da todas las opciones que tenemos para ver la lista de archivos y carpetas. Ejecuta <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>  para ver una lista larga de los archivos el la carpeta, verás entradas de éste tipo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">drwxrwxrwx</span> <span class="pre">1</span> <span class="pre">root</span> <span class="pre">root</span>&#160;&#160;&#160;&#160; <span class="pre">512</span> <span class="pre">Apr</span> <span class="pre">14</span> <span class="pre">21:22</span> <span class="pre">'3D</span> <span class="pre">Objects'</span></code></p>
+<p>La primera entrada, indica el tipo de fichero
+(<code class="docutils literal notranslate"><span class="pre">d</span></code>: directorio, <code class="docutils literal notranslate"><span class="pre">-</span></code>: archivo, <code class="docutils literal notranslate"><span class="pre">l</span></code>: enlace simbólico, <code class="docutils literal notranslate"><span class="pre">s</span></code>: socket, <code class="docutils literal notranslate"><span class="pre">p</span></code>: tubería, <code class="docutils literal notranslate"><span class="pre">b</span></code>: archivo de bloque, <code class="docutils literal notranslate"><span class="pre">c</span></code>: archivo de caracteres). Las tres entradas que siguen indican los permisos del propietario, las tres siguientes, los del grupo y los últimos 3 los permisos de los demás (<code class="docutils literal notranslate"><span class="pre">r</span></code>: <em>read</em> 4,  <code class="docutils literal notranslate"><span class="pre">w</span></code>: <em>write</em> 2, <code class="docutils literal notranslate"><span class="pre">x</span></code>: <em>execute</em> 1), el ejemplo indica que <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Objects</span></code> es una carpeta, y todos los usuarios tienen todos los permisos.</p>
+<p>La siguiente entrada, el número, indica la cantidad de enlaces que tiene el fichero. En el ejemplo el <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<p>Las dos entradas que siguen, indican el usuario propietario y el grupo propietario. En el ejemplo el <code class="docutils literal notranslate"><span class="pre">root</span> <span class="pre">root</span></code>.</p>
+<p>El valor que sigue, es el tamaño del archivo, en nuestro ejemplo <code class="docutils literal notranslate"><span class="pre">512</span></code>.</p>
+<p>Por último el nombre del archivo o directorio.</p>
+<p>La marca de tiempo que tiene el archivo, nos indica la fecha en que el archivo o directorio fueron modificados por última vez <code class="docutils literal notranslate"><span class="pre">Apr</span> <span class="pre">14</span> <span class="pre">21:22</span></code>.</p>
+<p><strong>Para crear una nueva carpeta</strong> empleamos el comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (<em>make directory</em>), por ejemplo <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">prueba</span></code>. Para comprobar la creación de la carpeta, puedes ejecutar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code> y debería aparecer la carpeta que acabamos de crear.</p>
+<p><strong>Para cambiar de carpeta</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cd</span></code> (<em>change directory</em>), por ejemplo, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">prueba</span></code>. Si deseamos ir a una carpeta diferente empleamos <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ruta-de-la-carpeta</span></code>. El comando <code class="docutils literal notranslate"><span class="pre">cd</span></code> tiene opciones adicionales para moverse con facilidad dentro de las carpetas <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>
+nos lleva a la carpeta de “arriba”, mientras que <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">--</span></code> nos lleva a la carpeta principal.</p>
+<p>Una vez dentro de nuestra carpeta de prueba, vamos a crear un archivo y lo modificaremos desde la consola, esto lo haremos con el comando <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">testfile.txt</span></code>. Lo anterior abre un editor de texto plano, en el cual podemos ingresar la siguiente información:</p>
+<p>día ganancia<br />
+01 <span class="math notranslate nohighlight">\(\$ \)</span>5000<br />
+02 <span class="math notranslate nohighlight">\(\$ \)</span>8000<br />
+03 <span class="math notranslate nohighlight">\(\$ \)</span>9000</p>
+<p>Luego de registrar la información, para guardar el archivo <code class="docutils literal notranslate"><span class="pre">CTR+X</span></code> y luego <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Para verificar la creación del archivo, recuerda usar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>, o si quieres ver la carpeta con tu GUI.</p>
+<p>Podemos verificar la creación del archivo, y los permisos del mismo (ejecuta <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>):</p>
+<p><code class="docutils literal notranslate"><span class="pre">-rwxrwxrwx</span> <span class="pre">1</span> <span class="pre">root</span> <span class="pre">root</span> <span class="pre">4</span> <span class="pre">Jul</span> <span class="pre">21</span> <span class="pre">11:58</span> <span class="pre">testfile.txt</span></code></p>
+<p>Es decir, el archivo que creamos tiene todos los permisos, para todos los usuarios. Si queremos modificar esto, empleamos el comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code>, ten presente su sintáxis: <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">'a_quien_da_o_quita_permiso''signo''permiso'</span> <span class="pre">'nombre_del_archivo'</span> </code></p>
+<p>A quien da o quita el permiso: <code class="docutils literal notranslate"><span class="pre">u</span></code>: usuario;<code class="docutils literal notranslate"><span class="pre">g</span></code>: grupo; <code class="docutils literal notranslate"><span class="pre">o</span></code>: otros; <code class="docutils literal notranslate"><span class="pre">a</span></code>: todos.</p>
+<p>Signo: <code class="docutils literal notranslate"><span class="pre">+</span></code> para dar el permiso y <code class="docutils literal notranslate"><span class="pre">-</span></code> para quitarlo.</p>
+<p>Permisos: <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code> y <code class="docutils literal notranslate"><span class="pre">x</span></code> como antes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">o-w</span> <span class="pre">testfile.txt</span></code></p>
+<p>Le quita el permiso de escribir a los demás.</p>
+<p><strong>Para cambiar el nombre de un archivo</strong>, el comando <code class="docutils literal notranslate"><span class="pre">mv</span></code> (<em>move</em>) nos permite realizar esta acción, <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">testfile.txt</span> <span class="pre">arprueba.txt</span></code>.</p>
+<p><strong>Para hacer una copia del archivo</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> (<em>copy</em>), por ejemplo, <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">arprueba.txt</span> <span class="pre">f1.txt</span></code></p>
+<p><strong>Para ver el contenido de un archivo</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">f1.txt</span></code> debe mostrar el contenido que ingresamos en el primer archivo.</p>
+<p>En <em>bash</em> (<em>OS X</em>, <em>Linux</em> y <em>Git</em>) podemos concatenar archivos, con el comando anterior y guardar esa información en un tercer archivo, por ejemplo <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">arprueba.txt</span> <span class="pre">f1.txt</span> <span class="pre">&gt;</span> <span class="pre">2.txt.</span> </code></p>
+<p><strong>Para copiar múltiples archivos</strong>, el comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> sirve nuevamente, si queremos copiar todos los archivos del tipo <code class="docutils literal notranslate"><span class="pre">.txt</span></code> podemos ejecutar la siguiente línea, <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">ruta-origen\*.txt</span> <span class="pre">ruta-destino</span></code></p>
+<p><strong>Para bortar un archivo</strong>, usamos el comando <code class="docutils literal notranslate"><span class="pre">rm</span></code> (<em>remove</em>) así: <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">2.txt</span></code>. Si quieremos <strong>borrar la carpeta de prueba</strong> completamente, haremos lo siguiente:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd..</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">prueba</span></code></p>
+<p><strong>Para limpiar el espacio de trabajo</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">clear</span></code>.</p>
+<p>Ahora debes ir al directorio en el cual está alojado este cuaderno:</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ubicación</span></code></p>
+<p>Allí, utilizaremos el comando <code class="docutils literal notranslate"><span class="pre">grep</span></code>, <strong>para buscar contenido en un archivo</strong>, para este ejemplo, buscaremos en este cuaderno, así:</p>
+<p><code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">'para'</span> <span class="pre">Consola.ipynb</span></code></p>
+<p>Esto nos arrojará las líneas en las cuales tenemos escrito la palabra ‘para’ en el archivo.</p>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">'Para'</span> <span class="pre">Consola.ipynb</span></code> buscará las ocurrencias de la palabra ‘Para’ en el documento.</p>
+<p>Mientras que, el comando <code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">-i</span> <span class="pre">'para'</span> <span class="pre">Consola.ipynb</span></code> buscará las ocurrencias de la palabra ‘para’, sin importar la coincidencia de las mayúsculas en el documento.</p>
+<p>Las otras opciones del comando son:</p>
+<ul class="simple">
+<li><p><strong>-c</strong>: Muestra el número de líneas que coinciden con la palabra buscada.</p></li>
+<li><p><strong>-n</strong>: Muestra las ocurrencias de la palabra buscada en el documento y las antecede del número de la línea en la que está el documento.</p></li>
+<li><p><strong>-v</strong>: Muestra las líneas que no coinciden con la palabra buscada.</p></li>
+</ul>
+<p><strong>Para buscar un archivo</strong>, lo podemos hacer por muchas opciones, dentro de las más comunes encontramos el tipo, el nombre y el tiempo, y el comando que emplearemos con ello es:  <code class="docutils literal notranslate"><span class="pre">find</span></code>. Para buscar por el tipo de fichero tenemos las opciones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> character.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code> directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> llamados pipe (FIFO).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f</span></code> archivos regulares.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> socket.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-type</span> <span class="pre">f</span></code> Buscará todos los archivos que tengamos en nuestra carpeta.</p>
+<p>Para buscar por contenido en el nombre, por ejemplo, buscar todos los cuadernos de python que tengamos en nuestra carpeta, empleamos el comando:</p>
+<p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">'*.ipynb'</span></code></p>
+<p>Para buscar los archivos que han sido accedidos durante las últimas <span class="math notranslate nohighlight">\(n\times 24\)</span> horas, empleamos el comando <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-atime</span> <span class="pre">n</span></code>, donde <span class="math notranslate nohighlight">\(n\)</span> representa:</p>
+<ul class="simple">
+<li><p>+7 = hace más de 7 días.</p></li>
+<li><p>2 = entre 2 y 3 días.</p></li>
+<li><p>-2 = dentro de los últimos 2 días.</p></li>
+<li><p>+1 = hace más de un día.</p></li>
+<li><p>1 = entre 1 y 2 días.</p></li>
+<li><p>-1 = dentro del último día.</p></li>
+<li><p>0 = dentro del último día.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-atime</span> <span class="pre">0</span></code></p>
+<p>Para buscar los archivos que han cambiado durante las últimas <span class="math notranslate nohighlight">\(n\times 24\)</span> horas, empleamos el comando <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">n</span></code>, donde <span class="math notranslate nohighlight">\(n\)</span> representa los mismos tiempos de <strong>-atime</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">0</span></code></p>
+<p>Si queremos ver el historial de nuestra consola de comandos, podemos emplear el comando <code class="docutils literal notranslate"><span class="pre">history</span></code>.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Programación I</a>
+    <a class='right-next' id="next-link" href="github1.html" title="next page">Controlador de versiones</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
