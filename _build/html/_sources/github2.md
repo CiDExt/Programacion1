@@ -12,25 +12,25 @@ Iniciaremos creando en nuestra cuenta un repositorio:
 * **Paso 1**: En la parte superior derecha de la página de inicio de su cuenta de github haga clic en la tecla agregar:
 
 
-![anadirrepo](images/añadirrepo.png)
+![anadirrepo](images/arepo1.png)
 
 Seleccione nuevo repositorio:
 
-![anadirrepo2](images/añadirrepo2.png)
+![anadirrepo2](images/arepo2.png)
 
 Ingrese los valores del formulario según la siguiente imagen:
 
-![anadirrepo3](images/añadirrepo3.png)
+![anadirrepo3](images/arepo3.png)
 
 Hagan clic en crear repositorio.
 
 Aparecerá una página como la siguiente:
 
-![anadirrepo4](images/añadirrepo4.png)
+![anadirrepo4](images/arepo4.png)
 
 Usaremos el recuadro resaltado, en esas líneas de código hacemos varias cosas, explicaremos en detalle. Antes que nada usando el explorador de archivos de bash `cd`, `dir` y `mkdir` cree una carpeta vacía que alojará su repositorio:
 
-![anadirrepo5](images/añadirrepo5.png)
+![anadirrepo5](images/arepo5.png)
 
 Después de llegar a la carpeta deseada iniciamos los pasos propuestos por GitHub, deben ser cuidadosos en usar la opción HTTPS. Cada línea hace lo siguiente:
 
@@ -41,7 +41,7 @@ echo "# Programación" >> README.md
 
 - Escribe la línea `# Programación` en el archivo *README.md*.
 
-![anadirrepo6](images/añadirrepo6.png)
+![anadirrepo6](images/arepo6.png)
 
 ```
 git init
@@ -49,7 +49,7 @@ git init
 
 - El comando `git init` crea un nuevo repositorio de Git. Se utiliza para convertir un proyecto existente y sin versiones en un repositorio de Git, o para empezar un nuevo repositorio vacío. En este caso crea el repositorio `.git` en nuestra carpeta con un solo archivo.
 
-![anadirrepo7](images/añadirrepo7.png)
+![anadirrepo7](images/arepo7.png)
 
 ```
 git add README.md
@@ -94,7 +94,7 @@ git git push -u origin main
 
 Sube todos los archivos dentro del repositorio local al repositorio remoto. Posterior a la ejecucióin actualice su repositorio y verá lo siguiente:
 
-![anadirrepo8](images/añadirrepo8.png)
+![anadirrepo8](images/arepo8.png)
 
 El archivo Readme.MD subió al repositorio.
 
