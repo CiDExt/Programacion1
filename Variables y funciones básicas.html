@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Variables y funciones básicas &#8212; Programación 1</title>
+    <title>&lt;no title&gt; &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ejercicios" href="if.html" />
-    <link rel="prev" title="Comandos básicos de git - Proyecto 1 - Mi primera página" href="github2.html" />
+    <link rel="next" title="Ejercicios" href="Estilo%20funcional%20de%20programaci%C3%B3n.html" />
+    <link rel="prev" title="Documentación:" href="Funciones.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="github1.html">
    Controlador de versiones
@@ -106,8 +106,8 @@
    Comandos básicos de git - Proyecto 1 - Mi primera página
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="var_fun.html">
    Variables y funciones básicas
   </a>
  </li>
@@ -172,7 +172,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/var_fun.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Variables y funciones básicas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -192,7 +192,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2Fvar_fun.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2FVariables y funciones básicas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -213,7 +213,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/var_fun.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/Variables y funciones básicas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -230,6 +230,14 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -238,9 +246,16 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="variables-y-funciones-basicas">
-<h1>Variables y funciones básicas<a class="headerlink" href="#variables-y-funciones-basicas" title="Permalink to this headline">¶</a></h1>
-<p>Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.</p>
+  <div style="padding: -5px;
+  text-align: center;
+  color: white;
+  font-size: 20px;">
+   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
+  <h1 style="
+  position: absolute;
+  top: 5%;
+  left: 50%;">Variables y funciones básicas</h1>
+</div><p>Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.</p>
 <p>Los tipos son escalares o no escalares. Los objetos escalares son los elementos indivisibles, mientras que, los objetos no escalares, son aquellos con estructura interna.</p>
 <p>Los objetos escalares en Python son los siguientes:</p>
 <ul class="simple">
@@ -655,7 +670,7 @@ Si lo queremos volver float:
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13435</span><span class="o">/</span><span class="mf">1007239876.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13400</span><span class="o">/</span><span class="mf">1007239876.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;texto que aparece, aclarando la entrada que se pretende modificar: &#39;</span><span class="p">)</span>
 
 <span class="nn">~/miniconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
@@ -689,7 +704,7 @@ Si lo queremos volver float:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El salario al que aspiras es:&quot;</span><span class="p">,</span> <span class="n">salario</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pero se vería mejor con la separación en miles: </span><span class="si">{0:8,f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">salario</span><span class="p">))</span>
-<span class="c1">#{0:7,f} El 0 indica la posición del elemento que imprimiremos, el 8 la cantidad de espacios para reservar e imprimir el </span>
+<span class="c1">#{0:8,f} El 0 indica la posición del elemento que imprimiremos, el 8 la cantidad de espacios para reservar e imprimir el </span>
 <span class="c1">#número pero no afectará ya que no tenemos ningún tipo de alineación</span>
 <span class="c1">#la , indica la separación por miles y por último f indica que se imprimirá un float</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Si no queremos el punto decimal: </span><span class="si">{0:7,d}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">salario</span><span class="p">)))</span>
@@ -720,7 +735,6 @@ O tal vez, sea mejor la notación científica: 7.00e+06
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Salario mensual: 7,000,000 Salario anual 8.40e+07 
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -755,16 +769,16 @@ O tal vez, sea mejor la notación científica: 7.00e+06
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="github2.html" title="previous page">
+        <a class="left-prev" href="Funciones.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Comandos básicos de git - Proyecto 1 - Mi primera página</p>
+                <p class="prevnext-title">Documentación:</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="if.html" title="next page">
+        <a class="right-next" href="Estilo%20funcional%20de%20programaci%C3%B3n.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
                 <p class="prevnext-title">Ejercicios</p>
