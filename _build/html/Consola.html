@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programación en consola &#8212; Programación 1</title>
+    <title>&lt;no title&gt; &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -95,12 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Programación en consola
-  </a>
- </li>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="github1.html">
    Controlador de versiones
@@ -118,12 +113,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="if.html">
-   Condicionales
+   Ejercicios
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="while.html">
-   Ciclos
+   Ejercicio
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Funciones.html">
+   Documentación:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Estilo%20funcional%20de%20programaci%C3%B3n.html">
+   Ejercicios
   </a>
  </li>
 </ul>
@@ -225,6 +230,14 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -233,9 +246,16 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programacion-en-consola">
-<h1>Programación en consola<a class="headerlink" href="#programacion-en-consola" title="Permalink to this headline">¶</a></h1>
-<p>Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una <strong>interfaz gráfica de usuario</strong> o <strong>GUI</strong> (<strong>Graphical User Inteface</strong>). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o <strong>CLI</strong> (<strong>Command-Line Interface</strong>).</p>
+  <div style="padding: -5px;
+  text-align: center;
+  color: white;
+  font-size: 20px;">
+   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
+  <h1 style="
+  position: absolute;
+  top: 5%;
+  left: 50%;">Programación en consola - Introducción</h1>
+</div><p>Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una <strong>interfaz gráfica de usuario</strong> o <strong>GUI</strong> (<strong>Graphical User Inteface</strong>). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o <strong>CLI</strong> (<strong>Command-Line Interface</strong>).</p>
 <p>Algunas de las ventajas que las interfaces de línea de comandos ofrecen son:</p>
 <ol class="simple">
 <li><p>Ejecución de tareas asignando parámetros específicos.</p></li>
@@ -255,11 +275,11 @@
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Configuración</span> <span class="pre">-&gt;</span> <span class="pre">Actialización</span> <span class="pre">y</span> <span class="pre">Seguridad</span> <span class="pre">-&gt;</span> <span class="pre">Para</span> <span class="pre">programadores</span></code>
 Allí debemos habilitar el <em>Modo de programador</em>. Debemos aceptar, los cambios.
-<img src="https://github.com/CiDExt/Programacion1/blob/master/images/i1.PNG?raw=true"  width="600"></p></li>
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i1.PNG?raw=true"  width="600"></p></li>
 <li><p>Luego, en el menú de inicio buscaremos “activar o desactivar las características de Windows”, y allí habilitaremos el <em>Subsistema de Windows para Linux</em>. Nos pedirá reiniciar el computador.
-<img src="https://github.com/CiDExt/Programacion1/blob/master/images/i2.png?raw=true" width="400"></p></li>
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i2.png?raw=true" width="400"></p></li>
 <li><p>En la Tienda de Microsoft, buscaremos “Ubuntu”, para descargar la opción que deseemos.
-<img src="https://github.com/CiDExt/Programacion1/blob/master/images/i3.png?raw=true" width="400"></p></li>
+<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i3.png?raw=true" width="400"></p></li>
 <li><p>Abrimos el PowerShell y ejecutamos el comando <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p></li>
 </ol>
 <p>De estamanera tendremos la consola de Ubuntu en Windows.</p>
@@ -339,7 +359,6 @@ nos lleva a la carpeta de “arriba”, mientras que <code class="docutils liter
 <p>Para buscar los archivos que han cambiado durante las últimas <span class="math notranslate nohighlight">\(n\times 24\)</span> horas, empleamos el comando <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">n</span></code>, donde <span class="math notranslate nohighlight">\(n\)</span> representa los mismos tiempos de <strong>-atime</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">0</span></code></p>
 <p>Si queremos ver el historial de nuestra consola de comandos, podemos emplear el comando <code class="docutils literal notranslate"><span class="pre">history</span></code>.</p>
-</div>
 
     <script type="text/x-thebe-config">
     {

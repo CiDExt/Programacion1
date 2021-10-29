@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Programación en consola
+# <div style="padding: -5px;
+#   text-align: center;
+#   color: white;
+#   font-size: 20px;">
+#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
+#   <h1 style="
+#   position: absolute;
+#   top: 5%;
+#   left: 50%;">Programación en consola - Introducción</h1>
+# </div>
 
 # Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una **interfaz gráfica de usuario** o **GUI** (**Graphical User Inteface**). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o **CLI** (**Command-Line Interface**).
 # 
@@ -28,11 +37,11 @@
 # Para tener el mismo manejo en los diferentes sistemas operativos, a la hora de trabajar en la consola, en *Windows* usaremos el GitBash o instalaremos la consola de Ubuntu en  nuestro sistema, de la siguiente manera:
 # 1. `Configuración -> Actialización y Seguridad -> Para programadores`
 # Allí debemos habilitar el *Modo de programador*. Debemos aceptar, los cambios.
-# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i1.PNG?raw=true"  width="600">
+# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i1.PNG?raw=true"  width="600">
 # 2. Luego, en el menú de inicio buscaremos "activar o desactivar las características de Windows", y allí habilitaremos el *Subsistema de Windows para Linux*. Nos pedirá reiniciar el computador.
-# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i2.png?raw=true" width="400">
+# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i2.png?raw=true" width="400">
 # 3. En la Tienda de Microsoft, buscaremos "Ubuntu", para descargar la opción que deseemos.
-# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i3.png?raw=true" width="400">
+# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i3.png?raw=true" width="400">
 # 4. Abrimos el PowerShell y ejecutamos el comando `bash`.
 # 
 # De estamanera tendremos la consola de Ubuntu en Windows.

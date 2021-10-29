@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Ciclos
+# <div style="padding: -5px;
+#   text-align: center;
+#   color: white;
+#   font-size: 20px;">
+#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
+#   <h1 style="
+#   position: absolute;
+#   top: 5%;
+#   left: 50%;">While</h1>
+# </div>
 
 # En este cuaderno, estudiaremos una estructura de control diseñadas hacer tareas repetitivas y parar cuando una condición deje de cumplirse.
 # 

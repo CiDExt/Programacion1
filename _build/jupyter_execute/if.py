@@ -1,7 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Condicionales
+# <div style="padding: -5px;
+#   text-align: center;
+#   color: white;
+#   font-size: 20px;">
+#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
+#   <h1 style="
+#   position: absolute;
+#   top: 5%;
+#   left: 50%;">If</h1>
+# </div>
 
 # El `if` se utiliza para evaluar expresiones condicionales, si cierta condición se satisface, se ejecuta un determinado bloque de código, y en caso de no satisfacer la condición puede que ejecute otro bloque de código, evalúe otra condición o simplemente no haga nada. Nosotros abordaremos todos los casos, pero debemos hacerlo desde el caso más sencillo:
 # 

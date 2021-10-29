@@ -10,3 +10,8 @@ chapters:
 - file: var_fun
 - file: if
 - file: while
+- file: Funciones
+- file: Variables y funciones básicas
+- file: Estilo funcional de programación
+- file: Lista y Tuplas
+
