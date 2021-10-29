@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <div style="padding: -5px;
-#   text-align: center;
-#   color: white;
-#   font-size: 20px;">
-#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-#   <h1 style="
-#   position: absolute;
-#   top: 5%;
-#   left: 50%;">Variables y funciones básicas</h1>
-# </div>
+# # Variables y funciones básicas
 
 # Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.
 # 
