@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <div style="padding: -5px;
-#   text-align: center;
-#   color: white;
-#   font-size: 20px;">
-#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-#   <h1 style="
-#   position: absolute;
-#   top: 5%;
-#   left: 50%;">Funciones</h1>
-# </div>
+# # Funciones
 
 # A lo largo de los cuadernos hemos utilizado algunas funciones propias de Python `print`, `int`, `float`, etc. cada una de ellas está hecha para realizar una tarea específica. En el cuaderno anterior, hemos creado una función, `cuadrado`, la cual hace una tarea que nosotros deseábamos y no hay una de las propias de Python que hiciera tal labor:
 
@@ -207,15 +198,3 @@ lanzardados(100)
 
 # # Ejercicio:
 # Como hemos podido ver, cada vez que ejecutamos la función anterior obtenemos diferentes resultados. Modifica éste código para que permita obtener los mismos valores cada vez que ejecutamos la función con determinado valor.
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-

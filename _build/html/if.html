@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicios &#8212; Programación 1</title>
+    <title>Condicionales (if) &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ejercicio" href="while.html" />
+    <link rel="next" title="While" href="while.html" />
     <link rel="prev" title="Variables y funciones básicas" href="var_fun.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -113,22 +113,22 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Ejercicios
+   Condicionales (if)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="while.html">
-   Ejercicio
+   While
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Funciones.html">
-   Documentación:
+   Funciones
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Estilo%20funcional%20de%20programaci%C3%B3n.html">
-   Ejercicios
+   Estilo funcional de programación
   </a>
  </li>
 </ul>
@@ -230,6 +230,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicios">
+   Ejercicios
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -238,16 +251,9 @@
         
               <div>
                 
-  <div style="padding: -5px;
-  text-align: center;
-  color: white;
-  font-size: 20px;">
-   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-  <h1 style="
-  position: absolute;
-  top: 5%;
-  left: 50%;">If</h1>
-</div><p>El <code class="docutils literal notranslate"><span class="pre">if</span></code> se utiliza para evaluar expresiones condicionales, si cierta condición se satisface, se ejecuta un determinado bloque de código, y en caso de no satisfacer la condición puede que ejecute otro bloque de código, evalúe otra condición o simplemente no haga nada. Nosotros abordaremos todos los casos, pero debemos hacerlo desde el caso más sencillo:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="condicionales-if">
+<h1>Condicionales (if)<a class="headerlink" href="#condicionales-if" title="Permalink to this headline">¶</a></h1>
+<p>El <code class="docutils literal notranslate"><span class="pre">if</span></code> se utiliza para evaluar expresiones condicionales, si cierta condición se satisface, se ejecuta un determinado bloque de código, y en caso de no satisfacer la condición puede que ejecute otro bloque de código, evalúe otra condición o simplemente no haga nada. Nosotros abordaremos todos los casos, pero debemos hacerlo desde el caso más sencillo:</p>
 <p>Si se cumple cierta condición, ejecute un bloque de código, si no se cumple no haga nada.</p>
 <p>Como debemos verificar la validez o no de una condición, la condición que ingresemos debe arrojar como resultado una variable booleana (<code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
 <p>La estructura es la siguiente:</p>
@@ -297,29 +303,8 @@
 </pre></div>
 </div>
 <p>Ahora verificaremos si un número que nosotros digitemos es positivo o no:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escribe el número que deseas verificar: &#39;</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escribe el número que deseas verificar: &#39;</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13418</span><span class="o">/</span><span class="mf">3362751499.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escribe el número que deseas verificar: &#39;</span><span class="p">))</span>
-
-<span class="nn">~/miniconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">976</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">977</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">978</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">979</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">980</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -331,7 +316,15 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El número es positivo
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16332</span><span class="o">/</span><span class="mf">2299777728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número es positivo&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número no es positivo&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;n&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -416,7 +409,7 @@ si se cumple cierta condición ejecute cierto bloque de código, sino, verifica 
 <p><strong>Nota:</strong></p>
 <p>Podemos anidar múltiples <code class="docutils literal notranslate"><span class="pre">elif</span></code>, dependiendo de la cantidad de condiciones que necesitemos imponer.</p>
 <div class="section" id="ejercicios">
-<h1>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h1>
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
 <p>Una materia se evaluó con 5 notas con los siguientes porcentajes: <em>Nota 1:</em> <span class="math notranslate nohighlight">\(10%\)</span>, <em>Nota 2:</em> <span class="math notranslate nohighlight">\(15%\)</span>, <em>Nota 3:</em> <span class="math notranslate nohighlight">\(20%\)</span>, <em>Nota 4:</em> <span class="math notranslate nohighlight">\(25%\)</span> y <em>Nota 5:</em> <span class="math notranslate nohighlight">\(30%\)</span>.</p>
 <ol class="simple">
 <li><p>Escriba un bloque de código que le permita al usuario introducir sus 5 notas y que calcule su definitiva.</p></li>
@@ -456,6 +449,7 @@ si se cumple cierta condición ejecute cierto bloque de código, sino, verifica 
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 no se puede dividir ni por 2 ni por 3
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -503,7 +497,7 @@ si se cumple cierta condición ejecute cierto bloque de código, sino, verifica 
         <a class="right-next" href="while.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Ejercicio</p>
+                <p class="prevnext-title">While</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

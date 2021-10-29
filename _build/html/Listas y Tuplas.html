@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listas: &#8212; Programación 1</title>
+    <title>Listas y Tuplas &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -109,22 +109,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="if.html">
-   Ejercicios
+   Condicionales (if)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="while.html">
-   Ejercicio
+   While
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Funciones.html">
-   Documentación:
+   Funciones
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Estilo%20funcional%20de%20programaci%C3%B3n.html">
-   Ejercicios
+   Estilo funcional de programación
   </a>
  </li>
 </ul>
@@ -231,19 +231,19 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listas">
    Listas:
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ejercicio">
      Ejercicio
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tuplas">
    Tuplas
   </a>
@@ -259,18 +259,11 @@
         
               <div>
                 
-  <div style="padding: -5px;
-  text-align: center;
-  color: white;
-  font-size: 20px;">
-   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-  <h1 style="
-  position: absolute;
-  top: 5%;
-  left: 50%;">Listas y Tuplas</h1>
-</div><p>En los cuadernos anteriores tuvimos un breve acercamiento a las listas, en el presente, el objetivo es entender las similitudes y diferencias que hay entre ellas y las tuplas, como también tener presentes algunos de los métodos y funciones más útiles al trabajar con éstos objetos.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="listas-y-tuplas">
+<h1>Listas y Tuplas<a class="headerlink" href="#listas-y-tuplas" title="Permalink to this headline">¶</a></h1>
+<p>En los cuadernos anteriores tuvimos un breve acercamiento a las listas, en el presente, el objetivo es entender las similitudes y diferencias que hay entre ellas y las tuplas, como también tener presentes algunos de los métodos y funciones más útiles al trabajar con éstos objetos.</p>
 <div class="section" id="listas">
-<h1>Listas:<a class="headerlink" href="#listas" title="Permalink to this headline">¶</a></h1>
+<h2>Listas:<a class="headerlink" href="#listas" title="Permalink to this headline">¶</a></h2>
 <p>Para <strong>crear una lista</strong> basta con escribir entre corchetes los elementos que la componen separados por coma, así: <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -294,7 +287,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;hola&#39;, 1, 5.1, 139724014678400]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;hola&#39;, 1, 5.1, 140521064289472]
 </pre></div>
 </div>
 </div>
@@ -412,7 +405,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13362</span><span class="o">/</span><span class="mf">2713866246.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16281</span><span class="o">/</span><span class="mf">2713866246.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">m</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 
 <span class="ne">IndexError</span>: list index out of range
@@ -557,7 +550,7 @@
 </div>
 </div>
 <div class="section" id="ejercicio">
-<h2>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h2>
+<h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Crea un bloque de código que dada una lista en blanco vaya agregando elementos a ésta. Dichos elementos deberán ser la suma de los índices hasta la posición en que se halla el elemento.</p></li>
 </ol>
@@ -579,7 +572,7 @@
 </div>
 </div>
 <div class="section" id="tuplas">
-<h1>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">¶</a></h1>
+<h2>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">¶</a></h2>
 <p>Las tuplas, a diferencia de las listas, son objetos inmutables en los cuales se almacenan datos, bien sean del mismo o de diferentes tipos, siendo éste último el uso más frecuente.</p>
 <p>De modo que definiremos nuestra primera tupa:</p>
 <div class="cell docutils container">
@@ -728,6 +721,7 @@
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(23, &#39;a&#39;, [1, 2, 3, &#39;cuatro&#39;])
 </pre></div>
+</div>
 </div>
 </div>
 </div>

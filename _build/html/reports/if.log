@@ -17,21 +17,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-n = int(input('Escribe el número que deseas verificar: '))
+if n>0:
+    print('El número es positivo')
+else:
+    print('El número no es positivo')
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_13418/3362751499.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mn[0m [0;34m=[0m [0mint[0m[0;34m([0m[0minput[0m[0;34m([0m[0;34m'Escribe el número que deseas verificar: '[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/miniconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
-[1;32m    976[0m         """
-[1;32m    977[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 978[0;31m             raise StdinNotImplementedError(
-[0m[1;32m    979[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    980[0m             )
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/tmp/ipykernel_16332/2299777728.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mif[0m [0mn[0m[0;34m>[0m[0;36m0[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m     [0mprint[0m[0;34m([0m[0;34m'El número es positivo'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mprint[0m[0;34m([0m[0;34m'El número no es positivo'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
-StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+[0;31mNameError[0m: name 'n' is not defined
+NameError: name 'n' is not defined
 

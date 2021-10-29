@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <div style="padding: -5px;
-#   text-align: center;
-#   color: white;
-#   font-size: 20px;">
-#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-#   <h1 style="
-#   position: absolute;
-#   top: 5%;
-#   left: 50%;">Listas y Tuplas</h1>
-# </div>
+# # Listas y Tuplas
 
 # En los cuadernos anteriores tuvimos un breve acercamiento a las listas, en el presente, el objetivo es entender las similitudes y diferencias que hay entre ellas y las tuplas, como también tener presentes algunos de los métodos y funciones más útiles al trabajar con éstos objetos.
 # 
@@ -288,10 +279,4 @@ tupla1elemento[2]=1
 #Pero podemos modificar la lista que está dentro de la tupla
 tupla1elemento[2][3]='cuatro'
 tupla1elemento
-
-
-# In[ ]:
-
-
-
 

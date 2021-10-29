@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <div style="padding: -5px;
-#   text-align: center;
-#   color: white;
-#   font-size: 20px;">
-#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-#   <h1 style="
-#   position: absolute;
-#   top: 5%;
-#   left: 50%;">If</h1>
-# </div>
+# # Condicionales (if)
 
 # El `if` se utiliza para evaluar expresiones condicionales, si cierta condición se satisface, se ejecuta un determinado bloque de código, y en caso de no satisfacer la condición puede que ejecute otro bloque de código, evalúe otra condición o simplemente no haga nada. Nosotros abordaremos todos los casos, pero debemos hacerlo desde el caso más sencillo:
 # 
@@ -66,13 +57,11 @@ if False:
 # 
 # Ahora verificaremos si un número que nosotros digitemos es positivo o no:
 
+# ```Python 
+# n = int(input('Escribe el número que deseas verificar: '))
+# ```
+
 # In[3]:
-
-
-n = int(input('Escribe el número que deseas verificar: '))
-
-
-# In[4]:
 
 
 if n>0:
@@ -83,7 +72,7 @@ else:
 
 # Para verificar si un número dado es par o no, podemos utilizar el siguiente bloque de código:
 
-# In[5]:
+# In[9]:
 
 
 m = 4
@@ -120,7 +109,7 @@ else:
 # 
 # Pero si deseamos verificar si el número es positivo negativo o cero, 
 
-# In[6]:
+# In[10]:
 
 
 k=0
@@ -134,7 +123,7 @@ else:
 
 # Ahora modificaremos ligeramente el código anterior para verificar la ley de tricotomía entre un par de números reales:
 
-# In[7]:
+# In[11]:
 
 
 a=3
@@ -166,7 +155,7 @@ else:
 
 # En las condiciones también podemos tener operadores lógicos, como podremos ver en las siguientes líneas:
 
-# In[8]:
+# In[12]:
 
 
 x=2
@@ -174,7 +163,7 @@ if (x%2==0 and x%3==0):
     print(x,'es divisible por 2 y 3')
 
 
-# In[9]:
+# In[13]:
 
 
 x=5

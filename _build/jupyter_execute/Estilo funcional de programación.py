@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
+# ## Estilo funcional de programación
 
 # En los casos en los cuales nuestras funciones tengan una gran cantidad de tareas para abordar, lo mejor es distribuir éstas en diferentes funciones, para que así podamos identificar los fallos en alguna parte del código de manera más eficiente y también para hacer mucho más fácil la lectura del código para otros e incluso para nosotros mismos.
 
@@ -38,12 +34,6 @@ def operaciones(a,b):
 operaciones(1,2)
 
 
-# In[ ]:
-
-
-
-
-
 # Lo anterior nos muestra algo que debemos tener presente, y es que en las funciones se maneja el concepto del *Último en Entrar es el Primero en Salir* (*UEPS*), es decir, la última función que se llama es la primera sobre la cual se termina el cálculo, para así poder utilizar su respuesta en los cálculos posteriores.
 # 
 # Este concepto del UEPS es muy familiar en programación, y lo usamos casi que a diario sin darnos cuenta, por ejemplo, en nuestro navegador cuando vamos de una página a otra y pulsamos el botón `atrás` éste nos regresa al más reciente de todos los sitios que visitamos.
@@ -58,12 +48,6 @@ operaciones(2,3)
 
 
 s
-
-
-# In[ ]:
-
-
-
 
 
 # Como podemos ver, las variabes `s`, `r`, `p` y `c` son variables locales dentro de la función `operaciones`, por ello no se almacenan en nuestra memoria.
@@ -88,9 +72,3 @@ s
 #  * Crea la función `RestaFracciones` la cual reciba como entrada dos fracciones (`n1/d1`,`n2/d2`) y su retorno sea la resta de dichas fracciones simplificada (`numerador = n1*d2-n2*d1`,`denominador = d1*d2`).
 #  * Crea la función `MultiplicaFracciones` la cual reciba como entrada dos fracciones (`n1/d1`,`n2/d2`) y su retorno sea el producto de dichas fracciones simplificada (`numerador = n1*n2`,`denominador = d1*d2`).
 #  * Crea la función `DivideFracciones` la cual reciba como entrada dos fracciones (`n1/d1`,`n2/d2`) y su retorno sea el cocioente de dichas fracciones simplificada (`numerador = n1*d2`,`denominador = d1*n2`).
-
-# In[ ]:
-
-
-
-

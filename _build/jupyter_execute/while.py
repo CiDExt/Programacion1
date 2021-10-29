@@ -1,16 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <div style="padding: -5px;
-#   text-align: center;
-#   color: white;
-#   font-size: 20px;">
-#    <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-#   <h1 style="
-#   position: absolute;
-#   top: 5%;
-#   left: 50%;">While</h1>
-# </div>
+# # While
 
 # En este cuaderno, estudiaremos una estructura de control diseñadas hacer tareas repetitivas y parar cuando una condición deje de cumplirse.
 # 
@@ -28,17 +19,14 @@
 # 
 # Para esta estructura debemos tener especial cuidado, ya que existe la posibilidad de escribir la condición de tal manera que siempre se cumpla y tendríamos un ciclo infinito, como ocurrirá con el siguiente código.
 
-# In[1]:
-
-
-while 2!=1:
-    print(1, end=' ')
-#Reinicia el Kernel.
-
+# ```Python
+# while 2!=1:
+#     print(1, end=' ')
+# ```
 
 # Como queremos que el ciclo se detenga en algún momento, se recomienda que en las instrucciones incluyamos un paso en el cual se modifique el elemento que interviene en la condición, de tal modo que, luego de un número finito de iteraciones se detenga la tarea:
 
-# In[3]:
+# In[1]:
 
 
 i=0
@@ -49,7 +37,7 @@ while i<10:
 
 # Otra forma de detener el ciclo, es incluir una condición con un `if`, así:
 
-# In[5]:
+# In[2]:
 
 
 i=0
@@ -64,7 +52,7 @@ while i<10:
 # 
 # 1. Utiliza un ciclo `while` para hallar el factorial de un número. Recuerda que el factorial de un número es el producto de todos los enteros positivos hasta él.
 
-# In[15]:
+# In[3]:
 
 
 n = 10
@@ -76,13 +64,7 @@ while i<=n:
 print(factorial)
 
 
-# In[ ]:
-
-
-
-
-
-# In[17]:
+# In[4]:
 
 
 n = 100
@@ -103,7 +85,7 @@ while i<=n:
 # \end{equation*}
 # siendo $x$ cualquier número positivo y $y$ la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:
 
-# In[26]:
+# In[5]:
 
 
 a = 10
