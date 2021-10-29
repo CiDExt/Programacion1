@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicios &#8212; Programación 1</title>
+    <title>Estilo funcional de programación &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -110,22 +110,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="if.html">
-   Ejercicios
+   Condicionales (if)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="while.html">
-   Ejercicio
+   While
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Funciones.html">
-   Documentación:
+   Funciones
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Ejercicios
+   Estilo funcional de programación
   </a>
  </li>
 </ul>
@@ -227,6 +227,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Estilo funcional de programación
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicios">
+   Ejercicios
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -235,7 +253,9 @@
         
               <div>
                 
-  <p>En los casos en los cuales nuestras funciones tengan una gran cantidad de tareas para abordar, lo mejor es distribuir éstas en diferentes funciones, para que así podamos identificar los fallos en alguna parte del código de manera más eficiente y también para hacer mucho más fácil la lectura del código para otros e incluso para nosotros mismos.</p>
+  <div class="section" id="estilo-funcional-de-programacion">
+<h1>Estilo funcional de programación<a class="headerlink" href="#estilo-funcional-de-programacion" title="Permalink to this headline">¶</a></h1>
+<p>En los casos en los cuales nuestras funciones tengan una gran cantidad de tareas para abordar, lo mejor es distribuir éstas en diferentes funciones, para que así podamos identificar los fallos en alguna parte del código de manera más eficiente y también para hacer mucho más fácil la lectura del código para otros e incluso para nosotros mismos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suma</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
@@ -295,7 +315,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13325</span><span class="o">/</span><span class="mf">1028141915.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16247</span><span class="o">/</span><span class="mf">1028141915.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">s</span>
 
 <span class="ne">NameError</span>: name &#39;s&#39; is not defined
@@ -306,6 +326,7 @@
 <p>Como podemos ver, las variabes <code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code> y <code class="docutils literal notranslate"><span class="pre">c</span></code> son variables locales dentro de la función <code class="docutils literal notranslate"><span class="pre">operaciones</span></code>, por ello no se almacenan en nuestra memoria.</p>
 <p>Un riesgo que podemos correr al tener una función con demasiadas tareas, es quedarmos sin memoria, ya que ésta no se liberará hasta no terminar los cálculos de la función en la cual estamos, por ello, el estilo funcional es muy propicio para evitar este tipo de errores, claro, esto también podría ocurrir si tenemos alguna función que no termine nunca su ejecución.</p>
 <p>Este estilo de programación es particularmente útil, ya que, permite al lector del código entender de una manera más fácil <em>qué</em> se pretende hacer con las funciones elaboradas, sin tener que esforzarse mucho con el <em>cómo</em> se hace, ya que casi siempre ésto viene cubierto por las diferentes librerías que tenemos a la mano. Otra ventaja que tenemos al emplear este tipo de programación es permitir la <em>inmutabilidad</em> de variables, pues esto evita errores que se pueden introducir de manera involuntaria al <em>mutar</em> o cambiar alguna variable, que afectará otras y posiblemente el resultado que deseamos calcular, como pasa en la función <code class="docutils literal notranslate"><span class="pre">operaciones</span></code>, ya que ésta función no puede modificar ninguna de las asignaciones que se realizan en las funciones <code class="docutils literal notranslate"><span class="pre">suma</span></code>, <code class="docutils literal notranslate"><span class="pre">resta</span></code>, <code class="docutils literal notranslate"><span class="pre">producto</span></code> y <code class="docutils literal notranslate"><span class="pre">cociente</span></code>.</p>
+</div>
 <div class="section" id="ejercicios">
 <h1>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h1>
 <ol class="simple">

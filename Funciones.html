@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentación: &#8212; Programación 1</title>
+    <title>Funciones &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="&lt;no title&gt;" href="Variables%20y%20funciones%20b%C3%A1sicas.html" />
-    <link rel="prev" title="Ejercicio" href="while.html" />
+    <link rel="prev" title="While" href="while.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -113,22 +113,22 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="if.html">
-   Ejercicios
+   Condicionales (if)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="while.html">
-   Ejercicio
+   While
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Documentación:
+   Funciones
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Estilo%20funcional%20de%20programaci%C3%B3n.html">
-   Ejercicios
+   Estilo funcional de programación
   </a>
  </li>
 </ul>
@@ -237,13 +237,20 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Documentación:
+   Funciones
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-locales">
-   Variables locales:
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentacion">
+     Documentación:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-locales">
+     Variables locales:
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ejercicios">
@@ -271,16 +278,9 @@
         
               <div>
                 
-  <div style="padding: -5px;
-  text-align: center;
-  color: white;
-  font-size: 20px;">
-   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-  <h1 style="
-  position: absolute;
-  top: 5%;
-  left: 50%;">Funciones</h1>
-</div><p>A lo largo de los cuadernos hemos utilizado algunas funciones propias de Python <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, etc. cada una de ellas está hecha para realizar una tarea específica. En el cuaderno anterior, hemos creado una función, <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>, la cual hace una tarea que nosotros deseábamos y no hay una de las propias de Python que hiciera tal labor:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="funciones">
+<h1>Funciones<a class="headerlink" href="#funciones" title="Permalink to this headline">¶</a></h1>
+<p>A lo largo de los cuadernos hemos utilizado algunas funciones propias de Python <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, etc. cada una de ellas está hecha para realizar una tarea específica. En el cuaderno anterior, hemos creado una función, <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>, la cual hace una tarea que nosotros deseábamos y no hay una de las propias de Python que hiciera tal labor:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -299,8 +299,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 3 su identidad es: 139876096375152
-Su cuadrado es: 9 y su identidad es: 139876096375344
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 3 su identidad es: 139911577037168
+Su cuadrado es: 9 y su identidad es: 139911577037360
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
@@ -317,7 +317,7 @@ Su cuadrado es: 9 y su identidad es: 139876096375344
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13345</span><span class="o">/</span><span class="mf">32546335.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16264</span><span class="o">/</span><span class="mf">32546335.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span>
 
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
@@ -399,7 +399,7 @@ Su cuadrado es: 9 y su identidad es: 139876096375344
 </div>
 </div>
 <div class="section" id="documentacion">
-<h1>Documentación:<a class="headerlink" href="#documentacion" title="Permalink to this headline">¶</a></h1>
+<h2>Documentación:<a class="headerlink" href="#documentacion" title="Permalink to this headline">¶</a></h2>
 <p>A las funciones que creamos, es posible añadirles documentación para que sea clara la manera de usarlas y que los argumentos sean aclarados para todos los usuarios:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -426,7 +426,7 @@ o con el siguiente comando:</p>
 <p>Lo más sano es escribir una descripción muy corta en la primera línea, luego una línea en blanco para continuar con la descripción más completa de la función.</p>
 </div>
 <div class="section" id="variables-locales">
-<h1>Variables locales:<a class="headerlink" href="#variables-locales" title="Permalink to this headline">¶</a></h1>
+<h2>Variables locales:<a class="headerlink" href="#variables-locales" title="Permalink to this headline">¶</a></h2>
 <p>Cuando creamos una función y en ella definimos alguna variable, es posible acceder a ella únicamente dentro de la función, si la intentamos llamar fuera de ella, obtendremos un error, como podemos ver a continuación:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -470,6 +470,7 @@ o con el siguiente comando:</p>
 </div>
 </div>
 <p>A las variables <code class="docutils literal notranslate"><span class="pre">z1</span></code>, <code class="docutils literal notranslate"><span class="pre">z2</span></code>, <code class="docutils literal notranslate"><span class="pre">z3</span></code> y <code class="docutils literal notranslate"><span class="pre">z4</span></code> se les conoce como <strong>variables locales</strong>, ya que éstas se “destruyen” al finalizar los cálculos requeridos para finalizar la ejecución de la función <code class="docutils literal notranslate"><span class="pre">operaciones</span></code>.</p>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="ejercicios">
 <h1>Ejercicios:<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h1>
@@ -593,7 +594,7 @@ o con el siguiente comando:</p>
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Ejercicio</p>
+                <p class="prevnext-title">While</p>
             </div>
         </a>
     </div>
