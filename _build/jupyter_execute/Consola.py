@@ -28,11 +28,11 @@
 # Para tener el mismo manejo en los diferentes sistemas operativos, a la hora de trabajar en la consola, en *Windows* usaremos el GitBash o instalaremos la consola de Ubuntu en  nuestro sistema, de la siguiente manera:
 # 1. `Configuración -> Actialización y Seguridad -> Para programadores`
 # Allí debemos habilitar el *Modo de programador*. Debemos aceptar, los cambios.
-# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i1.PNG?raw=true"  width="600">
+# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i1.PNG?raw=true"  width="600">
 # 2. Luego, en el menú de inicio buscaremos "activar o desactivar las características de Windows", y allí habilitaremos el *Subsistema de Windows para Linux*. Nos pedirá reiniciar el computador.
-# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i2.png?raw=true" width="400">
+# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i2.png?raw=true" width="400">
 # 3. En la Tienda de Microsoft, buscaremos "Ubuntu", para descargar la opción que deseemos.
-# <img src="https://github.com/CiDExt/Programacion1/blob/main/images/i3.png?raw=true" width="400">
+# <img src="https://github.com/CiDExt/Programacion1/blob/master/images/i3.png?raw=true" width="400">
 # 4. Abrimos el PowerShell y ejecutamos el comando `bash`.
 # 
 # De estamanera tendremos la consola de Ubuntu en Windows.
@@ -159,3 +159,9 @@
 # `find -ctime 0`
 # 
 # Si queremos ver el historial de nuestra consola de comandos, podemos emplear el comando `history`.
+
+# In[ ]:
+
+
+
+
