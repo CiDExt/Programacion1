@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Programación 1</title>
+    <title>Buscar, borrar y mover archivos en CLI &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Controlador de versiones" href="github1.html" />
-    <link rel="prev" title="Programación I" href="intro.html" />
+    <link rel="prev" title="Introducción a la programación" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,11 +91,16 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Programación I
+   Introducción a la programación
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="github1.html">
    Controlador de versiones
@@ -244,7 +249,27 @@
                 <i class="fas fa-list"></i> Contenido
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactuar-con-la-maquina">
+   Interactuar con la máquina
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminal">
+   Terminal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creacion-de-un-archivo-con-consola">
+   Creación de un archivo con consola
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cambiar-archivos">
+   Cambiar archivos
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -256,25 +281,45 @@
         
               <div>
                 
-  <div style="padding: -5px;
-  text-align: center;
-  color: white;
-  font-size: 20px;">
-   <img src="images/banner.jpg" alt="MINE-Seminario de programación" style="width:100%;">
-  <h1 style="
-  position: absolute;
-  top: 5%;
-  left: 50%;">Programación en consola - Introducción</h1>
-</div><p>Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una <strong>interfaz gráfica de usuario</strong> o <strong>GUI</strong> (<strong>Graphical User Inteface</strong>). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o <strong>CLI</strong> (<strong>Command-Line Interface</strong>).</p>
-<p>Algunas de las ventajas que las interfaces de línea de comandos ofrecen son:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="buscar-borrar-y-mover-archivos-en-cli">
+<h1>Buscar, borrar y mover archivos en CLI<a class="headerlink" href="#buscar-borrar-y-mover-archivos-en-cli" title="Permalink to this headline">¶</a></h1>
+<p>En la sección anterior se explicó que nuestro objetivo fundamental era estudiar los algoritmos y su ejecución en una máquina de computo. Si bien se anunció que Python sería el lenguaje base del curso, hoy estudiaremos la interfáz de la línea de comandos. Es bastante útil porque resulta ser una herramienta complementaria a Python o R y permitirá que aprendamos lo suficiente para:</p>
+<ul class="simple">
+<li><p>Navegar por las diferentes carpetas de la máquina.</p></li>
+<li><p>Actualizar repositorios</p></li>
+<li><p>Hacer despliegues de scripts</p></li>
+<li><p>Entre otras tareas</p></li>
+</ul>
+<p>Aquí también estudiaremos algunos algoritmos, en particular los que se refieren a consultar archivos, moverlos y borrarlos, pero antes hablemos un poco más de la herramienta y la diferencia con la interfaz gráfica que es la que usualmente utilizamos.</p>
+<div class="section" id="interactuar-con-la-maquina">
+<h2>Interactuar con la máquina<a class="headerlink" href="#interactuar-con-la-maquina" title="Permalink to this headline">¶</a></h2>
+<p>Actualmente, la manera más sencilla de interacción entre una computadora y su usuario, es mediante una <strong>interfaz gráfica de usuario</strong> o <strong>GUI</strong> (<strong>Graphical User Inteface</strong>). Por ejemplo, para abrir un programa, por lo general das clic en el ícono de éste para así ejecutarlo, o  cuando estás en internet, usas el ratón para interactuar con los diferentes elementos dispuestos en las diferentes páginas web. Pero antes de la creación de las GUI, la manera usual para interactuar con la computadora, era mediante una interfaz de línea de comandos o <strong>CLI</strong> (<strong>Command-Line Interface</strong>).</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61896ac2c01d470d419387d2" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<br>
+<br><p>Algunas de las ventajas que las interfaces de línea de comandos ofrecen son:</p>
 <ol class="simple">
 <li><p>Ejecución de tareas asignando parámetros específicos.</p></li>
 <li><p>Automatización de tareas por medio de scripts.</p></li>
 <li><p>Es ideal para la administración de sistemas para toda una empresa.</p></li>
 </ol>
-<p>En vista de tal importancia, lo primero que haremos es abrir la <em>terminal</em>, esto depende del sistema operativo, en <em>OS X</em> o <em>Linux</em>, abriremos la <strong>terminal</strong> mientras que, en <em>Windows</em> podremos abrir <em>PowerShell</em> o en su defecto <a class="reference external" href="https://git-scm.com/downloads">GitBash</a>.</p>
+</div>
+<div class="section" id="terminal">
+<h2>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">¶</a></h2>
+<p>En vista de tal importancia, lo primero que haremos es abrir la <em>terminal</em>, esto depende del sistema operativo, en <em>OS X</em> o <em>Linux</em>, abriremos la <strong>terminal</strong> mientras que, en <em>Windows</em> podremos abrir <em>PowerShell</em> o en su defecto <a class="reference external" href="https://git-scm.com/downloads">GitBash</a>. Veremos una consola como la siguiente:</p>
+<p><img alt="Consola" src="_images/cons1.png" /></p>
 <p>De modo que, nuestro primer acercamiento con nuestra CLI, será para aprender a navegar por el sistema de archivos de nuestra computadora:</p>
-<p>Para ello escribe el comando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (<em>print work directory</em>) y luego pulsa <em>Enter</em>, esto nos permitirá ver el directorio actual en el que estamos trabajando. En <em>OS X</em> o en <em>Linux</em> el resultado debería ser como el siguiente: <code class="docutils literal notranslate"><span class="pre">/usuarios/nombre-de-usuario</span></code>; mientras que, en <em>Windows</em> sería <code class="docutils literal notranslate"><span class="pre">C:\usuarios\nombre-de-usuario</span></code>.</p>
+<p>Para ello escribe el comando <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (<em>print work directory</em>) y luego pulsa <em>Enter</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+<p>esto nos permitirá ver el directorio actual en el que estamos trabajando. En <em>OS X</em> o en <em>Linux</em> el resultado debería ser como el siguiente:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/usuarios/nombre-de-usuario</span>
+</pre></div>
+</div>
+<p>En <em>Windows</em> sería:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">C:\usuarios\nombre-de-usuario</span>
+</pre></div>
+</div>
 <p>Como puedes observar hay diferencias, pero son pocas y no afectarán el desarrollo del resto del cuaderno.</p>
 <p>Para conocer los archivos y carpetas que hay en el directorio en el cual estamos ubicados, podemos utilizar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>, el cuál listará todos y cada uno de los elementos antes mencionados.</p>
 <hr class="docutils" />
@@ -283,37 +328,136 @@
 <hr class="docutils" />
 <p>Para tener el mismo manejo en los diferentes sistemas operativos, a la hora de trabajar en la consola, en <em>Windows</em> usaremos el GitBash o instalaremos la consola de Ubuntu en  nuestro sistema, de la siguiente manera:</p>
 <ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Configuración</span> <span class="pre">-&gt;</span> <span class="pre">Actialización</span> <span class="pre">y</span> <span class="pre">Seguridad</span> <span class="pre">-&gt;</span> <span class="pre">Para</span> <span class="pre">programadores</span></code>
-Allí debemos habilitar el <em>Modo de programador</em>. Debemos aceptar, los cambios.
-<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i1.PNG?raw=true"  width="600"></p></li>
-<li><p>Luego, en el menú de inicio buscaremos “activar o desactivar las características de Windows”, y allí habilitaremos el <em>Subsistema de Windows para Linux</em>. Nos pedirá reiniciar el computador.
-<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i2.png?raw=true" width="400"></p></li>
-<li><p>En la Tienda de Microsoft, buscaremos “Ubuntu”, para descargar la opción que deseemos.
-<img src="https://github.com/CiDExt/Programacion1/blob/main/images/i3.png?raw=true" width="400"></p></li>
-<li><p>Abrimos el PowerShell y ejecutamos el comando <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Configuración</span> <span class="pre">-&gt;</span> <span class="pre">Actualización</span> <span class="pre">y</span> <span class="pre">Seguridad</span> <span class="pre">-&gt;</span> <span class="pre">Para</span> <span class="pre">programadores</span></code><br />
+Allí debemos habilitar el <em>Modo de programador</em> y aceptar los cambios:</p></li>
 </ol>
-<p>De estamanera tendremos la consola de Ubuntu en Windows.</p>
-<hr class="docutils" />
+<p><img alt="im1" src="_images/i1.PNG" /></p>
+<ol>
+<li><p>Luego, en el menú de inicio buscaremos “activar o desactivar las características de Windows”, y allí habilitaremos el <em>Subsistema de Windows para Linux</em>. Nos pedirá reiniciar el computador.
+<img alt="im2" src="_images/i2.png" /></p></li>
+<li><p>En la Tienda de Microsoft, buscaremos “Ubuntu”, para descargar la opción que deseemos.
+<img alt="im3" src="_images/i3.png" /></p></li>
+<li><p>Abrimos el PowerShell y ejecutamos el comando <code class="docutils literal notranslate"><span class="pre">bash</span></code>.</p>
+<p>De esta manera tendremos la consola de Ubuntu en Windows.</p>
+</li>
+</ol>
 <p>Si estabas en el <em>PowerShell</em> y ahora ejecutas <code class="docutils literal notranslate"><span class="pre">ls</span></code> verás que la presentación de la lista es diferente, es como lo ven tus compañeros de <em>OS X</em> y  <em>Ubuntu</em>.</p>
-<p>Para ver todas las opciones de los comandos y la mejor forma de usarlos, empleamos <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">'comando'</span></code>, por ejemplo,<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code> nos da todas las opciones que tenemos para ver la lista de archivos y carpetas. Ejecuta <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>  para ver una lista larga de los archivos el la carpeta, verás entradas de éste tipo:</p>
-<p><code class="docutils literal notranslate"><span class="pre">drwxrwxrwx</span> <span class="pre">1</span> <span class="pre">root</span> <span class="pre">root</span>&#160;&#160;&#160;&#160; <span class="pre">512</span> <span class="pre">Apr</span> <span class="pre">14</span> <span class="pre">21:22</span> <span class="pre">'3D</span> <span class="pre">Objects'</span></code></p>
-<p>La primera entrada, indica el tipo de fichero
-(<code class="docutils literal notranslate"><span class="pre">d</span></code>: directorio, <code class="docutils literal notranslate"><span class="pre">-</span></code>: archivo, <code class="docutils literal notranslate"><span class="pre">l</span></code>: enlace simbólico, <code class="docutils literal notranslate"><span class="pre">s</span></code>: socket, <code class="docutils literal notranslate"><span class="pre">p</span></code>: tubería, <code class="docutils literal notranslate"><span class="pre">b</span></code>: archivo de bloque, <code class="docutils literal notranslate"><span class="pre">c</span></code>: archivo de caracteres). Las tres entradas que siguen indican los permisos del propietario, las tres siguientes, los del grupo y los últimos 3 los permisos de los demás (<code class="docutils literal notranslate"><span class="pre">r</span></code>: <em>read</em> 4,  <code class="docutils literal notranslate"><span class="pre">w</span></code>: <em>write</em> 2, <code class="docutils literal notranslate"><span class="pre">x</span></code>: <em>execute</em> 1), el ejemplo indica que <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Objects</span></code> es una carpeta, y todos los usuarios tienen todos los permisos.</p>
-<p>La siguiente entrada, el número, indica la cantidad de enlaces que tiene el fichero. En el ejemplo el <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
+<p>Para ver todas las opciones de los comandos y la mejor forma de usarlos, empleamos <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">'comando'</span></code>, por ejemplo,<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code> nos da todas las opciones que tenemos para ver la lista de archivos y carpetas.</p>
+<p><img alt="man comand" src="_images/cons2.png" /></p>
+<p>para salir de la ayuda oprimimos <code class="docutils literal notranslate"><span class="pre">q</span></code></p>
+<p>Una función interesante es:</p>
+<p><img alt="ls-l" src="_images/cons3.png" /></p>
+<p>indica que si ejecutamos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> 
+</pre></div>
+</div>
+<p>obtenemos, una lista larga de los archivos en la carpeta, los archivos se verán así:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">drwxrwxrwx 1 root root     512 Apr 14 21:22 &#39;3D Objects&#39;</span>
+</pre></div>
+</div>
+<p>Es la información completa de cada fichero según las siguientes convenciones, <strong>En la primera letra</strong> tenemos:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">d</span></code></p></td>
+<td class="text-align:center"><p>directorio</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td class="text-align:center"><p>archivo</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">l</span></code></p></td>
+<td class="text-align:center"><p>enlace simbólico</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">s</span></code></p></td>
+<td class="text-align:center"><p>socket</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">p</span></code></p></td>
+<td class="text-align:center"><p>tubería</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+<td class="text-align:center"><p>archivo de bloque</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
+<td class="text-align:center"><p>archivo de caracteres</p></td>
+</tr>
+</tbody>
+</table>
+<p>Las tres entradas que siguen indican los permisos del propietario, las tres siguientes, los del grupo y los últimos 3 los permisos de los demás:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">r</span></code></p></td>
+<td class="text-align:center"><p><em>read</em> 4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">w</span></code></p></td>
+<td class="text-align:center"><p><em>write</em> 2</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span></code></p></td>
+<td class="text-align:center"><p><em>execute</em> 1</p></td>
+</tr>
+</tbody>
+</table>
+<p>El ejemplo indica que <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Objects</span></code> es una carpeta, en la que todos los usuarios tienen todos los permisos.</p>
+<p>La siguiente entrada, el número, indica la cantidad de enlaces que tiene el fichero. En el ejemplo el <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <p>Las dos entradas que siguen, indican el usuario propietario y el grupo propietario. En el ejemplo el <code class="docutils literal notranslate"><span class="pre">root</span> <span class="pre">root</span></code>.</p>
-<p>El valor que sigue, es el tamaño del archivo, en nuestro ejemplo <code class="docutils literal notranslate"><span class="pre">512</span></code>.</p>
+<p>El valor que sigue, es el tamaño del archivo y su fecha de modificación, en nuestro ejemplo <code class="docutils literal notranslate"><span class="pre">512</span> <span class="pre">Apr</span> <span class="pre">14</span> <span class="pre">21:22</span></code>.</p>
 <p>Por último el nombre del archivo o directorio.</p>
-<p>La marca de tiempo que tiene el archivo, nos indica la fecha en que el archivo o directorio fueron modificados por última vez <code class="docutils literal notranslate"><span class="pre">Apr</span> <span class="pre">14</span> <span class="pre">21:22</span></code>.</p>
+<p><strong>Ejemplo</strong></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">drwxr-xr-x  6 juan oficina     4096 nov  8 11:28  Tareas</span>
+<span class="go">-rw-r--r--  1 maría personas  6029504 ago  6 08:13  invitaciones.pdf</span>
+<span class="go">-rw-rw-rw-  1 isaac oficina    55595 sep 21  2020  correos.pdf</span>
+<span class="go">-rw-r--r--  1 rippe familia    56292 sep 21  2020  ejercicio_en_casa.pdf</span>
+<span class="go">-rwxrwxrwx  1 cris extraños  239 jul 16  2020 cuentas.exe</span>
+</pre></div>
+</div>
+<p>En esta carpeta encontramos 5 elementos creados por personas distintas, por ejemplo, <code class="docutils literal notranslate"><span class="pre">juan</span></code> del grupo <code class="docutils literal notranslate"><span class="pre">oficina</span></code> creo la carpeta <code class="docutils literal notranslate"><span class="pre">Tareas</span></code> con permisos de lectura, escritura y ejecutable; tiene 6 enlaces y pesa 4096 bytes . <code class="docutils literal notranslate"><span class="pre">maria</span></code> del grupo <code class="docutils literal notranslate"><span class="pre">personas</span></code> creo el pdf <code class="docutils literal notranslate"><span class="pre">invitaciones</span></code> con permisos de escritura solo para ella, los demás tienen permiso de lectura con un peso de 6029504 bytes.</p>
 <p><strong>Para crear una nueva carpeta</strong> empleamos el comando <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (<em>make directory</em>), por ejemplo <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">prueba</span></code>. Para comprobar la creación de la carpeta, puedes ejecutar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code> y debería aparecer la carpeta que acabamos de crear.</p>
 <p><strong>Para cambiar de carpeta</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cd</span></code> (<em>change directory</em>), por ejemplo, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">prueba</span></code>. Si deseamos ir a una carpeta diferente empleamos <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">ruta-de-la-carpeta</span></code>. El comando <code class="docutils literal notranslate"><span class="pre">cd</span></code> tiene opciones adicionales para moverse con facilidad dentro de las carpetas <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code>
 nos lleva a la carpeta de “arriba”, mientras que <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">--</span></code> nos lleva a la carpeta principal.</p>
-<p>Una vez dentro de nuestra carpeta de prueba, vamos a crear un archivo y lo modificaremos desde la consola, esto lo haremos con el comando <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">testfile.txt</span></code>. Lo anterior abre un editor de texto plano, en el cual podemos ingresar la siguiente información:</p>
-<p>día ganancia<br />
-01 <span class="math notranslate nohighlight">\(\$ \)</span>5000<br />
-02 <span class="math notranslate nohighlight">\(\$ \)</span>8000<br />
-03 <span class="math notranslate nohighlight">\(\$ \)</span>9000</p>
-<p>Luego de registrar la información, para guardar el archivo <code class="docutils literal notranslate"><span class="pre">CTR+X</span></code> y luego <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Para verificar la creación del archivo, recuerda usar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>, o si quieres ver la carpeta con tu GUI.</p>
-<p>Podemos verificar la creación del archivo, y los permisos del mismo (ejecuta <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>):</p>
+<p>El siguiente ejercicio nos permitira resolver varias dudas:</p>
+</div>
+<div class="section" id="creacion-de-un-archivo-con-consola">
+<h2>Creación de un archivo con consola<a class="headerlink" href="#creacion-de-un-archivo-con-consola" title="Permalink to this headline">¶</a></h2>
+<p>En el directorio base crearemos una carpeta de prueba y en esta escribiremos un archivo de texto llamado <code class="docutils literal notranslate"><span class="pre">testfile.txt</span></code> que contendrá la información de ganancias de los tres primeros días del mes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>día ganancia                                               
+01  $5000                                                   
+02  $8000                                                   
+03  $9000   
+
+</pre></div>
+</div>
+<p>Apliquemos lo que estudiamos la clase anterior y pensemos en una serie de pasos que permita realizar esa tarea:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 141.40%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="1414" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61899ad1607edd0d489c209f" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Es decir,</p>
+<ol class="simple">
+<li><p>Verificamos si estamos en el directorio base con <code class="docutils literal notranslate"><span class="pre">pwd</span></code>.</p></li>
+<li><p>Si estamos en el directorio correcto creamos la carpeta prueba ingresando en la consola <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">prueba</span></code>, si no ejecutamos <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span> </code> y llegamos al directorio base.</p></li>
+<li><p>Ingresamos a la carpeta prueba ejecutando <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">prueba</span></code>.</p></li>
+<li><p>Una vez dentro de nuestra carpeta de prueba, vamos a crear un archivo y lo modificaremos desde la consola, esto lo haremos con el comando <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">testfile.txt</span></code>.</p></li>
+<li><p>Lo anterior abre un editor de texto plano, en el cual podemos ingresar la siguiente información:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>día ganancia                                               
+01  $5000                                                   
+02  $8000                                                   
+03  $9000   
+
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Luego de registrar la información, para guardar el archivo <code class="docutils literal notranslate"><span class="pre">CTR+X</span></code> y luego <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Para verificar la creación del archivo, recuerda usar el comando <code class="docutils literal notranslate"><span class="pre">ls</span></code>, o si quieres ver la carpeta con tu GUI.</p></li>
+</ol>
+</div>
+<div class="section" id="cambiar-archivos">
+<h2>Cambiar archivos<a class="headerlink" href="#cambiar-archivos" title="Permalink to this headline">¶</a></h2>
+<p><strong>PERMISOS</strong></p>
+<p>Del ejercicio anterior podemos verificar la creación del archivo, y los permisos del mismo (ejecuta <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>):</p>
 <p><code class="docutils literal notranslate"><span class="pre">-rwxrwxrwx</span> <span class="pre">1</span> <span class="pre">root</span> <span class="pre">root</span> <span class="pre">4</span> <span class="pre">Jul</span> <span class="pre">21</span> <span class="pre">11:58</span> <span class="pre">testfile.txt</span></code></p>
 <p>Es decir, el archivo que creamos tiene todos los permisos, para todos los usuarios. Si queremos modificar esto, empleamos el comando <code class="docutils literal notranslate"><span class="pre">chmod</span></code>, ten presente su sintáxis: <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">'a_quien_da_o_quita_permiso''signo''permiso'</span> <span class="pre">'nombre_del_archivo'</span> </code></p>
 <p>A quien da o quita el permiso: <code class="docutils literal notranslate"><span class="pre">u</span></code>: usuario;<code class="docutils literal notranslate"><span class="pre">g</span></code>: grupo; <code class="docutils literal notranslate"><span class="pre">o</span></code>: otros; <code class="docutils literal notranslate"><span class="pre">a</span></code>: todos.</p>
@@ -321,6 +465,7 @@ nos lleva a la carpeta de “arriba”, mientras que <code class="docutils liter
 <p>Permisos: <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">w</span></code> y <code class="docutils literal notranslate"><span class="pre">x</span></code> como antes.</p>
 <p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">o-w</span> <span class="pre">testfile.txt</span></code></p>
 <p>Le quita el permiso de escribir a los demás.</p>
+<p><strong>MODIFICAR ARCHIVOS</strong></p>
 <p><strong>Para cambiar el nombre de un archivo</strong>, el comando <code class="docutils literal notranslate"><span class="pre">mv</span></code> (<em>move</em>) nos permite realizar esta acción, <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">testfile.txt</span> <span class="pre">arprueba.txt</span></code>.</p>
 <p><strong>Para hacer una copia del archivo</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cp</span></code> (<em>copy</em>), por ejemplo, <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">arprueba.txt</span> <span class="pre">f1.txt</span></code></p>
 <p><strong>Para ver el contenido de un archivo</strong>, empleamos el comando <code class="docutils literal notranslate"><span class="pre">cat</span></code>, <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">f1.txt</span></code> debe mostrar el contenido que ingresamos en el primer archivo.</p>
@@ -369,6 +514,8 @@ nos lleva a la carpeta de “arriba”, mientras que <code class="docutils liter
 <p>Para buscar los archivos que han cambiado durante las últimas <span class="math notranslate nohighlight">\(n\times 24\)</span> horas, empleamos el comando <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">n</span></code>, donde <span class="math notranslate nohighlight">\(n\)</span> representa los mismos tiempos de <strong>-atime</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-ctime</span> <span class="pre">0</span></code></p>
 <p>Si queremos ver el historial de nuestra consola de comandos, podemos emplear el comando <code class="docutils literal notranslate"><span class="pre">history</span></code>.</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -404,7 +551,7 @@ nos lleva a la carpeta de “arriba”, mientras que <code class="docutils liter
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Programación I</p>
+                <p class="prevnext-title">Introducción a la programación</p>
             </div>
         </a>
     </div>

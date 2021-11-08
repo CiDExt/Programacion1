@@ -20,9 +20,9 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 input('texto que aparece, aclarando la entrada que se pretende modificar: ')
 ------------------
 
-[0;31m-------------------------------------------------------------------[0m
-[0;31mStdinNotImplementedError[0m          Traceback (most recent call last)
-[0;32m/tmp/ipykernel_17759/1007239876.py[0m in [0;36m<module>[0;34m[0m
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m/tmp/ipykernel_34613/1007239876.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0minput[0m[0;34m([0m[0;34m'texto que aparece, aclarando la entrada que se pretende modificar: '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;32m~/miniconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m

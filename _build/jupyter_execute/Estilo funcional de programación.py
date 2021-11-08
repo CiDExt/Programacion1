@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Estilo funcional de programación
+# # Estilo funcional de programación
 
 # En los casos en los cuales nuestras funciones tengan una gran cantidad de tareas para abordar, lo mejor es distribuir éstas en diferentes funciones, para que así podamos identificar los fallos en alguna parte del código de manera más eficiente y también para hacer mucho más fácil la lectura del código para otros e incluso para nosotros mismos.
 
