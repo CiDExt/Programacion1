@@ -1,4 +1,4 @@
-## Comandos básicos de git - Proyecto 1 - Mi primera página
+# Mi primera página
 
 A continuación hacemos una revisión de los comandos más elemenetales de git haciendo un recorrido por las diferentes secciones de Git e incluyendo una nueva zona que corresponde al repositorio en la nube (remoto).
 
