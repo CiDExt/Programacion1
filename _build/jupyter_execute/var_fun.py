@@ -3,6 +3,7 @@
 
 # # Variables y funciones básicas
 
+# Inicio
 # Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.
 # 
 # Los tipos son escalares o no escalares. Los objetos escalares son los elementos indivisibles, mientras que, los objetos no escalares, son aquellos con estructura interna.
