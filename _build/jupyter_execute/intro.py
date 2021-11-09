@@ -2,24 +2,23 @@
 # coding: utf-8
 
 # # Introducción a la programación
-# **Pregrado - Ciencia de Datos**
-# ***Universidad Externado de Colombia***
 # 
-# *Miguel Angel Rippe Espinoza* 
-# [miguel.rippe@uexternado.edu.co](mailto:miguel.rippe@uexternado.edu.co)
+# 
+# *Miguel Angel Rippe Espinosa* 
+# [marippee@unal.edu.co](mailto:marippee@unal.edu.co)
 # 
 # *Carlos Isaac Zainea Maya* 
-# [carlos.zainea@uexternado.edu.co](mailto:carlos.zainea@uexternado.edu.co)
+# [cizaineam@gmail.com](mailto:cizaineam@gmail.com)
 # 
 # Quizás los grandes avances que ha tenido la ciencia hasta estos días no se hubieran alcanzado sin las computadoras, una idea que empezó a tener forma a eso de 1936 cuando Alan Turing en su mente formalizaba la idea de algoritmo y creaba una máquina hipotética que representaba la posibilidad del cálculo mecánico, posteriormente en EE.UU., Alemania e Inglaterra se crearon dichas máquinas de computo  inspirados en esta idea (los primeros computadores). 
 # 
 
-# |**Primera computadora creada por IBM 1944**|
-# |:--|
-# |[![Harvard Mark I Computer - Right Segment.JPG](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harvard_Mark_I_Computer_-_Right_Segment.JPG/1200px-Harvard_Mark_I_Computer_-_Right_Segment.JPG)](https://commons.wikimedia.org/wiki/File:Harvard_Mark_I_Computer_-_Right_Segment.JPG#/media/Archivo:Harvard_Mark_I_Computer_-_Right_Segment.JPG)|
-# |[Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)|
-# |[Enlace Wikipedia](https://commons.wikimedia.org/w/index.php?curid=601387)|
-# 
+# **Primera computadora creada por IBM 1944**
+# ***
+# [![Harvard Mark I Computer - Right Segment.JPG](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harvard_Mark_I_Computer_-_Right_Segment.JPG/1200px-Harvard_Mark_I_Computer_-_Right_Segment.JPG)](https://commons.wikimedia.org/wiki/File:Harvard_Mark_I_Computer_-_Right_Segment.JPG#/media/Archivo:Harvard_Mark_I_Computer_-_Right_Segment.JPG)  
+# [Creative Commons Attribution-Share Alike 3.0](http://creativecommons.org/licenses/by-sa/3.0/)  
+# [Enlace Wikipedia](https://commons.wikimedia.org/w/index.php?curid=601387)
+# ***
 
 # Sin embargo, el acceso a esas máquinas requerían un lenguaje muy diferente al que estamos acostumbrados, era necesario un alto grado de formalidad y crear instrucciones capaces de reconocer, sin ambigüedades, las ordenes que le proponemos a la máquina, en ese sentido, la comunicación con la dicha máquina de computo se convirtió en el problema de los programadores y hasta hoy se constituye como el reto de hacer que las máquinas hagan los trabajos por nosotros. El día de hoy iniciaremos ese camino para enseñarle al computador, aprenderemos ese lenguaje libre de ambigüedades y nos especializaremos en la creación de algoritmos, uno de los eslabones entre el hombre y la máquina.
 # 
@@ -35,12 +34,12 @@
 # 
 # Dejamos la palabra soluciones resaltada porque hay una gran cantidad de tareas que se pueden enmarcar como una solución y debemos ser cuidadosos porque las soluciones aquí planteadas deben llevarse a cabo por computadores. Por ejemplo, si la solución es buscar la paz mundial seguramente no habrá una máquina que pueda llevarla a cabo y un programador que sea capaz de desarrollar una solución a esa tarea...¿o no?
 
-# |  |
-# |:--|
-# |[![Ultron2013.jpg](https://upload.wikimedia.org/wikipedia/en/4/4f/Ultron2013.jpg)](https://en.wikipedia.org/wiki/File:Ultron2013.jpg#/media/File:Ultron2013.jpg)|
-# |*Ultron*|
-# |[Fair use of copyrighted material in the context of Ultron](https:///en.wikipedia.org/wiki/File:Ultron2013.jpg)|
-# |[Enlace Wikipedia](https://en.wikipedia.org/w/index.php?curid=40339454)|
+# ***
+# [![Ultron2013.jpg](https://upload.wikimedia.org/wikipedia/en/4/4f/Ultron2013.jpg)](https://en.wikipedia.org/wiki/File:Ultron2013.jpg#/media/File:Ultron2013.jpg)  
+# *Ultron*  
+# [Fair use of copyrighted material in the context of Ultron](https:///en.wikipedia.org/wiki/File:Ultron2013.jpg)  
+# [Enlace Wikipedia](https://en.wikipedia.org/w/index.php?curid=40339454)
+# ***
 # 
 # 
 

@@ -3,6 +3,48 @@
 
 # # Variables y funciones básicas
 
+# :::::{important} ¿Cómo vamos?
+# 
+# 
+# Hasta el momento debemos tener claro lo siguiente:
+# 
+# 
+# ````{tabbed} ¿Qué hace un programador?
+# 
+# :::{warning} 
+# 
+# **La respuesta es sencilla**
+# 
+# Convertir **soluciones** en instrucciones que pueda seguir un computador
+# :::
+# 
+# se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución. Usamos herramientas de representación de los algoritmos: pseudocódigo o diagramas de flujo, que permiten resumir los pasos de un proceso.
+# 
+# ````
+# 
+# ````{tabbed} Consola bash
+# 
+# Ya pudimos establecer comunicación directa con la máquina a traves la consola, pudimos crear, mover y modificar archivos. Usamos un algoritmo muy simple para crear un nuevo texto e interactuamos con la consola para descubrir todas las propiedades de sus archivos y directorios.
+# 
+# ````
+# 
+# 
+# ````{tabbed} Página en github
+# 
+# Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.
+# 
+# ````
+# 
+# 
+# ````{tabbed} Jupyter
+# 
+# Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.
+# 
+# ````
+# :::::
+# 
+# 
+
 # Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.
 # 
 # Los tipos son escalares o no escalares. Los objetos escalares son los elementos indivisibles, mientras que, los objetos no escalares, son aquellos con estructura interna.

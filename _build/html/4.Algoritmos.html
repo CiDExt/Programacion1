@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algoritmos, Python y Jupyter &#8212; Programación 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Variables y funciones básicas" href="5.Variables.html" />
+    <link rel="prev" title="Mi primera página" href="3.Github2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programación 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introducción a la programación
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Consola.html">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Github2.html">
+   Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/4.Algoritmos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F4.Algoritmos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/4.Algoritmos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritmos">
+   Algoritmos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudo-codigo">
+     Pseudo-código
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramas-de-flujo">
+     Diagramas de flujo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python">
+   Python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrucciones-de-instalacion-y-uso-de-jupyter">
+     Instrucciones de instalación y uso de Jupyter
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#salidas-de-texto">
+     Salidas de texto
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-de-listas">
+     Creación de listas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#links-e-imagenes">
+     Links e imágenes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-de-encabezados-en-el-documento">
+     Creación de encabezados en el documento
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="algoritmos-python-y-jupyter">
+<h1>Algoritmos, Python y Jupyter<a class="headerlink" href="#algoritmos-python-y-jupyter" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Cómo vamos?</p>
+<p>Hasta el momento debemos tener claro lo siguiente:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="7dbd4cf1-a200-40e5-b629-338f9f4bc878" name="5cf03f72-d965-49a1-a635-be4645ffc6ed" type="radio">
+</input><label class="tabbed-label" for="7dbd4cf1-a200-40e5-b629-338f9f4bc878">
+¿Qué hace un programador?</label><div class="tabbed-content docutils">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>La respuesta es sencilla</strong></p>
+<p>Convertir <strong>soluciones</strong> en instrucciones que pueda seguir un computador</p>
+</div>
+<p>se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución.</p>
+</div>
+</div>
+</div>
+<p>Estudiaremos hoy herramientas que me permiten diagramar o representar los algoritmos y hablaremos un poco del lenguaje de programnación que estudiaremos hoy. También de Jupyter, el aplicativo web en el que trabajaremos nuestros cuadernos y documentaremos nuestras experiencias.</p>
+<div class="section" id="algoritmos">
+<h2>Algoritmos<a class="headerlink" href="#algoritmos" title="Permalink to this headline">¶</a></h2>
+<p>Aunque nos hemos referido a los algoritmos y hemos citados algunos ejemplos, se ha dicho que no se dará una definición formal, sin embargo, vale la pena mencionar diferentes herramientas que utilizaremos en este curso para tener claro los pasos que se llevarán a cabo antes de empezar a codificar. Hablaremos de pseudocódigo y diagramas de flujo.</p>
+<div class="section" id="pseudo-codigo">
+<h3>Pseudo-código<a class="headerlink" href="#pseudo-codigo" title="Permalink to this headline">¶</a></h3>
+<p>Se trata de una descripción de un algoritmo de una manera plana y compacta. Utiliza diversas normas y reglas estructurales de un lenguaje de programación pero se escribe en lenguaje natural. Particularmente en español resulta bastante útil puesto que la mayoría de lenguajes se escriben en inglés, en ese caso podríamos entenderlo como la traducción apropiada de un código al lenguaje natural.</p>
+<p><strong>Ejemplos de pseudocódigo</strong></p>
+<p>En el estudio de bash creamos un algoritmo para crear un nuevo archivo, el pseudocódigo que equivale a esa acción es el siguiente:</p>
+<div class="proof algorithm admonition" id="Crear un archivo">
+<p class="admonition-title"><span class="caption-number">Algorithm 1 </span> (Crear un archivo)</p>
+<div class="algorithm-content section" id="proof-content">
+<p><strong>Input</strong> La información a guardar:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">día ganancia                                               </span>
+<span class="go">01  $5000                                                   </span>
+<span class="go">02  $8000                                                   </span>
+<span class="go">03  $9000   </span>
+</pre></div>
+</div>
+<p><strong>Output</strong> Archivo testfile.txt con esa información</p>
+<ol class="simple">
+<li><p>Identificar carpeta de trabajo</p></li>
+<li><p>Si estamos en el directorio,
+crear carpeta prueba;<br />
+si no,
+dirigirse al directorio base y crear la carpeta de prueba.</p></li>
+<li><p>Ingresar a la carpeta prueba.</p></li>
+<li><p>Crear testfile.txt.</p></li>
+<li><p>Ingresar la siguiente información en  testfile.txt</p></li>
+<li><p><strong>Guardar y salir</strong></p></li>
+</ol>
+</div>
+</div><p>Como se puede apreciar, se ha descrito detalladamente el ejercicio de esa sección pero no se ha mencionado ningún lenguaje de programación, ni la sintáxis de la consola. En este caso, el algoritmo se puede presentar libre del lenguaje y basta con una sucesión clara, ordenada y detallada del proceso que soluciona nuestro problema.</p>
+<p>Usaremos esta estructura constantemente para describir algunas soluciones para los ejercicios propuestos de este curso.</p>
+</div>
+<div class="section" id="diagramas-de-flujo">
+<h3>Diagramas de flujo<a class="headerlink" href="#diagramas-de-flujo" title="Permalink to this headline">¶</a></h3>
+<p>Esta es una representación gráfica de un procedimiento o de un algoritmo. Se utiliza en diversas ramas y no solo para progamación de computadores, verás estos diagramas en asignación de actividades, descripción de procesos, investigación de operaciones, entre otros.</p>
+<p>Dicho diagrama sigue unas convenciones para cada node del grafo, dicho nodo expresa una situación o concepto y se mueve de acuerdo a las flechas del diagrama, veamos las convenciones:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="bba65deb-3052-4a00-aee2-f440c6981736" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="bba65deb-3052-4a00-aee2-f440c6981736">
+Línea de flujo</label><div class="tabbed-content docutils">
+<p><img alt="flecha" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Flowchart_Line.svg/100px-Flowchart_Line.svg.png" /></p>
+<p>Indica la dirección del flujo.</p>
+</div>
+<input id="ef2e3e7d-a268-4970-a0d9-f52e57702bee" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="ef2e3e7d-a268-4970-a0d9-f52e57702bee">
+Terminal</label><div class="tabbed-content docutils">
+<p><img alt="terminal" src="https://support.content.office.net/es-es/media/022c8ba9-01e8-4fd1-9967-170e82450352.gif" /></p>
+<p>Indica el inicio o final del proceso.</p>
+</div>
+<input id="af88dba2-df3f-4879-9c76-b1e293c8e135" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="af88dba2-df3f-4879-9c76-b1e293c8e135">
+Proceso</label><div class="tabbed-content docutils">
+<p><img alt="proceso" src="https://support.content.office.net/es-es/media/0f129ef2-5081-4d99-98b1-e288211dbd0d.gif" /></p>
+<p>Representa un paso del proceso en el que se cambian valores, formas o ubicaciones de datos. Se entiende como un paso típico del procedimiento.</p>
+</div>
+<input id="5d7ab90f-5d76-424d-af7d-854c29f4eb95" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="5d7ab90f-5d76-424d-af7d-854c29f4eb95">
+Decisión</label><div class="tabbed-content docutils">
+<p><img alt="decisión" src="https://support.content.office.net/es-es/media/d4c68a25-77e1-43eb-be3c-9a5ea2b75d8b.gif" /></p>
+<p>Hace referencia a una parte del proceso en el que se pueden tomar varios cáminos. Por ejemplo si se evalúa una condición generalmente la respuesta es sí o no.</p>
+</div>
+<input id="7807809d-5601-411d-8c60-c63746154235" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="7807809d-5601-411d-8c60-c63746154235">
+Documento</label><div class="tabbed-content docutils">
+<p><img alt="decisión" src="https://support.content.office.net/es-es/media/908189d1-3723-4671-8a75-da38f163e608.gif" /></p>
+<p>Hace referencia a una parte del proceso en el que se obtiene un documento como salida.</p>
+</div>
+<input id="05623171-3659-48f7-a6a3-49f8d7a1119c" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="05623171-3659-48f7-a6a3-49f8d7a1119c">
+Datos</label><div class="tabbed-content docutils">
+<p><img alt="datos" src="https://support.content.office.net/es-es/media/5036f7e8-c5c5-4cf1-a927-9b6593ae7640.gif" /></p>
+<p>Indica que entra o sale algo del proceso (datos, materiales, etc.)</p>
+</div>
+<input id="8b050c47-26a4-4cbe-aba3-c8671e8e227f" name="f578e80a-42bd-4e3e-b4e8-6ecb2e04940a" type="radio">
+</input><label class="tabbed-label" for="8b050c47-26a4-4cbe-aba3-c8671e8e227f">
+Referencia</label><div class="tabbed-content docutils">
+<p><img alt="Referencia" src="https://support.content.office.net/es-es/media/dc191c39-e01f-474c-8c81-1230e60e3a07.gif" /></p>
+<p>Indica que un paso siguiente (o anterior) que se encuentra en otra parte del dibujo. Se usa cuando tenemos diagramas bien complejos.</p>
+</div>
+</div>
+<p>Para el ejercicio anterior usamos un diagrama de flujo, verifica que dicho diagrama corresponde con las convenciones del diagrama:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 141.40%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="1414" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61899ad1607edd0d489c209f" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div></div>
+</div>
+<div class="section" id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Python es un lenguaje multiparadigma y de alto nivel cuya filosofia se sustenta en la sencillez de código. Resulta ser uno de los lenguajes más flexibles de la actualidad en el que se destacan sus usos en:</p>
+<ul class="simple">
+<li><p>Desarrollo web en servidores,</p></li>
+<li><p>Desarrollo de Software,</p></li>
+<li><p>Cálculos Matemáticos,</p></li>
+<li><p>Desarrollo de Scripts.</p></li>
+</ul>
+<p>Por ser de código abierto es gratuito y funciona en diferentes plataformas (Windows, Mac, Linux, etc). Resulta tener una sintaxis simple, similar al idioma inglés, ha aumentado su popularidad desde hace pocos años y hoy es el lenguaje de mayor crecimiento y más consultado en el mundo. Permite crear programas en muy pocas líneas, respecto a otros lenguajes de programación.</p>
+<p>Pyhton se ejecuta en un sistema interpretado. Es decir, que los códigos se pueden correr justo después de ser escritos; en otras palabras, no necesitan compilación previa. Se puede usar como un lenguaje clásico, como un lenguaje orientado a objetos, o como un lenguaje funcional. Es el principal lenguaje de la Ciencia de Datos. De hecho, uno de los complementos especiales de Python para los científicos de datos es Jupyter, una aplicación web que permite crear cuadernos interactivos: documentos web editados con texto enriquecido y celdas de ejecución de código.</p>
+<p>La posibilidad de ejecutar código y texto en un mismo documento nos permitirá definir algoritmos y explicarlos de manera adecuada, procesar datos y visualizar resultados inmediatamente, establecer una documentación adecuada de los procedimientos y recursos que usamos, entre otros.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Ver también</p>
+<p><img alt="Python logo" src="https://www.python.org/static/community_logos/python-logo.png" /> <a class="reference external" href="https://www.python.org/">Python </a></p>
+</div>
+<div class="section" id="instrucciones-de-instalacion-y-uso-de-jupyter">
+<h3>Instrucciones de instalación y uso de Jupyter<a class="headerlink" href="#instrucciones-de-instalacion-y-uso-de-jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Sigue los siguientes pasos para instalar jupyter en tu pc:</p>
+<ol class="simple">
+<li><p>Descargar Anaconda de (<a class="reference external" href="https://www.anaconda.com/distribution/">https://www.anaconda.com/distribution/</a>), verifica que la descarga corresponda a Python 3.7 y a las condiciones específicas de tu equipo (Windows x64, Windows x32, macOS o Linux)</p></li>
+<li><p>Despúes de instalar Anaconda abrelo y lanza el aplicativo de Jupyter:</p></li>
+</ol>
+<img src="https://raw.githubusercontent.com/Izainea/MCG2/master/AnacondaOpen.png" width="720" >
+<ol class="simple">
+<li><p>Jupyter abrirá una pestaña de tu navegador predeterminado, verás algo así:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterOpen.png?raw=true" width="720" >
+<ol class="simple">
+<li><p>En el boton NEW puedes crear un archivo nuevo en Python 3:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterNew.png?raw=true" width="320" >
+<ol class="simple">
+<li><p>Veras un panel como el siguiente, selecciona en la casilla tipo de celda selecciona Markdown, para titular el cuaderno que vas a crear, tambien puedes oprimir [Esc]+[M]:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterCode.png?raw=true" width="720" >
+<ol class="simple">
+<li><p>Después de cambiar el tipo de celda usa el formato Markdown para hacer encabezados del documento, escribes <em><strong># Título</strong></em> para el encabezado principal y <em><strong>## Subtítulo</strong></em> para el encabezado secundario:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterFirstCell.png?raw=true" width="720" >
+<ol class="simple">
+<li><p>Después de escribir oprimes [Shift]+[Enter] para ejecutar la celda y visualizar el resultado final de tu escrito, obtienes:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterFirstCell2.png?raw=true" width="720" >
+<ol class="simple">
+<li><p>Finalmente, para terminar este ejercicio haremos una operación muy simple para verificar el buen funcionamiento del programa, escribimos en la siguiente celda 5+8 y ejecutamos nuevamente con [Shift]+[Enter]:</p></li>
+</ol>
+<img src="https://github.com/Izainea/MCG2/blob/master/jupyterFirstRun.png?raw=true" width="720" ></div>
+</div>
+<div class="section" id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<p>Markdown es un lenguaje de marcado ligero escrito por John Gruber (<a class="reference external" href="https://daringfireball.net/projects/markdown/">https://daringfireball.net/projects/markdown/</a>) que permite convertir texto plano en HTML. Aunque suene muy complicado es un lenguaje muy senciullo de utilizar y está inspirado en la forma de escritura de los correos electrónicos.</p>
+<p>Veremos a continuación algunas convenciones sencillas de este lenguaje y las aplicaremos en nuestro cuaderno guía:</p>
+<img src="https://www.math.ubc.ca/~pwalls/math-python/img/jupyter/markdown.gif">
+*Tomado de: (https://www.math.ubc.ca/~pwalls/math-python/jupyter/markdown/)*<div class="section" id="salidas-de-texto">
+<h3>Salidas de texto<a class="headerlink" href="#salidas-de-texto" title="Permalink to this headline">¶</a></h3>
+<p>En la siguiente tabla resumimos algunas convenciones importantes para la escritura de documentos en Markdown:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><strong>Escrituta en Celda</strong></p></th>
+<th class="text-align:center head"><p><strong>Salida</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">Escritura</span> <span class="pre">normal</span></code></p></td>
+<td class="text-align:center"><p>Escritura normal</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">*énfasis*</span></code></p></td>
+<td class="text-align:center"><p><em>énfasis</em></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">**</span> <span class="pre">texto</span> <span class="pre">fuerte</span> <span class="pre">**</span></code></p></td>
+<td class="text-align:center"><p>** texto fuerte **</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">código</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">código</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="creacion-de-listas">
+<h3>Creación de listas<a class="headerlink" href="#creacion-de-listas" title="Permalink to this headline">¶</a></h3>
+<p>Tambien podemos crear listas, tanto numeradas como no numeradas:</p>
+<p><strong>Numeradas</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     ``` 
+     1. Primer elemento
+         1. Primero del primero
+     2. Segundo elemento
+     3. Tercer elemento
+     ```
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Primer elemento</p>
+<ol class="simple">
+<li><p>Primero del primero</p></li>
+</ol>
+</li>
+<li><p>Segundo elemento</p></li>
+<li><p>Tercer elemento</p></li>
+</ol>
+<p><strong>NO Numeradas</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>      ``` 
+    * Primer elemento
+        *otro elemento
+    * Segundo elemento
+    * Tercer elemento
+     ```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Primer elemento</p>
+<ul>
+<li><p>otro elemento</p></li>
+</ul>
+</li>
+<li><p>Segundo elemento</p></li>
+<li><p>Tercer elemento</p></li>
+</ul>
+</div>
+<div class="section" id="links-e-imagenes">
+<h3>Links e imágenes<a class="headerlink" href="#links-e-imagenes" title="Permalink to this headline">¶</a></h3>
+<p>Finalmente, usando este lenguaje también podemos conectar links y visualizar imágenes:</p>
+<p><strong>Links</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">[Universidad</span> <span class="pre">Externado]</span> <span class="pre">(https://www.uexternado.edu.co/)</span></code></p>
+<p><a class="reference external" href="https://www.uexternado.edu.co/">Universidad Externado</a></p>
+<p><strong>Imágenes</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">![Jupyter</span> <span class="pre">logo](http://jupyter.org/assets/nav_logo.svg)</span></code></p>
+<p><img alt="Jupyter logo" src="http://jupyter.org/assets/nav_logo.svg" /></p>
+</div>
+<div class="section" id="creacion-de-encabezados-en-el-documento">
+<h3>Creación de encabezados en el documento<a class="headerlink" href="#creacion-de-encabezados-en-el-documento" title="Permalink to this headline">¶</a></h3>
+<p>Es muy útil seccionar el documento por capítulos, subcapítulos, secciones, subsecciones, entre otros. A continuación, visualizamos las formas de crear encabezados en cuadernos de jupyter:</p>
+<ul class="simple">
+<li><p><strong>Encabezado 1</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Encabezado</span> <span class="pre">1</span></code></p></li>
+<li><p><strong>Encabezado 2</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">##</span> <span class="pre">Encabezado</span> <span class="pre">2</span></code></p></li>
+<li><p><strong>Encabezado 3</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">###</span> <span class="pre">Encabezado</span> <span class="pre">3</span></code></p></li>
+<li><p><strong>Encabezado 4</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">####</span> <span class="pre">Encabezado</span> <span class="pre">4</span></code></p></li>
+<li><p><strong>Encabezado 5</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">#####</span> <span class="pre">Encabezado</span> <span class="pre">5</span></code></p></li>
+<li><p><strong>Encabezado 6</strong>
+Escribimos: <code class="docutils literal notranslate"><span class="pre">######</span> <span class="pre">Encabezado</span> <span class="pre">6</span></code></p></li>
+</ul>
+<div class="seealso admonition">
+<p class="admonition-title">Ver también</p>
+<p><img alt="Jupyter logo" src="http://jupyter.org/assets/nav_logo.svg" /> <a class="reference external" href="https://jupyter.org/">Proyecto Jupyter</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Estudiamos la forma de represntar algoritmos utilizando lenguaje natural o diagramas. También conocimos a Python y el aplicativo web que nos permitira correr el código en ese lenguaje: Jupyter.</p>
+<p>Como Jupyter tiene dos tipos de celda, las de código que usaremos de aquí en adelante para ejecutar nuestros códigos de programación y las de texto, que permiten documentar de manera especial nuestros algoritmos, empezamos con la sintáxis de las celdas de texto que se conoce como lenguaje Markdown o texto enriquecido. Usaremos estas herramientas para crear cuadernos elegantes, claros y explicativos.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="3.Github2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Mi primera página</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="5.Variables.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Variables y funciones básicas</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
