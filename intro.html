@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -51,7 +52,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Buscar, borrar y mover archivos en CLI" href="Consola.html" />
+    <link rel="next" title="Buscar, borrar y mover archivos en CLI" href="1.Consola.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,18 +95,28 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Consola.html">
+  <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="github1.html">
+  <a class="reference internal" href="2.Github1.html">
    Controlador de versiones
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="github2.html">
+  <a class="reference internal" href="3.Github2.html">
    Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Algoritmos.html">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
   </a>
  </li>
 </ul>
@@ -240,27 +251,17 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="introduccion-a-la-programacion">
 <h1>Introducción a la programación<a class="headerlink" href="#introduccion-a-la-programacion" title="Permalink to this headline">¶</a></h1>
-<p><strong>Pregrado - Ciencia de Datos</strong>
-<em><strong>Universidad Externado de Colombia</strong></em></p>
-<p><em>Miguel Angel Rippe Espinoza</em>
-<a class="reference external" href="mailto:miguel&#46;rippe&#37;&#52;&#48;uexternado&#46;edu&#46;co">miguel<span>&#46;</span>rippe<span>&#64;</span>uexternado<span>&#46;</span>edu<span>&#46;</span>co</a></p>
+<p><em>Miguel Angel Rippe Espinosa</em>
+<a class="reference external" href="mailto:marippee&#37;&#52;&#48;unal&#46;edu&#46;co">marippee<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p>
 <p><em>Carlos Isaac Zainea Maya</em>
-<a class="reference external" href="mailto:carlos&#46;zainea&#37;&#52;&#48;uexternado&#46;edu&#46;co">carlos<span>&#46;</span>zainea<span>&#64;</span>uexternado<span>&#46;</span>edu<span>&#46;</span>co</a></p>
+<a class="reference external" href="mailto:cizaineam&#37;&#52;&#48;gmail&#46;com">cizaineam<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>Quizás los grandes avances que ha tenido la ciencia hasta estos días no se hubieran alcanzado sin las computadoras, una idea que empezó a tener forma a eso de 1936 cuando Alan Turing en su mente formalizaba la idea de algoritmo y creaba una máquina hipotética que representaba la posibilidad del cálculo mecánico, posteriormente en EE.UU., Alemania e Inglaterra se crearon dichas máquinas de computo  inspirados en esta idea (los primeros computadores).</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p><strong>Primera computadora creada por IBM 1944</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Harvard_Mark_I_Computer_-_Right_Segment.JPG#/media/Archivo:Harvard_Mark_I_Computer_-_Right_Segment.JPG"><img alt="Harvard Mark I Computer - Right Segment.JPG" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harvard_Mark_I_Computer_-_Right_Segment.JPG/1200px-Harvard_Mark_I_Computer_-_Right_Segment.JPG" /></a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=601387">Enlace Wikipedia</a></p></td>
-</tr>
-</tbody>
-</table>
+<p><strong>Primera computadora creada por IBM 1944</strong></p>
+<hr class="docutils" />
+<p><a class="reference external" href="https://commons.wikimedia.org/wiki/File:Harvard_Mark_I_Computer_-_Right_Segment.JPG#/media/Archivo:Harvard_Mark_I_Computer_-_Right_Segment.JPG"><img alt="Harvard Mark I Computer - Right Segment.JPG" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harvard_Mark_I_Computer_-_Right_Segment.JPG/1200px-Harvard_Mark_I_Computer_-_Right_Segment.JPG" /></a><br />
+<a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a><br />
+<a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=601387">Enlace Wikipedia</a></p>
+<hr class="docutils" />
 <p>Sin embargo, el acceso a esas máquinas requerían un lenguaje muy diferente al que estamos acostumbrados, era necesario un alto grado de formalidad y crear instrucciones capaces de reconocer, sin ambigüedades, las ordenes que le proponemos a la máquina, en ese sentido, la comunicación con la dicha máquina de computo se convirtió en el problema de los programadores y hasta hoy se constituye como el reto de hacer que las máquinas hagan los trabajos por nosotros. El día de hoy iniciaremos ese camino para enseñarle al computador, aprenderemos ese lenguaje libre de ambigüedades y nos especializaremos en la creación de algoritmos, uno de los eslabones entre el hombre y la máquina.</p>
 <p><strong>¡Bienvenidos a su curso de programación!</strong></p>
 <div class="section" id="que-hace-un-programador">
@@ -270,22 +271,12 @@
 <p><em>Convertir <strong>soluciones</strong> en instrucciones que pueda seguir un computador</em></p>
 <hr class="docutils" />
 <p>Dejamos la palabra soluciones resaltada porque hay una gran cantidad de tareas que se pueden enmarcar como una solución y debemos ser cuidadosos porque las soluciones aquí planteadas deben llevarse a cabo por computadores. Por ejemplo, si la solución es buscar la paz mundial seguramente no habrá una máquina que pueda llevarla a cabo y un programador que sea capaz de desarrollar una solución a esa tarea…¿o no?</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="text-align:left head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https://en.wikipedia.org/wiki/File:Ultron2013.jpg#/media/File:Ultron2013.jpg"><img alt="Ultron2013.jpg" src="https://upload.wikimedia.org/wikipedia/en/4/4f/Ultron2013.jpg" /></a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><em>Ultron</em></p></td>
-</tr>
-<tr class="row-even"><td class="text-align:left"><p><a class="reference external" href="https:///en.wikipedia.org/wiki/File:Ultron2013.jpg">Fair use of copyrighted material in the context of Ultron</a></p></td>
-</tr>
-<tr class="row-odd"><td class="text-align:left"><p><a class="reference external" href="https://en.wikipedia.org/w/index.php?curid=40339454">Enlace Wikipedia</a></p></td>
-</tr>
-</tbody>
-</table>
+<hr class="docutils" />
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/File:Ultron2013.jpg#/media/File:Ultron2013.jpg"><img alt="Ultron2013.jpg" src="https://upload.wikimedia.org/wikipedia/en/4/4f/Ultron2013.jpg" /></a><br />
+<em>Ultron</em><br />
+<a class="reference external" href="https:///en.wikipedia.org/wiki/File:Ultron2013.jpg">Fair use of copyrighted material in the context of Ultron</a><br />
+<a class="reference external" href="https://en.wikipedia.org/w/index.php?curid=40339454">Enlace Wikipedia</a></p>
+<hr class="docutils" />
 <p>Volviendo al tema, esas soluciones son planteadas como una sucesión de reglas bien escritas y sin ningún tipo de ambigüedades. Las conocemos como algoritmos (que de aquí en adelante serán nuestro principal objeto de estudio) y los describiremos, principalmente, en el lenguaje de programación Python, sin embargo iniciaremos con ejemplos de la vida diaria, porque esos algoritmos son más empleados de lo que ustedes creen.</p>
 </div>
 <div class="section" id="algoritmos-entre-nosotros">
@@ -352,7 +343,7 @@
 <div class='prev-next-bottom'>
     
      <div id="next">
-        <a class="right-next" href="Consola.html" title="next page">
+        <a class="right-next" href="1.Consola.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
                 <p class="prevnext-title">Buscar, borrar y mover archivos en CLI</p>

@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -53,8 +54,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Condicionales (if)" href="if.html" />
-    <link rel="prev" title="Mi primera página" href="github2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,7 +94,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -111,19 +110,9 @@
    Mi primera página
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Variables y funciones básicas
-  </a>
- </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="if.html">
-   Condicionales (if)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="while.html">
-   While
+  <a class="reference internal" href="Algoritmos.html">
+   Algoritmos, Python y Jupyter
   </a>
  </li>
 </ul>
@@ -235,6 +224,38 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="variables-y-funciones-basicas">
 <h1>Variables y funciones básicas<a class="headerlink" href="#variables-y-funciones-basicas" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Cómo vamos?</p>
+<p>Hasta el momento debemos tener claro lo siguiente:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f44bb255-798d-4bf1-bea6-c1c55a77a4fe" name="f1129ad5-e9c2-4cfc-a7a0-38cbaa80493e" type="radio">
+</input><label class="tabbed-label" for="f44bb255-798d-4bf1-bea6-c1c55a77a4fe">
+¿Qué hace un programador?</label><div class="tabbed-content docutils">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>La respuesta es sencilla</strong></p>
+<p>Convertir <strong>soluciones</strong> en instrucciones que pueda seguir un computador</p>
+</div>
+<p>se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución. Usamos herramientas de representación de los algoritmos: pseudocódigo o diagramas de flujo, que permiten resumir los pasos de un proceso.</p>
+</div>
+<input id="2954ab15-d3f5-42a6-9c61-5786e030d541" name="f1129ad5-e9c2-4cfc-a7a0-38cbaa80493e" type="radio">
+</input><label class="tabbed-label" for="2954ab15-d3f5-42a6-9c61-5786e030d541">
+Consola bash</label><div class="tabbed-content docutils">
+<p>Ya pudimos establecer comunicación directa con la máquina a traves la consola, pudimos crear, mover y modificar archivos. Usamos un algoritmo muy simple para crear un nuevo texto e interactuamos con la consola para descubrir todas las propiedades de sus archivos y directorios.</p>
+</div>
+<input id="cc6e95ac-b0f9-4e15-b609-469efd67f31c" name="f1129ad5-e9c2-4cfc-a7a0-38cbaa80493e" type="radio">
+</input><label class="tabbed-label" for="cc6e95ac-b0f9-4e15-b609-469efd67f31c">
+Página en github</label><div class="tabbed-content docutils">
+<p>Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.</p>
+</div>
+<input id="08149df4-b28b-4dec-aae6-05987464bbd6" name="f1129ad5-e9c2-4cfc-a7a0-38cbaa80493e" type="radio">
+</input><label class="tabbed-label" for="08149df4-b28b-4dec-aae6-05987464bbd6">
+Jupyter</label><div class="tabbed-content docutils">
+<p>Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.</p>
+</div>
+</div>
+</div>
 <p>Los objetos son los elementos principales que manipulan los programas de Python. Cada objeto tiene definido su tipo y esto permite saber las cosas que los programas pueden hacer con dicho objeto.</p>
 <p>Los tipos son escalares o no escalares. Los objetos escalares son los elementos indivisibles, mientras que, los objetos no escalares, son aquellos con estructura interna.</p>
 <p>Los objetos escalares en Python son los siguientes:</p>
@@ -650,7 +671,7 @@ Si lo queremos volver float:
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_37675</span><span class="o">/</span><span class="mf">1007239876.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_55591</span><span class="o">/</span><span class="mf">1007239876.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;texto que aparece, aclarando la entrada que se pretende modificar: &#39;</span><span class="p">)</span>
 
 <span class="nn">~/miniconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
@@ -749,24 +770,6 @@ O tal vez, sea mejor la notación científica: 7.00e+06
 
 <div class='prev-next-bottom'>
     
-    <div id="prev">
-        <a class="left-prev" href="github2.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Mi primera página</p>
-            </div>
-        </a>
-    </div>
-     <div id="next">
-        <a class="right-next" href="if.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Condicionales (if)</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         
