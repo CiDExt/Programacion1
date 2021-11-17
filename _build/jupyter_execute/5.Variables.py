@@ -41,6 +41,7 @@
 # 
 # 
 # ````{tabbed} Jupyter
+# 
 # :::{admonition} Recordemos...
 # :class: tip
 # Seguimos un tutorial para instalar Anaconda y así usar jupyter. Entendimos que tiene dos tipos de celdas: código y texto, y estudiamos el lenguaje Markdown para poder enriquecer el texto de nuestras celdas de código.

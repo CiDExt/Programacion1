@@ -20,18 +20,18 @@
 # :::
 # 
 # se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución.
-# 
 # ````
 # 
 # ````{tabbed} Consola bash
+# 
 # :::{admonition} Recordemos...
 # :class: tip
 # Ya pudimos establecer comunicación directa con la máquina a traves la consola, pudimos crear, mover y modificar archivos. Usamos un algoritmo muy simple para crear un nuevo texto e interactuamos con la consola para descubrir todas las propiedades de sus archivos y directorios.
 # :::
 # ````
 # 
+# ````{tabbed} Consola bash
 # 
-# ````{tabbed} Página en github
 # :::{admonition} Recordemos...
 # :class: tip
 # Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.
