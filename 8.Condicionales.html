@@ -54,6 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Intermezzo - Paradigmas de programación" href="7.Paradigmas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,7 +95,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -118,6 +119,21 @@
  <li class="toctree-l1">
   <a class="reference internal" href="5.Variables.html">
    Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Listas%20y%20Tuplas.html">
+   Listas (introducción)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7.Paradigmas.html">
+   Intermezzo - Paradigmas de programación
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Condicionales (if)
   </a>
  </li>
 </ul>
@@ -161,7 +177,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/if.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/8.Condicionales.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -181,7 +197,7 @@
                 data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
                     class="fab fa-github"></i>repositorio</button></a>
         <a class="issues-button"
-            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2Fif.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F8.Condicionales.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
         
@@ -202,7 +218,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/if.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/8.Condicionales.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -225,6 +241,37 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programacion-estructurada">
+   Programación estructurada
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condicional-basico-if">
+   Condicional básico
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condicional-de-la-forma-if-else">
+   Condicional de la forma
+   <strong>
+    if … else:
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condicional-if-elif">
+   Condicional
+   <strong>
+    if…elif…
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ejercicios">
    Ejercicios
   </a>
@@ -242,31 +289,74 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="condicionales-if">
 <h1>Condicionales (if)<a class="headerlink" href="#condicionales-if" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Cómo vamos?</p>
+<p>Hasta el momento debemos tener claro lo siguiente:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="9ae6e97b-67b4-4874-b035-663d578e483a" name="8a2a9148-a4c7-443b-97ba-abf9c0e98060" type="radio">
+</input><label class="tabbed-label" for="9ae6e97b-67b4-4874-b035-663d578e483a">
+Paradigmas de Programación</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
+</div>
+</div>
+<input id="b2272043-e777-4997-9074-cf2d2296a974" name="8a2a9148-a4c7-443b-97ba-abf9c0e98060" type="radio">
+</input><label class="tabbed-label" for="b2272043-e777-4997-9074-cf2d2296a974">
+Variables</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Una variable en Python sirve para <strong>guardar un valor específico</strong>, ya sea <strong>numérico</strong>, <strong>texto</strong> u otro <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp"><strong>Tipo de Dato</strong></a> con un nombre que nosotros escojamos. Debemos escribir una expresión de la forma:</p>
+<p>[Nombre de variable]=[Valor para guardar]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="programacion-estructurada">
+<h2>Programación estructurada<a class="headerlink" href="#programacion-estructurada" title="Permalink to this headline">¶</a></h2>
+<p>Volviendo al teorema del programa estructurado o <a class="reference external" href="https://en.wikipedia.org/wiki/Structured_program_theorem">teorema de Böhm–Jacopini</a> sabemos que toda función computable se puede implementar utilizando tres estructuras lógicas que permiten modificar el orden de ejecución del programa. A dichas estructuras las llamamos  <strong>estructuras de control</strong> y  corresponden a las siguientes:</p>
+<p><em>Secuencia:</em>  Que se entiende como la posibilidad de ejecutar una instrucción tras otra.
+<em>Selección:</em> Que ejecuta dos o más secuencias acorde al valor de una expresión booleana.
+<em>Iteración:</em> Que ejecuta una serie de instrucciones mientras una variable booleana es verdadera.</p>
+<p>Claramente la secuenciación de un programa indica que hay un orden para ejecutar las instrucciones, estudiaremos entonces las estructuras de seleccción, iniciando con la más sencilla de todas: <strong>el condicional</strong>.</p>
+</div>
+<div class="section" id="condicional-basico-if">
+<h2>Condicional básico <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#condicional-basico-if" title="Permalink to this headline">¶</a></h2>
 <p>El <code class="docutils literal notranslate"><span class="pre">if</span></code> se utiliza para evaluar expresiones condicionales, si cierta condición se satisface, se ejecuta un determinado bloque de código, y en caso de no satisfacer la condición puede que ejecute otro bloque de código, evalúe otra condición o simplemente no haga nada. Nosotros abordaremos todos los casos, pero debemos hacerlo desde el caso más sencillo:</p>
-<p>Si se cumple cierta condición, ejecute un bloque de código, si no se cumple no haga nada.</p>
-<p>Como debemos verificar la validez o no de una condición, la condición que ingresemos debe arrojar como resultado una variable booleana (<code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
-<p>La estructura es la siguiente:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span>
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
-    
-    <span class="n">instrucción</span> <span class="n">n</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Si</span> <span class="n">se</span> <span class="n">cumple</span> <span class="n">cierta</span> <span class="n">condición</span><span class="p">,</span> <span class="n">ejecute</span> <span class="n">un</span> <span class="n">bloque</span> <span class="n">de</span> <span class="n">código</span><span class="p">,</span> <span class="n">si</span> <span class="n">no</span> <span class="n">se</span> <span class="n">cumple</span> <span class="n">no</span> <span class="n">haga</span> <span class="n">nada</span><span class="o">.</span>
 </pre></div>
 </div>
+<p>Como debemos verificar la validez o no de una condición, la condición que ingresemos debe arrojar como resultado una variable booleana (<code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>La estructura es la siguiente:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span>
+    <span class="n">instrucción</span> <span class="mi">1</span>
+    <span class="n">instrucción</span> <span class="mi">2</span>  
+    <span class="o">...</span>
+    <span class="n">instrucción</span> <span class="n">n</span> 
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Importante</p>
+<p>En la estructura anterior <code class="docutils literal notranslate"><span class="pre">condición</span></code> hace referencia a una sentencia booleana, cuyos resultados pueden ser verdadero (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o falso (<code class="docutils literal notranslate"><span class="pre">False</span></code>). Tengalo en cuenta siempre que establezca igualdad, donde la sintáxis correcta es <code class="docutils literal notranslate"><span class="pre">x==y</span></code>y no <code class="docutils literal notranslate"><span class="pre">x=y</span></code>.</p>
+<p>Otro elemento importante es que en esta estructura de control aparece una característica destacada de Python, es la identación, como ven las instrucciones que se ejecutan después de validar la condición se escriben en una sangría a la derecha. Una identación equivocada puede llevar a un error de sintáxis por identación. No hay problema en la sintáxis sino que se manejaron mal los espacios. Ver los ejemplos siguientes.</p>
+</div>
+<p>Veamos que ocurre cuando la condición es verdadera:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadera&#39;</span><span class="p">)</span>
     
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor de verdad de la condición es verdadero
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor de verdad de la condición es verdadera
 </pre></div>
 </div>
 </div>
 </div>
+<p>Cuando no es así:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
@@ -276,88 +366,174 @@
 </div>
 </div>
 <p>note que en el bloque de código anterior no hubo respuesta alguna, esto ocurre porque la condición es falsa.</p>
-<p><strong>if … else:</strong></p>
-<p>Este es el segundo caso que podemos tener en un <code class="docutils literal notranslate"><span class="pre">if</span></code>, y es: verifique una condición, si se cumple ejecute un bloque de código, si no se cumple, ejecute otrobloque de código.</p>
-<p>Su estructura es la siguiente:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span>
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
-    
-    <span class="n">instrucción</span> <span class="n">n</span>
+<p>Veamos que ocurre si no respetamos la identación:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_136496/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aquí tenemos error porque no hay sangría después de los dos puntos que delimitan el final de la condición.</p>
+<p>Finalmente, comprobemos como actúa la sangría en la ejecución de instrucciones según el valor de verdad de la condición:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta instrucción se ejecuta si la condición es verdadera...&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta también...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta instrucción se ejecuta por fuera del condicional.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta instrucción se ejecuta si la condición es verdadera...
+Esta también...
+
+Esta se ejecuta por fuera del condicional.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">False</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta instrucción se ejecuta si la condición es verdadera...&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta también...</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta instrucción se ejecuta por fuera del condicional.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta instrucción se ejecuta por fuera del condicional.
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejemplo</strong></p>
+<p>Diseñe un algoritmo que identifique si es de día, necesitará determinar la hora actual y saber que diremos que es de dia si la hora está entre las 6:00am y las 6:00pm. Para obtener la hora actual use del modulo <code class="docutils literal notranslate"><span class="pre">datetime</span></code> en el paquete <code class="docutils literal notranslate"><span class="pre">datetime</span></code> el método <code class="docutils literal notranslate"><span class="pre">now</span></code> como sigue:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">Ahora</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">Ahora</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime.datetime(2021, 11, 16, 23, 23, 10, 966343)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esa instancia que acabo de obtener le puede dar la hora usando:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title"><strong>Solución</strong></p>
+<p>Una solución simple puede ser:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">Ahora</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">Ahora</span>
+<span class="k">if</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;</span><span class="mi">18</span> <span class="ow">or</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;=</span><span class="mi">6</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Es de día&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="condicional-de-la-forma-if-else">
+<h2>Condicional de la forma <strong>if … else:</strong><a class="headerlink" href="#condicional-de-la-forma-if-else" title="Permalink to this headline">¶</a></h2>
+<p>Este es el segundo caso en el que podemos tener en un <code class="docutils literal notranslate"><span class="pre">if</span></code>, la estructura de selección hace lo siguiente verifica una condición, si se cumple ejecuta un bloque de código, si no se cumple, ejecuta otro bloque de código.</p>
+<p>Su esquema es el siguiente:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span>
+    <span class="n">instrucción_positiva</span> <span class="mi">1</span>
+    <span class="n">instrucción_positiva</span> <span class="mi">2</span>
+    <span class="o">...</span>
+    <span class="n">instrucción_positiva</span> <span class="n">n</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
-    
-    <span class="n">instrucción</span> <span class="n">m</span>
+    <span class="n">instrucción_negativa</span> <span class="mi">1</span>
+    <span class="n">instrucción_negativa</span> <span class="mi">2</span>
+    <span class="o">...</span>
+    <span class="n">instrucción_negativa</span> <span class="n">m</span>
 </pre></div>
 </div>
 <p>Ahora verificaremos si un número que nosotros digitemos es positivo o no:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escribe el número que deseas verificar: &#39;</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+<p>El condicional debe tener una estructura como sigue:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61948c5ec121b10d88a24d1d" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><div class="tip dropdown admonition">
+<p class="admonition-title"><strong>Programa Simple</strong></p>
+<p>Identificar si el número ingresado es positivo:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escriba un número entero: &#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número es positivo&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número no es positivo&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_38475</span><span class="o">/</span><span class="mf">2299777728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número es positivo&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El número no es positivo&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;n&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
 <p>Para verificar si un número dado es par o no, podemos utilizar el siguiente bloque de código:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="k">if</span> <span class="n">m</span><span class="o">%</span><span class="k">2</span>==0:
+<div class="tip dropdown admonition">
+<p class="admonition-title"><strong>Programa Simple</strong></p>
+<p>Identificar si el número ingresado es positivo:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escriba un número entero: &#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">m</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:1d}</span><span class="s1"> es par&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:1d}</span><span class="s1"> es impar&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 es par
-</pre></div>
 </div>
-</div>
-</div>
-<p><strong>if … elif:</strong></p>
-<p>El tercer caso, es el siguiente:
-si se cumple cierta condición ejecute cierto bloque de código, sino, verifica otra condición si se cumple ejecuta otro bloque de código y si no se cumplen las condiciones anteriores, ejecute otro bloque de cpodigo.</p>
+<div class="section" id="condicional-if-elif">
+<h2>Condicional <strong>if…elif…</strong><a class="headerlink" href="#condicional-if-elif" title="Permalink to this headline">¶</a></h2>
+<p>El tercer caso, es el siguiente: si se cumple cierta condición ejecute cierto bloque de código, sino, verifica otra condición si se cumple ejecuta otro bloque de código y si no se cumplen las condiciones anteriores, ejecute otro bloque de código.</p>
 <p>Su estructura es la siguiente:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición1</span><span class="p">):</span>
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición1</span><span class="p">):</span>
+    <span class="n">instrucción_1</span> <span class="mi">1</span>
+    <span class="n">instrucción_1</span> <span class="mi">2</span>
+    <span class="o">...</span>
+    <span class="n">instrucción_1</span> <span class="n">n_1</span>
     
-    <span class="n">instrucción</span> <span class="n">n</span>
 <span class="k">elif</span> <span class="p">(</span><span class="n">condición2</span><span class="p">):</span>
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
-    
-    <span class="n">instrucción</span> <span class="n">m</span>
+    <span class="n">instrucción_2</span> <span class="mi">1</span>
+    <span class="n">instrucción_2</span> <span class="mi">2</span>
+    <span class="o">...</span>
+    <span class="n">instrucción_2</span> <span class="n">n_2</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">condición3</span><span class="p">):</span>
+    <span class="n">instrucción_3</span> <span class="mi">1</span>
+    <span class="n">instrucción_3</span> <span class="mi">2</span>
+    <span class="o">...</span>
+    <span class="n">instrucción_3</span> <span class="n">n_3</span>
+<span class="o">...</span>
 <span class="k">else</span> 
-    <span class="n">instrucción</span> <span class="mi">1</span>
-    <span class="n">instrucción</span> <span class="mi">2</span>
+    <span class="n">instrucción_m</span> <span class="mi">1</span>
+    <span class="n">instrucción_m</span> <span class="mi">2</span>
     
-    <span class="n">instrucción</span> <span class="n">l</span>
+    <span class="n">instrucción_m</span> <span class="n">n_m</span>
 </pre></div>
 </div>
-<p>Pero si deseamos verificar si el número es positivo negativo o cero,</p>
-<div class="cell docutils container">
+<p>Contamos con más opciones:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61948e24726a1e0dcf416eaa" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">if</span> <span class="n">k</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
@@ -397,6 +573,7 @@ si se cumple cierta condición ejecute cierto bloque de código, sino, verifica 
 </div>
 <p><strong>Nota:</strong></p>
 <p>Podemos anidar múltiples <code class="docutils literal notranslate"><span class="pre">elif</span></code>, dependiendo de la cantidad de condiciones que necesitemos imponer.</p>
+</div>
 <div class="section" id="ejercicios">
 <h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
 <p>Una materia se evaluó con 5 notas con los siguientes porcentajes: <em>Nota 1:</em> <span class="math notranslate nohighlight">\(10%\)</span>, <em>Nota 2:</em> <span class="math notranslate nohighlight">\(15%\)</span>, <em>Nota 3:</em> <span class="math notranslate nohighlight">\(20%\)</span>, <em>Nota 4:</em> <span class="math notranslate nohighlight">\(25%\)</span> y <em>Nota 5:</em> <span class="math notranslate nohighlight">\(30%\)</span>.</p>
@@ -473,6 +650,15 @@ si se cumple cierta condición ejecute cierto bloque de código, sino, verifica 
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="7.Paradigmas.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Intermezzo - Paradigmas de programación</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
