@@ -272,6 +272,31 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sintaxis-de-una-linea">
+   Sintáxis de una línea
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operador-ternario">
+   Operador ternario
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dejemoslo-pasar-con-pass">
+   Dejemoslo pasar con
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Pass
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ejercicios">
    Ejercicios
   </a>
@@ -294,16 +319,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9ae6e97b-67b4-4874-b035-663d578e483a" name="8a2a9148-a4c7-443b-97ba-abf9c0e98060" type="radio">
-</input><label class="tabbed-label" for="9ae6e97b-67b4-4874-b035-663d578e483a">
+<input checked="checked" id="fa6b226a-ab53-4e97-8153-ea93657a3b7b" name="128f855d-3b74-49fc-be74-79a25d725960" type="radio">
+</input><label class="tabbed-label" for="fa6b226a-ab53-4e97-8153-ea93657a3b7b">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="b2272043-e777-4997-9074-cf2d2296a974" name="8a2a9148-a4c7-443b-97ba-abf9c0e98060" type="radio">
-</input><label class="tabbed-label" for="b2272043-e777-4997-9074-cf2d2296a974">
+<input id="69422db5-1204-47e9-bd3d-f4a2bd28a04c" name="128f855d-3b74-49fc-be74-79a25d725960" type="radio">
+</input><label class="tabbed-label" for="69422db5-1204-47e9-bd3d-f4a2bd28a04c">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -375,7 +400,7 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_136496/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_8289/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: expected an indented block
@@ -418,6 +443,8 @@ Esta se ejecuta por fuera del condicional.
 </div>
 </div>
 </div>
+<p>Esta imagen tomada de <a class="reference external" href="https://realpython.com/">Real Python</a> no puede ser más aclaradora:</p>
+<p><img alt="if" src="https://files.realpython.com/media/t.78f3bacaa261.png" /></p>
 <p><strong>Ejemplo</strong></p>
 <p>Diseñe un algoritmo que identifique si es de día, necesitará determinar la hora actual y saber que diremos que es de dia si la hora está entre las 6:00am y las 6:00pm. Para obtener la hora actual use del modulo <code class="docutils literal notranslate"><span class="pre">datetime</span></code> en el paquete <code class="docutils literal notranslate"><span class="pre">datetime</span></code> el método <code class="docutils literal notranslate"><span class="pre">now</span></code> como sigue:</p>
 <div class="cell docutils container">
@@ -456,6 +483,37 @@ Esta se ejecuta por fuera del condicional.
 <span class="k">if</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;</span><span class="mi">18</span> <span class="ow">or</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;=</span><span class="mi">6</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Es de día&#39;</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<p>Dentro de cada bloque en el que se ejucuta un codicional se puede incluir otro. Lo podemos hacer a una profundidad arbitrária y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ¿Esta linea se ejecuta?                                   SÍ    NO</span>
+<span class="c1">#                                                          ---   ---</span>
+<span class="k">if</span> <span class="s1">&#39;foo&#39;</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">]:</span>                       <span class="c1">#  x</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vale la condición &quot;externa&quot;&#39;</span><span class="p">)</span>                 <span class="c1">#  x</span>
+
+    <span class="k">if</span> <span class="mi">10</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>                                          <span class="c1">#  x</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No vale la condición &quot;interna&quot; 1&#39;</span><span class="p">)</span>        <span class="c1">#        x</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Una sentencia que depende del primer if&#39;</span><span class="p">)</span>     <span class="c1">#  x</span>
+
+    <span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>                                          <span class="c1">#  x</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Si vale la condición &quot;interna&quot; 2&#39;</span><span class="p">)</span>        <span class="c1">#  x</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Una sentencia que depende del primer if&#39;</span><span class="p">)</span>     <span class="c1">#  x</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Una sentencia independiente&#39;</span><span class="p">)</span>                     <span class="c1">#  x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vale la condición &quot;externa&quot;
+Una sentencia que depende del primer if
+Si vale la condición &quot;interna&quot; 2
+Una sentencia que depende del primer if
+Una sentencia independiente
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -573,6 +631,196 @@ Esta se ejecuta por fuera del condicional.
 </div>
 <p><strong>Nota:</strong></p>
 <p>Podemos anidar múltiples <code class="docutils literal notranslate"><span class="pre">elif</span></code>, dependiendo de la cantidad de condiciones que necesitemos imponer.</p>
+</div>
+<div class="section" id="sintaxis-de-una-linea">
+<h2>Sintáxis de una línea<a class="headerlink" href="#sintaxis-de-una-linea" title="Permalink to this headline">¶</a></h2>
+<p>En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exagerdas definidas como bloques con una indentación adecuada,</p>
+<p>Afortunadamente Python admite que nosotros pongamos condicionales en una línea, escribimos lo siguiente:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span> <span class="n">instrucción_1</span><span class="p">;</span> <span class="n">instrucción_2</span><span class="p">;</span> <span class="o">...</span><span class="p">;</span><span class="n">instrucción_n</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es menor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de una línea&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 es menor que 100
+Esta es una sentencia condicional de una línea
+</pre></div>
+</div>
+</div>
+</div>
+<p>El punto y coma que separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es mayor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de una línea&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los bloques que dependen de <code class="docutils literal notranslate"><span class="pre">else</span></code>, y <code class="docutils literal notranslate"><span class="pre">elif</span></code> se dejan en líneas aparte:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición_1</span><span class="p">):</span> <span class="n">instrucción_1_1</span><span class="p">;</span> <span class="n">instrucción_1_2</span><span class="p">;</span> <span class="o">...</span><span class="p">;</span><span class="n">instrucción_1__n</span><span class="p">;</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">condición_2</span><span class="p">):</span> <span class="n">instrucción_2_1</span><span class="p">;</span> <span class="n">instrucción_2_2</span><span class="p">;</span> <span class="o">...</span><span class="p">;</span><span class="n">instrucción_2_m</span><span class="p">;</span>
+<span class="k">else</span> <span class="p">(</span><span class="n">condición_3</span><span class="p">):</span> <span class="n">instrucción_3_1</span><span class="p">;</span> <span class="n">instrucción_3_2</span><span class="p">;</span> <span class="o">...</span><span class="p">;</span><span class="n">instrucción_3_k</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es mayor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea if&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">20</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es menor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea elif&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es igual que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea else&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 es menor que 100
+Esta es una sentencia condicional de la línea elif
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es menor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea if&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">20</span><span class="o">==</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es igual que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea elif&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es mayor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea else&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 es menor que 100
+Esta es una sentencia condicional de la línea if
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es mayor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea if&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">20</span><span class="o">==</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es igual que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea elif&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es menor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de la línea else&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20 es menor que 100
+Esta es una sentencia condicional de la línea else
+</pre></div>
+</div>
+</div>
+</div>
+<p>Usar esta sintáxis no es tan agradable a la vista como la clásica, pero podría ser funcional para condicionales simples.</p>
+</div>
+<div class="section" id="operador-ternario">
+<h2>Operador ternario<a class="headerlink" href="#operador-ternario" title="Permalink to this headline">¶</a></h2>
+<p>Uno de los elementos interesantes de Python es que permite sugerencias de los usuarios para mejorar su sintáxis en pro de tener una mejora del lenguaje. La documentación de estas mejoras se puede encontrar en los <a class="reference external" href="https://www.python.org/dev/peps/">índices PEP</a> de la página oficial. Entre ellos hay una que se hizo a los condicionales con el fin de introducir el <a class="reference external" href="https://es.wikipedia.org/wiki/Operador_ternario">operador ternario</a> de otros lenguajes como C, Java o Perl.</p>
+<p>En este operador la idea es tomar tres argumentos: (condicion; valor si la condicion es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos esta se expresaba así:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>expresión boleana ? valor si cierto : valor si falso
+
+</pre></div>
+</div>
+<p>En Python, la sintaxis es:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">valor_si_cierto</span> <span class="k">if</span> <span class="n">condición</span> <span class="k">else</span> <span class="n">valor_si_falso</span>
+</pre></div>
+</div>
+<p>Veamos un ejemplo en el cual asignaremos <code class="docutils literal notranslate"><span class="pre">Pasó</span></code> si la nota es mayor o igual que 3 y <code class="docutils literal notranslate"><span class="pre">Perdió</span></code> si la nota es menor que 3:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nota</span><span class="o">=</span><span class="mf">2.5</span>
+<span class="s1">&#39;Pasó&#39;</span> <span class="k">if</span> <span class="n">nota</span><span class="o">&gt;</span><span class="mi">3</span> <span class="k">else</span> <span class="s1">&#39;Perdió&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Perdió&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nota</span><span class="o">=</span><span class="mf">4.5</span>
+<span class="s1">&#39;Pasó&#39;</span> <span class="k">if</span> <span class="n">nota</span><span class="o">&gt;</span><span class="mi">3</span> <span class="k">else</span> <span class="s1">&#39;Perdió&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Paso&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ese resultado lo podemos asignar a una variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nota</span><span class="o">=</span><span class="mf">4.5</span>
+<span class="n">res</span><span class="o">=</span><span class="s1">&#39;Pasó&#39;</span> <span class="k">if</span> <span class="n">nota</span><span class="o">&gt;</span><span class="mi">3</span> <span class="k">else</span> <span class="s1">&#39;Perdió&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;En esta nota usted: &#39;</span><span class="o">+</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>En esta nota usted: Pasó
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dejemoslo-pasar-con-pass">
+<h2>Dejemoslo pasar con <code class="docutils literal notranslate"><span class="pre">Pass</span></code><a class="headerlink" href="#dejemoslo-pasar-con-pass" title="Permalink to this headline">¶</a></h2>
+<p>Hay veces en que usamos un condicional pero no tenemos que hacer nada, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">5</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No hago nada&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 es mayor que 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No hago nada
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aunque imprimi <code class="docutils literal notranslate"><span class="pre">NO</span> <span class="pre">hago</span> <span class="pre">nada</span></code>sí estoy haciendo algo <strong>imprimir <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">hago</span> <span class="pre">nada</span></code></strong> para resolver este lío podríamos no escribir nada, así:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">5</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 es mayor que 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_5348/2099162262.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+    <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pero la indentación me lo cobra caro.  Este problema lo arreglamos con <code class="docutils literal notranslate"><span class="pre">pass</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">5</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+    <span class="k">pass</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 es mayor que 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Y aquí de verdad que no hicimos nada.</p>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones.</p>
 </div>
 <div class="section" id="ejercicios">
 <h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>

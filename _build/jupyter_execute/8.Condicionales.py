@@ -122,6 +122,10 @@ if False:
 print('Esta instrucción se ejecuta por fuera del condicional.')
 
 
+# Esta imagen tomada de [Real Python](https://realpython.com/) no puede ser más aclaradora:
+# 
+# ![if](https://files.realpython.com/media/t.78f3bacaa261.png)
+
 # **Ejemplo**
 # 
 # Diseñe un algoritmo que identifique si es de día, necesitará determinar la hora actual y saber que diremos que es de dia si la hora está entre las 6:00am y las 6:00pm. Para obtener la hora actual use del modulo `datetime` en el paquete `datetime` el método `now` como sigue:
@@ -156,6 +160,28 @@ Ahora.hour
 # ```
 # 
 # ::::
+
+# Dentro de cada bloque en el que se ejucuta un codicional se puede incluir otro. Lo podemos hacer a una profundidad arbitrária y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional. 
+
+# In[2]:
+
+
+# ¿Esta linea se ejecuta?                                   SÍ    NO
+#                                                          ---   ---
+if 'foo' in ['foo', 'bar', 'baz']:                       #  x
+    print('Vale la condición "externa"')                 #  x
+
+    if 10 > 20:                                          #  x
+        print('No vale la condición "interna" 1')        #        x
+
+    print('Una sentencia que depende del primer if')     #  x
+
+    if 10 < 20:                                          #  x
+        print('Si vale la condición "interna" 2')        #  x
+
+    print('Una sentencia que depende del primer if')     #  x
+print('Una sentencia independiente')                     #  x
+
 
 # ## Condicional de la forma **if ... else:**
 
@@ -284,6 +310,150 @@ else:
 # **Nota:**
 #     
 # Podemos anidar múltiples `elif`, dependiendo de la cantidad de condiciones que necesitemos imponer.
+
+# ## Sintáxis de una línea
+# 
+# En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exagerdas definidas como bloques con una indentación adecuada, 
+# 
+# Afortunadamente Python admite que nosotros pongamos condicionales en una línea, escribimos lo siguiente:
+# 
+# 
+# ```Python
+# if (condición): instrucción_1; instrucción_2; ...;instrucción_n
+# 
+# ```
+
+# In[2]:
+
+
+if 20<100: print('20 es menor que 100'); print('Esta es una sentencia condicional de una línea')
+
+
+# El punto y coma que separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.
+
+# In[3]:
+
+
+if 20>100: print('20 es mayor que 100'); print('Esta es una sentencia condicional de una línea')
+
+
+# Los bloques que dependen de `else`, y `elif` se dejan en líneas aparte:
+# ```Python
+# if (condición_1): instrucción_1_1; instrucción_1_2; ...;instrucción_1__n;
+# elif (condición_2): instrucción_2_1; instrucción_2_2; ...;instrucción_2_m;
+# else (condición_3): instrucción_3_1; instrucción_3_2; ...;instrucción_3_k;
+# ```
+
+# In[5]:
+
+
+if 20>100: print('20 es mayor que 100'); print('Esta es una sentencia condicional de la línea if')
+elif 20<100: print('20 es menor que 100'); print('Esta es una sentencia condicional de la línea elif')
+else: print('20 es igual que 100'); print('Esta es una sentencia condicional de la línea else')
+
+
+# In[6]:
+
+
+if 20<100: print('20 es menor que 100'); print('Esta es una sentencia condicional de la línea if')
+elif 20==100: print('20 es igual que 100'); print('Esta es una sentencia condicional de la línea elif')
+else: print('20 es mayor que 100'); print('Esta es una sentencia condicional de la línea else')
+
+
+# In[7]:
+
+
+if 20>100: print('20 es mayor que 100'); print('Esta es una sentencia condicional de la línea if')
+elif 20==100: print('20 es igual que 100'); print('Esta es una sentencia condicional de la línea elif')
+else: print('20 es menor que 100'); print('Esta es una sentencia condicional de la línea else')
+
+
+# Usar esta sintáxis no es tan agradable a la vista como la clásica, pero podría ser funcional para condicionales simples.
+
+# ## Operador ternario
+# 
+# Uno de los elementos interesantes de Python es que permite sugerencias de los usuarios para mejorar su sintáxis en pro de tener una mejora del lenguaje. La documentación de estas mejoras se puede encontrar en los [índices PEP](https://www.python.org/dev/peps/) de la página oficial. Entre ellos hay una que se hizo a los condicionales con el fin de introducir el [operador ternario](https://es.wikipedia.org/wiki/Operador_ternario) de otros lenguajes como C, Java o Perl.
+# 
+# En este operador la idea es tomar tres argumentos: (condicion; valor si la condicion es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos esta se expresaba así:
+# 
+# ```
+# expresión boleana ? valor si cierto : valor si falso
+# 
+# ```
+# 
+# En Python, la sintaxis es:
+# 
+# ```Python
+# valor_si_cierto if condición else valor_si_falso
+# ```
+
+# Veamos un ejemplo en el cual asignaremos `Pasó` si la nota es mayor o igual que 3 y `Perdió` si la nota es menor que 3:
+
+# In[3]:
+
+
+nota=2.5
+'Pasó' if nota>3 else 'Perdió'
+
+
+# In[4]:
+
+
+nota=4.5
+'Pasó' if nota>3 else 'Perdió'
+
+
+# Ese resultado lo podemos asignar a una variable:
+
+# In[7]:
+
+
+nota=4.5
+res='Pasó' if nota>3 else 'Perdió'
+
+print('En esta nota usted: '+res)
+
+
+# ## Dejemoslo pasar con `Pass`
+# 
+# Hay veces en que usamos un condicional pero no tenemos que hacer nada, por ejemplo:
+# 
+
+# In[8]:
+
+
+if 5>1:
+    print('No hago nada')
+else:
+    print('5 es mayor que 1')
+
+
+# Aunque imprimi `NO hago nada`sí estoy haciendo algo **imprimir `No hago nada`** para resolver este lío podríamos no escribir nada, así:
+
+# In[9]:
+
+
+if 5>1:
+else:
+    print('5 es mayor que 1')
+
+
+# Pero la indentación me lo cobra caro.  Este problema lo arreglamos con `pass`:
+
+# In[10]:
+
+
+if 5>1:
+    pass
+else:
+    print('5 es mayor que 1')
+
+
+# Y aquí de verdad que no hicimos nada.
+
+# ## Cierre
+# 
+# Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones. 
 
 # ## Ejercicios
 # 
