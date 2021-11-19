@@ -137,6 +137,11 @@
    Condicionales (if)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9.%20Iteraci%C3%B3n%20y%20bucles.html">
+   Bucles (while)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -318,8 +323,8 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="fbce7749-f2c6-4be1-bb9f-15306acee58d" name="f934f7ab-b1e3-4333-82c1-633c32f3ddc7" type="radio">
-</input><label class="tabbed-label" for="fbce7749-f2c6-4be1-bb9f-15306acee58d">
+<input checked="checked" id="914c8ca4-7d43-47a1-b7bf-9bee9bd548aa" name="aaf6511f-c5f3-4add-a194-409277059799" type="radio">
+</input><label class="tabbed-label" for="914c8ca4-7d43-47a1-b7bf-9bee9bd548aa">
 ¿Qué hace un programador?</label><div class="tabbed-content docutils">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -328,24 +333,24 @@
 </div>
 <p>se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución. Usamos herramientas de representación de los algoritmos: pseudocódigo o diagramas de flujo, que permiten resumir los pasos de un proceso.</p>
 </div>
-<input id="302026f9-3dbf-4fa3-9a59-58611c75318c" name="f934f7ab-b1e3-4333-82c1-633c32f3ddc7" type="radio">
-</input><label class="tabbed-label" for="302026f9-3dbf-4fa3-9a59-58611c75318c">
+<input id="270e2485-5b39-48fc-8f60-e1b96a8735cb" name="aaf6511f-c5f3-4add-a194-409277059799" type="radio">
+</input><label class="tabbed-label" for="270e2485-5b39-48fc-8f60-e1b96a8735cb">
 Consola bash</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Ya pudimos establecer comunicación directa con la máquina a traves la consola, pudimos crear, mover y modificar archivos. Usamos un algoritmo muy simple para crear un nuevo texto e interactuamos con la consola para descubrir todas las propiedades de sus archivos y directorios.</p>
 </div>
 </div>
-<input id="8634e179-0547-4f3c-a2de-2e0ff3d776bc" name="f934f7ab-b1e3-4333-82c1-633c32f3ddc7" type="radio">
-</input><label class="tabbed-label" for="8634e179-0547-4f3c-a2de-2e0ff3d776bc">
+<input id="80ca9349-6104-47df-8821-e651699ba99b" name="aaf6511f-c5f3-4add-a194-409277059799" type="radio">
+</input><label class="tabbed-label" for="80ca9349-6104-47df-8821-e651699ba99b">
 Página en github</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.</p>
 </div>
 </div>
-<input id="3ccb92e7-baea-43ef-9af9-bbfb1248e872" name="f934f7ab-b1e3-4333-82c1-633c32f3ddc7" type="radio">
-</input><label class="tabbed-label" for="3ccb92e7-baea-43ef-9af9-bbfb1248e872">
+<input id="183ab4dd-f39e-4212-a775-482c4646a3dc" name="aaf6511f-c5f3-4add-a194-409277059799" type="radio">
+</input><label class="tabbed-label" for="183ab4dd-f39e-4212-a775-482c4646a3dc">
 Jupyter</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -652,7 +657,7 @@ x3 = 0.5
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_16285</span><span class="o">/</span><span class="mf">2966927032.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_27008</span><span class="o">/</span><span class="mf">2966927032.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">n</span> <span class="c1"># Variable sin asignar</span>
 
 <span class="ne">NameError</span>: name &#39;n&#39; is not defined
@@ -675,8 +680,8 @@ x3 = 0.5
 <p>El intérprete reproduce la línea responsable del error y muestra una pequeña “flecha” que apunta al lugar donde se detectó el error. El error ha sido provocado (o al menos detectado) en el elemento que precede a la flecha: en el ejemplo, el error se detecta en la línea 1 puesto que se llama a <code class="docutils literal notranslate"><span class="pre">n</span></code>, una variable sin asignar. También se muestran: el número de línea para que sepas dónde corregir y en la última línea se indica el tipo de error cometido. En este caso, como se comentó anteriormente, es una excepción provocada porque no hay una asignación previa a la variable <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </div>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d7549c33-3c6a-481e-bf66-b635a69bd4e6" name="89218255-78c0-41de-b108-ed3cc81a5db1" type="radio">
-</input><label class="tabbed-label" for="d7549c33-3c6a-481e-bf66-b635a69bd4e6">
+<input checked="checked" id="3b625d17-39da-401a-a3ad-22c061f8e164" name="fb1ef9cc-90c5-437e-89e0-4449174c23af" type="radio">
+</input><label class="tabbed-label" for="3b625d17-39da-401a-a3ad-22c061f8e164">
 Errores de sintaxis</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Mala interpretación</p>
@@ -689,8 +694,8 @@ Errores de sintaxis</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="62f0bd4b-e1be-4ed0-bfb2-a87501b32931" name="89218255-78c0-41de-b108-ed3cc81a5db1" type="radio">
-</input><label class="tabbed-label" for="62f0bd4b-e1be-4ed0-bfb2-a87501b32931">
+<input id="418e6b4b-2882-433e-80a6-914efb717e92" name="fb1ef9cc-90c5-437e-89e0-4449174c23af" type="radio">
+</input><label class="tabbed-label" for="418e6b4b-2882-433e-80a6-914efb717e92">
 Excepciones</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Problemas en la ejecución</p>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bucles &#8212; Programación 1</title>
+    <title>Bucles (while) &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Condicionales (if)" href="8.Condicionales.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,7 +93,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -131,6 +132,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="8.Condicionales.html">
    Condicionales (if)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bucles (while)
   </a>
  </li>
 </ul>
@@ -247,6 +253,34 @@
    Bucle while
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bucle-while-else">
+   Bucle
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while:...
+    </span>
+    <span class="pre">
+     else:...
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bucles-anidados">
+   Bucles anidados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bucles-de-una-linea">
+   Bucles de una línea
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -258,23 +292,23 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="bucles">
-<h1>Bucles<a class="headerlink" href="#bucles" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="bucles-while">
+<h1>Bucles (while)<a class="headerlink" href="#bucles-while" title="Permalink to this headline">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="133fb9c4-776c-4165-b3a2-4b98723ea47d" name="472e56e2-71a6-435d-9417-33305f36aa82" type="radio">
-</input><label class="tabbed-label" for="133fb9c4-776c-4165-b3a2-4b98723ea47d">
+<input checked="checked" id="3b6e45bf-709e-46c3-af53-8b43323ca949" name="a37d830e-14c3-4831-b648-cea8a8113132" type="radio">
+</input><label class="tabbed-label" for="3b6e45bf-709e-46c3-af53-8b43323ca949">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="5a59859d-570e-4409-9fbd-39df6f1a1e4f" name="472e56e2-71a6-435d-9417-33305f36aa82" type="radio">
-</input><label class="tabbed-label" for="5a59859d-570e-4409-9fbd-39df6f1a1e4f">
+<input id="9e1c49d8-5cdc-432a-ba4a-625fd3c6a8c2" name="a37d830e-14c3-4831-b648-cea8a8113132" type="radio">
+</input><label class="tabbed-label" for="9e1c49d8-5cdc-432a-ba4a-625fd3c6a8c2">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -349,11 +383,319 @@ Python es maravilloso
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python es maravilloso&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Si ejecutó estas instrucciones y su computador se quedó ejecutando entonces oprima [Ctrl]+[C] para cancelar la ejecución, si no el computador ejecutará la orden infinitamente.</p>
 <p>Python permite utilizar ordenes que pueden interrumpir los búcles:</p>
 <ul class="simple">
 <li><p><strong>break</strong>: Una sentencia de Python que termina inmediatamente un ciclo por completo. El programa procede a la primera instrucción que sigue después de <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p></li>
 <li><p><strong>continue</strong>: Una sentencia de Python que termina inmediatamente una iteración del ciclo. El programa procede a la primera instrucción que sigue después de <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p></li>
 </ul>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 116.67%; padding-top: 0; height: 0;"><iframe frameborder="0" width="600" height="700" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6197bf60b2eaa20dad025cd1" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">break</span>     
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle terminado.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+Bucle terminado.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">continue</span>     
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle terminado.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+3
+4
+5
+Bucle terminado.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bucle-while-else">
+<h2>Bucle <code class="docutils literal notranslate"><span class="pre">while:...</span>&#160; <span class="pre">else:...</span> </code><a class="headerlink" href="#bucle-while-else" title="Permalink to this headline">¶</a></h2>
+<p>Esta es una propiedad caracterpística de Python, permite mostrar un resultado si y solo si un bucle termina. Si el bucle no pudo terminar no se mostrará:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle terminado&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+Bucle terminado
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle roto&#39;</span><span class="p">)</span>
+        <span class="k">break</span>    
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle terminado&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Como no dice &quot;Bucle terminado&quot;, el else no se ejecutó&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+Bucle roto
+Como no dice &quot;Bucle terminado&quot;, el else no se ejecutó
+</pre></div>
+</div>
+</div>
+</div>
+<p>Un ejemplo más interesante puede ser para buscar elementos en una lista:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FV</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Papa&#39;</span><span class="p">,</span> <span class="s1">&#39;Limón&#39;</span><span class="p">,</span> <span class="s1">&#39;Cebolla&#39;</span><span class="p">,</span> <span class="s1">&#39;Arroz&#39;</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Chocolate&#39;</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">FV</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">FV</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s1">&#39;fue encontrado en la lista.&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s1">&#39;no fue encontrado en la lista.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chocolate no fue encontrado en la lista.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FV</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Papa&#39;</span><span class="p">,</span> <span class="s1">&#39;Limón&#39;</span><span class="p">,</span> <span class="s1">&#39;Cebolla&#39;</span><span class="p">,</span> <span class="s1">&#39;Arroz&#39;</span><span class="p">,</span><span class="s1">&#39;Chocolate&#39;</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Chocolate&#39;</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">FV</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">FV</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s1">&#39;fue encontrado en la lista.&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s1">&#39;no fue encontrado en la lista.&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chocolate fue encontrado en la lista.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bucles-anidados">
+<h2>Bucles anidados<a class="headerlink" href="#bucles-anidados" title="Permalink to this headline">¶</a></h2>
+<p>En general, las estructuras de control de Python se pueden anidar, es decir, poner unas dentro de otras. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">su_edad</span><span class="o">=</span><span class="mi">20</span>
+<span class="n">genero</span><span class="o">=</span><span class="s1">&#39;M&#39;</span>
+<span class="k">if</span> <span class="n">su_edad</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Niño&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Niña&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">su_edad</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">su_edad</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;chico&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;chica&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Señor&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Señora&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Señor
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso de while podemos hacer algo muy parecido, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span> 
+    <span class="n">m</span><span class="o">=</span><span class="mi">10</span> <span class="c1">#---&gt; esto se ejecuta el primer while     </span>
+    <span class="k">while</span>  <span class="n">m</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">)</span> <span class="c1">#---&gt; solo se ejecuta el segundo while </span>
+        <span class="n">m</span><span class="o">-=</span><span class="mi">1</span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>  <span class="c1">#---&gt; esto se ejecuta el primer while </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 + 10 = 10
+0 + 9 = 9
+0 + 8 = 8
+0 + 7 = 7
+0 + 6 = 6
+1 + 10 = 11
+1 + 9 = 10
+1 + 8 = 9
+1 + 7 = 8
+1 + 6 = 7
+2 + 10 = 12
+2 + 9 = 11
+2 + 8 = 10
+2 + 7 = 9
+2 + 6 = 8
+3 + 10 = 13
+3 + 9 = 12
+3 + 8 = 11
+3 + 7 = 10
+3 + 6 = 9
+4 + 10 = 14
+4 + 9 = 13
+4 + 8 = 12
+4 + 7 = 11
+4 + 6 = 10
+</pre></div>
+</div>
+</div>
+</div>
+<p>Podemos combinar <code class="docutils literal notranslate"><span class="pre">if</span></code> y  <code class="docutils literal notranslate"><span class="pre">while</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">su_edad</span><span class="o">=</span><span class="mi">8</span>
+<span class="n">genero</span><span class="o">=</span><span class="s1">&#39;F&#39;</span>
+<span class="k">while</span> <span class="n">su_edad</span><span class="o">&lt;</span><span class="mi">25</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">su_edad</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es un niño.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es una niña.&#39;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">su_edad</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">su_edad</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es un chico.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es una chica.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">genero</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es un señor.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tiene&#39;</span><span class="p">,</span><span class="n">su_edad</span><span class="p">,</span><span class="s1">&#39;años. Es una señora.&#39;</span><span class="p">)</span>
+    <span class="n">su_edad</span><span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tiene 8 años. Es una niña.
+Tiene 9 años. Es una niña.
+Tiene 10 años. Es una chica.
+Tiene 11 años. Es una chica.
+Tiene 12 años. Es una chica.
+Tiene 13 años. Es una chica.
+Tiene 14 años. Es una chica.
+Tiene 15 años. Es una chica.
+Tiene 16 años. Es una chica.
+Tiene 17 años. Es una chica.
+Tiene 18 años. Es una señora.
+Tiene 19 años. Es una señora.
+Tiene 20 años. Es una señora.
+Tiene 21 años. Es una señora.
+Tiene 22 años. Es una señora.
+Tiene 23 años. Es una señora.
+Tiene 24 años. Es una señora.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como vemos, todas las estructuras de control de Python se pueden combinar en la medida que sea necesario. Esto hace que Python sea un lenguaje aclamdo, fácil y flexible. Usaremos muchos trucos de este estilo en diversos ejemplos.</p>
+</div>
+<div class="section" id="bucles-de-una-linea">
+<h2>Bucles de una línea<a class="headerlink" href="#bucles-de-una-linea" title="Permalink to this headline">¶</a></h2>
+<p>Como <code class="docutils literal notranslate"><span class="pre">if</span></code> también puedo definir bucles de while en una sola línea:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span> <span class="n">instrucción_1</span><span class="p">;</span><span class="n">instrucción_2</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span><span class="n">n</span><span class="o">+=</span><span class="mi">1</span><span class="p">;</span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esto funciona solo para expresiones simples, si, por ejemplo, busamos anidar en una sola línea tendremos problemas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_27079/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+                         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Avanzamos en el mundo de la iteración utilizando while, nos enfrentamos a varios ejerciciocios que conforme vamos avanzando se vuelven más complejos. No dejes que la fuerza se termine, aún debemos hacer muchas cosas más.</p>
 </div>
 </div>
 
@@ -386,6 +728,15 @@ Python es maravilloso
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="8.Condicionales.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Condicionales (if)</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
