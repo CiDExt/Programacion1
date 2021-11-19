@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -281,6 +283,16 @@
    Cierre
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicio-1">
+   Ejercicio 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ejercicio-2">
+   Ejercicio 2
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -299,16 +311,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3b6e45bf-709e-46c3-af53-8b43323ca949" name="a37d830e-14c3-4831-b648-cea8a8113132" type="radio">
-</input><label class="tabbed-label" for="3b6e45bf-709e-46c3-af53-8b43323ca949">
+<input checked="checked" id="d329a9fa-d05f-43f5-bd1c-af0653d7e362" name="327bbfe2-a67f-4841-8fde-ade23c0cb20e" type="radio">
+</input><label class="tabbed-label" for="d329a9fa-d05f-43f5-bd1c-af0653d7e362">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="9e1c49d8-5cdc-432a-ba4a-625fd3c6a8c2" name="a37d830e-14c3-4831-b648-cea8a8113132" type="radio">
-</input><label class="tabbed-label" for="9e1c49d8-5cdc-432a-ba4a-625fd3c6a8c2">
+<input id="418d9d06-e15b-4641-925c-8332a8b46a72" name="327bbfe2-a67f-4841-8fde-ade23c0cb20e" type="radio">
+</input><label class="tabbed-label" for="418d9d06-e15b-4641-925c-8332a8b46a72">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -684,7 +696,7 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_27079/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_27564/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
                          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -696,6 +708,80 @@ Tiene 24 años. Es una señora.
 <div class="section" id="cierre">
 <h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
 <p>Avanzamos en el mundo de la iteración utilizando while, nos enfrentamos a varios ejerciciocios que conforme vamos avanzando se vuelven más complejos. No dejes que la fuerza se termine, aún debemos hacer muchas cosas más.</p>
+</div>
+<div class="section" id="ejercicio-1">
+<h2>Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Utiliza un ciclo <code class="docutils literal notranslate"><span class="pre">while</span></code> para hallar el factorial de un número. Recuerda que el factorial de un número es el producto de todos los enteros positivos hasta él.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">:</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">i</span><span class="o">*</span><span class="n">factorial</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3628800
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los divisores de </span><span class="si">{0:1d}</span><span class="s1"> son:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="k">i</span>==0:
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Los divisores de 100 son: 1 2 4 5 10 20 25 50 100 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ejercicio-2">
+<h2>Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Elabora un código para determinar si un cierto número es primo o no.</p></li>
+</ol>
+<p>una forma de aproximar la raíz cuadrada de un número <span class="math notranslate nohighlight">\(a\)</span>, es utilizando la aproximación
+\begin{equation*}
+y=\frac{x^2+a}{2x},
+\end{equation*}
+siendo <span class="math notranslate nohighlight">\(x\)</span> cualquier número positivo y <span class="math notranslate nohighlight">\(y\)</span> la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">&gt;</span><span class="mf">0.001</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.5
+3.659090909090909
+3.196005081874647
+3.1624556228038903
+3.1622776651756745
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
