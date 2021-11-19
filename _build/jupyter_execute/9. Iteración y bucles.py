@@ -276,3 +276,51 @@ while n < 5: n -= 1; if True: print(n)
 # ## Cierre
 
 # Avanzamos en el mundo de la iteración utilizando while, nos enfrentamos a varios ejerciciocios que conforme vamos avanzando se vuelven más complejos. No dejes que la fuerza se termine, aún debemos hacer muchas cosas más.
+
+# ## Ejercicio 1
+# 
+# 1. Utiliza un ciclo `while` para hallar el factorial de un número. Recuerda que el factorial de un número es el producto de todos los enteros positivos hasta él.
+
+# In[15]:
+
+
+n = 10
+i = 1
+factorial = 1
+while i<=n:
+    factorial = i*factorial
+    i = i+1 
+print(factorial)
+
+
+# In[17]:
+
+
+n = 100
+i = 1
+print('Los divisores de {0:1d} son:'.format(n),end=' ')
+while i<=n:
+    if n%i==0:
+        print(i,end=' ')
+    i = i+1 
+
+
+# ## Ejercicio 2
+# 1. Elabora un código para determinar si un cierto número es primo o no.
+
+# una forma de aproximar la raíz cuadrada de un número $a$, es utilizando la aproximación 
+# \begin{equation*}
+# y=\frac{x^2+a}{2x},
+# \end{equation*}
+# siendo $x$ cualquier número positivo y $y$ la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:
+
+# In[26]:
+
+
+a = 10
+x = 1
+while abs(x**2-a)>0.001:
+    y = (x**2+a)/(2*x)
+    x = y
+    print(x)
+
