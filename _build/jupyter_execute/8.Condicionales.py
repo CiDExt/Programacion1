@@ -124,7 +124,7 @@ print('Esta instrucción se ejecuta por fuera del condicional.')
 
 # Esta imagen tomada de [Real Python](https://realpython.com/) no puede ser más aclaradora:
 # 
-# ![if](https://files.realpython.com/media/t.78f3bacaa261.png)
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1600" height="800" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6197b7ab39b5540d7ef9d12e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 
 # **Ejemplo**
 # 
@@ -414,7 +414,7 @@ res='Pasó' if nota>3 else 'Perdió'
 print('En esta nota usted: '+res)
 
 
-# ## Dejemoslo pasar con `Pass`
+# ## Dejemoslo pasar con `pass`
 # 
 # Hay veces en que usamos un condicional pero no tenemos que hacer nada, por ejemplo:
 # 
@@ -428,7 +428,7 @@ else:
     print('5 es mayor que 1')
 
 
-# Aunque imprimi `NO hago nada`sí estoy haciendo algo **imprimir `No hago nada`** para resolver este lío podríamos no escribir nada, así:
+# Aunque imprimí  `No hago nada`sí estoy haciendo algo **imprimir `No hago nada`** para resolver este lío podríamos no escribir nada, así:
 
 # In[9]:
 

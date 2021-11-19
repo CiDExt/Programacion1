@@ -21,7 +21,7 @@ if True:
 print('El valor de verdad de la condición es verdadero')
 ------------------
 
-[0;36m  File [0;32m"/tmp/ipykernel_8289/2201727748.py"[0;36m, line [0;32m2[0m
+[0;36m  File [0;32m"/tmp/ipykernel_16062/2201727748.py"[0;36m, line [0;32m2[0m
 [0;31m    print('El valor de verdad de la condición es verdadero')[0m
 [0m    ^[0m
 [0;31mIndentationError[0m[0;31m:[0m expected an indented block
