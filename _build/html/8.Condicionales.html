@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -145,6 +147,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -330,16 +367,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1e0eb8ef-70ea-4a9b-b334-c7a38d22efe6" name="ffb41210-ffab-4523-b010-d086194f9ca1" type="radio">
-</input><label class="tabbed-label" for="1e0eb8ef-70ea-4a9b-b334-c7a38d22efe6">
+<input checked="checked" id="5357ff0e-0cb2-408f-80cf-9d787d8e80c8" name="0e6e4916-5f57-40c1-8aa5-7da889de5232" type="radio">
+</input><label class="tabbed-label" for="5357ff0e-0cb2-408f-80cf-9d787d8e80c8">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="bfc1dbc2-c85c-4672-a2f2-6fe6ef7f898a" name="ffb41210-ffab-4523-b010-d086194f9ca1" type="radio">
-</input><label class="tabbed-label" for="bfc1dbc2-c85c-4672-a2f2-6fe6ef7f898a">
+<input id="a6f5ab41-11b3-47b0-853b-8bdb4b94dda1" name="0e6e4916-5f57-40c1-8aa5-7da889de5232" type="radio">
+</input><label class="tabbed-label" for="a6f5ab41-11b3-47b0-853b-8bdb4b94dda1">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -411,7 +448,7 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_58441/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_54861/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: expected an indented block

@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -143,6 +145,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -288,16 +325,16 @@
 <hr class="docutils" />
 <p>Por ejemplo, si yo quisiera acceder a una lista con los primeros 5 enteros positivos y guardarlos en la variable <code class="docutils literal notranslate"><span class="pre">Lista</span></code> tendría por lo menos estas dos opciones:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="65f984d0-364a-4478-8266-ddc6cdc2c0ee" name="9b7ba2fc-7cf6-471a-a78d-cad62c58c63d" type="radio">
-</input><label class="tabbed-label" for="65f984d0-364a-4478-8266-ddc6cdc2c0ee">
+<input checked="checked" id="7e9ecc0e-fe36-40b9-8869-b1711dbd0060" name="2f4a21e2-0f25-43b1-b304-b3b679f46e74" type="radio">
+</input><label class="tabbed-label" for="7e9ecc0e-fe36-40b9-8869-b1711dbd0060">
 Opción 1</label><div class="tabbed-content docutils">
 <p>Declarar la lista de forma directa:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<input id="9033fa8a-842f-43be-9bc1-626b9311907b" name="9b7ba2fc-7cf6-471a-a78d-cad62c58c63d" type="radio">
-</input><label class="tabbed-label" for="9033fa8a-842f-43be-9bc1-626b9311907b">
+<input id="cacd6d31-968e-47bc-a4f6-5da756eedf26" name="2f4a21e2-0f25-43b1-b304-b3b679f46e74" type="radio">
+</input><label class="tabbed-label" for="cacd6d31-968e-47bc-a4f6-5da756eedf26">
 Opción 2</label><div class="tabbed-content docutils">
 <p>Crear una rutina que la genere:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="o">=</span><span class="p">[]</span>
@@ -321,20 +358,20 @@ Opción 2</label><div class="tabbed-content docutils">
 <p><strong>Programación imperativa</strong></p>
 <p>Enfocada en explicar el cómo debe realizarse el cálculo, sigue una serie de instrucciones inmersas en un control de flujo explicito. En este caso, las variables <em>son constantemente modificadas</em> y representan el desarrollo del cálculo. Entre los diferentes paradigmas que se rigen según este enfoque se encuentran <strong>paradigma de programación estructurada</strong> y <strong>paradigma de programación modular</strong>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="72161040-989a-4601-a22d-7eee246056ab" name="e2ae1004-d494-4d30-ba13-03adbf50a49c" type="radio">
-</input><label class="tabbed-label" for="72161040-989a-4601-a22d-7eee246056ab">
+<input checked="checked" id="bace597f-2ced-42c3-9727-1607793635ae" name="cd9adf49-a095-4da5-90cc-e0d85a09db2c" type="radio">
+</input><label class="tabbed-label" for="bace597f-2ced-42c3-9727-1607793635ae">
 Programación Estructurada</label><div class="tabbed-content docutils">
 <p>Parte de un hermoso resultado de la teoría de lenguajes de programación conocido como el <a class="reference external" href="https://en.wikipedia.org/wiki/Structured_program_theorem">teorema de Böhm–Jacopini</a> que afirma que toda función computable puede implementarse utilizando únicamente tres estructuras lógicas <strong>(estructuras de control)</strong>: secuenciación, selección e iteración.</p>
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61944099c121b10d88a24212" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 </div>
-<input id="901d006e-6b49-44bb-bed9-046c5eff2088" name="e2ae1004-d494-4d30-ba13-03adbf50a49c" type="radio">
-</input><label class="tabbed-label" for="901d006e-6b49-44bb-bed9-046c5eff2088">
+<input id="107fccf5-bf93-4cd2-93ba-f78be45318d3" name="cd9adf49-a095-4da5-90cc-e0d85a09db2c" type="radio">
+</input><label class="tabbed-label" for="107fccf5-bf93-4cd2-93ba-f78be45318d3">
 Programación Modular</label><div class="tabbed-content docutils">
 <p>Usa el principio de que un problema se puede dividir en subproblemas, permite dividir un programa en módulos (programas más simples), con el fin de hacerlo más legible y manejable. Los elementos modulares más básicos pueden verse como funciones que admiten entradas y producen salidas.</p>
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61945398c5d9760d8b0ea779" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 </div>
-<input id="91e6709b-b87f-48de-a365-12a31632b9f5" name="e2ae1004-d494-4d30-ba13-03adbf50a49c" type="radio">
-</input><label class="tabbed-label" for="91e6709b-b87f-48de-a365-12a31632b9f5">
+<input id="219e3739-24a2-4867-b58d-1765d7738631" name="cd9adf49-a095-4da5-90cc-e0d85a09db2c" type="radio">
+</input><label class="tabbed-label" for="219e3739-24a2-4867-b58d-1765d7738631">
 Programación Orientada a Objetos</label><div class="tabbed-content docutils">
 <p>Los programas se modelan en torno a objetos, entidades que encapsulan atributos y funciones (o métodos) en una sola entidad. Para dar más claridad pensemos un objeto como una persona, que se distingue por los atributos que la describen pero que puede ejecutar varias acciones (o métodos).</p>
 <p><img alt="Clases" src="https://pythones.net/wp-content/uploads/2019/01/Clases-y-Objetos-min-577x1024-min.png" /></p>
@@ -344,8 +381,8 @@ Programación Orientada a Objetos</label><div class="tabbed-content docutils">
 <p><strong>Programación declarativa</strong></p>
 <p>Describe <strong>que</strong> se debe calcular, no hace referencia a métodos de evaluación y cada vez que se <em>instancia</em> una variable se vuelve inmutable. No requiere sentencias de asignación y el flujo se asocia a composición funcional, recursividad,reescritura y unificación. Entre estas se destacan el <strong>paradigma de programación funcional</strong> y el <strong>paradigma de programación lógica</strong>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="35d6a135-88f3-4eb9-858d-d90e1d1bb599" name="64ae8049-969e-4549-9a17-a7be0b9a0b13" type="radio">
-</input><label class="tabbed-label" for="35d6a135-88f3-4eb9-858d-d90e1d1bb599">
+<input checked="checked" id="9e6c9dec-a7df-411c-8eca-3d0b430826e5" name="fca4d260-111c-4a29-980b-5fc3b1473279" type="radio">
+</input><label class="tabbed-label" for="9e6c9dec-a7df-411c-8eca-3d0b430826e5">
 Programación Lógica</label><div class="tabbed-content docutils">
 <p>Basada en la <a class="reference external" href="https://es.wikipedia.org/wiki/L%C3%B3gica_de_primer_orden">lógica de predicados (o lógica de primer orden)</a>, busca resolver problemas a partir de la posibilidad de plantear problemas como conjuntos de sentencias expresadas en forma lógica que, a partir de reglas de inferencia (deducciones), permiten automatizar la solución. Se basa en la idea:</p>
 <p><img alt="Tomado de https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html" src="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/img/001.png" /></p>
@@ -353,8 +390,8 @@ Programación Lógica</label><div class="tabbed-content docutils">
 <p><img alt="Tomado de https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html" src="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/img/prolog004.PNG" /></p>
 <p>Imágenes tomadas de <a class="reference external" href="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html">https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html</a></p>
 </div>
-<input id="2aae8732-fd3c-423a-9d68-87c29c7a8c65" name="64ae8049-969e-4549-9a17-a7be0b9a0b13" type="radio">
-</input><label class="tabbed-label" for="2aae8732-fd3c-423a-9d68-87c29c7a8c65">
+<input id="bb0541a9-e7d3-497f-9fed-a10e6b43a6d5" name="fca4d260-111c-4a29-980b-5fc3b1473279" type="radio">
+</input><label class="tabbed-label" for="bb0541a9-e7d3-497f-9fed-a10e6b43a6d5">
 Programación Funcional</label><div class="tabbed-content docutils">
 <p>Podría considerarse como una ampliación del <a class="reference external" href="https://en.wikipedia.org/wiki/Lambda_calculus">cálculo lambda</a>, admite a las funciones como elementos primitivos. El objetivo es identificar qué resolver y para lograrlo se utiliza una forma explicita de la función que resolvería el problema.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>

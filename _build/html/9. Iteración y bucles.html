@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -145,6 +147,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -317,16 +354,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0f731a42-5798-4b97-b5ad-17b8e91303c8" name="5f06f2dd-510e-439e-a5a2-96f30d0882c2" type="radio">
-</input><label class="tabbed-label" for="0f731a42-5798-4b97-b5ad-17b8e91303c8">
+<input checked="checked" id="1bc52bc4-f8ba-4d14-b10d-2a7f139c15b9" name="b15e16ee-4f81-4674-8f48-8fe42b69fe02" type="radio">
+</input><label class="tabbed-label" for="1bc52bc4-f8ba-4d14-b10d-2a7f139c15b9">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="8b7282bc-f4b6-448f-907a-18d52da74e82" name="5f06f2dd-510e-439e-a5a2-96f30d0882c2" type="radio">
-</input><label class="tabbed-label" for="8b7282bc-f4b6-448f-907a-18d52da74e82">
+<input id="749be94e-c68c-42c8-a1c6-f45c84bafd41" name="b15e16ee-4f81-4674-8f48-8fe42b69fe02" type="radio">
+</input><label class="tabbed-label" for="749be94e-c68c-42c8-a1c6-f45c84bafd41">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -702,7 +739,7 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_58458/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_54878/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
                          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax

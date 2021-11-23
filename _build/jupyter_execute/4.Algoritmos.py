@@ -164,6 +164,16 @@
 # 
 # La posibilidad de ejecutar código y texto en un mismo documento nos permitirá definir algoritmos y explicarlos de manera adecuada, procesar datos y visualizar resultados inmediatamente, establecer una documentación adecuada de los procedimientos y recursos que usamos, entre otros.
 
+# ## La filosofía de Python
+# 
+# Es muy importante reconocer que Python sorprende no solo por su flexibilidad y elasticidad sino porque mantiene una filosofía clara, aquí recomendamos leer los principios de este lenguaje elaborados por [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)), uno de los grandes contribuyentes a este poderoso lenguaje:
+
+# In[1]:
+
+
+import this
+
+
 # :::{admonition} Ver también
 # :class: seealso
 # ![Python logo](https://www.python.org/static/community_logos/python-logo.png) [Python ](https://www.python.org/)

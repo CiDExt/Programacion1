@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones: Definición &#8212; Programación 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Funciones: Argumentos" href="12.Funciones.%20Argumentos.html" />
+    <link rel="prev" title="Bucles (for)" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programación 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introducción a la programación
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Consola.html">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Github2.html">
+   Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Algoritmos.html">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Listas%20y%20Tuplas.html">
+   Listas (introducción)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7.Paradigmas.html">
+   Intermezzo - Paradigmas de programación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.Condicionales.html">
+   Condicionales (if)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9.%20Iteraci%C3%B3n%20y%20bucles.html">
+   Bucles (while)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
+   Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/11.Funciones. Definición.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F11.Funciones. Definición.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/11.Funciones. Definición.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Funciones: Definición
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejercicios">
+     Ejercicios:
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentacion">
+     Documentación:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio">
+       Ejercicio:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-locales">
+     Variables locales:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Ejercicios:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo">
+       Ejemplo:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Ejercicio:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="funciones-definicion">
+<h1>Funciones: Definición<a class="headerlink" href="#funciones-definicion" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Hemos utilizado funciones?</p>
+<p>¡Claro! Hemos visto como utilizarlas, pero no como crearlas (a fondo).</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f1fd3f2a-6753-4b53-9c87-3ad3a5985c8b" name="d0271dfb-a4c1-4cc3-aea6-2bb2f0a8cbc7" type="radio">
+</input><label class="tabbed-label" for="f1fd3f2a-6753-4b53-9c87-3ad3a5985c8b">
+Funciones incorporadas</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>A lo largo de los cuadernos hemos utilizado algunas funciones propias de Python <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, etc. cada una de ellas está hecha para realizar una tarea específica, es decir, fueron hechas para resolver un problema concreto.</p>
+</div>
+</div>
+<input id="fc99c203-7913-431a-8fb7-afc2486de423" name="d0271dfb-a4c1-4cc3-aea6-2bb2f0a8cbc7" type="radio">
+</input><label class="tabbed-label" for="fc99c203-7913-431a-8fb7-afc2486de423">
+La que hemos creado</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>En el cuaderno anterior, hemos creado una función, <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>, la cual hace una tarea que nosotros deseábamos y no hay una de las propias de Python que hiciera tal labor:</p>
+</div>
+</div>
+<input id="cd6f75ad-4e81-4ab6-b021-10f02c380412" name="d0271dfb-a4c1-4cc3-aea6-2bb2f0a8cbc7" type="radio">
+</input><label class="tabbed-label" for="cd6f75ad-4e81-4ab6-b021-10f02c380412">
+Código</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>def cuadrado(x):
+    print(&#39;El valor es:&#39;,x,&#39;su identidad es:&#39;,id(x))
+    x = x**2
+    print(&#39;Su cuadrado es:&#39;,x,&#39;y su identidad es:&#39;,id(x))
+    return x
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Su cuadrado es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrado</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 3 su identidad es: 140426553911664
+Su cuadrado es: 9 y su identidad es: 140426553911856
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<p>En resumen, una función recibe unos argumentos y con ellos realiza una terea específica para la que fue diseñada:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61950fbc4384080dab59eefd" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>La manera adecuada para definir una función es la siguiente:
+<img src="https://github.com/MRippe7/CienciaDatos/blob/main/Imagenes/Funciones1.png?raw=true"></p>
+<p>Para invocar a la función que hemos definido, debemos escribir el nombre de ésta y entre paréntesis los argumentos requeridos para que ésta sea ejecutada así:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre_de_la_función</span> <span class="p">(</span><span class="n">parámetros</span><span class="p">,</span><span class="n">separados</span><span class="p">,</span><span class="n">por</span><span class="p">,</span><span class="n">comas</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>tal y como hemos hecho con las funciones <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> y <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code>.</p>
+<p>Las funciones se pueden definir sin argumentos, lo cual hace que ejecute sus acciones sin requerir valores de entrada y se ejecutarían de la siguiente manera:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nombre_de_la_función</span> <span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcion_sin_arg1</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta función se ejecuta sin requerir valores de entrada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcion_sin_arg2</span><span class="p">():</span>
+    <span class="k">return</span><span class="s1">&#39;Esta función se ejecuta sin requerir valores de entrada&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion_sin_arg1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta función se ejecuta sin requerir valores de entrada
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">funcion_sin_arg2</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Esta función se ejecuta sin requerir valores de entrada&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>La diferencia entre las dos funciones anteriores es que en la segunda tenemos un <code class="docutils literal notranslate"><span class="pre">return</span></code>, es decir, la función tiene una salida que se puede almacenar para necesidades futuras.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">funcion_sin_arg1</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Éste es el resultado de la primera función:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">funcion_sin_arg2</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Éste es el resultado de la segunda función:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Esta función se ejecuta sin requerir valores de entrada
+Éste es el resultado de la primera función: None
+Éste es el resultado de la segunda función: Esta función se ejecuta sin requerir valores de entrada
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ejercicios">
+<h2>Ejercicios:<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Cree una función que regrese como resultado el nombre de un restaurante y su NIT en una cadena de caracteres, pueden ser ficticios.</p></li>
+<li><p>Si en dicho restaurante cada persona consume en promedio <span class="math notranslate nohighlight">\(\$50.000\)</span>, haga una función que permira calcular el valor de la cuenta, en promedio, dado el número de comensales.</p></li>
+<li><p>En el total calculado en el punto anterior se incluye el impuesto al consumo, cree una función que le permita conocer el valor que debería pagar sin dicho impuesto el cual asciende al <span class="math notranslate nohighlight">\(8\%\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="documentacion">
+<h2>Documentación:<a class="headerlink" href="#documentacion" title="Permalink to this headline">¶</a></h2>
+<p>A las funciones que creamos, es posible añadirles documentación para que sea clara la manera de usarlas e incluso ejemplificando el uso de los diferentes argumentos de ésta:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funcion_con_doc1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;str de la variable de entrada.</span>
+<span class="sd">    </span>
+<span class="sd">    La función requiere de un argumento &quot;x&quot;, el cual puede ser un valor numérico </span>
+<span class="sd">    o una cadena de caracteres.</span>
+<span class="sd">    </span>
+<span class="sd">    Su salida es el string de la variable de entrada.&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para ver esta documentación podemos hacerlo de la siguiente manera:<br />
+<code class="docutils literal notranslate"><span class="pre">funcion_con_doc1</span></code>+<code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">TAB</span></code>+<code class="docutils literal notranslate"><span class="pre">TAB</span></code><br />
+o con el siguiente comando:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>funcion_con_doc1<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo más sano es escribir una descripción muy corta en la primera línea, luego una línea en blanco para continuar con la descripción más completa de la función.</p>
+<div class="section" id="ejercicio">
+<h3>Ejercicio:<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Agrega la documentación requerida para las funciones creadas en el bloque anterior de ejercicios.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="variables-locales">
+<h2>Variables locales:<a class="headerlink" href="#variables-locales" title="Permalink to this headline">¶</a></h2>
+<p>Cuando creamos una función y en ella definimos alguna variable, es posible acceder a ella únicamente dentro de la función, si la intentamos llamar fuera de ella, obtendremos un error, como podemos ver a continuación:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">operaciones</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">z1</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="n">z2</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
+    <span class="n">z3</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="n">z4</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Suma:&#39;</span><span class="p">,</span><span class="n">z1</span><span class="p">,</span><span class="s1">&#39;Resta:&#39;</span><span class="p">,</span><span class="n">z2</span><span class="p">,</span><span class="s1">&#39;Multiplicación:&#39;</span><span class="p">,</span><span class="n">z3</span><span class="p">,</span><span class="s1">&#39;División:&#39;</span><span class="p">,</span><span class="n">z4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">operaciones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Suma: 3 Resta: -1 Multiplicación: 2 División: 0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54506</span><span class="o">/</span><span class="mf">2096103169.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">z1</span>
+
+<span class="ne">NameError</span>: name &#39;z1&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>A las variables <code class="docutils literal notranslate"><span class="pre">z1</span></code>, <code class="docutils literal notranslate"><span class="pre">z2</span></code>, <code class="docutils literal notranslate"><span class="pre">z3</span></code> y <code class="docutils literal notranslate"><span class="pre">z4</span></code> se les conoce como <strong>variables locales</strong>, ya que éstas se “destruyen” al finalizar los cálculos requeridos para finalizar la ejecución de la función <code class="docutils literal notranslate"><span class="pre">operaciones</span></code>.</p>
+<div class="section" id="id1">
+<h3>Ejercicios:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Cree las siguientes funciones, con su debida documentación:</p>
+<ol class="simple">
+<li><p>Una función que tenga como argumentos de entrada <em>nombre de una persona</em> y <em>cantidad de comensales</em>, la función debe tener como respuesta un “recibo” en el que aparezca el nombre del restaurante, su NIT, el nombre del cliente, el valor de la factura sin impuestos y con impuestos (sug: emplee como base las funciones creadas anteriormente).</p></li>
+<li><p>Una función que permita calcular el máximo entre dos números.</p></li>
+<li><p>Una función que ordene de menor a mayor tres números.</p></li>
+</ol>
+</div>
+<div class="section" id="ejemplo">
+<h3>Ejemplo:<a class="headerlink" href="#ejemplo" title="Permalink to this headline">¶</a></h3>
+<p>Crearemos una función que permita contar los resultados obtenidos al lanzar un dado una cierta cantidad de veces.</p>
+<p>Para ello emplearemos la función <code class="docutils literal notranslate"><span class="pre">randrange(a,b)</span></code> del paquete <code class="docutils literal notranslate"><span class="pre">random</span></code>, la cual nos permite obtener un número entero arbitrario en el intervalo <span class="math notranslate nohighlight">\([a,b-1]\)</span> siendo <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> números enteros, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lanzardados</span> <span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Permite contar los resultados obtenidos al lanzar un dado n veces</span>
+<span class="sd">    n es el único argumento de ésta función&#39;&#39;&#39;</span>
+    <span class="c1"># n es la cantidad de veces que lanzaremos el dado</span>
+    <span class="c1"># Para evitar errores con números no enteros consideramos:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">cont1</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cont2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cont3</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cont4</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cont5</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cont6</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Debemos tomar un valor aleatorio entre 1 y 6, la cantidad de </span>
+    <span class="c1"># veces que indica n, para ello realizamos el siguiente ciclo</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">valor_en_el_lanzamiento</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">cont1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">cont2</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">cont3</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">cont4</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">cont5</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">valor_en_el_lanzamiento</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">cont6</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Valor</span><span class="si">{</span><span class="s2">&quot;Frecuencia&quot;</span><span class="si">:</span><span class="s1">&gt;13</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">1</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont1</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">2</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont2</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">3</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont3</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">4</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont4</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">5</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont5</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="mi">6</span><span class="si">:</span><span class="s1">&gt;5</span><span class="si">}{</span><span class="n">cont6</span><span class="si">:</span><span class="s1">&gt;10</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lanzardados</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valor   Frecuencia
+    1        19
+    2        12
+    3        22
+    4        15
+    5        14
+    6        18
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id2">
+<h1>Ejercicio:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>Como hemos podido ver, cada vez que ejecutamos la función anterior obtenemos diferentes resultados. Modifica éste código para que permita obtener los mismos valores cada vez que ejecutamos la función con determinado valor.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="cierre">
+<h1>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h1>
+<p>Las funciones en Python se comportan básicamente como funciones matemáticas, reciben una entrada, ejecutan una tarea y arrojan un resultado, las variables usadas dentro de ellas se destruyen al finalizar el proceso y se conocen como variables locales.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Bucles (for)</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="12.Funciones.%20Argumentos.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Funciones: Argumentos</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -143,6 +145,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -284,16 +321,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e5e965d7-f7e8-4671-970e-d0703938f96a" name="b6ffa12c-84ba-41c6-92f0-914b7980bda0" type="radio">
-</input><label class="tabbed-label" for="e5e965d7-f7e8-4671-970e-d0703938f96a">
+<input checked="checked" id="c67ed7b2-9d8b-429b-b10a-5252aad4837d" name="fa7d0f7e-ade0-459d-afe3-8dca788db07b" type="radio">
+</input><label class="tabbed-label" for="c67ed7b2-9d8b-429b-b10a-5252aad4837d">
 Página en github</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Seguimos un tutorial detallado para empezar a manejar repositorios locales y en línea. Adicionalmente, vimos elementos básicos para la creación de páginas utilizando una rama adicional de los repositorios. Esperamos que en esas páginas haya una descripción completa de sus perfiles, ilusiones y los que serían sus próximos proyectos.</p>
 </div>
 </div>
-<input id="02e22332-a09a-43be-89f6-4691356cec1e" name="b6ffa12c-84ba-41c6-92f0-914b7980bda0" type="radio">
-</input><label class="tabbed-label" for="02e22332-a09a-43be-89f6-4691356cec1e">
+<input id="b7b2bd24-eea9-4abe-9a82-0c0cea6ed8cb" name="fa7d0f7e-ade0-459d-afe3-8dca788db07b" type="radio">
+</input><label class="tabbed-label" for="b7b2bd24-eea9-4abe-9a82-0c0cea6ed8cb">
 ¿Qué hace un programador?</label><div class="tabbed-content docutils">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -302,8 +339,8 @@ Página en github</label><div class="tabbed-content docutils">
 </div>
 <p>se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución. Usamos herramientas de representación de los algoritmos: pseudocódigo o diagramas de flujo, que permiten resumir los pasos de un proceso.</p>
 </div>
-<input id="3341122c-d102-4778-8b47-12e642b27c5f" name="b6ffa12c-84ba-41c6-92f0-914b7980bda0" type="radio">
-</input><label class="tabbed-label" for="3341122c-d102-4778-8b47-12e642b27c5f">
+<input id="497b45ad-173b-4b9e-bfb6-aac25fab8630" name="fa7d0f7e-ade0-459d-afe3-8dca788db07b" type="radio">
+</input><label class="tabbed-label" for="497b45ad-173b-4b9e-bfb6-aac25fab8630">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -343,7 +380,7 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;hola&#39;, 1, 5.1, 140289273205696]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;hola&#39;, 1, 5.1, 140455164627520]
 </pre></div>
 </div>
 </div>
@@ -452,7 +489,7 @@ Variables</label><div class="tabbed-content docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_58402</span><span class="o">/</span><span class="mf">2713866246.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54827</span><span class="o">/</span><span class="mf">2713866246.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">m</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 
 <span class="ne">IndexError</span>: list index out of range

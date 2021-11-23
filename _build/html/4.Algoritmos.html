@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -143,6 +145,41 @@
  <li class="toctree-l1">
   <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -270,6 +307,11 @@
   <a class="reference internal nav-link" href="#python">
    Python
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-filosofia-de-python">
+   La filosofía de Python
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#instrucciones-de-instalacion-y-uso-de-jupyter">
@@ -328,8 +370,8 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3c7c75c9-50e6-42c7-ac2c-aa7158773d1e" name="9615e307-57cf-4ad5-b506-39dd2436a48f" type="radio">
-</input><label class="tabbed-label" for="3c7c75c9-50e6-42c7-ac2c-aa7158773d1e">
+<input checked="checked" id="5ab121f2-77bd-4cb8-8444-7b49c6a065ca" name="57cb66b6-82b1-4bd6-928a-ef99fc5e7d70" type="radio">
+</input><label class="tabbed-label" for="5ab121f2-77bd-4cb8-8444-7b49c6a065ca">
 ¿Qué hace un programador?</label><div class="tabbed-content docutils">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -338,16 +380,16 @@
 </div>
 <p>se hace a través de algoritmos procesos libres de ambigüedades y con todos los pasos necesarios para llegar a la dichosa solución.</p>
 </div>
-<input id="f5290320-02e3-4630-86e6-5068ab76fbdc" name="9615e307-57cf-4ad5-b506-39dd2436a48f" type="radio">
-</input><label class="tabbed-label" for="f5290320-02e3-4630-86e6-5068ab76fbdc">
+<input id="cca2b0c1-99d2-4284-9bf7-4e41aac034d8" name="57cb66b6-82b1-4bd6-928a-ef99fc5e7d70" type="radio">
+</input><label class="tabbed-label" for="cca2b0c1-99d2-4284-9bf7-4e41aac034d8">
 Consola bash</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Ya pudimos establecer comunicación directa con la máquina a traves la consola, pudimos crear, mover y modificar archivos. Usamos un algoritmo muy simple para crear un nuevo texto e interactuamos con la consola para descubrir todas las propiedades de sus archivos y directorios.</p>
 </div>
 </div>
-<input id="a520d415-458b-450a-9f6d-33d931dc3f67" name="9615e307-57cf-4ad5-b506-39dd2436a48f" type="radio">
-</input><label class="tabbed-label" for="a520d415-458b-450a-9f6d-33d931dc3f67">
+<input id="bbe33868-ec4b-474b-ac39-e8d843e6ab25" name="57cb66b6-82b1-4bd6-928a-ef99fc5e7d70" type="radio">
+</input><label class="tabbed-label" for="bbe33868-ec4b-474b-ac39-e8d843e6ab25">
 Consola bash</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -396,44 +438,44 @@ dirigirse al directorio base y crear la carpeta de prueba.</p></li>
 <p>Esta es una representación gráfica de un procedimiento o de un algoritmo. Se utiliza en diversas ramas y no solo para progamación de computadores, verás estos diagramas en asignación de actividades, descripción de procesos, investigación de operaciones, entre otros.</p>
 <p>Dicho diagrama sigue unas convenciones para cada node del grafo, dicho nodo expresa una situación o concepto y se mueve de acuerdo a las flechas del diagrama, veamos las convenciones:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a9077618-f44c-405e-9c4f-c2080f07cdbf" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="a9077618-f44c-405e-9c4f-c2080f07cdbf">
+<input checked="checked" id="1d3f6105-212f-48e2-a319-e38adf3a17ad" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="1d3f6105-212f-48e2-a319-e38adf3a17ad">
 Línea de flujo</label><div class="tabbed-content docutils">
 <p><img alt="flecha" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Flowchart_Line.svg/100px-Flowchart_Line.svg.png" /></p>
 <p>Indica la dirección del flujo.</p>
 </div>
-<input id="e99dee62-e094-4198-bc91-ebbe63d254f5" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="e99dee62-e094-4198-bc91-ebbe63d254f5">
+<input id="f52e476a-306a-480e-a0e4-3c788c2f09d0" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="f52e476a-306a-480e-a0e4-3c788c2f09d0">
 Terminal</label><div class="tabbed-content docutils">
 <p><img alt="terminal" src="https://support.content.office.net/es-es/media/022c8ba9-01e8-4fd1-9967-170e82450352.gif" /></p>
 <p>Indica el inicio o final del proceso.</p>
 </div>
-<input id="3aa8cd96-ead0-44e6-bde5-f2c03369836b" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="3aa8cd96-ead0-44e6-bde5-f2c03369836b">
+<input id="6c834307-f2b8-4a21-8576-f8550b807094" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="6c834307-f2b8-4a21-8576-f8550b807094">
 Proceso</label><div class="tabbed-content docutils">
 <p><img alt="proceso" src="https://support.content.office.net/es-es/media/0f129ef2-5081-4d99-98b1-e288211dbd0d.gif" /></p>
 <p>Representa un paso del proceso en el que se cambian valores, formas o ubicaciones de datos. Se entiende como un paso típico del procedimiento.</p>
 </div>
-<input id="9ae41749-35c2-411b-bea7-48230e5af251" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="9ae41749-35c2-411b-bea7-48230e5af251">
+<input id="d0fae582-3cab-4155-a05c-9ceaf07b4073" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="d0fae582-3cab-4155-a05c-9ceaf07b4073">
 Decisión</label><div class="tabbed-content docutils">
 <p><img alt="decisión" src="https://support.content.office.net/es-es/media/d4c68a25-77e1-43eb-be3c-9a5ea2b75d8b.gif" /></p>
 <p>Hace referencia a una parte del proceso en el que se pueden tomar varios cáminos. Por ejemplo si se evalúa una condición generalmente la respuesta es sí o no.</p>
 </div>
-<input id="e82ab544-774f-4793-bbea-36fcd58a12db" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="e82ab544-774f-4793-bbea-36fcd58a12db">
+<input id="b0297273-e46e-4eae-ae28-a47e2a8e1ba6" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="b0297273-e46e-4eae-ae28-a47e2a8e1ba6">
 Documento</label><div class="tabbed-content docutils">
 <p><img alt="decisión" src="https://support.content.office.net/es-es/media/908189d1-3723-4671-8a75-da38f163e608.gif" /></p>
 <p>Hace referencia a una parte del proceso en el que se obtiene un documento como salida.</p>
 </div>
-<input id="14af03bd-3f3c-4d90-9f81-25d686b47c47" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="14af03bd-3f3c-4d90-9f81-25d686b47c47">
+<input id="7efa2263-59db-477c-a6de-0c7833055539" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="7efa2263-59db-477c-a6de-0c7833055539">
 Datos</label><div class="tabbed-content docutils">
 <p><img alt="datos" src="https://support.content.office.net/es-es/media/5036f7e8-c5c5-4cf1-a927-9b6593ae7640.gif" /></p>
 <p>Indica que entra o sale algo del proceso (datos, materiales, etc.)</p>
 </div>
-<input id="7e9f1a19-0b23-4ec6-8bf5-44a8c229ace6" name="b8d24961-01ab-487f-95f8-bb706a81c1f5" type="radio">
-</input><label class="tabbed-label" for="7e9f1a19-0b23-4ec6-8bf5-44a8c229ace6">
+<input id="9a5a84a1-0b25-4b3e-b34a-b961d538ac21" name="19118f14-bc4d-4065-9d6f-691fab52e1df" type="radio">
+</input><label class="tabbed-label" for="9a5a84a1-0b25-4b3e-b34a-b961d538ac21">
 Referencia</label><div class="tabbed-content docutils">
 <p><img alt="Referencia" src="https://support.content.office.net/es-es/media/dc191c39-e01f-474c-8c81-1230e60e3a07.gif" /></p>
 <p>Indica que un paso siguiente (o anterior) que se encuentra en otra parte del dibujo. Se usa cuando tenemos diagramas bien complejos.</p>
@@ -454,6 +496,42 @@ Referencia</label><div class="tabbed-content docutils">
 <p>Por ser de código abierto es gratuito y funciona en diferentes plataformas (Windows, Mac, Linux, etc). Resulta tener una sintaxis simple, similar al idioma inglés, ha aumentado su popularidad desde hace pocos años y hoy es el lenguaje de mayor crecimiento y más consultado en el mundo. Permite crear programas en muy pocas líneas, respecto a otros lenguajes de programación.</p>
 <p>Pyhton se ejecuta en un sistema interpretado. Es decir, que los códigos se pueden correr justo después de ser escritos; en otras palabras, no necesitan compilación previa. Se puede usar como un lenguaje clásico, como un lenguaje orientado a objetos, o como un lenguaje funcional. Es el principal lenguaje de la Ciencia de Datos. De hecho, uno de los complementos especiales de Python para los científicos de datos es Jupyter, una aplicación web que permite crear cuadernos interactivos: documentos web editados con texto enriquecido y celdas de ejecución de código.</p>
 <p>La posibilidad de ejecutar código y texto en un mismo documento nos permitirá definir algoritmos y explicarlos de manera adecuada, procesar datos y visualizar resultados inmediatamente, establecer una documentación adecuada de los procedimientos y recursos que usamos, entre otros.</p>
+</div>
+<div class="section" id="la-filosofia-de-python">
+<h2>La filosofía de Python<a class="headerlink" href="#la-filosofia-de-python" title="Permalink to this headline">¶</a></h2>
+<p>Es muy importante reconocer que Python sorprende no solo por su flexibilidad y elasticidad sino porque mantiene una filosofía clara, aquí recomendamos leer los principios de este lenguaje elaborados por <a class="reference external" href="https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)">Tim Peters</a>, uno de los grandes contribuyentes a este poderoso lenguaje:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+</pre></div>
+</div>
+</div>
+</div>
 <div class="seealso admonition">
 <p class="admonition-title">Ver también</p>
 <p><img alt="Python logo" src="https://www.python.org/static/community_logos/python-logo.png" /> <a class="reference external" href="https://www.python.org/">Python </a></p>

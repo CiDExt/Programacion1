@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones: Argumentos &#8212; Programación 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modularizar" href="13.Modularizar.html" />
+    <link rel="prev" title="Funciones: Definición" href="11.Funciones.%20Definici%C3%B3n.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programación 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introducción a la programación
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Consola.html">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Github2.html">
+   Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Algoritmos.html">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Listas%20y%20Tuplas.html">
+   Listas (introducción)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7.Paradigmas.html">
+   Intermezzo - Paradigmas de programación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.Condicionales.html">
+   Condicionales (if)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9.%20Iteraci%C3%B3n%20y%20bucles.html">
+   Bucles (while)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
+   Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/12.Funciones. Argumentos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F12.Funciones. Argumentos.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/12.Funciones. Argumentos.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#argumentos-por-defecto">
+   Argumentos por defecto:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#argumentos-de-longitud-variable">
+   Argumentos de longitud variable:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejercicios">
+     Ejercicios:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejercicio">
+     Ejercicio:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Ejercicio:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comentarios-finales">
+   Comentarios finales:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="funciones-argumentos">
+<h1>Funciones: Argumentos<a class="headerlink" href="#funciones-argumentos" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Qué sabemos de las funciones?</p>
+<p>En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos a manera de manipular los argumentos de las funciones que creemos.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="6ad7b997-d4cd-4809-ba3d-c6e2c398c322" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
+</input><label class="tabbed-label" for="6ad7b997-d4cd-4809-ba3d-c6e2c398c322">
+¿El orden importa?</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, <strong>el orden es fundamental</strong>.</p>
+</div>
+</div>
+<input id="9bc5f35c-08c3-449e-8bb8-11cde7f9cbea" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
+</input><label class="tabbed-label" for="9bc5f35c-08c3-449e-8bb8-11cde7f9cbea">
+Ejemplo</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">La resta</p>
+<p>Sabemos que 2-3 es diferente a 3-2.</p>
+</div>
+</div>
+<input id="fad378f3-3245-4ebc-a890-900b727d33c6" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
+</input><label class="tabbed-label" for="fad378f3-3245-4ebc-a890-900b727d33c6">
+Ejemplo</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Al vestirse</p>
+<p>Si primero nos ponemos las medias y luego los zapatos, generará un resultado distinto a ponerse primero los zapatos y luego las medias.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="argumentos-por-defecto">
+<h2>Argumentos por defecto:<a class="headerlink" href="#argumentos-por-defecto" title="Permalink to this headline">¶</a></h2>
+<p>En la función que calculaba el valor, con y sin impuestos, de una cuenta en un cierto restaurante nos hizo falta incluir el valor de la propina, ajuste que realizaremos en este momento:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">costos</span><span class="p">(</span><span class="n">comensales</span><span class="p">,</span><span class="n">propina</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">Cuenta</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">comensales</span><span class="o">*</span><span class="mi">50000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">CuentaSinImp</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">Cuenta</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="mi">108</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">CuentaConProp</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">Cuenta</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">propina</span><span class="o">/</span><span class="mi">100</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;    Valor Neto: &#39;&#39;&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">CuentaSinImp</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    Total sin propina: &#39;&#39;&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">Cuenta</span><span class="p">)</span><span class="o">+</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    Total con propina: &#39;&#39;&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">CuentaConProp</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">costos</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Valor Neto: 46296.3
+    Total sin propina: 50000
+    Total con propina: 55000.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nota que en la función anterior el segundo argumento tiene un valor predeterminado <code class="docutils literal notranslate"><span class="pre">propina=10</span></code>, esto quiere decir que, si no modificamos su valor, la función asumirá éste como el valor predeterminado, es decir, las propinas serán del <span class="math notranslate nohighlight">\(10\%\)</span> salvo que se indique algún otro valor. Por ejemplo si deseamos calcular el total de la cuenta con una propina del <span class="math notranslate nohighlight">\(7\%\)</span>, ejecutamos las siguientes líneas de código:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">costos</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="c1">#Estamos considerando los argumentos posicionalmente</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Valor Neto: 46296.3
+    Total sin propina: 50000
+    Total con propina: 53500.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">costos</span><span class="p">(</span><span class="n">propina</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span><span class="n">comensales</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#Estamos haciendo referencia directa al valor de los argumentos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Valor Neto: 46296.3
+    Total sin propina: 50000
+    Total con propina: 53500.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lo presentado en la línea anterior suele emplearse únicamente cuando se tienen diferentes variables predeterminadas y no con las variables obligatorias, esto con el fin de evitar malas interpretaciones de las entradas.</p>
+</div>
+<div class="section" id="argumentos-de-longitud-variable">
+<h2>Argumentos de longitud variable:<a class="headerlink" href="#argumentos-de-longitud-variable" title="Permalink to this headline">¶</a></h2>
+<p>En diversos lenguajes de programación existe dos tipos de argumentos ampliamente utilizados <code class="docutils literal notranslate"><span class="pre">args</span></code> y <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> (<strong>arg</strong>ument<strong>s</strong> y <strong>k</strong>ey<strong>w</strong>ord<strong>arg</strong>ument<strong>s</strong> ), en Python los <code class="docutils literal notranslate"><span class="pre">args</span></code> son tuplas y los <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> son diccionarios (estructuras que estudiaremos en profundidad más adelante), estos argumentos permiten agregar cualquier cantidad de entradas a las funciones como podemos ver en las siguientes funciones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Note que si se introduce un argumento no numérico la función generará un error</span>
+<span class="n">f1</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54523</span><span class="o">/</span><span class="mf">1307643930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Note que si se introduce un argumento no numérico la función generará un error</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">f1</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
+
+<span class="nn">/tmp/ipykernel_54523/3653633694.py</span> in <span class="ni">f1</span><span class="nt">(*args)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Este tipo de argumentos nos permite definir, entre muchas otras, una función que calcule el promedio de una lista de números dados</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">promedio</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">promedio</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">5.2</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.185714285714286
+</pre></div>
+</div>
+</div>
+</div>
+<p>Es importante que note que en la definición de la función, el argumento que será una tupla de tamaño indefinido lleva un <code class="docutils literal notranslate"><span class="pre">*</span></code> antes, esto es lo que le indica a Python el tipo de variable que es, y dentro de la función se utiliza la variable sin el <code class="docutils literal notranslate"><span class="pre">*</span></code>. El nombre puede ser cualquiera pero por convención suele emplearse <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p>
+<p>Los tipos de entrada de éstas variables pueden ser diversos, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No hubo argumentos de entrada.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;En la entrada </span><span class="si">{0}</span><span class="s1"> se almacenó: </span><span class="si">{1}</span><span class="s1"> y es del tipo </span><span class="si">{2}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imprime</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No hubo argumentos de entrada.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imprime</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>En la entrada 0 se almacenó: hola y es del tipo &lt;class &#39;str&#39;&gt;
+En la entrada 1 se almacenó: 1 y es del tipo &lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>También podemos combinar las variables bien sean obligatorias u opcionales con éste tipo de argumentos, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">argv</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Primer argumento :&quot;</span><span class="p">,</span> <span class="n">arg1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Siguiente argumento en la tupla *argv :&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f2</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;bienvenido&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;la&#39;</span><span class="p">,</span> <span class="s1">&#39;Universidad&#39;</span><span class="p">,</span><span class="s1">&#39;Externado&#39;</span><span class="p">,</span><span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Primer argumento : Hola
+Siguiente argumento en la tupla *argv : bienvenido
+Siguiente argumento en la tupla *argv : a
+Siguiente argumento en la tupla *argv : la
+Siguiente argumento en la tupla *argv : Universidad
+Siguiente argumento en la tupla *argv : Externado
+Siguiente argumento en la tupla *argv : de
+Siguiente argumento en la tupla *argv : Colombia
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si intentamos escribir primero las variables de tamaño indefinido y luego las que necesitamos realmente obtendremos un error, ya que el Python no sabrá en qué momento debe parar de llenar la tupla y seguir con los argumentos fijos, salvo que se especifiquen sus valores como vimos anteriormente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f3</span><span class="p">(</span><span class="o">*</span><span class="n">argv</span><span class="p">,</span><span class="n">argn</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Último argumento :&quot;</span><span class="p">,</span> <span class="n">argn</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Siguiente argumento en la tupla *argv :&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f3</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;bienvenido&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;la&#39;</span><span class="p">,</span> <span class="s1">&#39;Universidad&#39;</span><span class="p">,</span><span class="s1">&#39;Externado&#39;</span><span class="p">,</span><span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="mi">36</span><span class="n">a5f8de1e71</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f3</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;bienvenido&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;la&#39;</span><span class="p">,</span> <span class="s1">&#39;Universidad&#39;</span><span class="p">,</span><span class="s1">&#39;Externado&#39;</span><span class="p">,</span><span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: f3() missing 1 required keyword-only argument: &#39;argn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f3</span><span class="p">(</span><span class="s1">&#39;Hola&#39;</span><span class="p">,</span> <span class="s1">&#39;bienvenido&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;la&#39;</span><span class="p">,</span> <span class="s1">&#39;Universidad&#39;</span><span class="p">,</span><span class="s1">&#39;Externado&#39;</span><span class="p">,</span><span class="s1">&#39;de&#39;</span><span class="p">,</span> <span class="n">argn</span><span class="o">=</span><span class="s1">&#39;Colombia&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Último argumento : Colombia
+Siguiente argumento en la tupla *argv : Hola
+Siguiente argumento en la tupla *argv : bienvenido
+Siguiente argumento en la tupla *argv : a
+Siguiente argumento en la tupla *argv : la
+Siguiente argumento en la tupla *argv : Universidad
+Siguiente argumento en la tupla *argv : Externado
+Siguiente argumento en la tupla *argv : de
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ejercicios">
+<h3>Ejercicios:<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Crea una función que permita hallar la mediana en una lista de números ingresados en orden ascendente.</p></li>
+<li><p>Crea una función que calcule la varianza muestral de los valores ingresados.$<span class="math notranslate nohighlight">\(\text{varianza} = \sigma^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2,\)</span><span class="math notranslate nohighlight">\( \)</span>n=\text{tamaño de la muestra} <span class="math notranslate nohighlight">\(  
+\)</span>\bar{x} = promedio<span class="math notranslate nohighlight">\(  
+\)</span>x_i = i-\text{ésimo elemento de la muestra} $</p></li>
+<li><p>Cree una función que halle el mínimo de una lista de números dados.</p></li>
+<li><p>Cree una función que halle el máximo de una lista de números dados.</p></li>
+</ol>
+<p>Para introducir los <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> es necesario en el argumento de la función a dicha variable antecederla de <code class="docutils literal notranslate"><span class="pre">**</span></code>, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fkw1</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">nombre</span><span class="p">,</span> <span class="n">valor</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> = </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">valor</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fkw1</span><span class="p">(</span><span class="n">nota1</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">nota2</span><span class="o">=</span><span class="mf">3.5</span><span class="p">,</span><span class="n">nota3</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nota1 = 1.0
+nota2 = 3.5
+nota3 = 5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ejercicio">
+<h3>Ejercicio:<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Modifica el código anterior para que el programa calcule el promedio de las notas ingresadas.</p></li>
+</ol>
+<p>En una función de Python podemos tener variables de todo tipo involucradas, como por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">superfuncion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor del único parámetro obligatorio es: &#39;</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor del único parámetro con valor predeterminado es: &#39;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los valores ingresados en la tupla args son: &#39;</span><span class="p">,</span><span class="n">args</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Los valores ingresados en el diccionario **kwargs son: &#39;</span><span class="p">,</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">superfuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor del único parámetro obligatorio es:  1
+El valor del único parámetro con valor predeterminado es:  5
+Los valores ingresados en la tupla args son:  ()
+Los valores ingresados en el diccionario **kwargs son:  {}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">superfuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor del único parámetro obligatorio es:  1
+El valor del único parámetro con valor predeterminado es:  2
+Los valores ingresados en la tupla args son:  ()
+Los valores ingresados en el diccionario **kwargs son:  {}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">superfuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor del único parámetro obligatorio es:  1
+El valor del único parámetro con valor predeterminado es:  2
+Los valores ingresados en la tupla args son:  (0, 1, 2, 3)
+Los valores ingresados en el diccionario **kwargs son:  {}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">superfuncion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">val0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">val1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">val2</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor del único parámetro obligatorio es:  1
+El valor del único parámetro con valor predeterminado es:  2
+Los valores ingresados en la tupla args son:  (0, 1, 2, 3)
+Los valores ingresados en el diccionario **kwargs son:  {&#39;val0&#39;: 0, &#39;val1&#39;: 1, &#39;val2&#39;: 2}
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este ejemplo podemos ver la clara diferencia entre la tupla almacenada en <code class="docutils literal notranslate"><span class="pre">args</span></code> y el diccionario almacenado en <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>, su manipulación será objeto de cuadernos posteriores, pero es bueno que desde ya tengamos presente su existencia, ya que posteriormente nos serán de gran utilidad.</p>
+</div>
+<div class="section" id="id1">
+<h3>Ejercicio:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Cree una función que dado un monto y una lista de personas con sus correspondientes invitados, calcule cuánto debe pagar cada uno si la cuenta se divide en partes iguales.</p></li>
+<li><p>Haga un programa que le permita ingresar las notas obtenidas por un estudiante y los porcentajes asociados a ellas, si el porcentaje es del <span class="math notranslate nohighlight">\(100\%\)</span> debe arrojar la nota definitiva de la materia y si el porcentaje es inferior debe informarle el valor de la nota acumulada y cuánto debería sacar en el resto de la materia para aprobarla.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="comentarios-finales">
+<h2>Comentarios finales:<a class="headerlink" href="#comentarios-finales" title="Permalink to this headline">¶</a></h2>
+<p>Recuerda que para evitar confusiones en la ejecución de la función los parámetros de ésta deben ir así: variables, variables con asignaciones predeterminadas, args y kwargs</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nombre_de_la_función</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">vn</span><span class="p">,</span><span class="n">vp1</span><span class="o">=</span><span class="s1">&#39;algo&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">vpm</span><span class="o">=</span><span class="s1">&#39;algo&#39;</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">lista_de_instrucciones</span>
+    <span class="k">return</span> <span class="n">resultado</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="11.Funciones.%20Definici%C3%B3n.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Funciones: Definición</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="13.Modularizar.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Modularizar</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
