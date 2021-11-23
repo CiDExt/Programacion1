@@ -1,0 +1,1840 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computación simbólica &#8212; Programación 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programación 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introducción a la programación
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Consola.html">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Github2.html">
+   Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Algoritmos.html">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Listas%20y%20Tuplas.html">
+   Listas (introducción)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7.Paradigmas.html">
+   Intermezzo - Paradigmas de programación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.Condicionales.html">
+   Condicionales (if)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9.%20Iteraci%C3%B3n%20y%20bucles.html">
+   Bucles (while)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
+   Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/25.Sympy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F25.Sympy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/25.Sympy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Computación simbólica
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceptos-basicos">
+   Conceptos básicos
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simbolos">
+     Símbolos
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sustitucion">
+     Sustitución
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convertir-cadenas-a-expresiones-sympy">
+       Convertir cadenas a expresiones SymPy
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#obtener-el-valor-en-punto-flotante">
+       Obtener el valor en punto flotante
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuaciones">
+     Ecuaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#igualdad-de-expresiones-y-simplificacion">
+   Igualdad de expresiones y simplificación
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simplificacion-de-funciones-polinomicas-racionales">
+     Simplificación de funciones polinómicas racionales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculo">
+   Cálculo
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solucionar-ecuaciones">
+   Solucionar ecuaciones
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistemas-de-ecuaciones-lineales">
+     Sistemas de ecuaciones lineales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistemas-no-lineales">
+     Sistemas no lineales
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuaciones-diferenciales">
+     Ecuaciones diferenciales
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <h1>Computación simbólica con Sympy<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Computación-simbólica" data-toc-modified-id="Computación-simbólica-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Computación simbólica</a></span></li><li><span><a href="#Conceptos-básicos" data-toc-modified-id="Conceptos-básicos-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Conceptos básicos</a></span><ul class="toc-item"><li><span><a href="#Símbolos" data-toc-modified-id="Símbolos-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Símbolos</a></span></li><li><span><a href="#Sustitución" data-toc-modified-id="Sustitución-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Sustitución</a></span><ul class="toc-item"><li><span><a href="#Convertir-cadenas-a-expresiones-SymPy" data-toc-modified-id="Convertir-cadenas-a-expresiones-SymPy-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span>Convertir cadenas a expresiones SymPy</a></span></li><li><span><a href="#Obtener-el-valor-en-punto-flotante" data-toc-modified-id="Obtener-el-valor-en-punto-flotante-2.2.2"><span class="toc-item-num">2.2.2&nbsp;&nbsp;</span>Obtener el valor en punto flotante</a></span></li></ul></li><li><span><a href="#Ecuaciones" data-toc-modified-id="Ecuaciones-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Ecuaciones</a></span></li></ul></li><li><span><a href="#Igualdad-de-expresiones-y-simplificación" data-toc-modified-id="Igualdad-de-expresiones-y-simplificación-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Igualdad de expresiones y simplificación</a></span><ul class="toc-item"><li><span><a href="#Simplificación-de-funciones-polinómicas-racionales" data-toc-modified-id="Simplificación-de-funciones-polinómicas-racionales-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Simplificación de funciones polinómicas racionales</a></span></li></ul></li><li><span><a href="#Cálculo" data-toc-modified-id="Cálculo-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Cálculo</a></span></li><li><span><a href="#Solucionar-ecuaciones" data-toc-modified-id="Solucionar-ecuaciones-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Solucionar ecuaciones</a></span><ul class="toc-item"><li><span><a href="#Sistemas-de-ecuaciones-lineales" data-toc-modified-id="Sistemas-de-ecuaciones-lineales-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Sistemas de ecuaciones lineales</a></span></li><li><span><a href="#Sistemas-no-lineales" data-toc-modified-id="Sistemas-no-lineales-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Sistemas no lineales</a></span></li><li><span><a href="#Ecuaciones-diferenciales" data-toc-modified-id="Ecuaciones-diferenciales-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Ecuaciones diferenciales</a></span></li></ul></li></ul></div><div class="section" id="computacion-simbolica">
+<h1>Computación simbólica<a class="headerlink" href="#computacion-simbolica" title="Permalink to this headline">¶</a></h1>
+<p>Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. El paquete <a class="reference external" href="https://docs.sympy.org/latest/index.html"><code class="docutils literal notranslate"><span class="pre">Sympy</span></code></a> nos ofrece la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.8284271247461903
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.000000000000002
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span>
+<span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54767</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nota</span><span class="p">:</span> <span class="n">para</span> <span class="n">obtener</span> <span class="n">una</span> <span class="n">salida</span> <span class="n">estética</span> <span class="n">de</span> <span class="n">sympy</span> <span class="n">usamos</span> <span class="n">la</span> <span class="n">orden</span><span class="p">:</span>
+
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">init_printing</span>
+
+<span class="n">init_printing</span><span class="p">()</span> 
+
+</pre></div>
+</div>
+<p><strong>El poder de la computación simbólica</strong></p>
+<p>El poder real de un sistema de cálculo simbólico como SymPy es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más.</p>
+<p><em>Tomado de</em> <a class="reference external" href="https://docs.sympy.org/latest/tutorial/intro.html">https://docs.sympy.org/latest/tutorial/intro.html</a></p>
+</div>
+<div class="section" id="conceptos-basicos">
+<h1>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">¶</a></h1>
+<p>Para iniciar el trabajo con la librería sympy debemos aclarar rutinas que son fundamentales para iniciar cualquier trabajo con este paquete. En primer lugar, por ejemplo, hay que aclarar que vamos a usar un símbolo así mismo, las ecuaciones tienen que poder expresarse y no podemos usar ni <code class="docutils literal notranslate"><span class="pre">=</span></code> ni  <code class="docutils literal notranslate"><span class="pre">==</span></code>. Veamos algunos de estos conceptos básicos.</p>
+<div class="section" id="simbolos">
+<h2>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">¶</a></h2>
+<p>Para usar variables simbólicas debemos definirlas, usamos la función symbols:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 2 x + 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">-</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - x + \left(2 x + 7\right) \left(3 x - 5\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">8</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8 x - 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comoescribo</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;comoveo&quot;</span><span class="p">)</span>
+<span class="n">comoescribo</span><span class="o">+</span><span class="mi">8</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle comoveo + 8\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="sustitucion">
+<h2>Sustitución<a class="headerlink" href="#sustitucion" title="Permalink to this headline">¶</a></h2>
+<p>Para remplazar valores en una expresión usamos <code class="docutils literal notranslate"><span class="pre">subs</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">-</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - x + \left(2 x + 7\right) \left(3 x - 5\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -19\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -35\]</div>
+</div>
+</div>
+<p>También se pueden sustituir expresiones</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{y}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{x^{y}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">expand_trig</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sin{\left(x \right)} \cos{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">),</span> <span class="mi">2</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">),</span><span class="mi">2</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sin{\left(x \right)} \cos{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{3} + 4 x y - z\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">0</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 40\]</div>
+</div>
+</div>
+<div class="section" id="convertir-cadenas-a-expresiones-sympy">
+<h3>Convertir cadenas a expresiones SymPy<a class="headerlink" href="#convertir-cadenas-a-expresiones-sympy" title="Permalink to this headline">¶</a></h3>
+<p>Usamos sympify para convertir cadenas en expresiones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">str_expr</span> <span class="o">=</span> <span class="s2">&quot;x**2 + 3*x - 1/2&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">str_expr</span><span class="p">)</span>
+<span class="n">expr</span> <span class="o">=</span> <span class="n">sympify</span><span class="p">(</span><span class="n">str_expr</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x**2 + 3*x - 1/2
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} + 3 x - \frac{1}{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">modulo1</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">z</span><span class="o">=</span><span class="s2">&quot;Error&quot;</span>
+    <span class="n">n</span><span class="o">=</span><span class="n">sympify</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">=</span><span class="n">sympify</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="n">z</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error!!&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">z</span>
+<span class="n">widn</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">modulo1</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="s2">&quot;sin(x)&quot;</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="n">widn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "7a08a2700c644cd38f168826cc474808", "version_major": 2, "version_minor": 0}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.modulo1(t, n)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="obtener-el-valor-en-punto-flotante">
+<h3>Obtener el valor en punto flotante<a class="headerlink" href="#obtener-el-valor-en-punto-flotante" title="Permalink to this headline">¶</a></h3>
+<p>Usamos <code class="docutils literal notranslate"><span class="pre">evalf</span></code> para obtener el valor en punto flotante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2 \sqrt{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">evalf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 2.82842712474619\]</div>
+</div>
+</div>
+<p>subsy evalf son buenos si desea hacer una evaluación simple, pero si tiene la intención de evaluar una expresión en muchos puntos, hay formas más eficientes. Por ejemplo, si desea evaluar una expresión en mil puntos, usar SymPy sería mucho más lento de lo necesario, especialmente si solo le importa la precisión de la máquina. En su lugar, debe usar bibliotecas como NumPy y SciPy .</p>
+<p>La forma más fácil de convertir una expresión SymPy en una expresión que puede evaluarse numéricamente es usar la lambdifyfunción. lambdifyactúa como una lambdafunción, excepto que convierte los nombres de SymPy a los nombres de la biblioteca numérica dada, generalmente NumPy. Por ejemplo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+<span class="n">a</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">lambdify</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="s2">&quot;numpy&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.        ,  0.84147098,  0.90929743,  0.14112001, -0.7568025 ,
+       -0.95892427, -0.2794155 ,  0.6569866 ,  0.98935825,  0.41211849])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">lambdify</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="s2">&quot;math&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.9589242746631385
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ecuaciones">
+<h2>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permalink to this headline">¶</a></h2>
+<p>Como sabemos <code class="docutils literal notranslate"><span class="pre">=</span></code> y <code class="docutils literal notranslate"><span class="pre">==</span></code> ya fueron usado en el lenguaje para unas operaciones específicas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sp</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x + 1 = 4\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="igualdad-de-expresiones-y-simplificacion">
+<h1>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">¶</a></h1>
+<p>Ahora saltemos y hagamos algunas matemáticas interesantes. Una de las características más útiles de un sistema de manipulación simbólica es la capacidad de simplificar expresiones matemáticas.</p>
+<p>SymPy tiene docenas de funciones para realizar varios tipos de simplificación. También hay una función general llamada simplify()que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos</p>
+<p>Es importante tener esta definición en cuenta cuando se presentan igualdades entre expresiones.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x^{3} + x^{2} - x - 1}{x^{2} + 2 x + 1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span><span class="p">(</span><span class="n">gamma</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">gamma</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 2\right) \left(x - 1\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">simplify</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0\]</div>
+</div>
+</div>
+<p>Un problema de simplify()es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.</p>
+<div class="section" id="simplificacion-de-funciones-polinomicas-racionales">
+<h2>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">¶</a></h2>
+<p>expand()es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{3} + 6 x^{2} + 12 x + 8\]</div>
+</div>
+</div>
+<p>factor()toma un polinomio y lo factoriza en factores irreducibles sobre los números racionales. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x - 1\right) \left(x^{2} + 1\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor_list</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, [(x - 1, 1), (x**2 + 1, 1)])
+</pre></div>
+</div>
+</div>
+</div>
+<p>cancel() tomará cualquier función racional y la pondrá en la forma canónica estándar, 𝑝𝑞, dónde 𝑝 y 𝑞 son polinomios expandidos sin factores comunes, y los coeficientes principales de 𝑝 y 𝑞 no tienen denominadores (es decir, son enteros).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cancel</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x + 1}{x}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{x y^{2} - 2 x y z + x z^{2} + y^{2} - 2 y z + z^{2}}{x^{2} - 1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cancel</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{y^{2} - 2 y z + z^{2}}{x - 1}\]</div>
+</div>
+</div>
+<p>apart() realiza una descomposición de fracción parcial en una función racional.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">21</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{4 x^{3} + 21 x^{2} + 10 x + 12}{x^{4} + 5 x^{3} + 5 x^{2} + 4 x}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">apart</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 x - 1}{x^{2} + x + 1} - \frac{1}{x + 4} + \frac{3}{x}\]</div>
+</div>
+</div>
+<p>Para simplificar expresiones usando identidades trigonométricas, use trigsimp().</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trigsimp</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">sec</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin^{2}{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cancel</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">sec</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\sin{\left(x \right)} \tan{\left(x \right)}}{\sec{\left(x \right)}}\]</div>
+</div>
+</div>
+<p>Para expandir las funciones trigonométricas, es decir, aplicar la suma o las identidades de doble ángulo, use expand_trig().</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand_trig</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)} \cos{\left(y \right)} + \sin{\left(y \right)} \cos{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand_trig</span><span class="p">(</span><span class="n">tan</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 \tan{\left(x \right)}}{1 - \tan^{2}{\left(x \right)}}\]</div>
+</div>
+</div>
+<p>powsimp() permite simplificaciones con leyes de exponentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a b&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">z</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;z t c&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">powsimp</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{a + b}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">powsimp</span><span class="p">(</span><span class="n">z</span><span class="o">**</span><span class="n">t</span><span class="o">*</span><span class="n">z</span><span class="o">**</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle z^{c + t}\]</div>
+</div>
+</div>
+<p><strong>rewrite()</strong>
+Podemos reescribir algunas funciones especiales en términos de otra:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{2 \sin^{2}{\left(x \right)}}{\sin{\left(2 x \right)}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \Gamma\left(x + 1\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle i \sin{\left(x \right)} + \cos{\left(x \right)}\]</div>
+</div>
+</div>
+<p><strong>Fracciones Continuas</strong></p>
+<p>Una fracción continua es una expresión de la forma:</p>
+<div class="math notranslate nohighlight">
+\[a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{ \ddots + \cfrac{1}{a_n}
+}}}\]</div>
+<p>Realizar una función en sympy que admita una lista <span class="math notranslate nohighlight">\([a_0,a_1,a_2,\cdots,a_n]\)</span> y que retorne el valor obtenido por la fracción.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">L</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">L</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3, 2, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lista_a_fraccion</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">L</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+    <span class="n">expr</span><span class="o">=</span><span class="n">Integer</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+        <span class="n">expr</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">expr</span><span class="o">+</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_a_fraccion</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{x + \frac{1}{y + \frac{1}{z}}}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_a_fraccion</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{1 + \frac{1}{2 x + \frac{1}{3}}}\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculo">
+<h1>Cálculo<a class="headerlink" href="#calculo" title="Permalink to this headline">¶</a></h1>
+<p>SymPy también permite realizar tareas básicas del cálculo diferencial e integral.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1">#derivadas en una sola variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \sin{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1">#derivadas en una sola variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(8 x + 5\right) e^{4 x^{2} + 5 x}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1">#derivadas parciales</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8 x y e^{4 x^{2} + 5 y}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>  <span class="c1">#derivadas de orden superior</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle - \cos{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">y</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1">#derivadas de orden superior</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8 x \left(5 y + 1\right) e^{4 x^{2} + 5 y}\]</div>
+</div>
+</div>
+<p>Como en las ecuaciones, a veces requerimos derivadas expresadas, sin evaluarse:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deriv</span> <span class="o">=</span> <span class="n">Derivative</span><span class="p">(</span> <span class="n">exp</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="n">deriv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\partial^{4}}{\partial z\partial y^{2}\partial x} e^{x y z}\]</div>
+</div>
+</div>
+<p>Para evaluarla:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">deriv</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x z \left(x^{2} y^{2} z^{2} + 5 x y z + 4\right) e^{x y z}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span> <span class="n">exp</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="n">z</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x z \left(x^{2} y^{2} z^{2} + 5 x y z + 4\right) e^{x y z}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Integrales</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sin{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">exp</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">exp</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int\limits_{0}^{\infty} e^{- x}\, dx\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">exp</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{1}{3}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty} e^{- x^{2} - y^{2}}\, dx\, dy\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \pi\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Integral</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">oo</span><span class="p">,</span> <span class="n">oo</span><span class="p">))</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \pi\]</div>
+</div>
+</div>
+<p>Y ¿si la integral no es posible de calcular?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int x^{x}\, dx\]</div>
+</div>
+</div>
+<p>Para expresar una integral no evaluada usamos <code class="docutils literal notranslate"><span class="pre">Integral</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integ</span><span class="o">=</span><span class="n">Integral</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">integ</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \int \frac{\left(x^{4} + x^{2} e^{x} - x^{2} - 2 x e^{x} - 2 x - e^{x}\right) e^{x}}{\left(x - 1\right)^{2} \left(x + 1\right)^{2} \left(e^{x} + 1\right)}\, dx\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integ</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \log{\left(e^{x} + 1 \right)} + \frac{e^{x}}{x^{2} - 1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#Límites</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span>
+<span class="n">expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{NaN}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">Limit</span><span class="p">((</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">)</span> <span class="c1">#Límites sin evaluar</span>
+<span class="n">expr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \lim_{x \to 0^-}\left(\frac{\cos{\left(x \right)} - 1}{x}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 0\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> 
+<span class="n">expr</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Series</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 1 + x + \frac{x^{2}}{2} - \frac{x^{4}}{8} - \frac{x^{5}}{15} - \frac{x^{6}}{240} + \frac{x^{7}}{90} + \frac{31 x^{8}}{5760} + \frac{x^{9}}{5670} + O\left(x^{10}\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Series no centradas en 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -5 + \frac{\left(x - 6\right)^{2}}{2} + \frac{\left(x - 6\right)^{3}}{6} + \frac{\left(x - 6\right)^{4}}{24} + \frac{\left(x - 6\right)^{5}}{120} + \frac{\left(x - 6\right)^{6}}{720} + \frac{\left(x - 6\right)^{7}}{5040} + \frac{\left(x - 6\right)^{8}}{40320} + \frac{\left(x - 6\right)^{9}}{362880} + x + O\left(\left(x - 6\right)^{10}; x\rightarrow 6\right)\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="solucionar-ecuaciones">
+<h1>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">¶</a></h1>
+<p>Ahora hagamos una rápida exploración por las diferentes ecuaciones que se resuelven en Sympy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x^{2} = 1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{-1, 1\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">60</span><span class="o">-</span><span class="n">bf4836c147c4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: &#39;FiniteSet&#39; object is not subscriptable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle -1\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="c1"># Raices</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{0, 1\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbb{C}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Integers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \mathbb{Z}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">Interval</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[0, 10\right]\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">Interval</span><span class="o">.</span><span class="n">Ropen</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[0, 10\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">Interval</span><span class="o">.</span><span class="n">Lopen</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(0, 10\right]\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">Interval</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(0, 10\right)\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">domain</span><span class="o">=</span><span class="n">FiniteSet</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{0, 1, 2, 3\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">Reals</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{2 n \pi + \frac{\pi}{2}\; |\; n \in \mathbb{Z}\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="n">Interval</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">34</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\frac{5 \pi}{2}, \frac{9 \pi}{2}, \frac{13 \pi}{2}, \frac{17 \pi}{2}, \frac{21 \pi}{2}\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>     <span class="c1"># Cuando la solución no existe</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \emptyset\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solveset</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>  <span class="c1"># Cuando es incapaz de encontrar una solución</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{x \mid x \in \mathbb{C} \wedge - x + \cos{\left(x \right)} = 0 \right\}\]</div>
+</div>
+</div>
+<div class="section" id="sistemas-de-ecuaciones-lineales">
+<h2>Sistemas de ecuaciones lineales<a class="headerlink" href="#sistemas-de-ecuaciones-lineales" title="Permalink to this headline">¶</a></h2>
+<p>Usamos <code class="docutils literal notranslate"><span class="pre">linsolve</span></code> para encontrar las soluciones:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linsolve</span><span class="p">([</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">z</span> <span class="o">-</span> <span class="mi">3</span> <span class="p">],</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( - y - 1, \  y, \  2\right)\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linsolve</span><span class="p">([</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span> <span class="p">],</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( 0, \  -1, \  2\right)\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linsolve</span><span class="p">([</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="mi">1</span> <span class="p">],</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \emptyset\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="sistemas-no-lineales">
+<h2>Sistemas no lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this headline">¶</a></h2>
+<p>Usaremos <code class="docutils literal notranslate"><span class="pre">nonlinsolve</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a, b, c, d&#39;</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nonlinsolve</span><span class="p">([</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( -1, \  -1\right), \left( 0, \  0\right)\right\}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nonlinsolve</span><span class="p">([</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span><span class="p">],</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left\{\left( 2, \  \frac{1}{2}\right)\right\}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="ecuaciones-diferenciales">
+<h2>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;f g h&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diffeq</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">diffeq</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle f{\left(x \right)} - 2 \frac{d}{d x} f{\left(x \right)} + \frac{d^{2}}{d x^{2}} f{\left(x \right)} = \sin{\left(x \right)}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">diffeq</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle f{\left(x \right)} = \left(C_{1} + C_{2} x\right) e^{x} + \frac{\cos{\left(x \right)}}{2}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x - f{\left(x \right)} - \cos{\left(f{\left(x \right)} \right)} = C_{1}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(1 - \sin{\left(f{\left(x \right)} \right)}\right) \frac{d}{d x} f{\left(x \right)} - 1\]</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

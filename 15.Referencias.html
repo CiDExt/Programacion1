@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referencias en Python: &#8212; Programación 1</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programación funcional" href="16.Programaci%C3%B3nFuncional.html" />
+    <link rel="prev" title="Math y Random - introducción" href="14.Math%20y%20Random.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programación 1</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introducción a la programación
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="1.Consola.html">
+   Buscar, borrar y mover archivos en CLI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2.Github1.html">
+   Controlador de versiones
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3.Github2.html">
+   Mi primera página
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4.Algoritmos.html">
+   Algoritmos, Python y Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5.Variables.html">
+   Variables y funciones básicas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6.Listas%20y%20Tuplas.html">
+   Listas (introducción)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7.Paradigmas.html">
+   Intermezzo - Paradigmas de programación
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8.Condicionales.html">
+   Condicionales (if)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9.%20Iteraci%C3%B3n%20y%20bucles.html">
+   Bucles (while)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10.%20Iteraci%C3%B3n%20y%20bucles%20II.html">
+   Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
+                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/15.Referencias.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
+                    class="fab fa-github"></i>repositorio</button></a>
+        <a class="issues-button"
+            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F15.Referencias.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
+        title="Modo de pantalla completa"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/15.Referencias.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo-es-objeto">
+   ¡Todo es objeto!
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objetos-mutables-vs-inmutables">
+     Objetos mutables vs inmutables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diferencias-de-las-variables-entre-c-y-python">
+   Diferencias de las variables entre C y Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="referencias-en-python">
+<h1>Referencias en Python:<a class="headerlink" href="#referencias-en-python" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Cómo vamos?</p>
+<p>Hasta el momento debemos tener claro lo siguiente:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="605f43c4-4850-4b8b-9e48-27e5fa23ebb8" name="969020d0-d8f3-44a8-b047-cafabf8e50ab" type="radio">
+</input><label class="tabbed-label" for="605f43c4-4850-4b8b-9e48-27e5fa23ebb8">
+Funciones en Python</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Hemos logrado crear funciones en Python, así mismo estudiamos como documentarlas y las diferentes formas de definirlas según los argumentos que reciben.</p>
+</div>
+</div>
+<input id="a0e019b6-b3fc-4f09-83f0-5a7445231e27" name="969020d0-d8f3-44a8-b047-cafabf8e50ab" type="radio">
+</input><label class="tabbed-label" for="a0e019b6-b3fc-4f09-83f0-5a7445231e27">
+Variables</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Una variable en Python sirve para <strong>guardar un valor específico</strong>, ya sea <strong>numérico</strong>, <strong>texto</strong> u otro <a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp"><strong>Tipo de Dato</strong></a> con un nombre que nosotros escojamos. Debemos escribir una expresión de la forma:</p>
+<p>[Nombre de variable]=[Valor para guardar]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Apuntadores</p>
+<p>En lenguajes como <strong>C</strong> o <strong>C++</strong> los apuntadores son unas herramientas destacadas en la optimización de rutinas puesto que indican la dirección de memoria donde se guardan las variables.
+En ese sentido, en tareas como la asignación dinámica de memoria, la creación de código conciso y compacto (sin reescribir encabezados) y en la eficiencia del código;  los apuntadores son fundamentales para los programadores en C o C++. Si quieres más información consulta en <a class="reference external" href="https://www.tutorialspoint.com/cprogramming/c_pointers.htm">https://www.tutorialspoint.com/cprogramming/c_pointers.htm</a></p>
+</div>
+<p>En Python no hay apuntadores, todo por mantener  los 20 principios de <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">Zen de Python</a>. Recordemos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+</pre></div>
+</div>
+</div>
+</div>
+<p>En este particular, la implementación de apuntadores contradice varios de los principios del lenguaje, ya bien se por su complejidad, por hacer cambios implicitos y porque esencialmente Python se concentra en la usabilidad más que en la velocidad.</p>
+<p>No quiere decir lo anterior que Python impida optimizar código con algunas ideas provenientes del uso de apuntadores, hay algunos beneficios de estas ideas que se pueden implementar en Python. Veamos en detalle lo que significa guardar un valor en Python.</p>
+<div class="section" id="todo-es-objeto">
+<h2>¡Todo es objeto!<a class="headerlink" href="#todo-es-objeto" title="Permalink to this headline">¶</a></h2>
+<p>En el estudio de <span class="xref myst">paradigmas de programación</span> vimos que hay un estilo de programación orientado a objetos, en ese resumen vimos que el concepto de objeto que se entiende como una entidad abstracta conformado por métodos y atributos. Veamos lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> permite identificar si un <strong>objeto</strong> es una <strong>instancia</strong> de una clase. Aquí ya estamos diciendo que el entero es un <strong>objeto</strong>, como si quisieramos decir que implicitamente todo lo que clasifique isinstance es un objeto, y pues :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Claramente si pensamos en más y más elementos tendriamos un resultado similar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">,</span><span class="nb">object</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="nb">object</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="nb">object</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">({</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="s1">&#39;Hola&#39;</span><span class="p">},</span><span class="nb">object</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+True
+True
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Estos objetos en Python tienen una estructura interesante, se tratan, la mayoría de veces, de la misma manera por el lenguaje y siempre cuentan con dos partes importantes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/es/3/c-api/intro.html#reference-counts">Conteo de referencias</a>, para hacer gestión de memoria, ver <a class="reference external" href="https://realpython.com/python-memory-management/">https://realpython.com/python-memory-management/</a> y</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/es/3/reference/datamodel.html#types">Tipo</a> que determina qué tipo de objeto es (por ejemplo, un número entero, una lista o una función definida por el usuario).</p></li>
+</ul>
+<div class="section" id="objetos-mutables-vs-inmutables">
+<h3>Objetos mutables vs inmutables<a class="headerlink" href="#objetos-mutables-vs-inmutables" title="Permalink to this headline">¶</a></h3>
+<p>Recuerdas la gran diferencia de la lista y la tupla, la lista se puede modificar cuando se quiera, en la tupla no puedo hacer eso, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">b</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 2, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54574</span><span class="o">/</span><span class="mf">3399445393.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pasa muy parecido con las cadenas de caracteres:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">txt</span><span class="o">=</span><span class="s1">&#39;hola&#39;</span>
+<span class="n">txt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;b&#39;</span>
+<span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_7868</span><span class="o">/</span><span class="mf">3685992916.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">txt</span><span class="o">=</span><span class="s1">&#39;hola&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">txt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;b&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">txt</span>
+
+<span class="ne">TypeError</span>: &#39;str&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
+<p>En particular tenemos que:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Tipo</p></th>
+<th class="text-align:center head"><p>¿Inmutable?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">complex</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">tuple</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">frozenset</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td class="text-align:center"><p>Sí</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">dict</span></code></p></td>
+<td class="text-align:center"><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ahora bien, en Python, el usuario relaciona el objeto y su contenido mediante una referencia, la cual es a la dirección en la cual se encuentra alojado dicho objeto en la memoria del computador (apuntador) mediante la función <code class="docutils literal notranslate"><span class="pre">id()</span></code>, así:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140227037911344
+</pre></div>
+</div>
+</div>
+</div>
+<p>En una asignación como la siguiente:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">x</span></code> no contiene el valor 1, pero sí la información del objeto en la memoria, en el cual se se encuentra alojado tal valor. En otras palabras, podríamos afirmar que <code class="docutils literal notranslate"><span class="pre">x</span></code> “apunta” o “se refiere” a un objeto en el cual se halla alojado el 1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140227037911344
+</pre></div>
+</div>
+</div>
+</div>
+<p>Observe que las dos salidas coinciden. Algo que debemos tener claro es que dos objetos diferentes no pueden estar alojados en la misma dirección, es decir, cada objeto tiene una única dirección en la memoria. No nos es posible acceder a la dirección de los objetos, pero podemos acceder al identificador único que ellos poseen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140227037911344
+140227037911376
+</pre></div>
+</div>
+</div>
+</div>
+<p>Muy probablemente, este número entero que obtuvimos, conocido como la <strong>identidad</strong> del objeto, sea diferente en cada máquina y en cada oportunidad que reiniciemos el kernel. El siguiente es un ejempo muy claro en el cual podremos ver que la identidad de cada objeto es única:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Su cuadrado es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;y su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrado</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 1 y su identidad es: 140227037911344
+Su cuadrado es: 1 y su identidad es: 140227037911344
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 1 y su identidad es: 140227037911344
+Su cuadrado es: 1 y su identidad es: 140227037911344
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notemos que la función <code class="docutils literal notranslate"><span class="pre">cuadrado</span></code> regresa el mismo valor de identidad para 1, su cuadrado, <span class="math notranslate nohighlight">\(x\)</span> y su cuadrado, ya que en ambos casos hablamos del mismo objeto, mientras que para el siguiente caso el valor de la identidad del parámetro y de su cuadrado cambian:</p>
+<p>Si hay un cambio:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrado</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 2 y su identidad es: 140227037911376
+Su cuadrado es: 4 y su identidad es: 140227037911440
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para comprobar que dos elementos tienen la misma identidad empleamos la función <code class="docutils literal notranslate"><span class="pre">is</span></code>, así:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="ow">is</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="ow">is</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notemos que, la función puede recibir la referencia a un objeto inmutable, y por más cálculos que se hagan sobre dicho objeto, éste no estará afectado, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Su cuadrado es:&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y su identidad es:&#39;</span><span class="p">,</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cuadrado</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor es: 2 su identidad es: 140227037911376
+Su cuadrado es: 4 y su identidad es: 140227037911440
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cabe resaltar que si no hacemos uso de la referencia del valor original, se estaría almacenando un poco de <em>basura</em> en nuestra memoria.</p>
+<p>En el caso de los objetos mutables pasa algo muy curioso, veamos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">Lista</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
+140226659470528
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">Lista</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 0, 3]
+140226659470528
+</pre></div>
+</div>
+</div>
+</div>
+<p>Estos objetos cambian no solo en Python sino que en la memoria también, a diferencia de los elementos inmutables que asumen cambios en nuevos espacios de memoria, los elementos mutables cambian en ese mismo espacio.</p>
+</div>
+</div>
+<div class="section" id="diferencias-de-las-variables-entre-c-y-python">
+<h2>Diferencias de las variables entre C y Python<a class="headerlink" href="#diferencias-de-las-variables-entre-c-y-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>En el caso de C</strong></p>
+<p>Si hacemos lo siguiente:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">152</span>
+</pre></div>
+</div>
+<p>estamos siguiendo el siguiente proceso:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bd815ba39a10d85c08574" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<p>Lo que ocurre es que se asigna un espaciode memoria para un número entero, el valor 152 se almacena en ese espacio de memoria y se indica que <code class="docutils literal notranslate"><span class="pre">x</span></code> apunta a ese valor.</p>
+<p>Si cambiamos el valor de la variable,</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">898</span>
+</pre></div>
+</div>
+<p>entonces cambiamos el valor guardado en ese espacio de memoria:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bdc85672a090d98e7f21e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p><strong>En el caso de Python</strong></p>
+<p>El ejercicio análogo hace un proceso un poco más largo. Crea un <code class="docutils literal notranslate"><span class="pre">PyObject</span></code>, identifica que el tipo de ese elemento es entero indica que ese objeto tiene valor 152, por otro lado crea un nombre llamado <code class="docutils literal notranslate"><span class="pre">x</span></code>, apunta <code class="docutils literal notranslate"><span class="pre">x</span></code> a <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> y aumenta el contador de referencias del <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> en 1:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619beb4f672a090d98e7f3ad" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Observe que la memoria guarda el objeto 152, en este caso el nombre <code class="docutils literal notranslate"><span class="pre">x</span></code> no tiene dirección de memoria, si hacemos una actualización como  <code class="docutils literal notranslate"><span class="pre">x=153</span></code> ocurre lo siguiente:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bf2d9672a090d98e7f4a0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Si hacemos algo más interesante, como por ejemplo <code class="docutils literal notranslate"><span class="pre">y=</span> <span class="pre">x</span> </code></p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619c230456355d0dcbd80610" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<p>Note que el contador de referencias se va actualizando cada vexz que se hace una asignación nueva.</p>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Python tiene una filosofia interesante frente al uso de memoria, cambia totalmente la idea detrás de los apuntadores y utiliza nombres más allá que variables. Si quisiese aplicar ideas de optimización con apuntadores en este lenguaje debería trabajar con objetos mutables, sin embargo, recuerda:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="14.Math%20y%20Random.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Math y Random - introducción</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="16.Programaci%C3%B3nFuncional.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Programación funcional</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+        
+            &copy; Derechos de autor 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

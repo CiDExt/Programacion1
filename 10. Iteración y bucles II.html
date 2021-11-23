@@ -43,6 +43,8 @@
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,6 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Funciones: Definición" href="11.Funciones.%20Definici%C3%B3n.html" />
     <link rel="prev" title="Bucles (while)" href="9.%20Iteraci%C3%B3n%20y%20bucles.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -142,6 +145,41 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Bucles (for)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11.Funciones.%20Definici%C3%B3n.html">
+   Funciones: Definición
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12.Funciones.%20Argumentos.html">
+   Funciones: Argumentos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13.Modularizar.html">
+   Modularizar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14.Math%20y%20Random.html">
+   Math y Random - introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15.Referencias.html">
+   Referencias en Python:
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16.Programaci%C3%B3nFuncional.html">
+   Programación funcional
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
+   Más sobre listas
   </a>
  </li>
 </ul>
@@ -308,16 +346,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="73c87991-7ec0-496d-831b-ccb38d9fe4c7" name="8a99980a-1753-45bb-a913-4fdeb65cca62" type="radio">
-</input><label class="tabbed-label" for="73c87991-7ec0-496d-831b-ccb38d9fe4c7">
+<input checked="checked" id="f719eadd-7fac-4841-b598-beaf72433429" name="29306a6a-91c2-4a6b-b066-7b5fb76dc521" type="radio">
+</input><label class="tabbed-label" for="f719eadd-7fac-4841-b598-beaf72433429">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="173f7686-267e-455b-9989-cf9ce6b41463" name="8a99980a-1753-45bb-a913-4fdeb65cca62" type="radio">
-</input><label class="tabbed-label" for="173f7686-267e-455b-9989-cf9ce6b41463">
+<input id="c482973b-740a-4e28-b898-4c922c257c87" name="29306a6a-91c2-4a6b-b066-7b5fb76dc521" type="radio">
+</input><label class="tabbed-label" for="c482973b-740a-4e28-b898-4c922c257c87">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -417,7 +455,7 @@ o
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;str_iterator at 0x7fbe54342730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;str_iterator at 0x7f5d4d7d7550&gt;
 </pre></div>
 </div>
 </div>
@@ -432,7 +470,7 @@ o
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_58351</span><span class="o">/</span><span class="mf">2035848844.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54489</span><span class="o">/</span><span class="mf">2035848844.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">iter</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: &#39;int&#39; object is not iterable
@@ -880,6 +918,15 @@ Bucle terminado.
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="11.Funciones.%20Definici%C3%B3n.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Funciones: Definición</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
