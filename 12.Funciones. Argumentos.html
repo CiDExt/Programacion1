@@ -184,6 +184,36 @@
    Más sobre listas
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18.Conjuntos%20y%20Diccionarios.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="20.Archivos.html">
+   Archivos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="22.Clases.html">
+   La programación orientada a objetos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="23.Numpy.html">
+   Paquete Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="24.Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="25.Sympy.html">
+   Sympy - Computación simbólica
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -338,24 +368,24 @@
 <p>¿Qué sabemos de las funciones?</p>
 <p>En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos a manera de manipular los argumentos de las funciones que creemos.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6ad7b997-d4cd-4809-ba3d-c6e2c398c322" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
-</input><label class="tabbed-label" for="6ad7b997-d4cd-4809-ba3d-c6e2c398c322">
+<input checked="checked" id="a2017afc-9b11-497c-ac63-d53d89171134" name="ff5d6098-daa7-4504-a938-1ac1b360d6e3" type="radio">
+</input><label class="tabbed-label" for="a2017afc-9b11-497c-ac63-d53d89171134">
 ¿El orden importa?</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, <strong>el orden es fundamental</strong>.</p>
 </div>
 </div>
-<input id="9bc5f35c-08c3-449e-8bb8-11cde7f9cbea" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
-</input><label class="tabbed-label" for="9bc5f35c-08c3-449e-8bb8-11cde7f9cbea">
+<input id="79c3c978-aa39-4b52-98e8-67e3a7cc9f2a" name="ff5d6098-daa7-4504-a938-1ac1b360d6e3" type="radio">
+</input><label class="tabbed-label" for="79c3c978-aa39-4b52-98e8-67e3a7cc9f2a">
 Ejemplo</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">La resta</p>
 <p>Sabemos que 2-3 es diferente a 3-2.</p>
 </div>
 </div>
-<input id="fad378f3-3245-4ebc-a890-900b727d33c6" name="eedf9faf-ee27-4209-8170-ad2ec1f3917d" type="radio">
-</input><label class="tabbed-label" for="fad378f3-3245-4ebc-a890-900b727d33c6">
+<input id="f73f835f-7a44-4982-b7d7-13e0f17a3ce1" name="ff5d6098-daa7-4504-a938-1ac1b360d6e3" type="radio">
+</input><label class="tabbed-label" for="f73f835f-7a44-4982-b7d7-13e0f17a3ce1">
 Ejemplo</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Al vestirse</p>
@@ -473,11 +503,11 @@ Ejemplo</label><div class="tabbed-content docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54523</span><span class="o">/</span><span class="mf">1307643930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5797</span><span class="o">/</span><span class="mf">1307643930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Note que si se introduce un argumento no numérico la función generará un error</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">f1</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
 
-<span class="nn">/tmp/ipykernel_54523/3653633694.py</span> in <span class="ni">f1</span><span class="nt">(*args)</span>
+<span class="nn">/tmp/ipykernel_5797/3653633694.py</span> in <span class="ni">f1</span><span class="nt">(*args)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
