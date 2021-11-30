@@ -2,11 +2,37 @@
 # coding: utf-8
 
 # # La programación orientada a objetos
+
+# :::::{important} ¿Qué debemos tener presente?
 # 
-# Una de las características principales de Python es que es un lenguaje multiparadigma, sin embargo, hasta el momento hemos trabajado con las características de programación estructurada *(estructuras de datos y estructuras de control)*. No obstante, también se menciono que Python como lenguaje admite la programación orientada a objetos, y con las **clases** materializamos este paradigma de programación, entendiendolas como *plantillas*  para la creación de objetos.
 # 
-# Un **objeto**, encapsulará atributos y funciones (o métodos) en una sola entidad. 
+# Python es un lenguaje multiparadigma.
 # 
+# 
+# ````{tabbed} ¿Cómo así?
+# 
+# :::{admonition} Recordemos...
+# :class: tip
+# Hemos trabajado con las características de programación estructurada *(estructuras de datos y estructuras de control)*. No obstante, también mencionamos que Python como lenguaje admite la programación orientada a objetos.
+# :::
+# ````
+# 
+# ````{tabbed} ¿Cómo podemos ver esto?
+# 
+# :::{admonition} Clases
+# :class: tip 
+# Las **clases** nos ayudan a materializar este paradigma de programación, entendiéndolas como *plantillas*  para la creación de objetos.
+# :::
+# ````
+# 
+# ````{tabbed} Objetos
+# 
+# :::{admonition}  ¿Qué hacen?
+# :class: tip 
+# Encapsulan atributos y funciones (o métodos) en una sola entidad. 
+# :::
+# ````
+# :::::
 
 # ## Clases
 # 

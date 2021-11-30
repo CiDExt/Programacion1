@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <h1>Matplotlib - Gráficos en Python<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introducción-Matplotlib" data-toc-modified-id="Introducción-Matplotlib-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introducción Matplotlib</a></span><ul class="toc-item"><li><span><a href="#¿Cómo-funciona?" data-toc-modified-id="¿Cómo-funciona?-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>¿Cómo funciona?</a></span></li><li><span><a href="#Partes-de-una-figura" data-toc-modified-id="Partes-de-una-figura-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Partes de una figura</a></span></li><li><span><a href="#Diferentes-tipos-de-gráficos" data-toc-modified-id="Diferentes-tipos-de-gráficos-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Diferentes tipos de gráficos</a></span><ul class="toc-item"><li><span><a href="#El-commando-plt.plot()" data-toc-modified-id="El-commando-plt.plot()-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>El commando <code>plt.plot()</code></a></span></li><li><span><a href="#Gráficos-de-dispersión" data-toc-modified-id="Gráficos-de-dispersión-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Gráficos de dispersión</a></span></li><li><span><a href="#Gráficos-para-variables-categóricas" data-toc-modified-id="Gráficos-para-variables-categóricas-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>Gráficos para variables categóricas</a></span></li><li><span><a href="#Graficador-de-funciones" data-toc-modified-id="Graficador-de-funciones-1.3.4"><span class="toc-item-num">1.3.4&nbsp;&nbsp;</span>Graficador de funciones</a></span></li><li><span><a href="#Texto-en-las-gráficas" data-toc-modified-id="Texto-en-las-gráficas-1.3.5"><span class="toc-item-num">1.3.5&nbsp;&nbsp;</span>Texto en las gráficas</a></span></li></ul></li><li><span><a href="#Backends" data-toc-modified-id="Backends-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Backends</a></span></li></ul></li><li><span><a href="#Herramientas-interactivas-ipywidgets" data-toc-modified-id="Herramientas-interactivas-ipywidgets-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Herramientas interactivas <code>ipywidgets</code></a></span><ul class="toc-item"><li><span><a href="#Una-primera-aplicación" data-toc-modified-id="Una-primera-aplicación-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Una primera aplicación</a></span></li></ul></li></ul></div>
+# # Matplotlib
 
-# # Introducción Matplotlib
+# 
+# :::::{important} ¿Qué aprenderemos?
 # 
 # El paquete para construir gráficos por excelencia en Python es [Matplotlib](https://matplotlib.org/3.2.2/index.html), una de las librerías más usadas para crear todo tipo de visualizaciones  . Para nosotros es muy importante manejar esta herramienta ya que en múltiples ocasiones la dificultad de muchas explicaciones se resuelven fácilmente con un buen gráfico. En este cuaderno veremos algunos componentes básicos de la graficación con Matplotlib, las partes del gráfico, la definición de `figure()`, unas configuraciones simples y algunas personalizaciones elementales. 
+# 
+# :::::
+# 
 
 # ## ¿Cómo funciona?
 # 

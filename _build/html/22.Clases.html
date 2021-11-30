@@ -54,6 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Paquete Numpy" href="23.Numpy.html" />
+    <link rel="prev" title="Archivos" href="20.Archivos.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,7 +96,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -178,6 +180,36 @@
  <li class="toctree-l1">
   <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
    Más sobre listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18.Conjuntos%20y%20Diccionarios.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="20.Archivos.html">
+   Archivos
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   La programación orientada a objetos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="23.Numpy.html">
+   Paquete Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="24.Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="25.Sympy.html">
+   Sympy - Computación simbólica
   </a>
  </li>
 </ul>
@@ -312,8 +344,37 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="la-programacion-orientada-a-objetos">
 <h1>La programación orientada a objetos<a class="headerlink" href="#la-programacion-orientada-a-objetos" title="Permalink to this headline">¶</a></h1>
-<p>Una de las características principales de Python es que es un lenguaje multiparadigma, sin embargo, hasta el momento hemos trabajado con las características de programación estructurada <em>(estructuras de datos y estructuras de control)</em>. No obstante, también se menciono que Python como lenguaje admite la programación orientada a objetos, y con las <strong>clases</strong> materializamos este paradigma de programación, entendiendolas como <em>plantillas</em>  para la creación de objetos.</p>
-<p>Un <strong>objeto</strong>, encapsulará atributos y funciones (o métodos) en una sola entidad.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Qué debemos tener presente?</p>
+<p>Python es un lenguaje multiparadigma.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="105fce87-ee91-4283-9896-9efb6c879f5a" name="730dbac7-b559-422d-9f7b-574a904c966d" type="radio">
+</input><label class="tabbed-label" for="105fce87-ee91-4283-9896-9efb6c879f5a">
+¿Cómo así?</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Hemos trabajado con las características de programación estructurada <em>(estructuras de datos y estructuras de control)</em>. No obstante, también mencionamos que Python como lenguaje admite la programación orientada a objetos.</p>
+</div>
+</div>
+<input id="d9323fe4-df2c-4147-aba8-24d1058bd1e0" name="730dbac7-b559-422d-9f7b-574a904c966d" type="radio">
+</input><label class="tabbed-label" for="d9323fe4-df2c-4147-aba8-24d1058bd1e0">
+¿Cómo podemos ver esto?</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Clases</p>
+<p>Las <strong>clases</strong> nos ayudan a materializar este paradigma de programación, entendiéndolas como <em>plantillas</em>  para la creación de objetos.</p>
+</div>
+</div>
+<input id="e3b7b5b2-b85f-4444-abb0-e7e2d0d6135d" name="730dbac7-b559-422d-9f7b-574a904c966d" type="radio">
+</input><label class="tabbed-label" for="e3b7b5b2-b85f-4444-abb0-e7e2d0d6135d">
+Objetos</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">¿Qué hacen?</p>
+<p>Encapsulan atributos y funciones (o métodos) en una sola entidad.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="clases">
 <h2>Clases<a class="headerlink" href="#clases" title="Permalink to this headline">¶</a></h2>
 <p>Una clase es un modelo para crear a partir de ella ciertos Objetos. Contendrá las características y capacidades que tendrá el objeto que sea cree a partir de ella.</p>
@@ -360,7 +421,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Fraccion object at 0x7f7afc4039d0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Fraccion object at 0x7f79285fddc0&gt;
 </pre></div>
 </div>
 </div>
@@ -444,7 +505,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54648</span><span class="o">/</span><span class="mf">868117976.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5953</span><span class="o">/</span><span class="mf">868117976.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">f1</span><span class="o">+</span><span class="n">f2</span>
 
 <span class="ne">TypeError</span>: unsupported operand type(s) for +: &#39;Fraccion&#39; and &#39;Fraccion&#39;
@@ -815,6 +876,24 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="20.Archivos.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Archivos</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="23.Numpy.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Paquete Numpy</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

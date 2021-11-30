@@ -21,6 +21,12 @@ chapters:
 - file: 15.Referencias
 - file: 16.ProgramaciónFuncional
 - file: 17.Más sobre listas 
+- file: 18.Conjuntos y Diccionarios
+- file: 20.Archivos
+- file: 22.Clases
+- file: 23.Numpy
+- file: 24.Matplotlib
+- file: 25.Sympy
 
 
 

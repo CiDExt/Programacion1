@@ -1,0 +1,6 @@
+1 Morales 240000
+2 Rodríguez 578138
+3 Cervantes 793000
+4 García 238458
+5 Romero 9125489
+6 Jaimes 275981

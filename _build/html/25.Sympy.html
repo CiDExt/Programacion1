@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computación simbólica &#8212; Programación 1</title>
+    <title>Sympy - Computación simbólica &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,6 +56,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Matplotlib" href="24.Matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,7 +97,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -180,6 +181,36 @@
  <li class="toctree-l1">
   <a class="reference internal" href="17.M%C3%A1s%20sobre%20listas.html">
    Más sobre listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18.Conjuntos%20y%20Diccionarios.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="20.Archivos.html">
+   Archivos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="22.Clases.html">
+   La programación orientada a objetos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="23.Numpy.html">
+   Paquete Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="24.Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Sympy - Computación simbólica
   </a>
  </li>
 </ul>
@@ -286,78 +317,73 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computación simbólica
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conceptos-basicos">
    Conceptos básicos
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#simbolos">
      Símbolos
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sustitucion">
      Sustitución
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#convertir-cadenas-a-expresiones-sympy">
        Convertir cadenas a expresiones SymPy
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#obtener-el-valor-en-punto-flotante">
        Obtener el valor en punto flotante
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ecuaciones">
      Ecuaciones
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#igualdad-de-expresiones-y-simplificacion">
    Igualdad de expresiones y simplificación
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#simplificacion-de-funciones-polinomicas-racionales">
      Simplificación de funciones polinómicas racionales
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculo">
    Cálculo
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solucionar-ecuaciones">
    Solucionar ecuaciones
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sistemas-de-ecuaciones-lineales">
      Sistemas de ecuaciones lineales
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sistemas-no-lineales">
      Sistemas no lineales
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ecuaciones-diferenciales">
      Ecuaciones diferenciales
     </a>
@@ -375,10 +401,16 @@
         
               <div>
                 
-  <h1>Computación simbólica con Sympy<span class="tocSkip"></span></h1>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Computación-simbólica" data-toc-modified-id="Computación-simbólica-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Computación simbólica</a></span></li><li><span><a href="#Conceptos-básicos" data-toc-modified-id="Conceptos-básicos-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Conceptos básicos</a></span><ul class="toc-item"><li><span><a href="#Símbolos" data-toc-modified-id="Símbolos-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Símbolos</a></span></li><li><span><a href="#Sustitución" data-toc-modified-id="Sustitución-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Sustitución</a></span><ul class="toc-item"><li><span><a href="#Convertir-cadenas-a-expresiones-SymPy" data-toc-modified-id="Convertir-cadenas-a-expresiones-SymPy-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span>Convertir cadenas a expresiones SymPy</a></span></li><li><span><a href="#Obtener-el-valor-en-punto-flotante" data-toc-modified-id="Obtener-el-valor-en-punto-flotante-2.2.2"><span class="toc-item-num">2.2.2&nbsp;&nbsp;</span>Obtener el valor en punto flotante</a></span></li></ul></li><li><span><a href="#Ecuaciones" data-toc-modified-id="Ecuaciones-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Ecuaciones</a></span></li></ul></li><li><span><a href="#Igualdad-de-expresiones-y-simplificación" data-toc-modified-id="Igualdad-de-expresiones-y-simplificación-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Igualdad de expresiones y simplificación</a></span><ul class="toc-item"><li><span><a href="#Simplificación-de-funciones-polinómicas-racionales" data-toc-modified-id="Simplificación-de-funciones-polinómicas-racionales-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Simplificación de funciones polinómicas racionales</a></span></li></ul></li><li><span><a href="#Cálculo" data-toc-modified-id="Cálculo-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Cálculo</a></span></li><li><span><a href="#Solucionar-ecuaciones" data-toc-modified-id="Solucionar-ecuaciones-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Solucionar ecuaciones</a></span><ul class="toc-item"><li><span><a href="#Sistemas-de-ecuaciones-lineales" data-toc-modified-id="Sistemas-de-ecuaciones-lineales-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Sistemas de ecuaciones lineales</a></span></li><li><span><a href="#Sistemas-no-lineales" data-toc-modified-id="Sistemas-no-lineales-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Sistemas no lineales</a></span></li><li><span><a href="#Ecuaciones-diferenciales" data-toc-modified-id="Ecuaciones-diferenciales-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Ecuaciones diferenciales</a></span></li></ul></li></ul></div><div class="section" id="computacion-simbolica">
-<h1>Computación simbólica<a class="headerlink" href="#computacion-simbolica" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="sympy-computacion-simbolica">
+<h1>Sympy - Computación simbólica<a class="headerlink" href="#sympy-computacion-simbolica" title="Permalink to this headline">¶</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>¿Qué aprenderemos?</p>
 <p>Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. El paquete <a class="reference external" href="https://docs.sympy.org/latest/index.html"><code class="docutils literal notranslate"><span class="pre">Sympy</span></code></a> nos ofrece la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -414,7 +446,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_54767</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6043</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
@@ -434,12 +466,11 @@
 <p><strong>El poder de la computación simbólica</strong></p>
 <p>El poder real de un sistema de cálculo simbólico como SymPy es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más.</p>
 <p><em>Tomado de</em> <a class="reference external" href="https://docs.sympy.org/latest/tutorial/intro.html">https://docs.sympy.org/latest/tutorial/intro.html</a></p>
-</div>
 <div class="section" id="conceptos-basicos">
-<h1>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">¶</a></h1>
+<h2>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">¶</a></h2>
 <p>Para iniciar el trabajo con la librería sympy debemos aclarar rutinas que son fundamentales para iniciar cualquier trabajo con este paquete. En primer lugar, por ejemplo, hay que aclarar que vamos a usar un símbolo así mismo, las ecuaciones tienen que poder expresarse y no podemos usar ni <code class="docutils literal notranslate"><span class="pre">=</span></code> ni  <code class="docutils literal notranslate"><span class="pre">==</span></code>. Veamos algunos de estos conceptos básicos.</p>
 <div class="section" id="simbolos">
-<h2>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">¶</a></h2>
+<h3>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">¶</a></h3>
 <p>Para usar variables simbólicas debemos definirlas, usamos la función symbols:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -513,7 +544,7 @@
 </div>
 </div>
 <div class="section" id="sustitucion">
-<h2>Sustitución<a class="headerlink" href="#sustitucion" title="Permalink to this headline">¶</a></h2>
+<h3>Sustitución<a class="headerlink" href="#sustitucion" title="Permalink to this headline">¶</a></h3>
 <p>Para remplazar valores en una expresión usamos <code class="docutils literal notranslate"><span class="pre">subs</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -649,7 +680,7 @@
 </div>
 </div>
 <div class="section" id="convertir-cadenas-a-expresiones-sympy">
-<h3>Convertir cadenas a expresiones SymPy<a class="headerlink" href="#convertir-cadenas-a-expresiones-sympy" title="Permalink to this headline">¶</a></h3>
+<h4>Convertir cadenas a expresiones SymPy<a class="headerlink" href="#convertir-cadenas-a-expresiones-sympy" title="Permalink to this headline">¶</a></h4>
 <p>Usamos sympify para convertir cadenas en expresiones:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -702,7 +733,7 @@
 </div>
 </div>
 <div class="section" id="obtener-el-valor-en-punto-flotante">
-<h3>Obtener el valor en punto flotante<a class="headerlink" href="#obtener-el-valor-en-punto-flotante" title="Permalink to this headline">¶</a></h3>
+<h4>Obtener el valor en punto flotante<a class="headerlink" href="#obtener-el-valor-en-punto-flotante" title="Permalink to this headline">¶</a></h4>
 <p>Usamos <code class="docutils literal notranslate"><span class="pre">evalf</span></code> para obtener el valor en punto flotante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -786,7 +817,7 @@
 </div>
 </div>
 <div class="section" id="ecuaciones">
-<h2>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permalink to this headline">¶</a></h2>
+<h3>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permalink to this headline">¶</a></h3>
 <p>Como sabemos <code class="docutils literal notranslate"><span class="pre">=</span></code> y <code class="docutils literal notranslate"><span class="pre">==</span></code> ya fueron usado en el lenguaje para unas operaciones específicas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -814,7 +845,7 @@
 </div>
 </div>
 <div class="section" id="igualdad-de-expresiones-y-simplificacion">
-<h1>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">¶</a></h1>
+<h2>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">¶</a></h2>
 <p>Ahora saltemos y hagamos algunas matemáticas interesantes. Una de las características más útiles de un sistema de manipulación simbólica es la capacidad de simplificar expresiones matemáticas.</p>
 <p>SymPy tiene docenas de funciones para realizar varios tipos de simplificación. También hay una función general llamada simplify()que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos</p>
 <p>Es importante tener esta definición en cuenta cuando se presentan igualdades entre expresiones.</p>
@@ -875,7 +906,7 @@
 </div>
 <p>Un problema de simplify()es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.</p>
 <div class="section" id="simplificacion-de-funciones-polinomicas-racionales">
-<h2>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">¶</a></h2>
+<h3>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">¶</a></h3>
 <p>expand()es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1143,7 +1174,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 <div class="section" id="calculo">
-<h1>Cálculo<a class="headerlink" href="#calculo" title="Permalink to this headline">¶</a></h1>
+<h2>Cálculo<a class="headerlink" href="#calculo" title="Permalink to this headline">¶</a></h2>
 <p>SymPy también permite realizar tareas básicas del cálculo diferencial e integral.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1472,7 +1503,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 <div class="section" id="solucionar-ecuaciones">
-<h1>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">¶</a></h1>
+<h2>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">¶</a></h2>
 <p>Ahora hagamos una rápida exploración por las diferentes ecuaciones que se resuelven en Sympy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,7 +1688,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 <div class="section" id="sistemas-de-ecuaciones-lineales">
-<h2>Sistemas de ecuaciones lineales<a class="headerlink" href="#sistemas-de-ecuaciones-lineales" title="Permalink to this headline">¶</a></h2>
+<h3>Sistemas de ecuaciones lineales<a class="headerlink" href="#sistemas-de-ecuaciones-lineales" title="Permalink to this headline">¶</a></h3>
 <p>Usamos <code class="docutils literal notranslate"><span class="pre">linsolve</span></code> para encontrar las soluciones:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1694,7 +1725,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 <div class="section" id="sistemas-no-lineales">
-<h2>Sistemas no lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this headline">¶</a></h2>
+<h3>Sistemas no lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this headline">¶</a></h3>
 <p>Usaremos <code class="docutils literal notranslate"><span class="pre">nonlinsolve</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1727,7 +1758,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 <div class="section" id="ecuaciones-diferenciales">
-<h2>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Permalink to this headline">¶</a></h2>
+<h3>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;f g h&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
@@ -1782,6 +1813,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1812,6 +1844,15 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="24.Matplotlib.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Matplotlib</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

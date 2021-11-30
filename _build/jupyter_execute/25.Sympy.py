@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <h1>Computación simbólica con Sympy<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Computación-simbólica" data-toc-modified-id="Computación-simbólica-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Computación simbólica</a></span></li><li><span><a href="#Conceptos-básicos" data-toc-modified-id="Conceptos-básicos-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Conceptos básicos</a></span><ul class="toc-item"><li><span><a href="#Símbolos" data-toc-modified-id="Símbolos-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Símbolos</a></span></li><li><span><a href="#Sustitución" data-toc-modified-id="Sustitución-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Sustitución</a></span><ul class="toc-item"><li><span><a href="#Convertir-cadenas-a-expresiones-SymPy" data-toc-modified-id="Convertir-cadenas-a-expresiones-SymPy-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span>Convertir cadenas a expresiones SymPy</a></span></li><li><span><a href="#Obtener-el-valor-en-punto-flotante" data-toc-modified-id="Obtener-el-valor-en-punto-flotante-2.2.2"><span class="toc-item-num">2.2.2&nbsp;&nbsp;</span>Obtener el valor en punto flotante</a></span></li></ul></li><li><span><a href="#Ecuaciones" data-toc-modified-id="Ecuaciones-2.3"><span class="toc-item-num">2.3&nbsp;&nbsp;</span>Ecuaciones</a></span></li></ul></li><li><span><a href="#Igualdad-de-expresiones-y-simplificación" data-toc-modified-id="Igualdad-de-expresiones-y-simplificación-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Igualdad de expresiones y simplificación</a></span><ul class="toc-item"><li><span><a href="#Simplificación-de-funciones-polinómicas-racionales" data-toc-modified-id="Simplificación-de-funciones-polinómicas-racionales-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Simplificación de funciones polinómicas racionales</a></span></li></ul></li><li><span><a href="#Cálculo" data-toc-modified-id="Cálculo-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Cálculo</a></span></li><li><span><a href="#Solucionar-ecuaciones" data-toc-modified-id="Solucionar-ecuaciones-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Solucionar ecuaciones</a></span><ul class="toc-item"><li><span><a href="#Sistemas-de-ecuaciones-lineales" data-toc-modified-id="Sistemas-de-ecuaciones-lineales-5.1"><span class="toc-item-num">5.1&nbsp;&nbsp;</span>Sistemas de ecuaciones lineales</a></span></li><li><span><a href="#Sistemas-no-lineales" data-toc-modified-id="Sistemas-no-lineales-5.2"><span class="toc-item-num">5.2&nbsp;&nbsp;</span>Sistemas no lineales</a></span></li><li><span><a href="#Ecuaciones-diferenciales" data-toc-modified-id="Ecuaciones-diferenciales-5.3"><span class="toc-item-num">5.3&nbsp;&nbsp;</span>Ecuaciones diferenciales</a></span></li></ul></li></ul></div>
+# # Sympy - Computación simbólica
+# 
+# 
 
-# ## Computación simbólica
+# :::::{important} ¿Qué aprenderemos?
 # 
 # Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. El paquete [`Sympy`](https://docs.sympy.org/latest/index.html) nos ofrece la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación. 
+# 
+# ::::
 
 # In[1]:
 
