@@ -22,7 +22,7 @@ f1+f2
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_5953/868117976.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_6714/868117976.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mf1[0m[0;34m+[0m[0mf2[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mTypeError[0m: unsupported operand type(s) for +: 'Fraccion' and 'Fraccion'
