@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Matplotlib
+# # Matplotlib - Creación de gráficos
 
 # 
 # :::::{important} ¿Qué aprenderemos?

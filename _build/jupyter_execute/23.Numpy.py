@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Paquete Numpy
+# # Numpy - Computación numérica
 
 # :::::{important} Para tener presente
 # 
