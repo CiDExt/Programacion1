@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sympy - Computación simbólica &#8212; Programación 1</title>
+    <title>Computación simbólica con Sympy &#8212; Programación 1</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Matplotlib - Creación de gráficos" href="24.Matplotlib.html" />
+    <link rel="prev" title="Matplotlib - Gráficos en Python" href="24.Matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -200,17 +200,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="23.Numpy.html">
-   Numpy - Computación numérica
+   Paquete Numpy
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="24.Matplotlib.html">
-   Matplotlib - Creación de gráficos
+   Matplotlib - Gráficos en Python
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sympy - Computación simbólica
+   Computación simbólica con Sympy
   </a>
  </li>
 </ul>
@@ -318,6 +318,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computacion-simbolica">
+   Computación simbólica
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conceptos-basicos">
    Conceptos básicos
   </a>
@@ -367,6 +372,23 @@
   <a class="reference internal nav-link" href="#calculo">
    Cálculo
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivadas">
+     Derivadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrales">
+     Integrales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limites">
+     Límites
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solucionar-ecuaciones">
@@ -383,11 +405,6 @@
      Sistemas no lineales
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ecuaciones-diferenciales">
-     Ecuaciones diferenciales
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -401,16 +418,34 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="sympy-computacion-simbolica">
-<h1>Sympy - Computación simbólica<a class="headerlink" href="#sympy-computacion-simbolica" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="computacion-simbolica-con-sympy">
+<h1>Computación simbólica con Sympy<a class="headerlink" href="#computacion-simbolica-con-sympy" title="Permalink to this headline">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>¿Qué aprenderemos?</p>
-<p>Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. El paquete <a class="reference external" href="https://docs.sympy.org/latest/index.html"><code class="docutils literal notranslate"><span class="pre">Sympy</span></code></a> nos ofrece la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
+<p>Para tener presente</p>
+<p>El paquete <code class="docutils literal notranslate"><span class="pre">sympy</span></code> nos brinda la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="44e99982-851d-4fe3-b009-c3465d8726ce" name="05289562-58d6-43d4-b63e-e87ca1cd290e" type="radio">
+</input><label class="tabbed-label" for="44e99982-851d-4fe3-b009-c3465d8726ce">
+¿Para qué?</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Importante</p>
+<p>Para realizar cálculo simbólico y así apoyar el proceso de enseñanza-aprendizaje de las matemáticas y además solucionar algunos percances computacionales.</p>
 </div>
 </div>
+<input id="9361335f-8c02-4246-ae44-3d0cb926c19a" name="05289562-58d6-43d4-b63e-e87ca1cd290e" type="radio">
+</input><label class="tabbed-label" for="9361335f-8c02-4246-ae44-3d0cb926c19a">
+¿Tiene documentación?</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Por supuesto:</p>
+<p>En la página del paquete <a class="reference external" href="https://docs.sympy.org/latest/index.html"><code class="docutils literal notranslate"><span class="pre">Sympy</span></code></a> podemos encontrar toda la información relevante.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="computacion-simbolica">
+<h2>Computación simbólica<a class="headerlink" href="#computacion-simbolica" title="Permalink to this headline">¶</a></h2>
+<p>Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -446,13 +481,24 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6819</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_29930</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;sympy&#39;
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle 8\]</div>
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Nota</span><span class="p">:</span> <span class="n">para</span> <span class="n">obtener</span> <span class="n">una</span> <span class="n">salida</span> <span class="n">estética</span> <span class="n">de</span> <span class="n">sympy</span> <span class="n">usamos</span> <span class="n">la</span> <span class="n">orden</span><span class="p">:</span>
@@ -464,8 +510,9 @@
 </pre></div>
 </div>
 <p><strong>El poder de la computación simbólica</strong></p>
-<p>El poder real de un sistema de cálculo simbólico como SymPy es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más.</p>
+<p>El poder real de un sistema de cálculo simbólico como <strong>SymPy</strong> es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más.</p>
 <p><em>Tomado de</em> <a class="reference external" href="https://docs.sympy.org/latest/tutorial/intro.html">https://docs.sympy.org/latest/tutorial/intro.html</a></p>
+</div>
 <div class="section" id="conceptos-basicos">
 <h2>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">¶</a></h2>
 <p>Para iniciar el trabajo con la librería sympy debemos aclarar rutinas que son fundamentales para iniciar cualquier trabajo con este paquete. En primer lugar, por ejemplo, hay que aclarar que vamos a usar un símbolo así mismo, las ecuaciones tienen que poder expresarse y no podemos usar ni <code class="docutils literal notranslate"><span class="pre">=</span></code> ni  <code class="docutils literal notranslate"><span class="pre">==</span></code>. Veamos algunos de estos conceptos básicos.</p>
@@ -481,7 +528,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -495,6 +542,18 @@
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
 \[\displaystyle x\]</div>
+</div>
+</div>
+<p>Notemos que las operaciones las realiza de manera análoga a lo que solemos hacer con lápiz y papel:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(x + 1\right)^{2}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -532,7 +591,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comoescribo</span><span class="o">=</span><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;comoveo&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comoescribo</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;comoveo&quot;</span><span class="p">)</span>
 <span class="n">comoescribo</span><span class="o">+</span><span class="mi">8</span> 
 </pre></div>
 </div>
@@ -548,7 +607,7 @@
 <p>Para remplazar valores en una expresión usamos <code class="docutils literal notranslate"><span class="pre">subs</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">-</span><span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">-</span><span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -634,7 +693,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
-
 <span class="n">expand_trig</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -657,7 +715,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>
 <span class="n">expr</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
 <span class="n">expr</span>
 </pre></div>
@@ -725,7 +783,7 @@
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7a08a2700c644cd38f168826cc474808", "version_major": 2, "version_minor": 0}
+{"model_id": "c53c8521bca64f37a53580ee8b6ee03e", "version_major": 2, "version_minor": 0}
 </script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.modulo1(t, n)&gt;
 </pre></div>
 </div>
@@ -758,8 +816,8 @@
 \[\displaystyle 2.82842712474619\]</div>
 </div>
 </div>
-<p>subsy evalf son buenos si desea hacer una evaluación simple, pero si tiene la intención de evaluar una expresión en muchos puntos, hay formas más eficientes. Por ejemplo, si desea evaluar una expresión en mil puntos, usar SymPy sería mucho más lento de lo necesario, especialmente si solo le importa la precisión de la máquina. En su lugar, debe usar bibliotecas como NumPy y SciPy .</p>
-<p>La forma más fácil de convertir una expresión SymPy en una expresión que puede evaluarse numéricamente es usar la lambdifyfunción. lambdifyactúa como una lambdafunción, excepto que convierte los nombres de SymPy a los nombres de la biblioteca numérica dada, generalmente NumPy. Por ejemplo</p>
+<p><code class="docutils literal notranslate"><span class="pre">subs</span></code> y <code class="docutils literal notranslate"><span class="pre">evalf</span></code> son buenos si desea hacer una evaluación simple, pero si tiene la intención de evaluar una expresión en muchos puntos, hay formas más eficientes. Por ejemplo, si desea evaluar una expresión en mil puntos, usar SymPy sería mucho más lento de lo necesario, especialmente si solo le importa la precisión de la máquina. En su lugar, debe usar librerías como NumPy y SciPy .</p>
+<p>La forma más fácil de convertir una expresión SymPy en una expresión que puede evaluarse numéricamente es usar la <code class="docutils literal notranslate"><span class="pre">lambdify</span></code>función. <code class="docutils literal notranslate"><span class="pre">lambdify</span></code> actúa como una función lambda, excepto que convierte los nombres de SymPy a los nombres de la biblioteca numérica dada, generalmente NumPy. Por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -847,7 +905,7 @@
 <div class="section" id="igualdad-de-expresiones-y-simplificacion">
 <h2>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">¶</a></h2>
 <p>Ahora saltemos y hagamos algunas matemáticas interesantes. Una de las características más útiles de un sistema de manipulación simbólica es la capacidad de simplificar expresiones matemáticas.</p>
-<p>SymPy tiene docenas de funciones para realizar varios tipos de simplificación. También hay una función general llamada simplify()que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos</p>
+<p>SymPy tiene docenas de funciones para realizar varios tipos de simplificación, pero hay una función general llamada <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos:</p>
 <p>Es importante tener esta definición en cuenta cuando se presentan igualdades entre expresiones.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -904,10 +962,10 @@
 \[\displaystyle 0\]</div>
 </div>
 </div>
-<p>Un problema de simplify()es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.</p>
+<p>Un problema de <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.</p>
 <div class="section" id="simplificacion-de-funciones-polinomicas-racionales">
 <h3>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">¶</a></h3>
-<p>expand()es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">expand()</span></code> es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
@@ -919,7 +977,7 @@
 \[\displaystyle x^{3} + 6 x^{2} + 12 x + 8\]</div>
 </div>
 </div>
-<p>factor()toma un polinomio y lo factoriza en factores irreducibles sobre los números racionales. Por ejemplo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">factor()</span></code> toma un polinomio y lo factoriza en factores irreducibles sobre los números racionales. Por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -943,7 +1001,7 @@
 </div>
 </div>
 </div>
-<p>cancel() tomará cualquier función racional y la pondrá en la forma canónica estándar, 𝑝𝑞, dónde 𝑝 y 𝑞 son polinomios expandidos sin factores comunes, y los coeficientes principales de 𝑝 y 𝑞 no tienen denominadores (es decir, son enteros).</p>
+<p><code class="docutils literal notranslate"><span class="pre">cancel()</span></code> tomará cualquier función racional y la pondrá en la forma canónica estándar, 𝑝/𝑞, dónde 𝑝 y 𝑞 son polinomios expandidos sin factores comunes, y los coeficientes principales de 𝑝 y 𝑞 no tienen denominadores (es decir, son enteros).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cancel</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">))</span>
@@ -978,7 +1036,7 @@
 \[\displaystyle \frac{y^{2} - 2 y z + z^{2}}{x - 1}\]</div>
 </div>
 </div>
-<p>apart() realiza una descomposición de fracción parcial en una función racional.</p>
+<p><code class="docutils literal notranslate"><span class="pre">apart()</span></code> realiza una descomposición en fracciones parciales de una función racional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">21</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">10</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">12</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
@@ -1002,7 +1060,7 @@
 \[\displaystyle \frac{2 x - 1}{x^{2} + x + 1} - \frac{1}{x + 4} + \frac{3}{x}\]</div>
 </div>
 </div>
-<p>Para simplificar expresiones usando identidades trigonométricas, use trigsimp().</p>
+<p>Para simplificar expresiones usando identidades trigonométricas, es recomendable el uso de <code class="docutils literal notranslate"><span class="pre">trigsimp()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trigsimp</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">sec</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -1025,7 +1083,7 @@
 \[\displaystyle \frac{\sin{\left(x \right)} \tan{\left(x \right)}}{\sec{\left(x \right)}}\]</div>
 </div>
 </div>
-<p>Para expandir las funciones trigonométricas, es decir, aplicar la suma o las identidades de doble ángulo, use expand_trig().</p>
+<p>Para expandir las funciones trigonométricas, es decir, aplicar la suma o las identidades de doble ángulo, usamos <code class="docutils literal notranslate"><span class="pre">expand_trig()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">expand_trig</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">))</span>
@@ -1048,7 +1106,7 @@
 \[\displaystyle \frac{2 \tan{\left(x \right)}}{1 - \tan^{2}{\left(x \right)}}\]</div>
 </div>
 </div>
-<p>powsimp() permite simplificaciones con leyes de exponentes.</p>
+<p><code class="docutils literal notranslate"><span class="pre">powsimp()</span></code> permite simplificaciones con leyes de exponentes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1082,8 +1140,7 @@
 \[\displaystyle z^{c + t}\]</div>
 </div>
 </div>
-<p><strong>rewrite()</strong>
-Podemos reescribir algunas funciones especiales en términos de otra:</p>
+<p>Con <code class="docutils literal notranslate"><span class="pre">rewrite()</span></code> podemos reescribir algunas funciones especiales en términos de otra:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">rewrite</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
@@ -1184,6 +1241,8 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 </div>
+<div class="section" id="derivadas">
+<h3>Derivadas<a class="headerlink" href="#derivadas" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1">#derivadas en una sola variable</span>
@@ -1297,6 +1356,9 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 \[\displaystyle x z \left(x^{2} y^{2} z^{2} + 5 x y z + 4\right) e^{x y z}\]</div>
 </div>
 </div>
+</div>
+<div class="section" id="integrales">
+<h3>Integrales<a class="headerlink" href="#integrales" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Integrales</span>
@@ -1400,7 +1462,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 <p>Para expresar una integral no evaluada usamos <code class="docutils literal notranslate"><span class="pre">Integral</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integ</span><span class="o">=</span><span class="n">Integral</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integ</span> <span class="o">=</span> <span class="n">Integral</span><span class="p">((</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span> <span class="o">+</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">x</span><span class="p">)</span>
 <span class="n">integ</span>
 </pre></div>
 </div>
@@ -1421,6 +1483,9 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 \[\displaystyle \log{\left(e^{x} + 1 \right)} + \frac{e^{x}}{x^{2} - 1}\]</div>
 </div>
 </div>
+</div>
+<div class="section" id="limites">
+<h3>Límites<a class="headerlink" href="#limites" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#Límites</span>
@@ -1502,6 +1567,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="solucionar-ecuaciones">
 <h2>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">¶</a></h2>
 <p>Ahora hagamos una rápida exploración por las diferentes ecuaciones que se resuelven en Sympy.</p>
@@ -1536,7 +1602,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">60</span><span class="o">-</span><span class="n">bf4836c147c4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">94</span><span class="o">-</span><span class="n">bf4836c147c4</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">solveset</span><span class="p">(</span><span class="n">Eq</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: &#39;FiniteSet&#39; object is not subscriptable
@@ -1651,7 +1717,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left\{2 n \pi + \frac{\pi}{2}\; |\; n \in \mathbb{Z}\right\}\]</div>
+\[\displaystyle \left\{2 n \pi + \frac{\pi}{2}\; \middle|\; n \in \mathbb{Z}\right\}\]</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1684,7 +1750,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left\{x \mid x \in \mathbb{C} \wedge - x + \cos{\left(x \right)} = 0 \right\}\]</div>
+\[\displaystyle \left\{x\; \middle|\; x \in \mathbb{C} \wedge - x + \cos{\left(x \right)} = 0 \right\}\]</div>
 </div>
 </div>
 <div class="section" id="sistemas-de-ecuaciones-lineales">
@@ -1757,61 +1823,6 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
 </div>
 </div>
 </div>
-<div class="section" id="ecuaciones-diferenciales">
-<h3>Ecuaciones diferenciales<a class="headerlink" href="#ecuaciones-diferenciales" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;f g h&#39;</span><span class="p">,</span> <span class="bp">cls</span><span class="o">=</span><span class="n">Function</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diffeq</span> <span class="o">=</span> <span class="n">Eq</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">diffeq</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle f{\left(x \right)} - 2 \frac{d}{d x} f{\left(x \right)} + \frac{d^{2}}{d x^{2}} f{\left(x \right)} = \sin{\left(x \right)}\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">diffeq</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle f{\left(x \right)} = \left(C_{1} + C_{2} x\right) e^{x} + \frac{\cos{\left(x \right)}}{2}\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dsolve</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle x - f{\left(x \right)} - \cos{\left(f{\left(x \right)} \right)} = C_{1}\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="o">-</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_latex math notranslate nohighlight">
-\[\displaystyle \left(1 - \sin{\left(f{\left(x \right)} \right)}\right) \frac{d}{d x} f{\left(x \right)} - 1\]</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
@@ -1849,7 +1860,7 @@ Podemos reescribir algunas funciones especiales en términos de otra:</p>
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Matplotlib - Creación de gráficos</p>
+                <p class="prevnext-title">Matplotlib - Gráficos en Python</p>
             </div>
         </a>
     </div>
