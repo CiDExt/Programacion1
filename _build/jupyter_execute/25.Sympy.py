@@ -1,15 +1,34 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Sympy - Computación simbólica
-# 
-# 
+# # Computación simbólica con Sympy
 
-# :::::{important} ¿Qué aprenderemos?
+# :::::{important} Para tener presente
 # 
-# Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. El paquete [`Sympy`](https://docs.sympy.org/latest/index.html) nos ofrece la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación. 
 # 
-# ::::
+# El paquete `sympy` nos brinda la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación. 
+# 
+# ````{tabbed} ¿Para qué?
+# 
+# :::{admonition} Importante
+# :class: tip
+# Para realizar cálculo simbólico y así apoyar el proceso de enseñanza-aprendizaje de las matemáticas y además solucionar algunos percances computacionales.
+# :::
+# ````
+# 
+# ````{tabbed} ¿Tiene documentación?
+# 
+# :::{admonition} Por supuesto:
+# :class: tip 
+# En la página del paquete [`Sympy`](https://docs.sympy.org/latest/index.html) podemos encontrar toda la información relevante.
+# :::
+# ````
+# 
+# :::::
+
+# ## Computación simbólica
+# 
+# Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores. 
 
 # In[1]:
 
@@ -31,6 +50,12 @@ import sympy
 sympy.sqrt(8)
 
 
+# In[4]:
+
+
+sympy.sqrt(8)*sympy.sqrt(8)
+
+
 # ```
 # Nota: para obtener una salida estética de sympy usamos la orden:
 # 
@@ -42,7 +67,7 @@ sympy.sqrt(8)
 
 # **El poder de la computación simbólica**
 # 
-# El poder real de un sistema de cálculo simbólico como SymPy es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más. 
+# El poder real de un sistema de cálculo simbólico como **SymPy** es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más. 
 # 
 # *Tomado de* [https://docs.sympy.org/latest/tutorial/intro.html](https://docs.sympy.org/latest/tutorial/intro.html)
 
@@ -56,31 +81,39 @@ sympy.sqrt(8)
 # 
 # Para usar variables simbólicas debemos definirlas, usamos la función symbols:
 
-# In[6]:
+# In[5]:
 
 
 import sympy as sp
 
 
-# In[11]:
+# In[6]:
 
 
-x=sp.symbols("x")
+x = sp.symbols("x")
 
 
-# In[12]:
+# In[7]:
 
 
 x
 
 
-# In[15]:
+# Notemos que las operaciones las realiza de manera análoga a lo que solemos hacer con lápiz y papel:
+
+# In[10]:
+
+
+(x+1)**2
+
+
+# In[8]:
 
 
 sp.expand((x+1)**2)
 
 
-# In[16]:
+# In[9]:
 
 
 (3*x-5)*(2*x+7)-x
@@ -92,10 +125,10 @@ sp.expand((x+1)**2)
 x+2*x-8+5*x+7
 
 
-# In[18]:
+# In[11]:
 
 
-comoescribo=sp.symbols("comoveo")
+comoescribo = sp.symbols("comoveo")
 comoescribo+8 
 
 
@@ -103,25 +136,25 @@ comoescribo+8
 # 
 # Para remplazar valores en una expresión usamos `subs`
 
-# In[19]:
+# In[12]:
 
 
-expr=(3*x-5)*(2*x+7)-x
+expr = (3*x-5)*(2*x+7)-x
 
 
-# In[20]:
+# In[13]:
 
 
 expr
 
 
-# In[21]:
+# In[14]:
 
 
 expr.subs(x,1)
 
 
-# In[22]:
+# In[15]:
 
 
 expr.subs(x,0)
@@ -129,55 +162,54 @@ expr.subs(x,0)
 
 # También se pueden sustituir expresiones
 
-# In[23]:
+# In[16]:
 
 
 y=sp.symbols("y")
 
 
-# In[24]:
+# In[17]:
 
 
 expr = x**y
 
 
-# In[25]:
+# In[18]:
 
 
 expr
 
 
-# In[26]:
+# In[19]:
 
 
 expr = expr.subs(y, x**y)
 expr
 
 
-# In[27]:
+# In[20]:
 
 
 from sympy import *
 
 
-# In[29]:
+# In[21]:
 
 
 expr = sin(2*x)
-
 expand_trig(expr)
 
 
-# In[30]:
+# In[24]:
 
 
 expr.subs(sin(2*x), 2*sin(x)*cos(x)).subs(cos(2*x),2*cos(x)**2-1)
 
 
-# In[31]:
+# In[25]:
 
 
-z=symbols("z")
+z = symbols("z")
 expr = x**3 + 4*x*y - z
 expr
 
@@ -193,7 +225,7 @@ expr.subs([(x, 2), (y, 4), (z, 0)])
 # Usamos sympify para convertir cadenas en expresiones:
 # 
 
-# In[30]:
+# In[26]:
 
 
 str_expr = "x**2 + 3*x - 1/2"
@@ -202,14 +234,14 @@ expr = sympify(str_expr)
 expr
 
 
-# In[33]:
+# In[27]:
 
 
 import ipywidgets as widgets
 from ipywidgets import interact
 
 
-# In[42]:
+# In[28]:
 
 
 def modulo1(t,n):
@@ -229,24 +261,24 @@ interact(modulo1, t="sin(x)",n=widn)
 # 
 # Usamos `evalf` para obtener el valor en punto flotante.
 
-# In[43]:
+# In[29]:
 
 
 expr = sqrt(8)
 expr
 
 
-# In[44]:
+# In[30]:
 
 
 expr.evalf()
 
 
-# subsy evalf son buenos si desea hacer una evaluación simple, pero si tiene la intención de evaluar una expresión en muchos puntos, hay formas más eficientes. Por ejemplo, si desea evaluar una expresión en mil puntos, usar SymPy sería mucho más lento de lo necesario, especialmente si solo le importa la precisión de la máquina. En su lugar, debe usar bibliotecas como NumPy y SciPy .
+# `subs` y `evalf` son buenos si desea hacer una evaluación simple, pero si tiene la intención de evaluar una expresión en muchos puntos, hay formas más eficientes. Por ejemplo, si desea evaluar una expresión en mil puntos, usar SymPy sería mucho más lento de lo necesario, especialmente si solo le importa la precisión de la máquina. En su lugar, debe usar librerías como NumPy y SciPy .
 # 
-# La forma más fácil de convertir una expresión SymPy en una expresión que puede evaluarse numéricamente es usar la lambdifyfunción. lambdifyactúa como una lambdafunción, excepto que convierte los nombres de SymPy a los nombres de la biblioteca numérica dada, generalmente NumPy. Por ejemplo
+# La forma más fácil de convertir una expresión SymPy en una expresión que puede evaluarse numéricamente es usar la `lambdify`función. `lambdify` actúa como una función lambda, excepto que convierte los nombres de SymPy a los nombres de la biblioteca numérica dada, generalmente NumPy. Por ejemplo:
 
-# In[45]:
+# In[31]:
 
 
 import numpy as np
@@ -254,25 +286,25 @@ a = np.arange(10)
 a
 
 
-# In[46]:
+# In[32]:
 
 
 expr = sin(x)
 
 
-# In[47]:
+# In[33]:
 
 
 f = lambdify(x, expr, "numpy") 
 
 
-# In[48]:
+# In[34]:
 
 
 f(a) 
 
 
-# In[51]:
+# In[35]:
 
 
 f = lambdify(x, expr, "math")
@@ -284,13 +316,13 @@ f(5)
 # 
 # 
 
-# In[50]:
+# In[36]:
 
 
 x+1==4
 
 
-# In[52]:
+# In[37]:
 
 
 sp.Eq(x + 1, 4)
@@ -301,57 +333,57 @@ sp.Eq(x + 1, 4)
 # Ahora saltemos y hagamos algunas matemáticas interesantes. Una de las características más útiles de un sistema de manipulación simbólica es la capacidad de simplificar expresiones matemáticas. 
 # 
 # 
-# SymPy tiene docenas de funciones para realizar varios tipos de simplificación. También hay una función general llamada simplify()que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos
+# SymPy tiene docenas de funciones para realizar varios tipos de simplificación, pero hay una función general llamada `simplify()` que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos:
 
 # Es importante tener esta definición en cuenta cuando se presentan igualdades entre expresiones.
 
-# In[53]:
+# In[38]:
 
 
 simplify(sin(x)**2 + cos(x)**2)
 
 
-# In[54]:
+# In[39]:
 
 
 (x**3 + x**2 - x - 1)/(x**2 + 2*x + 1)
 
 
-# In[55]:
+# In[40]:
 
 
 simplify((x**3 + x**2 - x - 1)/(x**2 + 2*x + 1))
 
 
-# In[56]:
+# In[41]:
 
 
 simplify(gamma(x)/gamma(x - 2))
 
 
-# In[57]:
+# In[42]:
 
 
 simplify (x**2+2*x+1 - (x+1)**2)
 
 
-# Un problema de simplify()es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.
+# Un problema de `simplify()` es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.
 # 
 # 
 
 # ### Simplificación de funciones polinómicas racionales
 # 
-# expand()es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:
+# `expand()` es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:
 # 
 # 
 
-# In[57]:
+# In[43]:
 
 
 expand((x+2)**3)
 
 
-# factor()toma un polinomio y lo factoriza en factores irreducibles sobre los números racionales. Por ejemplo:
+# `factor()` toma un polinomio y lo factoriza en factores irreducibles sobre los números racionales. Por ejemplo:
 
 # In[58]:
 
@@ -365,73 +397,73 @@ factor(x**3-x**2+x-1)
 factor_list(x**3-x**2+x-1)
 
 
-# cancel() tomará cualquier función racional y la pondrá en la forma canónica estándar, 𝑝𝑞, dónde 𝑝 y 𝑞 son polinomios expandidos sin factores comunes, y los coeficientes principales de 𝑝 y 𝑞 no tienen denominadores (es decir, son enteros).
+# `cancel()` tomará cualquier función racional y la pondrá en la forma canónica estándar, 𝑝/𝑞, dónde 𝑝 y 𝑞 son polinomios expandidos sin factores comunes, y los coeficientes principales de 𝑝 y 𝑞 no tienen denominadores (es decir, son enteros).
 
-# In[60]:
+# In[44]:
 
 
 cancel((x**2 + 2*x + 1)/(x**2 + x))
 
 
-# In[61]:
+# In[45]:
 
 
 expr = (x*y**2 - 2*x*y*z + x*z**2 + y**2 - 2*y*z + z**2)/(x**2 - 1)
 expr
 
 
-# In[62]:
+# In[46]:
 
 
 cancel(expr)
 
 
-# apart() realiza una descomposición de fracción parcial en una función racional.
+# `apart()` realiza una descomposición en fracciones parciales de una función racional.
 
-# In[63]:
+# In[47]:
 
 
 expr = (4*x**3 + 21*x**2 + 10*x + 12)/(x**4 + 5*x**3 + 5*x**2 + 4*x)
 expr
 
 
-# In[64]:
+# In[48]:
 
 
 apart(expr)
 
 
-# Para simplificar expresiones usando identidades trigonométricas, use trigsimp().
+# Para simplificar expresiones usando identidades trigonométricas, es recomendable el uso de `trigsimp()`.
 
-# In[65]:
+# In[49]:
 
 
 trigsimp(sin(x)*tan(x)/sec(x))
 
 
-# In[66]:
+# In[50]:
 
 
 cancel(sin(x)*tan(x)/sec(x))
 
 
-# Para expandir las funciones trigonométricas, es decir, aplicar la suma o las identidades de doble ángulo, use expand_trig().
+# Para expandir las funciones trigonométricas, es decir, aplicar la suma o las identidades de doble ángulo, usamos `expand_trig()`.
 
-# In[67]:
+# In[51]:
 
 
 expand_trig(sin(x + y))
 
 
-# In[68]:
+# In[52]:
 
 
 expand_trig(tan(2*x))
 
 
-# powsimp() permite simplificaciones con leyes de exponentes.
+# `powsimp()` permite simplificaciones con leyes de exponentes.
 
-# In[69]:
+# In[53]:
 
 
 x, y = symbols('x y', positive=True)
@@ -441,34 +473,33 @@ a, b = symbols('a b', real=True)
 z, t, c = symbols('z t c')
 
 
-# In[70]:
+# In[54]:
 
 
 powsimp(x**a*x**b)
 
 
-# In[71]:
+# In[55]:
 
 
 powsimp(z**t*z**c)
 
 
-# **rewrite()**
-# Podemos reescribir algunas funciones especiales en términos de otra:
+# Con `rewrite()` podemos reescribir algunas funciones especiales en términos de otra:
 
-# In[72]:
+# In[56]:
 
 
 tan(x).rewrite(sin)
 
 
-# In[73]:
+# In[57]:
 
 
 factorial(x).rewrite(gamma)
 
 
-# In[74]:
+# In[58]:
 
 
 exp(I*x).rewrite(sin)
@@ -484,7 +515,7 @@ exp(I*x).rewrite(sin)
 # 
 # Realizar una función en sympy que admita una lista $[a_0,a_1,a_2,\cdots,a_n]$ y que retorne el valor obtenido por la fracción. 
 
-# In[78]:
+# In[59]:
 
 
 L=[1,2,3]
@@ -492,7 +523,7 @@ L.reverse()
 L
 
 
-# In[86]:
+# In[60]:
 
 
 def lista_a_fraccion(L):
@@ -503,13 +534,13 @@ def lista_a_fraccion(L):
     return expr
 
 
-# In[87]:
+# In[61]:
 
 
 lista_a_fraccion([x,y,z])
 
 
-# In[88]:
+# In[62]:
 
 
 lista_a_fraccion([1,2*x,3])
@@ -519,50 +550,52 @@ lista_a_fraccion([1,2*x,3])
 # 
 # SymPy también permite realizar tareas básicas del cálculo diferencial e integral. 
 
-# In[90]:
+# In[63]:
 
 
 from sympy import *
 x, y, z = symbols('x y z')
 
 
-# In[91]:
+# ### Derivadas
+
+# In[64]:
 
 
 diff(cos(x),x) #derivadas en una sola variable
 
 
-# In[92]:
+# In[65]:
 
 
 diff(exp(4*x**2+5*x),x) #derivadas en una sola variable
 
 
-# In[93]:
+# In[66]:
 
 
 diff(y*exp(4*x**2+5*y),x) #derivadas parciales
 
 
-# In[94]:
+# In[67]:
 
 
 diff(cos(x),x,x)  #derivadas de orden superior
 
 
-# In[95]:
+# In[68]:
 
 
 diff(cos(x),x,x,x)
 
 
-# In[96]:
+# In[69]:
 
 
 diff(cos(x),x,3) 
 
 
-# In[97]:
+# In[70]:
 
 
 diff(y*exp(4*x**2+5*y),x,y) #derivadas de orden superior
@@ -570,7 +603,7 @@ diff(y*exp(4*x**2+5*y),x,y) #derivadas de orden superior
 
 # Como en las ecuaciones, a veces requerimos derivadas expresadas, sin evaluarse:
 
-# In[98]:
+# In[71]:
 
 
 deriv = Derivative( exp (x * y * z), x, y, y, z)
@@ -579,61 +612,63 @@ deriv
 
 # Para evaluarla:
 
-# In[99]:
+# In[72]:
 
 
 deriv.doit()
 
 
-# In[100]:
+# In[73]:
 
 
 diff( exp (x * y * z), x, y, y, z)
 
 
-# In[100]:
+# ### Integrales
+
+# In[74]:
 
 
 integrate(cos(x),x) # Integrales
 
 
-# In[101]:
+# In[75]:
 
 
 integrate(exp (-x), (x, 0, oo))
 
 
-# In[102]:
+# In[76]:
 
 
 Integral(exp (-x), (x, 0, oo))
 
 
-# In[103]:
+# In[77]:
 
 
 Integral(exp (-x), (x, 0, oo)).doit()
 
 
-# In[105]:
+# In[78]:
 
 
 integrate(x**2, (x, 0,1))
 
 
-# In[104]:
+# In[79]:
 
 
 Integral(exp(-x**2 - y**2), (x, -oo, oo), (y, -oo, oo))
 
 
-# In[105]:
+# In[80]:
 
 
 integrate(exp(-x**2 - y**2), (x, -oo, oo), (y, -oo, oo))
 
 
-# In[109]:
+# In[81]:
 
 
 Integral(exp(-x**2 - y**2), (x, -oo, oo), (y, -oo, oo)).doit()
@@ -641,7 +676,7 @@ Integral(exp(-x**2 - y**2), (x, -oo, oo), (y, -oo, oo)).doit()
 
 # Y ¿si la integral no es posible de calcular?
 
-# In[106]:
+# In[82]:
 
 
 integrate(x**x, x)
@@ -649,59 +684,61 @@ integrate(x**x, x)
 
 # Para expresar una integral no evaluada usamos `Integral`:
 
-# In[107]:
+# In[83]:
 
 
-integ=Integral((x**4 + x**2*exp(x) - x**2 - 2*x*exp(x) - 2*x -exp(x))*exp(x)/((x - 1)**2*(x + 1)**2*(exp(x) + 1)), x)
+integ = Integral((x**4 + x**2*exp(x) - x**2 - 2*x*exp(x) - 2*x -exp(x))*exp(x)/((x - 1)**2*(x + 1)**2*(exp(x) + 1)), x)
 integ
 
 
-# In[108]:
+# In[84]:
 
 
 integ.doit()
 
 
-# In[109]:
+# ### Límites
+
+# In[85]:
 
 
 limit(sin(x)/x, x, 0) #Límites
 
 
-# In[110]:
+# In[86]:
 
 
 expr = sin(x)/x
 expr.subs(x, 0)
 
 
-# In[111]:
+# In[87]:
 
 
 limit(expr, x, 0)
 
 
-# In[113]:
+# In[88]:
 
 
 expr = Limit((cos(x) - 1)/x, x, 0,"-") #Límites sin evaluar
 expr
 
 
-# In[114]:
+# In[89]:
 
 
 expr.doit()
 
 
-# In[115]:
+# In[90]:
 
 
 expr = exp(sin(x)) 
 expr.series(x,0, 10)  # Series
 
 
-# In[116]:
+# In[91]:
 
 
 exp(x - 6).series(x, 6,10) # Series no centradas en 0
@@ -711,97 +748,97 @@ exp(x - 6).series(x, 6,10) # Series no centradas en 0
 # 
 # Ahora hagamos una rápida exploración por las diferentes ecuaciones que se resuelven en Sympy.
 
-# In[58]:
+# In[92]:
 
 
 Eq(x**2,1)
 
 
-# In[59]:
+# In[93]:
 
 
 solveset(Eq(x**2,1),x)
 
 
-# In[60]:
+# In[94]:
 
 
 solveset(Eq(x**2,1),x)[0]
 
 
-# In[62]:
+# In[95]:
 
 
 list(solveset(Eq(x**2,1),x))[0]
 
 
-# In[63]:
+# In[96]:
 
 
 solveset(x ** 2 - x, x) # Raices
 
 
-# In[64]:
+# In[97]:
 
 
 solveset(x - x, x)
 
 
-# In[67]:
+# In[98]:
 
 
 solveset(x - x, x,domain=sp.Integers)
 
 
-# In[68]:
+# In[99]:
 
 
 solveset(x - x, x,domain=Interval(0,10))
 
 
-# In[69]:
+# In[100]:
 
 
 solveset(x - x, x,domain=Interval.Ropen(0,10))
 
 
-# In[70]:
+# In[101]:
 
 
 solveset(x - x, x,domain=Interval.Lopen(0,10))
 
 
-# In[133]:
+# In[102]:
 
 
 solveset(x - x, x,domain=Interval.open(0,10))
 
 
-# In[71]:
+# In[103]:
 
 
 solveset(x - x, x,domain=FiniteSet(0,1,2,3))
 
 
-# In[73]:
+# In[104]:
 
 
 solveset(sin(x) - 1, x, domain=sp.Reals)
 
 
-# In[74]:
+# In[105]:
 
 
 solveset(sin(x) - 1, x, domain=Interval.open(5,34))
 
 
-# In[75]:
+# In[106]:
 
 
 solveset(exp(x), x)     # Cuando la solución no existe
 
 
-# In[76]:
+# In[107]:
 
 
 solveset(cos(x) - x, x)  # Cuando es incapaz de encontrar una solución
@@ -811,19 +848,19 @@ solveset(cos(x) - x, x)  # Cuando es incapaz de encontrar una solución
 # 
 # Usamos `linsolve` para encontrar las soluciones:
 
-# In[77]:
+# In[108]:
 
 
 linsolve([x + y + z - 1, x + y + 2*z - 3 ], (x, y, z))
 
 
-# In[78]:
+# In[109]:
 
 
 linsolve([x + y + z - 1, x - y + z - 3,x+y+1 ], (x, y, z))
 
 
-# In[141]:
+# In[110]:
 
 
 linsolve([x + y + z - 1, x + y + z - 3,x+y+1 ], (x, y, z))
@@ -833,62 +870,20 @@ linsolve([x + y + z - 1, x + y + z - 3,x+y+1 ], (x, y, z))
 # 
 # Usaremos `nonlinsolve`
 
-# In[82]:
+# In[111]:
 
 
 a, b, c, d = symbols('a, b, c, d', real=True)
 
 
-# In[83]:
+# In[112]:
 
 
 nonlinsolve([a**2 + a, a - b], [a, b])
 
 
-# In[84]:
+# In[113]:
 
 
 nonlinsolve([x*y - 1, x - 2], x, y)
-
-
-# ### Ecuaciones diferenciales
-# 
-# 
-# 
-
-# In[85]:
-
-
-f, g, h = symbols('f g h', cls=Function)
-
-
-# In[86]:
-
-
-diffeq = Eq(f(x).diff(x, x) - 2*f(x).diff(x) + f(x), sin(x))
-diffeq
-
-
-# In[87]:
-
-
-dsolve(diffeq, f(x))
-
-
-# In[88]:
-
-
-dsolve(f(x).diff(x)*(1 - sin(f(x))) - 1, f(x))
-
-
-# In[89]:
-
-
-f(x).diff(x)*(1 - sin(f(x))) - 1
-
-
-# In[ ]:
-
-
-
 

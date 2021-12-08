@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Numpy - Computación numérica
+# # Paquete Numpy
 
 # :::::{important} Para tener presente
 # 
@@ -835,12 +835,14 @@ A+B
 # # Herramientas interactivas `ipywidgets`
 # 
 # Otro paquete que será transversal en este curso y nos permitira crear interfaces interesantes para nuestros estudiantes es [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/). Para instalar desde el cuaderno escriba:
-# 
-# ```Python
-# !pip install ipywidgets
-# ```
 
 # In[106]:
+
+
+get_ipython().system('pip install ipywidgets')
+
+
+# In[107]:
 
 
 #Debemos habilitar la extensión en nuestro entorno:
@@ -849,7 +851,7 @@ get_ipython().system('jupyter nbextension enable --py widgetsnbextension')
 
 # Importemos el paquete
 
-# In[107]:
+# In[108]:
 
 
 from ipywidgets import interact
@@ -858,7 +860,7 @@ import ipywidgets as widgets
 
 # La herramienta más básica de este paquete es la función `interact`. En el siguiente ejemplo veremos su utilidad:
 
-# In[108]:
+# In[109]:
 
 
 def f(x):
@@ -866,31 +868,31 @@ def f(x):
     return x
 
 
-# In[109]:
+# In[110]:
 
 
 f(4)
 
 
-# In[110]:
+# In[111]:
 
 
 interact(f, x=1.2)
 
 
-# In[111]:
+# In[112]:
 
 
 interact(f, x=True)
 
 
-# In[112]:
+# In[113]:
 
 
 interact(f, x={0:'Elemento 1',1:'Elemento 2'})
 
 
-# In[113]:
+# In[114]:
 
 
 interact(f, x='Soy interactivo')
@@ -900,7 +902,7 @@ interact(f, x='Soy interactivo')
 # 
 # Veamos otro par de ejemplos:
 
-# In[114]:
+# In[115]:
 
 
 def g(x):
@@ -909,27 +911,27 @@ def g(x):
     return y
 
 
-# In[115]:
+# In[116]:
 
 
 g(8)
 
 
-# In[116]:
+# In[117]:
 
 
 interact(g, x=1.2)
 #Objeto interactivo: Slider tipo float
 
 
-# In[117]:
+# In[118]:
 
 
 interact(g, x=1)
 #Objeto interactivo: Slider tipo int
 
 
-# In[118]:
+# In[119]:
 
 
 def nombrelargoocorto(t):
@@ -942,20 +944,20 @@ def nombrelargoocorto(t):
     return z
 
 
-# In[119]:
+# In[120]:
 
 
 nombrelargoocorto("Benjamin")
 
 
-# In[120]:
+# In[121]:
 
 
 interact(nombrelargoocorto, t="Pepito")
 #Objeto interactivo: Caja de texto
 
 
-# In[121]:
+# In[122]:
 
 
 interact(nombrelargoocorto, t=["Pepito","Luis","Gustavo","Felipe"])
@@ -966,7 +968,7 @@ interact(nombrelargoocorto, t=["Pepito","Luis","Gustavo","Felipe"])
 
 # A continuación hacemos un cambio sobre el widget:
 
-# In[122]:
+# In[123]:
 
 
 interact(f, x=widgets.IntText(
@@ -976,7 +978,7 @@ interact(f, x=widgets.IntText(
 ));
 
 
-# In[123]:
+# In[124]:
 
 
 interact()
@@ -986,7 +988,7 @@ interact()
 # 
 # Ya que conocemos algo de Numpy y ipywidgets vamos a crear un ejemplo muy sencillo para calcular algunos estadísticos elementales de una lista de valores:
 
-# In[124]:
+# In[125]:
 
 
 def estadisticos(x):
@@ -1002,7 +1004,7 @@ def estadisticos(x):
     return
 
 
-# In[125]:
+# In[126]:
 
 
 estadisticos("1 2 3")
@@ -1010,19 +1012,19 @@ estadisticos("1 2 3")
 
 # Evalue los estadísticos del conjunto de datos [1,1,2,3] y compruebelo con la herramienta:
 
-# In[126]:
+# In[127]:
 
 
 estadisticos("1 2 3 4 5 7 8 3 1 3 4 1 3 4 8 0 9")
 
 
-# In[127]:
+# In[128]:
 
 
 interact(estadisticos,x="1 2 3")
 
 
-# In[128]:
+# In[129]:
 
 
 def estadisticos(x):
@@ -1041,7 +1043,7 @@ def estadisticos(x):
     return
 
 
-# In[129]:
+# In[130]:
 
 
 interact(estadisticos,x="1 2 3")
@@ -1049,3 +1051,9 @@ interact(estadisticos,x="1 2 3")
 
 # ## Ejercicio
 # 1. Crea una función, para luego hacer un elemento interactivo con ella, de tal modo que se digite una cantidad que sea el cuadrado de un número entero de datos y esta lo escriba como una matriz del tamaño adecuado, es decir, si se digitan 4 elementos, la respuesta de la función debe ser una matriz de tamaño 2x2.
+
+# In[ ]:
+
+
+
+

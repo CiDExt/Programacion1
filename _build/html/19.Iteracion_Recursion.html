@@ -197,17 +197,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="23.Numpy.html">
-   Numpy - Computación numérica
+   Paquete Numpy
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="24.Matplotlib.html">
-   Matplotlib - Creación de gráficos
+   Matplotlib - Gráficos en Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="25.Sympy.html">
-   Sympy - Computación simbólica
+   Computación simbólica con Sympy
   </a>
  </li>
 </ul>
@@ -309,6 +309,36 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contenido
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#es-un-divide-y-venceras">
+   Es un divide y venceras
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estado-de-ejecucion-en-funciones-recursivas">
+     Estado de ejecución en funciones recursivas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estructuras-de-datos-recursivas">
+     Estructuras de datos recursivas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -324,8 +354,8 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5d9e4322-13e3-4641-9078-fc1f8429e198" name="826efc0c-33ba-470d-abd4-5005eb791631" type="radio">
-</input><label class="tabbed-label" for="5d9e4322-13e3-4641-9078-fc1f8429e198">
+<input checked="checked" id="04b4569c-00bc-4fe1-9557-e935934e285c" name="30170323-2cd8-4eeb-9a9d-70998767c695" type="radio">
+</input><label class="tabbed-label" for="04b4569c-00bc-4fe1-9557-e935934e285c">
 Estructuras de programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -335,8 +365,8 @@ Estructuras de programación</label><div class="tabbed-content docutils">
 <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
 </div>
 </div>
-<input id="f84ca4a1-459c-4e5b-b0ad-b9e16b793713" name="826efc0c-33ba-470d-abd4-5005eb791631" type="radio">
-</input><label class="tabbed-label" for="f84ca4a1-459c-4e5b-b0ad-b9e16b793713">
+<input id="6ae94ac8-577f-41ad-a3f8-6ffbe6f013fb" name="30170323-2cd8-4eeb-9a9d-70998767c695" type="radio">
+</input><label class="tabbed-label" for="6ae94ac8-577f-41ad-a3f8-6ffbe6f013fb">
 Secuencias en Python</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -350,6 +380,293 @@ Secuencias en Python</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
+</div>
+<p>En el siguiente código la idea es imprimir los cuatro colores, establecemos dos funciones que lo permiten. Tómate el tiempo para analizarlos y cuentanos como opera cada uno:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Amarillo&#39;</span><span class="p">,</span><span class="s1">&#39;Azul&#39;</span><span class="p">,</span><span class="s1">&#39;Rojo&#39;</span><span class="p">,</span><span class="s1">&#39;Verde&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Función 1</span>
+<span class="k">def</span> <span class="nf">impresion_iterativa</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">impresion_iterativa</span><span class="p">(</span><span class="n">colores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Amarillo
+Azul
+Rojo
+Verde
+</pre></div>
+</div>
+</div>
+</div>
+<p>En la siguiente buscamos un resultado similar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Función 2</span>
+<span class="k">def</span> <span class="nf">impresion_recursiva</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">lista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">mitad</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">primera_mitad</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[:</span><span class="n">mitad</span><span class="p">]</span>
+        <span class="n">segunda_mitad</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="n">mitad</span><span class="p">:]</span>
+
+        <span class="n">impresion_recursiva</span><span class="p">(</span><span class="n">primera_mitad</span><span class="p">)</span>
+        <span class="n">impresion_recursiva</span><span class="p">(</span><span class="n">segunda_mitad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">impresion_recursiva</span><span class="p">(</span><span class="n">colores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Amarillo
+Azul
+Rojo
+Verde
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Qué clase de algortimo es este?</p>
+<p>Como podemos ver obtenemos el mismo resultado, pero en la función 2 se hace referencia a ella misma. Un ejercicio interesante es explicar que ocurre desde que inicia el algoritmo. Pensemos en un diagrama que aclare esta situación:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61afe68d0cece40d63da9847" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Observe que no importa el tamaño de la lista siempre realizará la tarea que asignamos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Amarillo&#39;</span><span class="p">,</span><span class="s1">&#39;Azul&#39;</span><span class="p">,</span><span class="s1">&#39;Rojo&#39;</span><span class="p">,</span><span class="s1">&#39;Verde&#39;</span><span class="p">,</span><span class="s1">&#39;Naranja&#39;</span><span class="p">,</span><span class="s1">&#39;Violeta&#39;</span><span class="p">,</span><span class="s1">&#39;Ocre&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">impresion_recursiva</span><span class="p">(</span><span class="n">Colores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Amarillo
+Azul
+Rojo
+Verde
+Naranja
+Violeta
+Ocre
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tomando como base el gráfico anterior, trata de dibujar como se imprimieron los anteriores siete colores. Veamos ahora el siguiente algorimo, usado para calcular el factorial de un número.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial_iterativo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">=</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">=</span><span class="n">i</span><span class="o">*</span><span class="n">f</span>
+    <span class="k">return</span> <span class="n">f</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial_iterativo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+3
+4
+5
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comparemos con el siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span><span class="o">*</span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">factorial_recursivo</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<p>En un diagrama como el anterior explique como se está ejecutando este algoritmo.</p>
+<div class="section" id="es-un-divide-y-venceras">
+<h2>Es un divide y venceras<a class="headerlink" href="#es-un-divide-y-venceras" title="Permalink to this headline">¶</a></h2>
+<p>Un guía adecuada para reconocer estos algoritmos recursivos es que se define un problema como simple o como una división que nos lleva a un problema más sencillo.</p>
+<p>En terminos más formales, una función recursiva es una función definida en términos de sí misma a través de expresiones autorreferenciales. Es decir, la función continuará llamándose a sí misma y repetirá su comportamiento hasta que se cumpla alguna condición para devolver un resultado. Todas las funciones recursivas comparten una estructura común compuesta de dos partes: caso base y caso recursivo.</p>
+<p>En los ejemplos anteriores es muy sencillo identificar este par de partes.</p>
+<div class="section" id="estado-de-ejecucion-en-funciones-recursivas">
+<h3>Estado de ejecución en funciones recursivas<a class="headerlink" href="#estado-de-ejecucion-en-funciones-recursivas" title="Permalink to this headline">¶</a></h3>
+<p>En las funciones recursivas cada <em>llamada</em> tiene su propio contexto de ejecución, es muy importante que mientras se mantenga en el estado de recursividad se pase el estado a través de cada llamada recursiva para que el estado actual sea parte del contexto de ejecución de la llamada actual, sin embargo otra alternativa se puede plantear al  mantener el estado en el ámbito global, ilustremos esta situación con los siguientes ejemplos, el objetivo es lograr la suma de los primeros diez números enteros positivos.</p>
+<p>El siguiente mantiene el estado recursivo aplicando cada llamada  <em>recursiva</em> como argumento:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_recursive</span><span class="p">(</span><span class="n">current_number</span><span class="p">,</span> <span class="n">accumulated_sum</span><span class="p">):</span>
+    <span class="c1"># Caso Base</span>
+    <span class="c1"># Estado final</span>
+    <span class="k">if</span> <span class="n">current_number</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">accumulated_sum</span>
+
+    <span class="c1"># Caso recursivo</span>
+    <span class="c1"># Avanza atraves de la ejecución con llamadas recursivas</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sum_recursive</span><span class="p">(</span><span class="n">current_number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">accumulated_sum</span> <span class="o">+</span> <span class="n">current_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sum_recursive</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>55
+</pre></div>
+</div>
+</div>
+</div>
+<p>La ejecución avanza de la siguiente manera:</p>
+<p><img alt="recursivo_estadoi" src="https://files.realpython.com/media/state_3.3e8a68c4fde5.png" /></p>
+<p>Ahora trabajemos dejando todo en el espacio de nombres global, aca <code class="docutils literal notranslate"><span class="pre">current_number</span></code> y <code class="docutils literal notranslate"><span class="pre">accumulated_sum</span></code> se mantienen como variables globales:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Entorno global</span>
+<span class="n">current_number</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">accumulated_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="k">def</span> <span class="nf">sum_recursive</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">current_number</span>
+    <span class="k">global</span> <span class="n">accumulated_sum</span>
+    <span class="c1"># Caso Base</span>
+    <span class="k">if</span> <span class="n">current_number</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">accumulated_sum</span>
+    <span class="c1"># Caso Recursivo</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">accumulated_sum</span> <span class="o">=</span> <span class="n">accumulated_sum</span> <span class="o">+</span> <span class="n">current_number</span>
+        <span class="n">current_number</span> <span class="o">=</span> <span class="n">current_number</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">sum_recursive</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="estructuras-de-datos-recursivas">
+<h3>Estructuras de datos recursivas<a class="headerlink" href="#estructuras-de-datos-recursivas" title="Permalink to this headline">¶</a></h3>
+<p>Diremos que una estructura de datos es recursiva si puede definirse en términos de una versión más pequeña de sí misma.</p>
+<p>Por ejemplo, una lista es un ejemplo de estructura de datos recursiva, es posible construir cualquier lista aplicando la siguiente función varias veces y iniciando con una lista vacía. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">elemento_adjunto</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span><span class="n">elemento</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">lista</span> <span class="o">+</span> <span class="p">[</span><span class="n">elemento</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elemento_adjunto</span><span class="p">(</span><span class="n">elemento_adjunto</span><span class="p">(</span><span class="n">elemento_adjunto</span><span class="p">([],</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los diccionarios, los conjuntos, los árboles admiten definición recursiva, claramente los algoritmos recursivos se montan en datos recursivos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">suma_de_lista_recursiva</span><span class="p">(</span><span class="n">lista_inicial</span><span class="p">):</span>
+    <span class="c1"># Caso Base</span>
+    <span class="k">if</span> <span class="n">lista_inicial</span> <span class="o">==</span> <span class="p">[]:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+    <span class="c1"># Caso recursivo</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">encabezado</span> <span class="o">=</span> <span class="n">lista_inicial</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">Lista_pequeña</span> <span class="o">=</span> <span class="n">lista_inicial</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">return</span> <span class="n">encabezado</span> <span class="o">+</span> <span class="n">suma_de_lista_recursiva</span><span class="p">(</span><span class="n">Lista_pequeña</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suma_de_lista_recursiva</span><span class="p">([])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suma_de_lista_recursiva</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Cuando usamos herramientas recursivas estamos cambiando la forma de pensar. Es todo un arte identificar problemas que se pueden hacer pequeños y autoreferenciar. Además estamos logrando una solución elegante a prblemas que tradicionalmente se resuelven con iteraciones. Una de las características destacadas de Python, que permite la elegancia de las soluciones.</p>
 </div>
 </div>
 
