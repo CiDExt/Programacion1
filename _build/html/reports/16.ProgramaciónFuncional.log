@@ -22,7 +22,7 @@ suma_y_resta=lambda x,y: x+y,x-y
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_29720/2828231163.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_30869/2828231163.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0msuma_y_resta[0m[0;34m=[0m[0;32mlambda[0m [0mx[0m[0;34m,[0m[0my[0m[0;34m:[0m [0mx[0m[0;34m+[0m[0my[0m[0;34m,[0m[0mx[0m[0;34m-[0m[0my[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'x' is not defined

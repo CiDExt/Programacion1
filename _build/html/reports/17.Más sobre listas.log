@@ -22,7 +22,7 @@ temperatura[0]='hola'
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_29738/1406467647.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_30886/1406467647.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mtemperatura[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m=[0m[0;34m'hola'[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mTypeError[0m: 'tuple' object does not support item assignment
