@@ -188,8 +188,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="19.Iteracion_Recursion.html">
+   Iteración y Recursión
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="20.Archivos.html">
    Archivos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="21.%20Excepciones.html">
+   Excepciones
   </a>
  </li>
  <li class="toctree-l1">
@@ -355,16 +365,16 @@
 <hr class="docutils" />
 <p>Por ejemplo, si yo quisiera acceder a una lista con los primeros 5 enteros positivos y guardarlos en la variable <code class="docutils literal notranslate"><span class="pre">Lista</span></code> tendría por lo menos estas dos opciones:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e49e6b56-c532-4250-b0bc-41ff0a212f05" name="7b42f2d6-1d1e-4740-8173-de6fb92ecfb7" type="radio">
-</input><label class="tabbed-label" for="e49e6b56-c532-4250-b0bc-41ff0a212f05">
+<input checked="checked" id="37bb8fdc-9187-4d5e-a47a-201aa54fef04" name="3a8bcf86-18c7-4f88-895e-ef38ceb4fde6" type="radio">
+</input><label class="tabbed-label" for="37bb8fdc-9187-4d5e-a47a-201aa54fef04">
 Opción 1</label><div class="tabbed-content docutils">
 <p>Declarar la lista de forma directa:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
-<input id="be05722f-a652-4e2d-9a80-1ded724e4c7f" name="7b42f2d6-1d1e-4740-8173-de6fb92ecfb7" type="radio">
-</input><label class="tabbed-label" for="be05722f-a652-4e2d-9a80-1ded724e4c7f">
+<input id="86952e8e-6a94-4d80-9084-b80b4a16d5d5" name="3a8bcf86-18c7-4f88-895e-ef38ceb4fde6" type="radio">
+</input><label class="tabbed-label" for="86952e8e-6a94-4d80-9084-b80b4a16d5d5">
 Opción 2</label><div class="tabbed-content docutils">
 <p>Crear una rutina que la genere:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Lista</span><span class="o">=</span><span class="p">[]</span>
@@ -388,20 +398,20 @@ Opción 2</label><div class="tabbed-content docutils">
 <p><strong>Programación imperativa</strong></p>
 <p>Enfocada en explicar el cómo debe realizarse el cálculo, sigue una serie de instrucciones inmersas en un control de flujo explicito. En este caso, las variables <em>son constantemente modificadas</em> y representan el desarrollo del cálculo. Entre los diferentes paradigmas que se rigen según este enfoque se encuentran <strong>paradigma de programación estructurada</strong> y <strong>paradigma de programación modular</strong>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5ea0b7fd-567d-4292-b41d-aab9c60fb4f8" name="834422df-ae3c-4274-a3d7-22fe2c7ff1c8" type="radio">
-</input><label class="tabbed-label" for="5ea0b7fd-567d-4292-b41d-aab9c60fb4f8">
+<input checked="checked" id="692aacc6-54c1-4111-8089-cc3ed210e921" name="2a3bef1a-e1b7-4c2d-9784-aee0a954e0b7" type="radio">
+</input><label class="tabbed-label" for="692aacc6-54c1-4111-8089-cc3ed210e921">
 Programación Estructurada</label><div class="tabbed-content docutils">
 <p>Parte de un hermoso resultado de la teoría de lenguajes de programación conocido como el <a class="reference external" href="https://en.wikipedia.org/wiki/Structured_program_theorem">teorema de Böhm–Jacopini</a> que afirma que toda función computable puede implementarse utilizando únicamente tres estructuras lógicas <strong>(estructuras de control)</strong>: secuenciación, selección e iteración.</p>
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61944099c121b10d88a24212" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 </div>
-<input id="abbe6a68-a5ca-4917-8655-77e9e31e6524" name="834422df-ae3c-4274-a3d7-22fe2c7ff1c8" type="radio">
-</input><label class="tabbed-label" for="abbe6a68-a5ca-4917-8655-77e9e31e6524">
+<input id="147c410b-b724-4512-a089-8390ecd19e6e" name="2a3bef1a-e1b7-4c2d-9784-aee0a954e0b7" type="radio">
+</input><label class="tabbed-label" for="147c410b-b724-4512-a089-8390ecd19e6e">
 Programación Modular</label><div class="tabbed-content docutils">
 <p>Usa el principio de que un problema se puede dividir en subproblemas, permite dividir un programa en módulos (programas más simples), con el fin de hacerlo más legible y manejable. Los elementos modulares más básicos pueden verse como funciones que admiten entradas y producen salidas.</p>
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61945398c5d9760d8b0ea779" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 </div>
-<input id="7a57baaa-5290-4b7e-b29b-cc136fdb7b5e" name="834422df-ae3c-4274-a3d7-22fe2c7ff1c8" type="radio">
-</input><label class="tabbed-label" for="7a57baaa-5290-4b7e-b29b-cc136fdb7b5e">
+<input id="12e235b2-c946-4b95-b7ea-100d159abe0b" name="2a3bef1a-e1b7-4c2d-9784-aee0a954e0b7" type="radio">
+</input><label class="tabbed-label" for="12e235b2-c946-4b95-b7ea-100d159abe0b">
 Programación Orientada a Objetos</label><div class="tabbed-content docutils">
 <p>Los programas se modelan en torno a objetos, entidades que encapsulan atributos y funciones (o métodos) en una sola entidad. Para dar más claridad pensemos un objeto como una persona, que se distingue por los atributos que la describen pero que puede ejecutar varias acciones (o métodos).</p>
 <p><img alt="Clases" src="https://pythones.net/wp-content/uploads/2019/01/Clases-y-Objetos-min-577x1024-min.png" /></p>
@@ -411,8 +421,8 @@ Programación Orientada a Objetos</label><div class="tabbed-content docutils">
 <p><strong>Programación declarativa</strong></p>
 <p>Describe <strong>que</strong> se debe calcular, no hace referencia a métodos de evaluación y cada vez que se <em>instancia</em> una variable se vuelve inmutable. No requiere sentencias de asignación y el flujo se asocia a composición funcional, recursividad,reescritura y unificación. Entre estas se destacan el <strong>paradigma de programación funcional</strong> y el <strong>paradigma de programación lógica</strong>.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9f4efecd-ba8e-4113-89d7-cd88a31877c1" name="05aea298-f225-475f-ab4a-1a85e9ee06dc" type="radio">
-</input><label class="tabbed-label" for="9f4efecd-ba8e-4113-89d7-cd88a31877c1">
+<input checked="checked" id="e7dbae02-424b-4c6b-9edc-6fa8abc00e84" name="ab4c1a15-bcf2-41ed-acd3-17e06958c289" type="radio">
+</input><label class="tabbed-label" for="e7dbae02-424b-4c6b-9edc-6fa8abc00e84">
 Programación Lógica</label><div class="tabbed-content docutils">
 <p>Basada en la <a class="reference external" href="https://es.wikipedia.org/wiki/L%C3%B3gica_de_primer_orden">lógica de predicados (o lógica de primer orden)</a>, busca resolver problemas a partir de la posibilidad de plantear problemas como conjuntos de sentencias expresadas en forma lógica que, a partir de reglas de inferencia (deducciones), permiten automatizar la solución. Se basa en la idea:</p>
 <p><img alt="Tomado de https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html" src="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/img/001.png" /></p>
@@ -420,8 +430,8 @@ Programación Lógica</label><div class="tabbed-content docutils">
 <p><img alt="Tomado de https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html" src="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/img/prolog004.PNG" /></p>
 <p>Imágenes tomadas de <a class="reference external" href="https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html">https://ferestrepoca.github.io/paradigmas-de-programacion/proglogica/logica_teoria/proglogica.html</a></p>
 </div>
-<input id="2043a710-1067-42c6-a4fb-4aea3d69e318" name="05aea298-f225-475f-ab4a-1a85e9ee06dc" type="radio">
-</input><label class="tabbed-label" for="2043a710-1067-42c6-a4fb-4aea3d69e318">
+<input id="d57c091c-29f8-4509-82e5-63776da0d379" name="ab4c1a15-bcf2-41ed-acd3-17e06958c289" type="radio">
+</input><label class="tabbed-label" for="d57c091c-29f8-4509-82e5-63776da0d379">
 Programación Funcional</label><div class="tabbed-content docutils">
 <p>Podría considerarse como una ampliación del <a class="reference external" href="https://en.wikipedia.org/wiki/Lambda_calculus">cálculo lambda</a>, admite a las funciones como elementos primitivos. El objetivo es identificar qué resolver y para lograrlo se utiliza una forma explicita de la función que resolvería el problema.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
