@@ -43,7 +43,7 @@
 # ```Python
 # Lista=[]
 # contador=1
-# ## Usamos while, ejecutalo en una celda y trata de identificar de que se trata.
+# ## Usamos while, ejecútalo en una celda y trata de identificar de que se trata.
 # ## Si no lo comprendes no te preocues, lo veremos más adelante.
 # while contador <6:
 #     Lista.append(contador)
@@ -136,4 +136,4 @@
 
 # ## Cierre
 # 
-# Si bien existen paradigmas como tipos de soluciones y parece que hay lenguajes enfocados a trabajar mejor con un paradigma dado, es el modelo de computación, la eficiencia del programa y las condiciones del **problema** lo que determina cual de estos paradigmas es más conveniente. Afortunadamente Python es multiparadigma y permite que trabajemos con diferentes diseños de solución. En el siguiente módulo estudiaremos elementos de la programación estructurada, en particular definiremos las estructuras de control en Python y haremos algunos ejemplos.
+# Si bien existen paradigmas como tipos de soluciones y parece que hay lenguajes enfocados a trabajar mejor con un paradigma dado, es el modelo de computación, la eficiencia del programa y las condiciones del **problema** lo que determina cuál de estos paradigmas es más conveniente. Afortunadamente Python es multiparadigma y permite que trabajemos con diferentes diseños de solución. En el siguiente módulo estudiaremos elementos de la programación estructurada, en particular definiremos las estructuras de control en Python y haremos algunos ejemplos.

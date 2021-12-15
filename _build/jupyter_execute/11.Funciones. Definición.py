@@ -64,7 +64,7 @@ cuadrado(3)
 # La manera adecuada para definir una función es la siguiente:
 # <img src="https://github.com/MRippe7/CienciaDatos/blob/main/Imagenes/Funciones1.png?raw=true">
 # 
-# Para invocar a la función que hemos definido, debemos escribir el nombre de ésta y entre paréntesis los argumentos requeridos para que ésta sea ejecutada así:
+# Para invocar a la función que hemos definido, debemos escribir el nombre de esta y entre paréntesis los argumentos requeridos para que esta sea ejecutada así:
 # ```python
 # nombre_de_la_función (parámetros,separados,por,comas)
 # ```
@@ -107,9 +107,9 @@ funcion_sin_arg2()
 
 
 x = funcion_sin_arg1()
-print('Éste es el resultado de la primera función:',x)
+print('Este es el resultado de la primera función:',x)
 x = funcion_sin_arg2()
-print('Éste es el resultado de la segunda función:',x)
+print('Este es el resultado de la segunda función:',x)
 
 
 # ### Ejercicios:
@@ -119,7 +119,7 @@ print('Éste es el resultado de la segunda función:',x)
 # 
 
 # ## Documentación:
-# A las funciones que creamos, es posible añadirles documentación para que sea clara la manera de usarlas e incluso ejemplificando el uso de los diferentes argumentos de ésta:
+# A las funciones que creamos, es posible añadirles documentación para que sea clara la manera de usarlas e incluso ejemplificando el uso de los diferentes argumentos de esta:
 
 # In[8]:
 
@@ -176,7 +176,27 @@ operaciones(1,2)
 z1
 
 
-# A las variables `z1`, `z2`, `z3` y `z4` se les conoce como **variables locales**, ya que éstas se "destruyen" al finalizar los cálculos requeridos para finalizar la ejecución de la función `operaciones`.
+# A las variables `z1`, `z2`, `z3` y `z4` se les conoce como **variables locales**, ya que estas se "destruyen" al finalizar los cálculos requeridos para finalizar la ejecución de la función `operaciones`.
+
+# Si tal vez se ha utilizado el mismo nombre para una variable, por fuera y por dentro de una función, no tendremos problemas por ello, pues en Python las funciones conocen su entorno trabajan con las variables locales que se han definido:
+
+# In[13]:
+
+
+z4 = 'hola'
+
+
+# In[14]:
+
+
+operaciones(1,2)
+
+
+# In[15]:
+
+
+z4
+
 
 # ### Ejercicios:
 # Cree las siguientes funciones, con su debida documentación:
@@ -189,19 +209,19 @@ z1
 # 
 # Para ello emplearemos la función `randrange(a,b)` del paquete `random`, la cual nos permite obtener un número entero arbitrario en el intervalo $[a,b-1]$ siendo $a$ y $b$ números enteros, por ejemplo:
 
-# In[13]:
+# In[16]:
 
 
 import random
 random.randrange(1, 7)
 
 
-# In[14]:
+# In[17]:
 
 
 def lanzardados (n):
     '''Permite contar los resultados obtenidos al lanzar un dado n veces
-    n es el único argumento de ésta función'''
+    n es el único argumento de esta función'''
     # n es la cantidad de veces que lanzaremos el dado
     # Para evitar errores con números no enteros consideramos:
     n = int(n)
@@ -236,20 +256,14 @@ def lanzardados (n):
     print(f'{6:>5}{cont6:>10}')
 
 
-# In[15]:
+# In[18]:
 
 
 lanzardados(100)
 
 
 # # Ejercicio:
-# Como hemos podido ver, cada vez que ejecutamos la función anterior obtenemos diferentes resultados. Modifica éste código para que permita obtener los mismos valores cada vez que ejecutamos la función con determinado valor.
+# Como hemos podido ver, cada vez que ejecutamos la función anterior obtenemos diferentes resultados. Modifica este código para que permita obtener los mismos valores cada vez que ejecutamos la función con determinado valor.
 # 
 # # Cierre
 # Las funciones en Python se comportan básicamente como funciones matemáticas, reciben una entrada, ejecutan una tarea y arrojan un resultado, las variables usadas dentro de ellas se destruyen al finalizar el proceso y se conocen como variables locales.
-
-# In[ ]:
-
-
-
-

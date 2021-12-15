@@ -5,13 +5,13 @@
 
 # :::::{important} ¿Qué sabemos de las funciones?
 # 
-# En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos a manera de manipular los argumentos de las funciones que creemos.
+# En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos la manera de manipular los argumentos de las funciones que creemos.
 # 
 # ````{tabbed} ¿El orden importa?
 # 
 # :::{admonition} Recordemos...
 # :class: tip
-# En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, **el orden es fundamental**.
+# En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, **el orden de los argumentos es fundamental**.
 # :::
 # ````
 # 
@@ -57,7 +57,7 @@ def costos(comensales,propina=10):
 costos(1)
 
 
-# Nota que en la función anterior el segundo argumento tiene un valor predeterminado `propina=10`, esto quiere decir que, si no modificamos su valor, la función asumirá éste como el valor predeterminado, es decir, las propinas serán del $10\%$ salvo que se indique algún otro valor. Por ejemplo si deseamos calcular el total de la cuenta con una propina del $7\%$, ejecutamos las siguientes líneas de código:
+# Nota que en la función anterior el segundo argumento tiene un valor predeterminado `propina=10`, esto quiere decir que, si no modificamos su valor, la función asumirá este como el valor predeterminado, es decir, las propinas serán del $10\%$ salvo que se indique algún otro valor. Por ejemplo si deseamos calcular el total de la cuenta con una propina del $7\%$, ejecutamos las siguientes líneas de código:
 
 # In[3]:
 
@@ -75,8 +75,8 @@ costos(propina=7,comensales=1)
 
 # Lo presentado en la línea anterior suele emplearse únicamente cuando se tienen diferentes variables predeterminadas y no con las variables obligatorias, esto con el fin de evitar malas interpretaciones de las entradas.
 
-# ## Argumentos de longitud variable:
-# En diversos lenguajes de programación existe dos tipos de argumentos ampliamente utilizados `args` y `kwargs` (**arg**ument**s** y **k**ey**w**ord**arg**ument**s** ), en Python los `args` son tuplas y los `kwargs` son diccionarios (estructuras que estudiaremos en profundidad más adelante), estos argumentos permiten agregar cualquier cantidad de entradas a las funciones como podemos ver en las siguientes funciones:
+# ## Argumentos opcionales:
+# En diversos lenguajes de programación existe dos tipos de argumentos ampliamente utilizados `args` (**arg**ument**s**:  argumentos opcionales no nombrados) y `kwargs` (**k**ey**w**ord**arg**ument**s**: argumentos opcionales nombrados), en Python los `args` son tuplas y los `kwargs` son diccionarios (estructuras que estudiaremos en profundidad más adelante), estos argumentos permiten agregar cualquier cantidad de entradas a las funciones como podemos ver en las siguientes funciones:
 
 # In[5]:
 
@@ -122,7 +122,7 @@ promedio(1,2,3,4,5.2,3.1,4)
 
 # Es importante que note que en la definición de la función, el argumento que será una tupla de tamaño indefinido lleva un `*` antes, esto es lo que le indica a Python el tipo de variable que es, y dentro de la función se utiliza la variable sin el `*`. El nombre puede ser cualquiera pero por convención suele emplearse `args`.
 # 
-# Los tipos de entrada de éstas variables pueden ser diversos, por ejemplo:
+# Los tipos de entrada de estas variables pueden ser diversos, por ejemplo:
 
 # In[11]:
 
@@ -147,7 +147,7 @@ imprime()
 imprime('hola',1)
 
 
-# También podemos combinar las variables bien sean obligatorias u opcionales con éste tipo de argumentos, por ejemplo:
+# También podemos combinar las variables bien sean obligatorias u opcionales con este tipo de argumentos, por ejemplo:
 
 # In[14]:
 
@@ -164,7 +164,7 @@ def f2(arg1, *argv):
 f2('Hola', 'bienvenido', 'a', 'la', 'Universidad','Externado','de', 'Colombia')
 
 
-# Si intentamos escribir primero las variables de tamaño indefinido y luego las que necesitamos realmente obtendremos un error, ya que el Python no sabrá en qué momento debe parar de llenar la tupla y seguir con los argumentos fijos, salvo que se especifiquen sus valores como vimos anteriormente:
+# Si intentamos escribir primero las variables de tamaño indefinido y luego las que necesitamos realmente obtendremos un error, ya que Python no sabrá en qué momento debe parar de llenar la tupla y seguir con los argumentos fijos, salvo que se especifiquen sus valores como vimos anteriormente:
 
 # In[16]:
 
@@ -257,7 +257,7 @@ superfuncion(1,2,0,1,2,3,val0=0,val1=1,val2=2)
 # 2. Haga un programa que le permita ingresar las notas obtenidas por un estudiante y los porcentajes asociados a ellas, si el porcentaje es del $100\%$ debe arrojar la nota definitiva de la materia y si el porcentaje es inferior debe informarle el valor de la nota acumulada y cuánto debería sacar en el resto de la materia para aprobarla.
 
 # ## Comentarios finales:
-# Recuerda que para evitar confusiones en la ejecución de la función los parámetros de ésta deben ir así: variables, variables con asignaciones predeterminadas, args y kwargs
+# Recuerda que para evitar confusiones en la ejecución de la función los parámetros de esta deben ir así: variables, variables con asignaciones predeterminadas, args y kwargs
 # ```python
 # def nombre_de_la_función(v1,...,vn,vp1='algo',...,vpm='algo',*args,**kwargs):
 #     lista_de_instrucciones

@@ -43,7 +43,7 @@
 # :::::
 # 
 
-# En el ejercicio anterior tuvimos un breve acercamiento a diferentes tipos de datos guardados en variables, le brindamos una atención particular a las cadenas de caractéres porque permitían extraer subtextos, caracteres por separado, entre otros. Ese orden intrinseco en cada cadena lo extrapolaremos para organizar secuencias de cualquier tipo de objetos, en este sentido, nos referimos a las listas y a las tuplas. Nuestro objetivo es entender las similitudes y diferencias que hay entre ellas, como también tener presentes algunos de los métodos y funciones más útiles al trabajar con éstos objetos.
+# En el ejercicio anterior tuvimos un breve acercamiento a diferentes tipos de datos guardados en variables, le brindamos una atención particular a las cadenas de caractéres porque permitían extraer subtextos, caracteres por separado, entre otros. Ese orden intrinseco en cada cadena lo extrapolaremos para organizar secuencias de cualquier tipo de objetos, en este sentido, nos referimos a las listas y a las tuplas. Nuestro objetivo es entender las similitudes y diferencias que hay entre ellas, como también tener presentes algunos de los métodos y funciones más útiles al trabajar con estos objetos.
 # 
 
 # 
@@ -92,7 +92,7 @@ m
 # <div style="width: 100%;"><div style="position: relative; padding-bottom: 25.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="800" height="200" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6193e9d850419a0d7f19923b" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 
 # 
-# El índice de la lista hace referencia a la posición en la cual se encuentra el elemento y éste es un número entero. El primer elemento de una lista tiene como índice el 0, el segundo es el índice 1 y así suscesivamente, lo anterior marca una gran diferencia con otros lenguajes de programación, en los cuales el primer elemento de una lista tiene índice 1.
+# El índice de la lista hace referencia a la posición en la cual se encuentra el elemento y este es un número entero. El primer elemento de una lista tiene como índice el 0, el segundo es el índice 1 y así suscesivamente, lo anterior marca una gran diferencia con otros lenguajes de programación, en los cuales el primer elemento de una lista tiene índice 1.
 
 # In[3]:
 
@@ -255,7 +255,7 @@ M
 
 # Esto nos permite agregar elementos a una lista de otra manera, empleando el operador `+=`, como podemos ver:
 
-# In[24]:
+# In[23]:
 
 
 l += [11]
@@ -267,6 +267,6 @@ l
 # * Otro por medio del operador, `+=` así: `lista += [elemento_a_agregar]`.
 
 # ### Ejercicio
-# 1. Crea un bloque de código que dada una lista en blanco vaya agregando elementos a ésta. Dichos elementos deberán ser la suma de los índices hasta la posición en que se halla el elemento.
+# 1. Crea un bloque de código que dada una lista en blanco vaya agregando elementos a esta. Dichos elementos deberán ser la suma de los índices hasta la posición en que se halla el elemento.
 # 
 # 

@@ -407,16 +407,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="184b3313-4f91-4e5a-99d8-0ce0c6df22d8" name="906bfcd7-fe63-40c0-804d-133ff01bba00" type="radio">
-</input><label class="tabbed-label" for="184b3313-4f91-4e5a-99d8-0ce0c6df22d8">
+<input checked="checked" id="d0450323-490b-4194-8ea9-91d3b022ea29" name="921f7398-627f-4f86-a74f-f1e94ef2a52b" type="radio">
+</input><label class="tabbed-label" for="d0450323-490b-4194-8ea9-91d3b022ea29">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="07634758-dfb5-4e90-99e7-0ecba3c5266e" name="906bfcd7-fe63-40c0-804d-133ff01bba00" type="radio">
-</input><label class="tabbed-label" for="07634758-dfb5-4e90-99e7-0ecba3c5266e">
+<input id="c74a512f-2a00-406d-8045-245960fad021" name="921f7398-627f-4f86-a74f-f1e94ef2a52b" type="radio">
+</input><label class="tabbed-label" for="c74a512f-2a00-406d-8045-245960fad021">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -430,7 +430,7 @@ Variables</label><div class="tabbed-content docutils">
 <h2>Programación estructurada<a class="headerlink" href="#programacion-estructurada" title="Permalink to this headline">¶</a></h2>
 <p>Volviendo al teorema del programa estructurado o <a class="reference external" href="https://en.wikipedia.org/wiki/Structured_program_theorem">teorema de Böhm–Jacopini</a> sabemos que toda función computable se puede implementar utilizando tres estructuras lógicas que permiten modificar el orden de ejecución del programa. A dichas estructuras las llamamos  <strong>estructuras de control</strong> y  corresponden a las siguientes:</p>
 <p><em>Secuencia:</em>  Que se entiende como la posibilidad de ejecutar una instrucción tras otra.
-<em>Selección:</em> Que ejecuta dos o más secuencias acorde al valor de una expresión booleana.
+<em>Selección:</em> Que ejecuta una de dos o más secuencias acorde al valor de una expresión booleana.
 <em>Iteración:</em> Que ejecuta una serie de instrucciones mientras una variable booleana es verdadera.</p>
 <p>Claramente la secuenciación de un programa indica que hay un orden para ejecutar las instrucciones, estudiaremos entonces las estructuras de seleccción, iniciando con la más sencilla de todas: <strong>el condicional</strong>.</p>
 </div>
@@ -451,8 +451,8 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Importante</p>
-<p>En la estructura anterior <code class="docutils literal notranslate"><span class="pre">condición</span></code> hace referencia a una sentencia booleana, cuyos resultados pueden ser verdadero (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o falso (<code class="docutils literal notranslate"><span class="pre">False</span></code>). Tengalo en cuenta siempre que establezca igualdad, donde la sintáxis correcta es <code class="docutils literal notranslate"><span class="pre">x==y</span></code>y no <code class="docutils literal notranslate"><span class="pre">x=y</span></code>.</p>
-<p>Otro elemento importante es que en esta estructura de control aparece una característica destacada de Python, es la identación, como ven las instrucciones que se ejecutan después de validar la condición se escriben en una sangría a la derecha. Una identación equivocada puede llevar a un error de sintáxis por identación. No hay problema en la sintáxis sino que se manejaron mal los espacios. Ver los ejemplos siguientes.</p>
+<p>En la estructura anterior <code class="docutils literal notranslate"><span class="pre">condición</span></code> hace referencia a una sentencia booleana, cuyos resultados pueden ser verdadero (<code class="docutils literal notranslate"><span class="pre">True</span></code>) o falso (<code class="docutils literal notranslate"><span class="pre">False</span></code>). Téngalo en cuenta siempre que establezca igualdad, donde la sintáxis correcta es <code class="docutils literal notranslate"><span class="pre">x==y</span></code>y no <code class="docutils literal notranslate"><span class="pre">x=y</span></code>.</p>
+<p>Otro elemento importante es que en esta estructura de control aparece una característica destacada de Python, <strong>la identación</strong>, como ven, las instrucciones que se ejecutan después de validar la condición se escriben con una sangría a la derecha. Una identación equivocada puede llevar a un error de sintáxis por identación. No hay problema en los comandos utilizados sino un mal manejo de los espacios. Ver los ejemplos siguientes.</p>
 </div>
 <p>Veamos que ocurre cuando la condición es verdadera:</p>
 <div class="cell docutils container">
@@ -488,7 +488,7 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_31179/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_459470/2201727748.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El valor de verdad de la condición es verdadero&#39;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: expected an indented block
@@ -497,7 +497,7 @@ Variables</label><div class="tabbed-content docutils">
 </div>
 </div>
 <p>Aquí tenemos error porque no hay sangría después de los dos puntos que delimitan el final de la condición.</p>
-<p>Finalmente, comprobemos como actúa la sangría en la ejecución de instrucciones según el valor de verdad de la condición:</p>
+<p>Finalmente, comprobemos cómo actúa la sangría en la ejecución de instrucciones según el valor de verdad de la condición:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
@@ -567,12 +567,13 @@ Esta se ejecuta por fuera del condicional.
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="n">Ahora</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="n">Ahora</span>
-<span class="k">if</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;</span><span class="mi">18</span> <span class="ow">or</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;=</span><span class="mi">6</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&lt;</span><span class="mi">18</span> <span class="ow">or</span> <span class="n">Ahora</span><span class="o">.</span><span class="n">hour</span><span class="o">&gt;=</span><span class="mi">6</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Es de día&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<p>Dentro de cada bloque en el que se ejucuta un codicional se puede incluir otro. Lo podemos hacer a una profundidad arbitrária y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional.</p>
+<p>Dentro de cada bloque en el que se ejucuta un condicional se puede incluir otro. Lo podemos hacer a una profundidad arbitraria y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional.</p>
+<p>En el siguiente script es evidente que estamos haciendo, apesar de que no definimos <code class="docutils literal notranslate"><span class="pre">in</span></code> es claro a que alude y vemos como la filosofia de Python permite entender el pseudocódigo a partir del script. Después de entender este ejercicio haga un diagrama de flujo o describa el pseudocódigo del algoritmo que estudiamos a continuación:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ¿Esta linea se ejecuta?                                   SÍ    NO</span>
@@ -721,7 +722,7 @@ Una sentencia independiente
 </div>
 <div class="section" id="sintaxis-de-una-linea">
 <h2>Sintáxis de una línea<a class="headerlink" href="#sintaxis-de-una-linea" title="Permalink to this headline">¶</a></h2>
-<p>En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exagerdas definidas como bloques con una indentación adecuada,</p>
+<p>En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exageradas definidas como bloques con una indentación adecuada,</p>
 <p>Afortunadamente Python admite que nosotros pongamos condicionales en una línea, escribimos lo siguiente:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span> <span class="n">instrucción_1</span><span class="p">;</span> <span class="n">instrucción_2</span><span class="p">;</span> <span class="o">...</span><span class="p">;</span><span class="n">instrucción_n</span>
 </pre></div>
@@ -739,7 +740,7 @@ Esta es una sentencia condicional de una línea
 </div>
 </div>
 </div>
-<p>El punto y coma que separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.</p>
+<p>El punto y coma separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;20 es mayor que 100&#39;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Esta es una sentencia condicional de una línea&#39;</span><span class="p">)</span>
@@ -803,7 +804,7 @@ Esta es una sentencia condicional de la línea else
 <div class="section" id="operador-ternario">
 <h2>Operador ternario<a class="headerlink" href="#operador-ternario" title="Permalink to this headline">¶</a></h2>
 <p>Uno de los elementos interesantes de Python es que permite sugerencias de los usuarios para mejorar su sintáxis en pro de tener una mejora del lenguaje. La documentación de estas mejoras se puede encontrar en los <a class="reference external" href="https://www.python.org/dev/peps/">índices PEP</a> de la página oficial. Entre ellos hay una que se hizo a los condicionales con el fin de introducir el <a class="reference external" href="https://es.wikipedia.org/wiki/Operador_ternario">operador ternario</a> de otros lenguajes como C, Java o Perl.</p>
-<p>En este operador la idea es tomar tres argumentos: (condicion; valor si la condicion es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos esta se expresaba así:</p>
+<p>En este operador la idea es tomar tres argumentos: (condición; valor si la condición es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos ésta se expresaba así:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>expresión boleana ? valor si cierto : valor si falso
 
 </pre></div>
@@ -864,7 +865,7 @@ Esta es una sentencia condicional de la línea else
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">5</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No hago nada&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 es mayor que 1&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;5 es menor que 1&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -904,25 +905,6 @@ Esta es una sentencia condicional de la línea else
 </div>
 </div>
 <p>Y aquí de verdad que no hicimos nada.</p>
-</div>
-<div class="section" id="cierre">
-<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
-<p>Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones.</p>
-</div>
-<div class="section" id="ejercicios">
-<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
-<p>Una materia se evaluó con 5 notas con los siguientes porcentajes: <em>Nota 1:</em> <span class="math notranslate nohighlight">\(10%\)</span>, <em>Nota 2:</em> <span class="math notranslate nohighlight">\(15%\)</span>, <em>Nota 3:</em> <span class="math notranslate nohighlight">\(20%\)</span>, <em>Nota 4:</em> <span class="math notranslate nohighlight">\(25%\)</span> y <em>Nota 5:</em> <span class="math notranslate nohighlight">\(30%\)</span>.</p>
-<ol class="simple">
-<li><p>Escriba un bloque de código que le permita al usuario introducir sus 5 notas y que calcule su definitiva.</p></li>
-<li><p>Si se desea dejar un comentario en el sistema, dependiendo de la nota obtenida, haga un bloque de código de tal forma que clasifique a los estudiantes según su definitiva, como sigue:</p></li>
-</ol>
-<ul class="simple">
-<li><p>Rendimiento deficiente <span class="math notranslate nohighlight">\(0\leq definitiva \leq 1.5\)</span>.</p></li>
-<li><p>Rendimiento insuficiente <span class="math notranslate nohighlight">\(1.5&lt; definitiva &lt; 3\)</span>.</p></li>
-<li><p>Rendimiento aceptable <span class="math notranslate nohighlight">\(3\leq definitiva \leq 3.8\)</span>.</p></li>
-<li><p>Rendimiento sobresaliente <span class="math notranslate nohighlight">\(3.8&lt; definitiva \leq 4.5\)</span>.</p></li>
-<li><p>Rendimiento sobresaliente <span class="math notranslate nohighlight">\(4.5&lt; definitiva \leq 5\)</span>.</p></li>
-</ul>
 <p>En las condiciones también podemos tener operadores lógicos, como podremos ver en las siguientes líneas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -953,6 +935,25 @@ Esta es una sentencia condicional de la línea else
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="cierre">
+<h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
+<p>Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones.</p>
+</div>
+<div class="section" id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
+<p>Una materia se evaluó con 5 notas con los siguientes porcentajes: <em>Nota 1:</em> <span class="math notranslate nohighlight">\(10%\)</span>, <em>Nota 2:</em> <span class="math notranslate nohighlight">\(15%\)</span>, <em>Nota 3:</em> <span class="math notranslate nohighlight">\(20%\)</span>, <em>Nota 4:</em> <span class="math notranslate nohighlight">\(25%\)</span> y <em>Nota 5:</em> <span class="math notranslate nohighlight">\(30%\)</span>.</p>
+<ol class="simple">
+<li><p>Escriba un bloque de código que le permita al usuario introducir sus 5 notas y que calcule su definitiva.</p></li>
+<li><p>Si se desea dejar un comentario en el sistema, dependiendo de la nota obtenida, haga un bloque de código de tal forma que clasifique a los estudiantes según su definitiva, como sigue:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Rendimiento deficiente <span class="math notranslate nohighlight">\(0\leq definitiva \leq 1.5\)</span>.</p></li>
+<li><p>Rendimiento insuficiente <span class="math notranslate nohighlight">\(1.5&lt; definitiva &lt; 3\)</span>.</p></li>
+<li><p>Rendimiento aceptable <span class="math notranslate nohighlight">\(3\leq definitiva \leq 3.8\)</span>.</p></li>
+<li><p>Rendimiento sobresaliente <span class="math notranslate nohighlight">\(3.8&lt; definitiva \leq 4.5\)</span>.</p></li>
+<li><p>Rendimiento sobresaliente <span class="math notranslate nohighlight">\(4.5&lt; definitiva \leq 5\)</span>.</p></li>
+</ul>
 </div>
 </div>
 

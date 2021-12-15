@@ -20,9 +20,10 @@
 # ````
 # 
 # ````{tabbed} Índices en las listas
+# 
 # :::{admonition} Recordemos...
 # :class: tip 
-# Los índices inician en $0$ y aumentan de uno en uno, algunos índices negativos también se pueden utilizar, al emplear estos valores estamos indicando que la lista se recorre en orden inverso, es decir, el índice -1 es el último elemento de la lista, el -2 es el penúltimo, etc., como podemos ver a continuación:
+# Los índices inician en 0 y aumentan de uno en uno, algunos índices negativos también se pueden utilizar, al emplear estos valores estamos indicando que la lista se recorre en orden inverso, es decir, el índice -1 es el último elemento de la lista, el -2 es el penúltimo, etc., como podemos ver a continuación:
 # <img src="https://github.com/MRippe7/CienciaDatos/blob/main/Imagenes/listas.png?raw=true"  width=300 >
 # :::
 # ````
@@ -39,7 +40,7 @@
 # :::::
 
 # ## Sub-listas
-# Hay  oportunidades en las que nuestra necesidad sea extraer una sub-lista de la lista que tenemos, por ejemplo, de la lista `l = [0, 1, 2, 3, 4, 5]` requerimos los elementos desde el índice 2 hasta el 4 de nuestra lista, o los primeros $3$ elementos  o los últimos $4$, éstas tres sub-listas se obtienen así:
+# Hay  oportunidades en las que nuestra necesidad sea extraer una sub-lista de la lista que tenemos, por ejemplo, de la lista `l = [0, 1, 2, 3, 4, 5]` requerimos los elementos desde el índice 2 hasta el 4 de nuestra lista, o los primeros $3$ elementos  o los últimos $4$, estas tres sub-listas se obtienen así:
 
 # In[1]:
 
@@ -109,7 +110,7 @@ M
 # se borra la entrada de la lista.
 
 # ## Listas por Comprensión:
-# Las listas se pueden crear de una manera un poco más avanzada, empleando la característica que las define. Si por ejemplo, deseamos crear la lista de los primeros $5$ números pares podemos emplear el siguiente código:
+# Las listas se pueden crear de una manera un poco más avanzada, empleando la característica que las define, si la hay. Si por ejemplo, deseamos crear la lista de los primeros $5$ números pares podemos emplear el siguiente código:
 
 # In[7]:
 
@@ -248,37 +249,62 @@ temperatura[0]='hola'
 
 # Como lo comentamos antes, las tuplas son **inmutables**.
 # 
-# Para agregar elementos a una tupla empleamos el operador `+=`, de la misma manera que lo hicimos con las listas. Para las tuplas no disponemos del método `append`.
+# Para "agregar" elementos a una tupla empleamos el operador `+=`, de la misma manera que lo hicimos con las listas. Para las tuplas no disponemos del método `append`. Es importante tener en cuenta que al "agregar", lo que en realidad estamos haciendo es crear una nueva tupla, como podemos ver a continuación: 
 
-# In[18]:
+# In[63]:
+
+
+id(tupla1elemento)
+
+
+# In[64]:
 
 
 tupla1elemento += ('a',)
 tupla1elemento
 
 
-# Como hemos recalcado las tuplas son inmutables, pero pueden contener elementos mutables, por ejemplo:
+# In[65]:
 
-# In[19]:
+
+id(tupla1elemento)
+
+
+# Esto ocurre, pues como hemos recalcado, las tuplas son elementos inmutables, pero pueden contener elementos mutables, por ejemplo:
+
+# In[66]:
 
 
 tupla1elemento += ([1,2,3,4],)
 tupla1elemento
 
 
-# In[20]:
+# In[67]:
+
+
+id(tupla1elemento)
+
+
+# In[68]:
 
 
 tupla1elemento[2]=1
 #genererá un error ya que no podemos modificar el elemento de la tupla
 
 
-# In[21]:
+# In[69]:
 
 
 #Pero podemos modificar la lista que está dentro de la tupla
 tupla1elemento[2][3]='cuatro'
 tupla1elemento
+
+
+# In[70]:
+
+
+id(tupla1elemento)
+#Como se modificó la lista pero no la tupla, sigue siendo el mismo objeto
 
 
 # En este cuaderno, hemos estudiado las herramientas básicas sobre las listas y las tuplas, para así poder tener un mejor desempeño a la hora de elaborar nuestros programas.
@@ -289,23 +315,23 @@ tupla1elemento
 # Para llevar a cabo ésta tarea existen diferentes formas de hacerlo, una forma conocida es mediante el **método burbuja**, el cual se basa en simples comparaciones e intercambios.
 # 
 # ```
-#     Una lista de n valores se recorre n-1 veces, en las cuales se irán comparando los términos de izquierda a derecha con el siguiente, de tal manera que, si el i-ésimo término es mayor que el que se ubica en la posición i+1, éstos se intercambian de lo contrario se dejan tal cual. Las comparaciones se van reduciendo ya que en la parte derecha de la lista se van almacenando los términos mayores con el orden deseado.
+#     Una lista de n valores se recorre n-1 veces, en las cuales se irán comparando los términos de izquierda a derecha con el siguiente, de tal manera que, si el i-ésimo término es mayor que el que se ubica en la posición i+1, éstos se intercambian de lo contrario se dejan tal cual. En otras palabras, el método lo que hace es ir ubicando el término más grande a la derecha de la lista, motivo por el cual las comparaciones se van reduciendo en cada iteración.
 # ```
 # 
-# Por ejemplo, en la lista que definimos anteriormente, al aplicar las comparaciones del método de la burbuja en la primera iteración, obtenemos lo siguiente:
+# Por ejemplo, en la lista `l` que definimos anteriormente, al aplicar las comparaciones del método de la burbuja en la primera iteración, obtenemos lo siguiente:
 # <img src="https://github.com/CiDExt/Programacion1/blob/master/images/burbuja.png?raw=true">
 # 
-# El nombre de éste método es debido a que las comparaciones se hacen en pequeñas burbujas de toda la lista.
+# El nombre de este método es debido a que las comparaciones se hacen en pequeñas burbujas de toda la lista.
 # 
-# Una implementación de éste método se puede consultar en la siguiente función:
+# Una implementación de este método se puede consultar en la siguiente función:
 
-# In[22]:
+# In[71]:
 
 
 from time import time
 
 
-# In[23]:
+# In[72]:
 
 
 def burbuja(l):  
@@ -319,11 +345,17 @@ def burbuja(l):
     return l    
 
 
-# En nuestro código hay dos líneas muy particulares `tiempo_inicial = time()` y `tiempo_transcurrido = time() - tiempo_inicial`, éstas permiten calcular el tiempo transcurrido en los cálculos para ordenar la lista. La función `time()` está disponible gracias a la importación de la libreria con el mismo nombre.
+# En nuestro código hay tres líneas muy particulares `tiempo_inicial = time()`, `tiempo_transcurrido = time() - tiempo_inicial` y `l[j],l[j+1] = l[j+1],l[j]`. Las dos primeras permiten calcular el tiempo transcurrido en los cálculos para ordenar la lista. La función `time()` está disponible gracias a la importación de la libreria con el mismo nombre. Mientras que, la expresión `l[j],l[j+1] = l[j+1],l[j]` es una asignación que nos permite ahorrar el uso de una variable auxiliar, en otros lenguajes la asignación sería la siguiente:
+# ```python
+#     l[j] = aux
+#     l[j] = l[j+1]
+#     l[j+1] = aux
+# ```
+# Este tipo de asignaciones se conocen como azúcar sintáctico, ya que permiten hace más "dulce" la forma de escribir y leer el código.
 # 
 # Hagamos un ensayo con una lista corta:
 
-# In[24]:
+# In[73]:
 
 
 burbuja([5,7,3,1,1,3,16])
@@ -331,7 +363,7 @@ burbuja([5,7,3,1,1,3,16])
 
 # Ahora ordenaremos una lista de $1000$ elementos aleatorios, para tal fin, lo primero que haremos es definirla:
 
-# In[25]:
+# In[74]:
 
 
 import random
@@ -339,7 +371,7 @@ random.seed(2022)
 aleatorios = [random.randint(0,1000) for i in range(1000)]
 
 
-# In[26]:
+# In[75]:
 
 
 burbuja(aleatorios)
@@ -351,7 +383,51 @@ burbuja(aleatorios)
 # ```
 # Esta tarea la podemos ver programada en el siguiente bloque de código:
 
-# In[27]:
+# In[76]:
+
+
+a = [1,2,3,4,5,6]
+
+
+# In[77]:
+
+
+len(a)
+
+
+# In[78]:
+
+
+b = a[0:2]
+b= b+ a[3:6]
+b
+
+
+# In[79]:
+
+
+a=b
+
+
+# In[80]:
+
+
+a[3:6]
+
+
+# In[81]:
+
+
+a[0:2]
+
+
+# In[ ]:
+
+
+
+
+
+# In[82]:
 
 
 def ordenamiento1(l):
@@ -363,7 +439,9 @@ def ordenamiento1(l):
             if j < Min:
                 Min = j
         m.append(Min)
-        del l[l.index(Min)]
+        aux = l[0:l.index(Min)]
+        aux = aux + l[l.index(Min)+1:len(a)+1]
+        l = aux
     tiempo_transcurrido = time() - tiempo_inicial
     print('El proceso tardó {0} segundos'.format(tiempo_transcurrido))
     return m    
@@ -371,13 +449,13 @@ def ordenamiento1(l):
 
 # Probemos con la lista corta:
 
-# In[28]:
+# In[83]:
 
 
 ordenamiento1([5,7,3,1,1,3,16])
 
 
-# In[29]:
+# In[84]:
 
 
 random.seed(2022)
@@ -385,7 +463,7 @@ aleatorios = [random.randint(0,1000) for i in range(1000)]
 #aleatorios
 
 
-# In[30]:
+# In[85]:
 
 
 ordenamiento1(aleatorios)
@@ -393,14 +471,14 @@ ordenamiento1(aleatorios)
 
 # En Python existe una manera natural de hacerlo y es con la función `sorted` o con el método `lista.sort()`, en los cuales subyace el **método Timsort**, los cuales son supremamente eficientes:
 
-# In[31]:
+# In[ ]:
 
 
 l = [5,7,3,1,1,3,16]
 sorted(l)
 
 
-# In[32]:
+# In[86]:
 
 
 l = [5,7,3,1,1,3,16]
@@ -410,7 +488,7 @@ l
 
 # Estas funciones tienen argumentos que pueden ser de gran ayuda para nosotros, por ejemplo, ordenar de mayor a menor la lista, requeriría definir una función nueva para nosotros, pero con éstas predefinidas basta con escribir lo siguiente:
 
-# In[33]:
+# In[87]:
 
 
 l = [5,7,3,1,1,3,16]
@@ -419,13 +497,12 @@ l
 
 
 # ### Ejercicio:
-# 1. Como hemos visto hay diferentes métodos para ordenar listas, unos más eficientes que otros. Busque un método diferente a los expuestos en el cuaderno, haga una un resumen en palabras del método y escriba una función que permita hacer esta tarea.
-# 2. Cree una lista de 400 valores, en los cuales estén almacenadas las ventas de la última semana de un almacén, aplique los métodos vistos en clase y el que usted construyó y determine cual es más eficiente sobre dicha lista.
+# 1. Cree una lista de 400 valores, en los cuales estén almacenadas las ventas de la última semana de un almacén, aplique los métodos vistos en clase y determine cuál de ellos toma menos tiempo en hacerlo.
 
 # ## Filtros
 # En muchas ocasiones nos será necesario elegir algunos valores de una lista que cumplan con un cierto criterio, por ejemplo de la lista `[10,20,50,70,90,60,40,30,40,8,95,74,69,45]`, extraigamos los valores que son mayores o iguales a 50:
 
-# In[34]:
+# In[88]:
 
 
 lista = [10,20,50,70,90,60,40,30,40,8,95,74,69,45]
@@ -436,37 +513,37 @@ for i in lista:
 lista_filtrada        
 
 
-# In[35]:
+# In[89]:
 
 
 lfiltrada = filter(lambda i:i>= 50,lista)
 
 
-# Si observamos el resultado de un filtro, éste un objeto tipo `filter`, para poder ver su contenido empleamos el comando `list`, así:
+# Si observamos el resultado de un filtro, este un objeto tipo `filter`, para poder ver su contenido empleamos el comando `list`, así:
 
-# In[36]:
+# In[90]:
 
 
 list(lfiltrada)
 
 
-# Si se llega a dar el caso que el filtro viene dado como el resultado de una función, primero debemos definir dicha función y luego aplicamos el filto, así:
+# Si deseamos que el filtro venga dado por el resultado de una función, primero debemos definir dicha función y luego aplicamos el filtro, es decir, no podemos emplear funciones `lambda` como en el ejemplo anterior:
 
-# In[37]:
+# In[91]:
 
 
 random.seed(2022)
 lista = [random.randint(0,250) for i in range(100)]
 
 
-# In[38]:
+# In[92]:
 
 
 def par(x):
     return x%2==0
 
 
-# In[39]:
+# In[93]:
 
 
 len(list(filter(par,lista)))
@@ -484,32 +561,39 @@ len(list(filter(par,lista)))
 #                                                                 Don quijote de la mancha - Miguel de Cervantes Saavedra
 # ```
 # ## Mapear
-# En otras oportunidades necesitaremos aplicar una función sobre todos los elementos de la lista, es allí cuando aplicamos la función `map`. El resultado de ésta función  es un objeto tipo `map` y el cual se puede volver una lista de la misma manera como hicimos con los filtros, por ejemplo
+# En otras oportunidades necesitaremos aplicar una función sobre todos los elementos de la lista, es allí cuando aplicamos la función `map`. El resultado de esta función  es un objeto tipo `map`  el cual se puede volver una lista de la misma manera como hicimos con los filtros, por ejemplo
 
-# In[40]:
+# In[94]:
 
 
 def f1(x):
     return x**2+1
 
 
-# In[41]:
+# In[95]:
 
 
 list(map(f1,[1,2,3,4,5]))
 
 
-# La diferencia entre `map`y `filter`, es que en `map` aplicamos una función sobre cada elemento de la lista y en `filter` buscamos un criterio de selección booleano.
+# In[96]:
+
+
+#Una forma equivalente es emplear las listas por comprensión
+[f1(x) for x in [1,2,3,4,5]]
+
+
+# La diferencia entre `map`y `filter`, es que en `map` aplicamos una función sobre cada elemento de la lista y en `filter` aplicamos una función booleana sobre cada elemento de la lista y seleccionamos los que tienen como resultado `True`, es decir, aplicamos un criterio de selección booleano.
 # 
 # Los mapeos se pueden aplicar sobre cadenas de caracteres, por ejemplo:
 
-# In[42]:
+# In[97]:
 
 
 cadena = list('Hoy es un gran día para aprender más herramientas de programación')
 
 
-# In[43]:
+# In[98]:
 
 
 list(map(lambda x:x.upper(),cadena))
@@ -517,7 +601,7 @@ list(map(lambda x:x.upper(),cadena))
 
 # También podemos aplicar los mapeos sobre varias listas, siempre que la función lo permita:
 
-# In[44]:
+# In[99]:
 
 
 nume1 = [1, 2, 3]
@@ -533,26 +617,26 @@ print(list(result))
 # ## Reducir
 # La función `reduce` del paquete `functools`, es una útil herramienta cuando deseamos aplicar una función sobre una lista y sus resultados de manera sucesiva. Por ejemplo, para calcular la suma de los elementos de una lista sabemos que existe la función `sum`, pero de manera alternativa podemos ejecutar el siguiente código:
 
-# In[45]:
+# In[100]:
 
 
 from functools import reduce
 
 
-# In[46]:
+# In[101]:
 
 
 reduce(lambda x,y:x+y,[1,2,3,4,5])
 
 
-# In[47]:
+# In[102]:
 
 
 def fun(x,y):
     return x+y
 
 
-# In[48]:
+# In[103]:
 
 
 reduce(fun,[1,2,3,4,5])
@@ -567,7 +651,7 @@ reduce(fun,[1,2,3,4,5])
 # `reduce` tiene un argumento adicional, el cual es opcional, dicho argumento es el valor inicial, por ejemplo, el siguiente resultado inicia en $10$ y a eso le suma $1$, al resultado luego le suma $2$ y así hasta agotar la lista:
 # 
 
-# In[49]:
+# In[104]:
 
 
 reduce(fun,[1,2,3,4,5],10)
@@ -604,7 +688,7 @@ reduce(fun,[1,2,3,4,5],10)
 # 
 # Consideremos las siguientes listas:
 
-# In[50]:
+# In[105]:
 
 
 l1 = [0,1,2,3]
@@ -614,7 +698,7 @@ l3 = [20,21,22,23]
 
 # Partiendo de ellas, podemos obtener la siguiente lista:
 
-# In[51]:
+# In[106]:
 
 
 L = [l1,l2,l3]
@@ -623,7 +707,7 @@ L
 
 # `L` es una lista, y sus elementos son listas, es decir, es una lista de listas. Para acceder a un elemento en particular necesitamos tener dos índices, uno para acceder a la lista `L` y otro para la lista en la cual nos ubiquemos (`l1`, `l2`, `l3`). Por ejemplo, para acceder a la primera lista y a su primer elemento escribimos así:
 
-# In[52]:
+# In[107]:
 
 
 L[0][0]
@@ -635,7 +719,7 @@ L[0][0]
 # 
 # Siguiendo esta idea, si quisiéramos sumar el elemento de la fila $1$ columna $2$, con el de la fila $2$ columna $1$, emplearíamos la siguiente línea de código:
 
-# In[53]:
+# In[108]:
 
 
 L[1][2]+L[2][1]
@@ -651,31 +735,31 @@ L[1][2]+L[2][1]
 # <img src="https://github.com/CiDExt/Programacion1/blob/master/images/listasn3.png?raw=true" width="600" >
 # es decir, es un arreglo de matrices, como por ejemplo:
 
-# In[1]:
+# In[109]:
 
 
 Cubo = [[[1,2],[3,4],[5,6]],[[7,8,9],[10,11,12]],[[13,14,15,16],[17,18,19,20],[21,22,23,24]]]
 
 
-# In[2]:
+# In[110]:
 
 
 Cubo
 
 
-# In[3]:
+# In[111]:
 
 
 Cubo[1]
 
 
-# In[4]:
+# In[112]:
 
 
 Cubo[1][0]
 
 
-# In[5]:
+# In[113]:
 
 
 Cubo[1][0][2]
@@ -683,6 +767,12 @@ Cubo[1][0][2]
 
 # # Cierre
 # Las listas y las tuplas tienen una gran cantidad de aplicaciones, por eso entender el momento y la forma de usarlas es muy importante, ya que las listas son objetos mutables, mientras que las tuplas no, es por esto que si necesitamos modificar alguna de nuestras entradas luego de haber definido el objeto, se debe emplear una lista, pero si deseamos "proteger" las entradas de nuesto objeto, debemos emplear una tupla.
+
+# In[ ]:
+
+
+
+
 
 # In[ ]:
 

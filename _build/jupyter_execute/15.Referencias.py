@@ -91,6 +91,47 @@ print(isinstance({1:1,2:2,3:'Hola'},object))
 # 
 # 
 
+# ## Diferencias de las variables entre C y Python
+
+# **En el caso de C** 
+# 
+# Si hacemos lo siguiente:
+# 
+# ```C
+# int x=152
+# ```
+# 
+# estamos siguiendo el siguiente proceso:
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bd815ba39a10d85c08574" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+# 
+
+# Lo que ocurre es que se asigna un espaciode memoria para un número entero, el valor 152 se almacena en ese espacio de memoria y se indica que `x` apunta a ese valor. 
+
+# Si cambiamos el valor de la variable,
+# 
+# ```C
+# x=898
+# ```
+# 
+# entonces cambiamos el valor guardado en ese espacio de memoria:
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bdc85672a090d98e7f21e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
+# **En el caso de Python** 
+# 
+# El ejercicio análogo hace un proceso un poco más largo. Crea un `PyObject`, identifica que el tipo de ese elemento es entero indica que ese objeto tiene valor 152, por otro lado crea un nombre llamado `x`, apunta `x` a `PyObject` y aumenta el contador de referencias del `PyObject` en 1:
+# 
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619beb4f672a090d98e7f3ad" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
+# Observe que la memoria guarda el objeto 152, en este caso el nombre `x` no tiene dirección de memoria, si hacemos una actualización como  ` x=153 ` ocurre lo siguiente:
+# 
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bf2d9672a090d98e7f4a0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
+# Si hacemos algo más interesante, como por ejemplo `y= x `
+# 
+# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619c230456355d0dcbd80610" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+# 
+# Note que el contador de referencias se va actualizando cada vez que se hace una asignación nueva.
+
 # ### Objetos mutables vs inmutables
 # 
 # Recuerdas la gran diferencia de la lista y la tupla, la lista se puede modificar cuando se quiera, en la tupla no puedo hacer eso, por ejemplo:
@@ -271,47 +312,6 @@ print(id(Lista))
 
 
 # Estos objetos cambian no solo en Python sino que en la memoria también, a diferencia de los elementos inmutables que asumen cambios en nuevos espacios de memoria, los elementos mutables cambian en ese mismo espacio. 
-
-# ## Diferencias de las variables entre C y Python
-
-# **En el caso de C** 
-# 
-# Si hacemos lo siguiente:
-# 
-# ```C
-# int x=152
-# ```
-# 
-# estamos siguiendo el siguiente proceso:
-# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bd815ba39a10d85c08574" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-# 
-
-# Lo que ocurre es que se asigna un espaciode memoria para un número entero, el valor 152 se almacena en ese espacio de memoria y se indica que `x` apunta a ese valor. 
-
-# Si cambiamos el valor de la variable,
-# 
-# ```C
-# x=898
-# ```
-# 
-# entonces cambiamos el valor guardado en ese espacio de memoria:
-# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bdc85672a090d98e7f21e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-
-# **En el caso de Python** 
-# 
-# El ejercicio análogo hace un proceso un poco más largo. Crea un `PyObject`, identifica que el tipo de ese elemento es entero indica que ese objeto tiene valor 152, por otro lado crea un nombre llamado `x`, apunta `x` a `PyObject` y aumenta el contador de referencias del `PyObject` en 1:
-# 
-# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619beb4f672a090d98e7f3ad" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-
-# Observe que la memoria guarda el objeto 152, en este caso el nombre `x` no tiene dirección de memoria, si hacemos una actualización como  ` x=153 ` ocurre lo siguiente:
-# 
-# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bf2d9672a090d98e7f4a0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-
-# Si hacemos algo más interesante, como por ejemplo `y= x `
-# 
-# <div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619c230456355d0dcbd80610" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-# 
-# Note que el contador de referencias se va actualizando cada vexz que se hace una asignación nueva.
 
 # ## Cierre
 # 

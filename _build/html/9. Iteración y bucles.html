@@ -394,16 +394,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a858b0d9-c0bf-4b3b-bf81-5d32d5fd603e" name="2867bfa2-74df-4651-a6fc-a3bcbfc6d606" type="radio">
-</input><label class="tabbed-label" for="a858b0d9-c0bf-4b3b-bf81-5d32d5fd603e">
+<input checked="checked" id="20cae994-f0b1-4be4-bcb7-3f14ad9bdc63" name="bb215d07-d757-4269-b699-d898a857e589" type="radio">
+</input><label class="tabbed-label" for="20cae994-f0b1-4be4-bcb7-3f14ad9bdc63">
 Paradigmas de Programación</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Un <strong>paradigma de programación</strong> indica las guías y métodos de realizar cálculos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa. Se asocian a cierto estilo de programación y al modelo de computación (operaciones permitidas) admitido en nuestro sistema.</p>
 </div>
 </div>
-<input id="d0537629-d1dd-43ad-be83-791d7e7400a8" name="2867bfa2-74df-4651-a6fc-a3bcbfc6d606" type="radio">
-</input><label class="tabbed-label" for="d0537629-d1dd-43ad-be83-791d7e7400a8">
+<input id="38bf0aa6-3b97-45de-88da-d899f891064c" name="bb215d07-d757-4269-b699-d898a857e589" type="radio">
+</input><label class="tabbed-label" for="38bf0aa6-3b97-45de-88da-d899f891064c">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -419,7 +419,7 @@ Variables</label><div class="tabbed-content docutils">
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 50.00%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1000" height="500" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/61944099c121b10d88a24212" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div></div>
 <div class="section" id="bucle-while">
 <h2>Bucle while<a class="headerlink" href="#bucle-while" title="Permalink to this headline">¶</a></h2>
-<p>Es similar al condicional, porque revisará si una condición es cierta o falsa, y se ejecutará mientras esa condición sea cierta. Es muy importante que la condición en while cambié a medida que avanza la iteración, porque si no el programa ejecutará indefinidamente las operaciones. Su sintáxis es:</p>
+<p>Es similar al condicional, porque revisará si una condición es cierta o falsa, y se ejecutará una nueva iteración mientras esa condición sea cierta. Es muy importante que el valor de verdad de la condición en while cambié en algún momento de la iteración, porque si no el programa ejecutará indefinidamente las operaciones. Su sintáxis es:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">condición</span><span class="p">):</span>
     <span class="n">instrucción_1</span>
     <span class="n">instrucción_2</span>
@@ -478,11 +478,11 @@ Python es maravilloso
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Python es maravilloso&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Si ejecutó estas instrucciones y su computador se quedó ejecutando entonces oprima [Ctrl]+[C] para cancelar la ejecución, si no el computador ejecutará la orden infinitamente.</p>
-<p>Python permite utilizar ordenes que pueden interrumpir los búcles:</p>
+<p>Si ejecutó estas instrucciones y su computador se quedó ejecutando entonces oprima [Ctrl]+[C] para cancelar la ejecución, sino el computador ejecutará la orden infinitamente.</p>
+<p>Python permite utilizar órdenes que pueden interrumpir los bucles:</p>
 <ul class="simple">
-<li><p><strong>break</strong>: Una sentencia de Python que termina inmediatamente un ciclo por completo. El programa procede a la primera instrucción que sigue después de <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p></li>
-<li><p><strong>continue</strong>: Una sentencia de Python que termina inmediatamente una iteración del ciclo. El programa procede a la primera instrucción que sigue después de <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p></li>
+<li><p><strong>break</strong>: Una sentencia de Python que termina inmediatamente un ciclo por completo. El programa procede a la primera instrucción que sigue después del cuerpo del bucle.</p></li>
+<li><p><strong>continue</strong>: Una sentencia de Python que termina inmediatamente una iteración del ciclo. El programa procede a la primera instrucción que sigue después de la nueva iteración si la hay, sino la primera instrucción después del cuerpo del bucle.</p></li>
 </ul>
 <div style="width: 100%;"><div style="position: relative; padding-bottom: 116.67%; padding-top: 0; height: 0;"><iframe frameborder="0" width="600" height="700" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6197bf60b2eaa20dad025cd1" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Veamos un ejemplo:</p>
 <div class="cell docutils container">
@@ -529,7 +529,7 @@ Bucle terminado.
 </div>
 <div class="section" id="bucle-while-else">
 <h2>Bucle <code class="docutils literal notranslate"><span class="pre">while:...</span>&#160; <span class="pre">else:...</span> </code><a class="headerlink" href="#bucle-while-else" title="Permalink to this headline">¶</a></h2>
-<p>Esta es una propiedad caracterpística de Python, permite mostrar un resultado si y solo si un bucle termina. Si el bucle no pudo terminar no se mostrará:</p>
+<p>Esta es una propiedad característica de Python, permite mostrar un resultado si y solo si un bucle termina. Si el bucle no pudo terminar no se mostrará:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">0</span>
@@ -563,7 +563,6 @@ Bucle terminado
         <span class="k">break</span>    
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bucle terminado&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Como no dice &quot;Bucle terminado&quot;, el else no se ejecutó&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -573,12 +572,12 @@ Bucle terminado
 3
 4
 Bucle roto
-Como no dice &quot;Bucle terminado&quot;, el else no se ejecutó
 </pre></div>
 </div>
 </div>
 </div>
-<p>Un ejemplo más interesante puede ser para buscar elementos en una lista:</p>
+<p><strong>Como no dice “Bucle terminado”, el else no se ejecutó.</strong></p>
+<p>Un ejemplo más interesante puede ser para buscar elementos en una lista, animamos al estudiante para identificar el algoritmo que se esta desarrollando en el siguiente script. Otro ejemplo de que Python permite una escritura clara y limpia:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">FV</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Papa&#39;</span><span class="p">,</span> <span class="s1">&#39;Limón&#39;</span><span class="p">,</span> <span class="s1">&#39;Cebolla&#39;</span><span class="p">,</span> <span class="s1">&#39;Arroz&#39;</span><span class="p">]</span>
@@ -657,15 +656,17 @@ Como no dice &quot;Bucle terminado&quot;, el else no se ejecutó
 </div>
 </div>
 <p>En el caso de while podemos hacer algo muy parecido, por ejemplo:</p>
+<p>En el siguiente ejemplo mostramos un conjunto de sumas donde el primer sumando varía de 0 a 4 y el segundo varía de 10 a 6. Identifique como opera cada bucle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">while</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span> 
-    <span class="n">m</span><span class="o">=</span><span class="mi">10</span> <span class="c1">#---&gt; esto se ejecuta el primer while     </span>
+    <span class="n">m</span><span class="o">=</span><span class="mi">10</span> <span class="c1">#---&gt; se ejecuta en cada iteración del primer while     </span>
     <span class="k">while</span>  <span class="n">m</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">)</span> <span class="c1">#---&gt; solo se ejecuta el segundo while </span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="n">m</span><span class="p">)</span> <span class="c1">#---&gt; se ejecuta en cada iteración del </span>
+                               <span class="c1">#---&gt; segundo while por cada iteración del primer while</span>
         <span class="n">m</span><span class="o">-=</span><span class="mi">1</span>
-    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>  <span class="c1">#---&gt; esto se ejecuta el primer while </span>
+    <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>  <span class="c1">#---&gt; se ejecuta en cada iteración del primer while </span>
 </pre></div>
 </div>
 </div>
@@ -746,7 +747,8 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 </div>
-<p>Como vemos, todas las estructuras de control de Python se pueden combinar en la medida que sea necesario. Esto hace que Python sea un lenguaje aclamdo, fácil y flexible. Usaremos muchos trucos de este estilo en diversos ejemplos.</p>
+<p>Aprovechemos este momento para crear un diagrama de flujo del anterior script.</p>
+<p>Como vemos, todas las estructuras de control de Python se pueden combinar en la medida que sea necesario. Esto hace que Python sea un lenguaje aclamado, fácil y flexible. Usaremos muchos trucos de este estilo en diversos ejemplos.</p>
 </div>
 <div class="section" id="bucles-de-una-linea">
 <h2>Bucles de una línea<a class="headerlink" href="#bucles-de-una-linea" title="Permalink to this headline">¶</a></h2>
@@ -771,7 +773,7 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 </div>
-<p>Esto funciona solo para expresiones simples, si, por ejemplo, busamos anidar en una sola línea tendremos problemas.</p>
+<p>Esto funciona solo para expresiones simples, si, por ejemplo, buscamos anidar en una sola línea tendremos problemas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -779,7 +781,7 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_31196/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_459495/2362488159.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span> <span class="k">if</span> <span class="kc">True</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
                          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -815,6 +817,9 @@ Tiene 24 años. Es una señora.
 </div>
 </div>
 </div>
+<ol class="simple">
+<li><p>El siguiente script muestra como se encuentran los divisores de 100.</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
@@ -839,11 +844,14 @@ Tiene 24 años. Es una señora.
 <ol class="simple">
 <li><p>Elabora un código para determinar si un cierto número es primo o no.</p></li>
 </ol>
-<p>una forma de aproximar la raíz cuadrada de un número <span class="math notranslate nohighlight">\(a\)</span>, es utilizando la aproximación
-\begin{equation*}
+<ol class="simple">
+<li><p>Una forma de aproximar la raíz cuadrada de un número <span class="math notranslate nohighlight">\(a\)</span>, es utilizando la aproximación</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
 y=\frac{x^2+a}{2x},
-\end{equation*}
-siendo <span class="math notranslate nohighlight">\(x\)</span> cualquier número positivo y <span class="math notranslate nohighlight">\(y\)</span> la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:</p>
+\]</div>
+<p>siendo <span class="math notranslate nohighlight">\(x\)</span> cualquier número positivo y <span class="math notranslate nohighlight">\(y\)</span> la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
@@ -865,6 +873,7 @@ siendo <span class="math notranslate nohighlight">\(x\)</span> cualquier número
 </div>
 </div>
 </div>
+<p>Aquí calculamos la raíz de 10. ¿Por qué dejamos <code class="docutils literal notranslate"><span class="pre">x=1</span></code>? ¿Por que <code class="docutils literal notranslate"><span class="pre">abs(x**2-a)&gt;0.001</span></code>?</p>
 </div>
 </div>
 

@@ -35,7 +35,7 @@
 # Volviendo al teorema del programa estructurado o [teorema de Böhm–Jacopini](https://en.wikipedia.org/wiki/Structured_program_theorem) sabemos que toda función computable se puede implementar utilizando tres estructuras lógicas que permiten modificar el orden de ejecución del programa. A dichas estructuras las llamamos  **estructuras de control** y  corresponden a las siguientes:
 # 
 # *Secuencia:*  Que se entiende como la posibilidad de ejecutar una instrucción tras otra.
-# *Selección:* Que ejecuta dos o más secuencias acorde al valor de una expresión booleana.
+# *Selección:* Que ejecuta una de dos o más secuencias acorde al valor de una expresión booleana.
 # *Iteración:* Que ejecuta una serie de instrucciones mientras una variable booleana es verdadera.
 # 
 # Claramente la secuenciación de un programa indica que hay un orden para ejecutar las instrucciones, estudiaremos entonces las estructuras de seleccción, iniciando con la más sencilla de todas: **el condicional**.
@@ -65,9 +65,9 @@
 # 
 # :::{admonition} Importante
 # :class: tip
-# En la estructura anterior `condición` hace referencia a una sentencia booleana, cuyos resultados pueden ser verdadero (`True`) o falso (`False`). Tengalo en cuenta siempre que establezca igualdad, donde la sintáxis correcta es `x==y`y no `x=y`.
+# En la estructura anterior `condición` hace referencia a una sentencia booleana, cuyos resultados pueden ser verdadero (`True`) o falso (`False`). Téngalo en cuenta siempre que establezca igualdad, donde la sintáxis correcta es `x==y`y no `x=y`.
 # 
-# Otro elemento importante es que en esta estructura de control aparece una característica destacada de Python, es la identación, como ven las instrucciones que se ejecutan después de validar la condición se escriben en una sangría a la derecha. Una identación equivocada puede llevar a un error de sintáxis por identación. No hay problema en la sintáxis sino que se manejaron mal los espacios. Ver los ejemplos siguientes.
+# Otro elemento importante es que en esta estructura de control aparece una característica destacada de Python, **la identación**, como ven, las instrucciones que se ejecutan después de validar la condición se escriben con una sangría a la derecha. Una identación equivocada puede llevar a un error de sintáxis por identación. No hay problema en los comandos utilizados sino un mal manejo de los espacios. Ver los ejemplos siguientes.
 # :::
 
 # Veamos que ocurre cuando la condición es verdadera:
@@ -102,7 +102,7 @@ print('El valor de verdad de la condición es verdadero')
 
 # Aquí tenemos error porque no hay sangría después de los dos puntos que delimitan el final de la condición. 
 # 
-# Finalmente, comprobemos como actúa la sangría en la ejecución de instrucciones según el valor de verdad de la condición:
+# Finalmente, comprobemos cómo actúa la sangría en la ejecución de instrucciones según el valor de verdad de la condición:
 
 # In[7]:
 
@@ -155,13 +155,15 @@ Ahora.hour
 # from datetime import datetime
 # Ahora=datetime.now()
 # Ahora
-# if Ahora.hour<18 or Ahora.hour<=6:
+# if Ahora.hour<18 or Ahora.hour>=6:
 #     print( 'Es de día')
 # ```
 # 
 # ::::
 
-# Dentro de cada bloque en el que se ejucuta un codicional se puede incluir otro. Lo podemos hacer a una profundidad arbitrária y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional. 
+# Dentro de cada bloque en el que se ejucuta un condicional se puede incluir otro. Lo podemos hacer a una profundidad arbitraria y debemos entender que es la sangria la que indica el nivel en el que hemos anidado el condicional. 
+# 
+# En el siguiente script es evidente que estamos haciendo, apesar de que no definimos `in` es claro a que alude y vemos como la filosofia de Python permite entender el pseudocódigo a partir del script. Después de entender este ejercicio haga un diagrama de flujo o describa el pseudocódigo del algoritmo que estudiamos a continuación:
 
 # In[2]:
 
@@ -313,7 +315,7 @@ else:
 
 # ## Sintáxis de una línea
 # 
-# En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exagerdas definidas como bloques con una indentación adecuada, 
+# En ocasiones, escribir tantas líneas de código resulta abrumador, y hay algunas sentencias simples que para un estilo de escritura de programación (que tiene que ver más con el desarrollador) podrían ser exageradas definidas como bloques con una indentación adecuada, 
 # 
 # Afortunadamente Python admite que nosotros pongamos condicionales en una línea, escribimos lo siguiente:
 # 
@@ -329,7 +331,7 @@ else:
 if 20<100: print('20 es menor que 100'); print('Esta es una sentencia condicional de una línea')
 
 
-# El punto y coma que separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.
+# El punto y coma separa las instrucciones, si la condición no se satisface todo lo que esta al frente de los dos puntos no se ejecuta.
 
 # In[3]:
 
@@ -374,7 +376,7 @@ else: print('20 es menor que 100'); print('Esta es una sentencia condicional de 
 # 
 # Uno de los elementos interesantes de Python es que permite sugerencias de los usuarios para mejorar su sintáxis en pro de tener una mejora del lenguaje. La documentación de estas mejoras se puede encontrar en los [índices PEP](https://www.python.org/dev/peps/) de la página oficial. Entre ellos hay una que se hizo a los condicionales con el fin de introducir el [operador ternario](https://es.wikipedia.org/wiki/Operador_ternario) de otros lenguajes como C, Java o Perl.
 # 
-# En este operador la idea es tomar tres argumentos: (condicion; valor si la condicion es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos esta se expresaba así:
+# En este operador la idea es tomar tres argumentos: (condición; valor si la condición es cierta; valor si la condición es falsa) y dar un resultado acorde a la validación. En los lenguajes clásicos ésta se expresaba así:
 # 
 # ```
 # expresión boleana ? valor si cierto : valor si falso
@@ -419,13 +421,13 @@ print('En esta nota usted: '+res)
 # Hay veces en que usamos un condicional pero no tenemos que hacer nada, por ejemplo:
 # 
 
-# In[8]:
+# In[1]:
 
 
 if 5>1:
     print('No hago nada')
 else:
-    print('5 es mayor que 1')
+    print('5 es menor que 1')
 
 
 # Aunque imprimí  `No hago nada`sí estoy haciendo algo **imprimir `No hago nada`** para resolver este lío podríamos no escribir nada, así:
@@ -451,23 +453,6 @@ else:
 
 # Y aquí de verdad que no hicimos nada.
 
-# ## Cierre
-# 
-# Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones. 
-
-# ## Ejercicios
-# 
-# Una materia se evaluó con 5 notas con los siguientes porcentajes: *Nota 1:* $10%$, *Nota 2:* $15%$, *Nota 3:* $20%$, *Nota 4:* $25%$ y *Nota 5:* $30%$.
-# 
-# 1. Escriba un bloque de código que le permita al usuario introducir sus 5 notas y que calcule su definitiva.
-# 2. Si se desea dejar un comentario en el sistema, dependiendo de la nota obtenida, haga un bloque de código de tal forma que clasifique a los estudiantes según su definitiva, como sigue: 
-# * Rendimiento deficiente $0\leq definitiva \leq 1.5$.
-# * Rendimiento insuficiente $1.5< definitiva < 3$.
-# * Rendimiento aceptable $3\leq definitiva \leq 3.8$.
-# * Rendimiento sobresaliente $3.8< definitiva \leq 4.5$.
-# * Rendimiento sobresaliente $4.5< definitiva \leq 5$.
-# 
-
 # En las condiciones también podemos tener operadores lógicos, como podremos ver en las siguientes líneas:
 
 # In[12]:
@@ -491,3 +476,20 @@ elif (x%2==0 and x%3==0):
 else:
     print(x,'no se puede dividir ni por 2 ni por 3')
 
+
+# ## Cierre
+# 
+# Esta es nuestra primera experiencia con una estructura de control, aquí podemos seleccionar bloques de código e incluso aplicar esa idea en la definición de variables. en lo que sigue trabajaremos con las iteraciones, una estructura que permite repetir varias veces una secuencia de instrucciones. 
+
+# ## Ejercicios
+# 
+# Una materia se evaluó con 5 notas con los siguientes porcentajes: *Nota 1:* $10%$, *Nota 2:* $15%$, *Nota 3:* $20%$, *Nota 4:* $25%$ y *Nota 5:* $30%$.
+# 
+# 1. Escriba un bloque de código que le permita al usuario introducir sus 5 notas y que calcule su definitiva.
+# 2. Si se desea dejar un comentario en el sistema, dependiendo de la nota obtenida, haga un bloque de código de tal forma que clasifique a los estudiantes según su definitiva, como sigue: 
+# * Rendimiento deficiente $0\leq definitiva \leq 1.5$.
+# * Rendimiento insuficiente $1.5< definitiva < 3$.
+# * Rendimiento aceptable $3\leq definitiva \leq 3.8$.
+# * Rendimiento sobresaliente $3.8< definitiva \leq 4.5$.
+# * Rendimiento sobresaliente $4.5< definitiva \leq 5$.
+# 

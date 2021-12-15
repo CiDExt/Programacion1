@@ -450,8 +450,8 @@
 <p>¿Qué debemos recordar?</p>
 <p>Sobre listas debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2a8a21dd-357f-4e73-87e9-efad6af9fb5c" name="11e165d6-0b63-4646-9c68-d240d2268f62" type="radio">
-</input><label class="tabbed-label" for="2a8a21dd-357f-4e73-87e9-efad6af9fb5c">
+<input checked="checked" id="f7893742-4386-4d0e-96d4-0711f7cae035" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
+</input><label class="tabbed-label" for="f7893742-4386-4d0e-96d4-0711f7cae035">
 Como definir listas</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -460,8 +460,17 @@ Como definir listas</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<input id="2c25b4c3-6d89-4598-8374-ac6298434b73" name="11e165d6-0b63-4646-9c68-d240d2268f62" type="radio">
-</input><label class="tabbed-label" for="2c25b4c3-6d89-4598-8374-ac6298434b73">
+<input id="4d2981f6-b3a4-4853-a152-84351e99ccbf" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
+</input><label class="tabbed-label" for="4d2981f6-b3a4-4853-a152-84351e99ccbf">
+Índices en las listas</label><div class="tabbed-content docutils">
+<div class="tip admonition">
+<p class="admonition-title">Recordemos…</p>
+<p>Los índices inician en 0 y aumentan de uno en uno, algunos índices negativos también se pueden utilizar, al emplear estos valores estamos indicando que la lista se recorre en orden inverso, es decir, el índice -1 es el último elemento de la lista, el -2 es el penúltimo, etc., como podemos ver a continuación:
+<img src="https://github.com/MRippe7/CienciaDatos/blob/main/Imagenes/listas.png?raw=true"  width=300 ></p>
+</div>
+</div>
+<input id="d3439ea0-9266-488f-8347-d1bc5995505a" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
+</input><label class="tabbed-label" for="d3439ea0-9266-488f-8347-d1bc5995505a">
 Objetos mutables</label><div class="tabbed-content docutils">
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -476,7 +485,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 <div class="section" id="sub-listas">
 <h2>Sub-listas<a class="headerlink" href="#sub-listas" title="Permalink to this headline">¶</a></h2>
-<p>Hay  oportunidades en las que nuestra necesidad sea extraer una sub-lista de la lista que tenemos, por ejemplo, de la lista <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> requerimos los elementos desde el índice 2 hasta el 4 de nuestra lista, o los primeros <span class="math notranslate nohighlight">\(3\)</span> elementos  o los últimos <span class="math notranslate nohighlight">\(4\)</span>, éstas tres sub-listas se obtienen así:</p>
+<p>Hay  oportunidades en las que nuestra necesidad sea extraer una sub-lista de la lista que tenemos, por ejemplo, de la lista <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> requerimos los elementos desde el índice 2 hasta el 4 de nuestra lista, o los primeros <span class="math notranslate nohighlight">\(3\)</span> elementos  o los últimos <span class="math notranslate nohighlight">\(4\)</span>, estas tres sub-listas se obtienen así:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -560,7 +569,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 3, &#39;cuatro&#39;, 1, 1, 5.1, 140718903710784]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 3, &#39;cuatro&#39;, 1, 1, 5.1, 139933661128896]
 </pre></div>
 </div>
 </div>
@@ -573,7 +582,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 <div class="section" id="listas-por-comprension">
 <h2>Listas por Comprensión:<a class="headerlink" href="#listas-por-comprension" title="Permalink to this headline">¶</a></h2>
-<p>Las listas se pueden crear de una manera un poco más avanzada, empleando la característica que las define. Si por ejemplo, deseamos crear la lista de los primeros <span class="math notranslate nohighlight">\(5\)</span> números pares podemos emplear el siguiente código:</p>
+<p>Las listas se pueden crear de una manera un poco más avanzada, empleando la característica que las define, si la hay. Si por ejemplo, deseamos crear la lista de los primeros <span class="math notranslate nohighlight">\(5\)</span> números pares podemos emplear el siguiente código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
@@ -766,7 +775,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_30886</span><span class="o">/</span><span class="mf">1406467647.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_459202</span><span class="o">/</span><span class="mf">1406467647.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">temperatura</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;hola&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -775,7 +784,19 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <p>Como lo comentamos antes, las tuplas son <strong>inmutables</strong>.</p>
-<p>Para agregar elementos a una tupla empleamos el operador <code class="docutils literal notranslate"><span class="pre">+=</span></code>, de la misma manera que lo hicimos con las listas. Para las tuplas no disponemos del método <code class="docutils literal notranslate"><span class="pre">append</span></code>.</p>
+<p>Para “agregar” elementos a una tupla empleamos el operador <code class="docutils literal notranslate"><span class="pre">+=</span></code>, de la misma manera que lo hicimos con las listas. Para las tuplas no disponemos del método <code class="docutils literal notranslate"><span class="pre">append</span></code>. Es importante tener en cuenta que al “agregar”, lo que en realidad estamos haciendo es crear una nueva tupla, como podemos ver a continuación:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">tupla1elemento</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140632800957152
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tupla1elemento</span> <span class="o">+=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,)</span>
@@ -789,7 +810,19 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<p>Como hemos recalcado las tuplas son inmutables, pero pueden contener elementos mutables, por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">tupla1elemento</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140632835582656
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esto ocurre, pues como hemos recalcado, las tuplas son elementos inmutables, pero pueden contener elementos mutables, por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tupla1elemento</span> <span class="o">+=</span> <span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],)</span>
@@ -805,6 +838,18 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">tupla1elemento</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140632801261248
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tupla1elemento</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
 <span class="c1">#genererá un error ya que no podemos modificar el elemento de la tupla</span>
 </pre></div>
@@ -813,7 +858,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="mi">6</span><span class="n">fafb212dea0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">68</span><span class="o">-</span><span class="mi">6</span><span class="n">fafb212dea0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">tupla1elemento</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#genererá un error ya que no podemos modificar el elemento de la tupla</span>
 
@@ -836,19 +881,32 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">tupla1elemento</span><span class="p">)</span>
+<span class="c1">#Como se modificó la lista pero no la tupla, sigue siendo el mismo objeto</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140632801261248
+</pre></div>
+</div>
+</div>
+</div>
 <p>En este cuaderno, hemos estudiado las herramientas básicas sobre las listas y las tuplas, para así poder tener un mejor desempeño a la hora de elaborar nuestros programas.</p>
 </div>
 <div class="section" id="metodos-de-ordenamiento">
 <h2>Métodos de ordenamiento<a class="headerlink" href="#metodos-de-ordenamiento" title="Permalink to this headline">¶</a></h2>
 <p>Una de las primeras tareas que se abordan cuando se trabaja con listas es la de <strong>ordenar</strong>, ya que para diversas labores es necesario que los elementos estén dispuestos de ésta manera.</p>
 <p>Para llevar a cabo ésta tarea existen diferentes formas de hacerlo, una forma conocida es mediante el <strong>método burbuja</strong>, el cual se basa en simples comparaciones e intercambios.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Una</span> <span class="n">lista</span> <span class="n">de</span> <span class="n">n</span> <span class="n">valores</span> <span class="n">se</span> <span class="n">recorre</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="n">veces</span><span class="p">,</span> <span class="n">en</span> <span class="n">las</span> <span class="n">cuales</span> <span class="n">se</span> <span class="n">irán</span> <span class="n">comparando</span> <span class="n">los</span> <span class="n">términos</span> <span class="n">de</span> <span class="n">izquierda</span> <span class="n">a</span> <span class="n">derecha</span> <span class="n">con</span> <span class="n">el</span> <span class="n">siguiente</span><span class="p">,</span> <span class="n">de</span> <span class="n">tal</span> <span class="n">manera</span> <span class="n">que</span><span class="p">,</span> <span class="n">si</span> <span class="n">el</span> <span class="n">i</span><span class="o">-</span><span class="n">ésimo</span> <span class="n">término</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="n">el</span> <span class="n">que</span> <span class="n">se</span> <span class="n">ubica</span> <span class="n">en</span> <span class="n">la</span> <span class="n">posición</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">éstos</span> <span class="n">se</span> <span class="n">intercambian</span> <span class="n">de</span> <span class="n">lo</span> <span class="n">contrario</span> <span class="n">se</span> <span class="n">dejan</span> <span class="n">tal</span> <span class="n">cual</span><span class="o">.</span> <span class="n">Las</span> <span class="n">comparaciones</span> <span class="n">se</span> <span class="n">van</span> <span class="n">reduciendo</span> <span class="n">ya</span> <span class="n">que</span> <span class="n">en</span> <span class="n">la</span> <span class="n">parte</span> <span class="n">derecha</span> <span class="n">de</span> <span class="n">la</span> <span class="n">lista</span> <span class="n">se</span> <span class="n">van</span> <span class="n">almacenando</span> <span class="n">los</span> <span class="n">términos</span> <span class="n">mayores</span> <span class="n">con</span> <span class="n">el</span> <span class="n">orden</span> <span class="n">deseado</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Una</span> <span class="n">lista</span> <span class="n">de</span> <span class="n">n</span> <span class="n">valores</span> <span class="n">se</span> <span class="n">recorre</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="n">veces</span><span class="p">,</span> <span class="n">en</span> <span class="n">las</span> <span class="n">cuales</span> <span class="n">se</span> <span class="n">irán</span> <span class="n">comparando</span> <span class="n">los</span> <span class="n">términos</span> <span class="n">de</span> <span class="n">izquierda</span> <span class="n">a</span> <span class="n">derecha</span> <span class="n">con</span> <span class="n">el</span> <span class="n">siguiente</span><span class="p">,</span> <span class="n">de</span> <span class="n">tal</span> <span class="n">manera</span> <span class="n">que</span><span class="p">,</span> <span class="n">si</span> <span class="n">el</span> <span class="n">i</span><span class="o">-</span><span class="n">ésimo</span> <span class="n">término</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="n">el</span> <span class="n">que</span> <span class="n">se</span> <span class="n">ubica</span> <span class="n">en</span> <span class="n">la</span> <span class="n">posición</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">éstos</span> <span class="n">se</span> <span class="n">intercambian</span> <span class="n">de</span> <span class="n">lo</span> <span class="n">contrario</span> <span class="n">se</span> <span class="n">dejan</span> <span class="n">tal</span> <span class="n">cual</span><span class="o">.</span> <span class="n">En</span> <span class="n">otras</span> <span class="n">palabras</span><span class="p">,</span> <span class="n">el</span> <span class="n">método</span> <span class="n">lo</span> <span class="n">que</span> <span class="n">hace</span> <span class="n">es</span> <span class="n">ir</span> <span class="n">ubicando</span> <span class="n">el</span> <span class="n">término</span> <span class="n">más</span> <span class="n">grande</span> <span class="n">a</span> <span class="n">la</span> <span class="n">derecha</span> <span class="n">de</span> <span class="n">la</span> <span class="n">lista</span><span class="p">,</span> <span class="n">motivo</span> <span class="n">por</span> <span class="n">el</span> <span class="n">cual</span> <span class="n">las</span> <span class="n">comparaciones</span> <span class="n">se</span> <span class="n">van</span> <span class="n">reduciendo</span> <span class="n">en</span> <span class="n">cada</span> <span class="n">iteración</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>Por ejemplo, en la lista que definimos anteriormente, al aplicar las comparaciones del método de la burbuja en la primera iteración, obtenemos lo siguiente:
+<p>Por ejemplo, en la lista <code class="docutils literal notranslate"><span class="pre">l</span></code> que definimos anteriormente, al aplicar las comparaciones del método de la burbuja en la primera iteración, obtenemos lo siguiente:
 <img src="https://github.com/CiDExt/Programacion1/blob/master/images/burbuja.png?raw=true"></p>
-<p>El nombre de éste método es debido a que las comparaciones se hacen en pequeñas burbujas de toda la lista.</p>
-<p>Una implementación de éste método se puede consultar en la siguiente función:</p>
+<p>El nombre de este método es debido a que las comparaciones se hacen en pequeñas burbujas de toda la lista.</p>
+<p>Una implementación de este método se puede consultar en la siguiente función:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
@@ -871,7 +929,13 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<p>En nuestro código hay dos líneas muy particulares <code class="docutils literal notranslate"><span class="pre">tiempo_inicial</span> <span class="pre">=</span> <span class="pre">time()</span></code> y <code class="docutils literal notranslate"><span class="pre">tiempo_transcurrido</span> <span class="pre">=</span> <span class="pre">time()</span> <span class="pre">-</span> <span class="pre">tiempo_inicial</span></code>, éstas permiten calcular el tiempo transcurrido en los cálculos para ordenar la lista. La función <code class="docutils literal notranslate"><span class="pre">time()</span></code> está disponible gracias a la importación de la libreria con el mismo nombre.</p>
+<p>En nuestro código hay tres líneas muy particulares <code class="docutils literal notranslate"><span class="pre">tiempo_inicial</span> <span class="pre">=</span> <span class="pre">time()</span></code>, <code class="docutils literal notranslate"><span class="pre">tiempo_transcurrido</span> <span class="pre">=</span> <span class="pre">time()</span> <span class="pre">-</span> <span class="pre">tiempo_inicial</span></code> y <code class="docutils literal notranslate"><span class="pre">l[j],l[j+1]</span> <span class="pre">=</span> <span class="pre">l[j+1],l[j]</span></code>. Las dos primeras permiten calcular el tiempo transcurrido en los cálculos para ordenar la lista. La función <code class="docutils literal notranslate"><span class="pre">time()</span></code> está disponible gracias a la importación de la libreria con el mismo nombre. Mientras que, la expresión <code class="docutils literal notranslate"><span class="pre">l[j],l[j+1]</span> <span class="pre">=</span> <span class="pre">l[j+1],l[j]</span></code> es una asignación que nos permite ahorrar el uso de una variable auxiliar, en otros lenguajes la asignación sería la siguiente:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span>
+    <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">l</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux</span>
+</pre></div>
+</div>
+<p>Este tipo de asignaciones se conocen como azúcar sintáctico, ya que permiten hace más “dulce” la forma de escribir y leer el código.</p>
 <p>Hagamos un ensayo con una lista corta:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -905,7 +969,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El proceso tardó 0.045436859130859375 segundos
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El proceso tardó 0.04517793655395508 segundos
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0,
@@ -1919,6 +1983,70 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <p>Esta tarea la podemos ver programada en el siguiente bloque de código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">b</span><span class="o">=</span> <span class="n">b</span><span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 4, 5, 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5, 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ordenamiento1</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
     <span class="n">tiempo_inicial</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
     <span class="n">m</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1928,7 +2056,9 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
             <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">Min</span><span class="p">:</span>
                 <span class="n">Min</span> <span class="o">=</span> <span class="n">j</span>
         <span class="n">m</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Min</span><span class="p">)</span>
-        <span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">Min</span><span class="p">)]</span>
+        <span class="n">aux</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">Min</span><span class="p">)]</span>
+        <span class="n">aux</span> <span class="o">=</span> <span class="n">aux</span> <span class="o">+</span> <span class="n">l</span><span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">Min</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">aux</span>
     <span class="n">tiempo_transcurrido</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">tiempo_inicial</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El proceso tardó </span><span class="si">{0}</span><span class="s1"> segundos&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tiempo_transcurrido</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">m</span>    
@@ -1944,10 +2074,19 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El proceso tardó 4.0531158447265625e-06 segundos
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 3, 3, 5, 7, 16]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">83</span><span class="o">-</span><span class="n">f352f94c0b9c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ordenamiento1</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">16</span><span class="p">])</span>
+
+<span class="nn">&lt;ipython-input-82-e22822f1cd7f&gt;</span> in <span class="ni">ordenamiento1</span><span class="nt">(l)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">m</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>         <span class="n">Min</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">Min</span><span class="p">:</span>
+
+<span class="ne">IndexError</span>: list index out of range
 </pre></div>
 </div>
 </div>
@@ -1968,1009 +2107,19 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El proceso tardó 0.01024007797241211 segundos
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0,
- 2,
- 3,
- 3,
- 8,
- 8,
- 9,
- 9,
- 10,
- 11,
- 12,
- 12,
- 13,
- 13,
- 14,
- 16,
- 17,
- 19,
- 20,
- 24,
- 26,
- 26,
- 27,
- 27,
- 28,
- 29,
- 29,
- 30,
- 30,
- 32,
- 32,
- 32,
- 35,
- 35,
- 38,
- 40,
- 40,
- 44,
- 44,
- 45,
- 49,
- 49,
- 49,
- 49,
- 50,
- 51,
- 52,
- 53,
- 53,
- 54,
- 54,
- 54,
- 56,
- 56,
- 57,
- 57,
- 58,
- 58,
- 60,
- 60,
- 61,
- 61,
- 61,
- 62,
- 62,
- 63,
- 63,
- 64,
- 64,
- 65,
- 67,
- 67,
- 67,
- 68,
- 70,
- 71,
- 73,
- 73,
- 74,
- 77,
- 78,
- 78,
- 79,
- 83,
- 84,
- 85,
- 85,
- 86,
- 89,
- 89,
- 90,
- 93,
- 95,
- 95,
- 95,
- 96,
- 97,
- 99,
- 99,
- 100,
- 101,
- 103,
- 103,
- 104,
- 105,
- 105,
- 106,
- 107,
- 108,
- 109,
- 109,
- 110,
- 110,
- 110,
- 112,
- 114,
- 115,
- 116,
- 117,
- 119,
- 122,
- 123,
- 123,
- 123,
- 124,
- 125,
- 127,
- 129,
- 129,
- 129,
- 130,
- 130,
- 134,
- 134,
- 135,
- 135,
- 136,
- 136,
- 136,
- 139,
- 142,
- 142,
- 143,
- 143,
- 143,
- 145,
- 147,
- 148,
- 148,
- 149,
- 149,
- 151,
- 152,
- 152,
- 152,
- 152,
- 152,
- 152,
- 154,
- 156,
- 156,
- 161,
- 163,
- 163,
- 163,
- 168,
- 169,
- 171,
- 171,
- 172,
- 172,
- 174,
- 176,
- 177,
- 178,
- 179,
- 179,
- 181,
- 184,
- 185,
- 185,
- 186,
- 187,
- 188,
- 188,
- 188,
- 190,
- 191,
- 191,
- 192,
- 196,
- 197,
- 197,
- 198,
- 199,
- 199,
- 200,
- 201,
- 202,
- 203,
- 205,
- 206,
- 206,
- 206,
- 208,
- 210,
- 211,
- 212,
- 212,
- 214,
- 215,
- 215,
- 215,
- 216,
- 217,
- 217,
- 218,
- 218,
- 219,
- 221,
- 222,
- 224,
- 225,
- 225,
- 227,
- 227,
- 228,
- 233,
- 234,
- 235,
- 236,
- 238,
- 239,
- 242,
- 245,
- 246,
- 246,
- 247,
- 252,
- 253,
- 257,
- 257,
- 257,
- 257,
- 262,
- 262,
- 264,
- 266,
- 267,
- 268,
- 268,
- 268,
- 269,
- 270,
- 270,
- 271,
- 271,
- 271,
- 272,
- 276,
- 276,
- 276,
- 276,
- 277,
- 278,
- 283,
- 284,
- 285,
- 285,
- 286,
- 286,
- 286,
- 288,
- 290,
- 291,
- 292,
- 293,
- 293,
- 293,
- 294,
- 294,
- 294,
- 294,
- 295,
- 295,
- 295,
- 296,
- 297,
- 298,
- 299,
- 301,
- 301,
- 302,
- 304,
- 305,
- 305,
- 306,
- 309,
- 311,
- 311,
- 311,
- 313,
- 313,
- 314,
- 315,
- 315,
- 316,
- 316,
- 317,
- 317,
- 320,
- 322,
- 322,
- 323,
- 324,
- 325,
- 329,
- 330,
- 332,
- 333,
- 335,
- 336,
- 336,
- 336,
- 337,
- 337,
- 338,
- 339,
- 340,
- 341,
- 342,
- 342,
- 344,
- 344,
- 345,
- 346,
- 347,
- 347,
- 348,
- 348,
- 349,
- 349,
- 350,
- 350,
- 350,
- 355,
- 355,
- 355,
- 359,
- 361,
- 362,
- 364,
- 368,
- 371,
- 372,
- 374,
- 374,
- 374,
- 376,
- 376,
- 377,
- 379,
- 379,
- 380,
- 381,
- 383,
- 383,
- 386,
- 387,
- 388,
- 389,
- 392,
- 392,
- 394,
- 397,
- 397,
- 397,
- 397,
- 399,
- 399,
- 400,
- 402,
- 402,
- 402,
- 402,
- 403,
- 405,
- 405,
- 406,
- 408,
- 408,
- 409,
- 409,
- 409,
- 410,
- 410,
- 413,
- 414,
- 415,
- 416,
- 416,
- 417,
- 421,
- 422,
- 423,
- 423,
- 425,
- 425,
- 427,
- 430,
- 431,
- 431,
- 431,
- 431,
- 432,
- 433,
- 434,
- 435,
- 435,
- 436,
- 439,
- 439,
- 441,
- 441,
- 442,
- 442,
- 442,
- 443,
- 444,
- 444,
- 445,
- 445,
- 447,
- 447,
- 447,
- 448,
- 448,
- 448,
- 449,
- 451,
- 451,
- 452,
- 453,
- 453,
- 455,
- 456,
- 457,
- 458,
- 459,
- 462,
- 462,
- 462,
- 463,
- 463,
- 464,
- 465,
- 466,
- 467,
- 467,
- 467,
- 469,
- 472,
- 473,
- 475,
- 475,
- 476,
- 476,
- 476,
- 477,
- 477,
- 481,
- 481,
- 484,
- 485,
- 485,
- 485,
- 487,
- 487,
- 487,
- 488,
- 488,
- 490,
- 490,
- 491,
- 493,
- 494,
- 495,
- 495,
- 497,
- 497,
- 498,
- 500,
- 500,
- 501,
- 502,
- 503,
- 503,
- 504,
- 508,
- 509,
- 509,
- 509,
- 510,
- 510,
- 511,
- 511,
- 512,
- 516,
- 519,
- 520,
- 522,
- 523,
- 523,
- 523,
- 525,
- 526,
- 526,
- 528,
- 528,
- 528,
- 529,
- 530,
- 531,
- 532,
- 533,
- 533,
- 534,
- 535,
- 535,
- 538,
- 538,
- 541,
- 542,
- 542,
- 544,
- 544,
- 544,
- 544,
- 545,
- 545,
- 546,
- 546,
- 546,
- 551,
- 552,
- 552,
- 555,
- 556,
- 558,
- 560,
- 560,
- 560,
- 562,
- 562,
- 562,
- 563,
- 564,
- 565,
- 567,
- 567,
- 573,
- 573,
- 573,
- 575,
- 575,
- 577,
- 578,
- 579,
- 580,
- 580,
- 580,
- 582,
- 582,
- 582,
- 583,
- 584,
- 584,
- 585,
- 586,
- 587,
- 587,
- 589,
- 590,
- 593,
- 597,
- 599,
- 601,
- 603,
- 603,
- 603,
- 605,
- 605,
- 607,
- 608,
- 610,
- 611,
- 613,
- 613,
- 614,
- 615,
- 615,
- 617,
- 618,
- 619,
- 619,
- 620,
- 621,
- 622,
- 623,
- 623,
- 628,
- 630,
- 631,
- 633,
- 633,
- 635,
- 635,
- 637,
- 637,
- 638,
- 640,
- 641,
- 641,
- 644,
- 645,
- 645,
- 645,
- 645,
- 645,
- 645,
- 646,
- 646,
- 647,
- 648,
- 649,
- 650,
- 651,
- 654,
- 655,
- 657,
- 658,
- 659,
- 660,
- 661,
- 664,
- 667,
- 669,
- 670,
- 670,
- 672,
- 672,
- 675,
- 677,
- 679,
- 681,
- 682,
- 682,
- 683,
- 683,
- 684,
- 685,
- 685,
- 686,
- 686,
- 687,
- 688,
- 688,
- 689,
- 689,
- 690,
- 691,
- 691,
- 692,
- 693,
- 693,
- 694,
- 695,
- 695,
- 696,
- 696,
- 698,
- 699,
- 699,
- 699,
- 701,
- 701,
- 701,
- 702,
- 702,
- 703,
- 703,
- 703,
- 704,
- 704,
- 706,
- 708,
- 708,
- 708,
- 711,
- 712,
- 713,
- 714,
- 715,
- 716,
- 716,
- 717,
- 718,
- 719,
- 721,
- 722,
- 722,
- 723,
- 723,
- 724,
- 724,
- 726,
- 732,
- 734,
- 734,
- 734,
- 734,
- 738,
- 740,
- 740,
- 742,
- 742,
- 742,
- 742,
- 743,
- 743,
- 744,
- 744,
- 745,
- 745,
- 746,
- 747,
- 750,
- 751,
- 751,
- 751,
- 752,
- 753,
- 753,
- 755,
- 756,
- 758,
- 758,
- 758,
- 759,
- 759,
- 759,
- 760,
- 760,
- 761,
- 761,
- 762,
- 762,
- 763,
- 764,
- 767,
- 769,
- 770,
- 770,
- 771,
- 771,
- 772,
- 773,
- 775,
- 775,
- 775,
- 779,
- 779,
- 779,
- 780,
- 782,
- 782,
- 783,
- 785,
- 786,
- 786,
- 787,
- 787,
- 788,
- 788,
- 792,
- 792,
- 792,
- 793,
- 795,
- 796,
- 797,
- 798,
- 798,
- 799,
- 801,
- 801,
- 802,
- 805,
- 805,
- 806,
- 806,
- 812,
- 812,
- 815,
- 815,
- 816,
- 817,
- 817,
- 817,
- 822,
- 823,
- 824,
- 824,
- 824,
- 827,
- 827,
- 827,
- 830,
- 831,
- 831,
- 831,
- 832,
- 833,
- 833,
- 836,
- 837,
- 837,
- 837,
- 838,
- 840,
- 840,
- 840,
- 841,
- 843,
- 843,
- 844,
- 846,
- 847,
- 847,
- 848,
- 848,
- 848,
- 849,
- 849,
- 850,
- 851,
- 853,
- 854,
- 855,
- 855,
- 855,
- 857,
- 857,
- 858,
- 860,
- 861,
- 865,
- 865,
- 870,
- 871,
- 872,
- 872,
- 873,
- 873,
- 877,
- 877,
- 879,
- 879,
- 879,
- 881,
- 881,
- 881,
- 884,
- 888,
- 891,
- 891,
- 892,
- 893,
- 894,
- 894,
- 895,
- 896,
- 896,
- 897,
- 898,
- 899,
- 899,
- 900,
- 901,
- 903,
- 903,
- 903,
- 904,
- 904,
- 907,
- 907,
- 908,
- 910,
- 910,
- 910,
- 911,
- 913,
- 913,
- 913,
- 915,
- 915,
- 915,
- 918,
- 919,
- 920,
- 920,
- 921,
- 921,
- 923,
- 926,
- 927,
- 927,
- 929,
- 930,
- 931,
- 932,
- 932,
- 932,
- 933,
- 934,
- 934,
- 935,
- 935,
- 936,
- 937,
- 938,
- 938,
- 939,
- 940,
- 940,
- 942,
- 944,
- 945,
- 945,
- 946,
- 947,
- 949,
- 949,
- 950,
- 951,
- 951,
- 951,
- 952,
- 952,
- 953,
- 953,
- 954,
- 955,
- 956,
- 956,
- 957,
- 958,
- 959,
- 962,
- 962,
- 964,
- 965,
- 966,
- 966,
- 967,
- 968,
- 968,
- 968,
- 972,
- 973,
- 973,
- 973,
- 973,
- 974,
- 974,
- 975,
- 976,
- 976,
- 977,
- 980,
- 981,
- 982,
- 984,
- 984,
- 985,
- 986,
- 987,
- 988,
- 989,
- 990,
- 990,
- 991,
- 991,
- 992,
- 992,
- 994,
- 998,
- 998,
- 999,
- 1000]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">85</span><span class="o">-</span><span class="n">c50901b0ecb5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ordenamiento1</span><span class="p">(</span><span class="n">aleatorios</span><span class="p">)</span>
+
+<span class="nn">&lt;ipython-input-82-e22822f1cd7f&gt;</span> in <span class="ni">ordenamiento1</span><span class="nt">(l)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">m</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>         <span class="n">Min</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">Min</span><span class="p">:</span>
+
+<span class="ne">IndexError</span>: list index out of range
 </pre></div>
 </div>
 </div>
@@ -2980,11 +2129,6 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">16</span><span class="p">]</span>
 <span class="nb">sorted</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1, 3, 3, 5, 7, 16]
 </pre></div>
 </div>
 </div>
@@ -3021,8 +2165,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="section" id="id3">
 <h3>Ejercicio:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Como hemos visto hay diferentes métodos para ordenar listas, unos más eficientes que otros. Busque un método diferente a los expuestos en el cuaderno, haga una un resumen en palabras del método y escriba una función que permita hacer esta tarea.</p></li>
-<li><p>Cree una lista de 400 valores, en los cuales estén almacenadas las ventas de la última semana de un almacén, aplique los métodos vistos en clase y el que usted construyó y determine cual es más eficiente sobre dicha lista.</p></li>
+<li><p>Cree una lista de 400 valores, en los cuales estén almacenadas las ventas de la última semana de un almacén, aplique los métodos vistos en clase y determine cuál de ellos toma menos tiempo en hacerlo.</p></li>
 </ol>
 </div>
 </div>
@@ -3053,7 +2196,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<p>Si observamos el resultado de un filtro, éste un objeto tipo <code class="docutils literal notranslate"><span class="pre">filter</span></code>, para poder ver su contenido empleamos el comando <code class="docutils literal notranslate"><span class="pre">list</span></code>, así:</p>
+<p>Si observamos el resultado de un filtro, este un objeto tipo <code class="docutils literal notranslate"><span class="pre">filter</span></code>, para poder ver su contenido empleamos el comando <code class="docutils literal notranslate"><span class="pre">list</span></code>, así:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">lfiltrada</span><span class="p">)</span>
@@ -3066,7 +2209,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<p>Si se llega a dar el caso que el filtro viene dado como el resultado de una función, primero debemos definir dicha función y luego aplicamos el filto, así:</p>
+<p>Si deseamos que el filtro venga dado por el resultado de una función, primero debemos definir dicha función y luego aplicamos el filtro, es decir, no podemos emplear funciones <code class="docutils literal notranslate"><span class="pre">lambda</span></code> como en el ejemplo anterior:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
@@ -3113,7 +2256,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 <div class="section" id="mapear">
 <h2>Mapear<a class="headerlink" href="#mapear" title="Permalink to this headline">¶</a></h2>
-<p>En otras oportunidades necesitaremos aplicar una función sobre todos los elementos de la lista, es allí cuando aplicamos la función <code class="docutils literal notranslate"><span class="pre">map</span></code>. El resultado de ésta función  es un objeto tipo <code class="docutils literal notranslate"><span class="pre">map</span></code> y el cual se puede volver una lista de la misma manera como hicimos con los filtros, por ejemplo</p>
+<p>En otras oportunidades necesitaremos aplicar una función sobre todos los elementos de la lista, es allí cuando aplicamos la función <code class="docutils literal notranslate"><span class="pre">map</span></code>. El resultado de esta función  es un objeto tipo <code class="docutils literal notranslate"><span class="pre">map</span></code>  el cual se puede volver una lista de la misma manera como hicimos con los filtros, por ejemplo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -3134,7 +2277,20 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<p>La diferencia entre <code class="docutils literal notranslate"><span class="pre">map</span></code>y <code class="docutils literal notranslate"><span class="pre">filter</span></code>, es que en <code class="docutils literal notranslate"><span class="pre">map</span></code> aplicamos una función sobre cada elemento de la lista y en <code class="docutils literal notranslate"><span class="pre">filter</span></code> buscamos un criterio de selección booleano.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Una forma equivalente es emplear las listas por comprensión</span>
+<span class="p">[</span><span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 5, 10, 17, 26]
+</pre></div>
+</div>
+</div>
+</div>
+<p>La diferencia entre <code class="docutils literal notranslate"><span class="pre">map</span></code>y <code class="docutils literal notranslate"><span class="pre">filter</span></code>, es que en <code class="docutils literal notranslate"><span class="pre">map</span></code> aplicamos una función sobre cada elemento de la lista y en <code class="docutils literal notranslate"><span class="pre">filter</span></code> aplicamos una función booleana sobre cada elemento de la lista y seleccionamos los que tienen como resultado <code class="docutils literal notranslate"><span class="pre">True</span></code>, es decir, aplicamos un criterio de selección booleano.</p>
 <p>Los mapeos se pueden aplicar sobre cadenas de caracteres, por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

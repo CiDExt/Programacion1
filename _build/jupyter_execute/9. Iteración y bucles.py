@@ -41,7 +41,7 @@
 
 # ## Bucle while
 # 
-# Es similar al condicional, porque revisará si una condición es cierta o falsa, y se ejecutará mientras esa condición sea cierta. Es muy importante que la condición en while cambié a medida que avanza la iteración, porque si no el programa ejecutará indefinidamente las operaciones. Su sintáxis es:
+# Es similar al condicional, porque revisará si una condición es cierta o falsa, y se ejecutará una nueva iteración mientras esa condición sea cierta. Es muy importante que el valor de verdad de la condición en while cambié en algún momento de la iteración, porque si no el programa ejecutará indefinidamente las operaciones. Su sintáxis es:
 # 
 # ```Python
 # while (condición):
@@ -80,12 +80,12 @@ while n<10:
 #     print(n)
 #     print('Python es maravilloso')
 # ```
-# Si ejecutó estas instrucciones y su computador se quedó ejecutando entonces oprima [Ctrl]+[C] para cancelar la ejecución, si no el computador ejecutará la orden infinitamente.
+# Si ejecutó estas instrucciones y su computador se quedó ejecutando entonces oprima [Ctrl]+[C] para cancelar la ejecución, sino el computador ejecutará la orden infinitamente.
 
-# Python permite utilizar ordenes que pueden interrumpir los búcles:
+# Python permite utilizar órdenes que pueden interrumpir los bucles:
 # 
-# * **break**: Una sentencia de Python que termina inmediatamente un ciclo por completo. El programa procede a la primera instrucción que sigue después de `break`.
-# * **continue**: Una sentencia de Python que termina inmediatamente una iteración del ciclo. El programa procede a la primera instrucción que sigue después de `break`.
+# * **break**: Una sentencia de Python que termina inmediatamente un ciclo por completo. El programa procede a la primera instrucción que sigue después del cuerpo del bucle.
+# * **continue**: Una sentencia de Python que termina inmediatamente una iteración del ciclo. El programa procede a la primera instrucción que sigue después de la nueva iteración si la hay, sino la primera instrucción después del cuerpo del bucle.
 
 # <div style="width: 100%;"><div style="position: relative; padding-bottom: 116.67%; padding-top: 0; height: 0;"><iframe frameborder="0" width="600" height="700" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/6197bf60b2eaa20dad025cd1" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
 
@@ -117,7 +117,7 @@ print('Bucle terminado.')
 
 # ## Bucle `while:...  else:... `
 # 
-# Esta es una propiedad caracterpística de Python, permite mostrar un resultado si y solo si un bucle termina. Si el bucle no pudo terminar no se mostrará:
+# Esta es una propiedad característica de Python, permite mostrar un resultado si y solo si un bucle termina. Si el bucle no pudo terminar no se mostrará:
 
 # In[4]:
 
@@ -142,10 +142,11 @@ while n<5:
         break    
 else:
     print('Bucle terminado')
-print('Como no dice "Bucle terminado", el else no se ejecutó')
 
 
-# Un ejemplo más interesante puede ser para buscar elementos en una lista:
+# **Como no dice "Bucle terminado", el else no se ejecutó.**
+
+# Un ejemplo más interesante puede ser para buscar elementos en una lista, animamos al estudiante para identificar el algoritmo que se esta desarrollando en el siguiente script. Otro ejemplo de que Python permite una escritura clara y limpia:
 
 # In[6]:
 
@@ -208,16 +209,19 @@ else:
 
 # En el caso de while podemos hacer algo muy parecido, por ejemplo:
 
+# En el siguiente ejemplo mostramos un conjunto de sumas donde el primer sumando varía de 0 a 4 y el segundo varía de 10 a 6. Identifique como opera cada bucle.
+
 # In[9]:
 
 
 n=0
 while n<5: 
-    m=10 #---> esto se ejecuta el primer while     
+    m=10 #---> se ejecuta en cada iteración del primer while     
     while  m>5:
-        print(n,'+',m,'=',n+m) #---> solo se ejecuta el segundo while 
+        print(n,'+',m,'=',n+m) #---> se ejecuta en cada iteración del 
+                               #---> segundo while por cada iteración del primer while
         m-=1
-    n+=1  #---> esto se ejecuta el primer while 
+    n+=1  #---> se ejecuta en cada iteración del primer while 
 
 
 # Podemos combinar `if` y  `while`
@@ -246,7 +250,9 @@ while su_edad<25:
     su_edad+=1
 
 
-# Como vemos, todas las estructuras de control de Python se pueden combinar en la medida que sea necesario. Esto hace que Python sea un lenguaje aclamdo, fácil y flexible. Usaremos muchos trucos de este estilo en diversos ejemplos.
+# Aprovechemos este momento para crear un diagrama de flujo del anterior script. 
+# 
+# Como vemos, todas las estructuras de control de Python se pueden combinar en la medida que sea necesario. Esto hace que Python sea un lenguaje aclamado, fácil y flexible. Usaremos muchos trucos de este estilo en diversos ejemplos.
 
 # ## Bucles de una línea
 # 
@@ -265,7 +271,7 @@ n=0
 while n<5:n+=1;print(n);
 
 
-# Esto funciona solo para expresiones simples, si, por ejemplo, busamos anidar en una sola línea tendremos problemas. 
+# Esto funciona solo para expresiones simples, si, por ejemplo, buscamos anidar en una sola línea tendremos problemas. 
 
 # In[12]:
 
@@ -293,6 +299,8 @@ while i<=n:
 print(factorial)
 
 
+# 2. El siguiente script muestra como se encuentran los divisores de 100.
+
 # In[17]:
 
 
@@ -308,13 +316,15 @@ while i<=n:
 # ## Ejercicio 2
 # 1. Elabora un código para determinar si un cierto número es primo o no.
 
-# una forma de aproximar la raíz cuadrada de un número $a$, es utilizando la aproximación 
-# \begin{equation*}
+# 2. Una forma de aproximar la raíz cuadrada de un número $a$, es utilizando la aproximación 
+# 
+# $$
 # y=\frac{x^2+a}{2x},
-# \end{equation*}
+# $$
+# 
 # siendo $x$ cualquier número positivo y $y$ la aproximación obtenida. Si se aplica la aproximación sobre el resultado inmediatamente anterior, se obtendrá una mejora notable, de modo que, emplearemos este hecho para aproximar raíces cuadradas:
 
-# In[26]:
+# In[2]:
 
 
 a = 10
@@ -324,3 +334,5 @@ while abs(x**2-a)>0.001:
     x = y
     print(x)
 
+
+# Aquí calculamos la raíz de 10. ¿Por qué dejamos `x=1`? ¿Por que `abs(x**2-a)>0.001`?

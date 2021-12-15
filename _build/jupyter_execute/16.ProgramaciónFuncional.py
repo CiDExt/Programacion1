@@ -399,5 +399,5 @@ list(filter(es_par,range(1,31)))
 
 # ## Cierre
 # 
-# En esta sección exploramos conceptos elementales de la programación funcional, es evidente su diferencia con la programación estructurada que conociamos y posiblemente habrán muchos algoritmos que para nuestra formación inicial no se puedan llevar a cabo con este estilo de programación. NO obstante, la potencia de poder aplicar funciones y de crear algoritmos en este sentido se utiliza bastante en el análisis de tablas de datos, de hecho, siguiendo los lineamientos de este estilo es más fácil paralelizar la computación y el valor final de las ejecuciones es más transparente que lo que se obtiene por la programación estructurada.
+# En esta sección exploramos conceptos elementales de la programación funcional, es evidente su diferencia con la programación estructurada que conociamos y posiblemente habrá muchos algoritmos que para nuestra formación inicial no se puedan llevar a cabo con este estilo de programación. No obstante, la potencia de poder aplicar funciones y de crear algoritmos en este sentido se utiliza bastante en el análisis de tablas de datos, de hecho, siguiendo los lineamientos de este estilo es más fácil paralelizar la computación y el valor final de las ejecuciones es más transparente que lo que se obtiene por la programación estructurada.
 # 

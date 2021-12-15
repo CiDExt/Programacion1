@@ -46,7 +46,7 @@
 # otras instrucciones    
 # ```
 
-# En las instrucciones dentro de `for` el valor de objeto varía conforme se vaya recorriendo la lista. Un ejemplo muy sencillo puede ser:
+# En las instrucciones dentro de `for` el valor de objeto varía conforme se vaya recorriendo la colección. Un ejemplo muy sencillo puede ser:
 
 # In[1]:
 
@@ -61,7 +61,7 @@ for Elemento in Lista:
 print('Fin del bucle')
 
 
-# En la colección que recorre el `for` debe haber un  elemento iterable. Hay elementos iterables que no son tan evidentes. Por ejemplo:
+# La colección que recorre el `for` debe ser un  elemento iterable. Hay elementos iterables que no son tan evidentes. Por ejemplo:
 
 # In[2]:
 
@@ -70,7 +70,7 @@ for i in 'Hola Mundo':
     print(i)
 
 
-# El ejemplo anterior recorrio cada caracter de la cadena de caractéres, esta cadena se reconoce como elemento iterable, al respecto tenemos los siguientes tipos de datos:
+# El ejemplo anterior recorrió cada caracter de la cadena de caractéres, esta cadena se reconoce como elemento iterable, al respecto tenemos los siguientes tipos de datos:
 # 
 # * **Cadenas de caracteres**
 # * **Listas**
@@ -94,7 +94,7 @@ iter('Hola')
 iter(20)
 
 
-# A parte de los tipos de datos mencionados anteriormente en Python hay una gran cantidad de datos iterables, la función mencionada `iter` es la que permite recorrer los elementos de una lista. De hecho podemos utilizarla de nuestra parte usando su complemento `next()`. Veamos:
+# Aparte de los tipos de datos mencionados anteriormente en Python hay una gran cantidad de datos iterables, el método mencionado `iter`  sobre el objeto lista es el que permite recorrer los elementos de una lista. De hecho podemos utilizarla de nuestra parte usando su complemento `next()`. Veamos:
 
 # In[13]:
 
@@ -132,7 +132,7 @@ while True:
     print(elemento)
 
 
-# Indiscutiblemente `for` recorre las listas ayudandose del itearable y la función next. `StopIteration` muestra el final del camino del for. Veremos a continuación unos elementos que son extremadamente útiles para trabajar con `for`.
+# Indiscutiblemente `for` recorre las listas ayudandose del iterador y la función next. `StopIteration` muestra el final del camino del for. Veremos a continuación unos elementos que son extremadamente útiles para trabajar con `for`.
 
 # 
 # 
@@ -140,17 +140,10 @@ while True:
 # 
 # ### range()
 # 
-# `range()`es una función de Python que genera un elemento iterable que recorre un rango numérico, si revisamos la ayuda de esta función tenemos:
+# `range()`es una función de Python que genera un elemento iterable que recorre un rango numérico, tenemos:
 # 
 
-# In[28]:
-
-
-
-help(range)
-
-
-# Podemos validar que:
+# 
 # ```Python 
 # range(start, stop, step) ## start hace referencia al inicio del rango numérico, 
 #                          ## por defecto es 0.
@@ -191,9 +184,17 @@ for i in lista:
     print(i)
 
 
+# Si utilizamos `help` para entender como funcione `range()`tenemos:
+
+# In[3]:
+
+
+help(range)
+
+
 # ### enumerate()
 # 
-# `enumerate()` convierte una lista en una lista de tuplas que indica el índice del elemento. `for`me permite desentrañar la función:
+# `enumerate()` crea una lista a partir del argumento que puede ser un elemento iterable en el cual cada elemento corresponde a una tupla que contiene un índice para el elemento y el elemento al que alude. En el siguiente script vemos como `for` permite desentrañar la función:
 
 # In[33]:
 
@@ -247,7 +248,7 @@ print('Bucle terminado.')
 
 # ## else en for
 # 
-# Igual que en `while` for puede contener `else`, su interpretación es similar:
+# Igual que en `while` for puede trabajarse con `else`, su interpretación es similar:
 
 # In[44]:
 
