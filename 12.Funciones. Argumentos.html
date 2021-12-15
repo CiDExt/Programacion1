@@ -334,8 +334,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#argumentos-de-longitud-variable">
-   Argumentos de longitud variable:
+  <a class="reference internal nav-link" href="#argumentos-opcionales">
+   Argumentos opcionales:
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -376,26 +376,26 @@
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>¿Qué sabemos de las funciones?</p>
-<p>En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos a manera de manipular los argumentos de las funciones que creemos.</p>
+<p>En el cuaderno anterior, aprendimos a definir y a invocar funciones. Ahora aprenderemos la manera de manipular los argumentos de las funciones que creemos.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1e289520-eed2-4a7d-93e3-4b697bb3fa83" name="f247eeac-8585-46f3-8578-ca05fb95ff18" type="radio">
-</input><label class="tabbed-label" for="1e289520-eed2-4a7d-93e3-4b697bb3fa83">
+<input checked="checked" id="abeaf8ed-ab36-4bbc-83f5-1c69502b9fb9" name="9945f0c7-72ae-4d5e-b0e6-38aedd0b2ad4" type="radio">
+</input><label class="tabbed-label" for="abeaf8ed-ab36-4bbc-83f5-1c69502b9fb9">
 ¿El orden importa?</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
-<p>En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, <strong>el orden es fundamental</strong>.</p>
+<p>En las funciones que definimos ocurre lo mismo que en las funciones matemáticas, <strong>el orden de los argumentos es fundamental</strong>.</p>
 </div>
 </div>
-<input id="fae5d002-db63-4731-a925-6d6f14a60dff" name="f247eeac-8585-46f3-8578-ca05fb95ff18" type="radio">
-</input><label class="tabbed-label" for="fae5d002-db63-4731-a925-6d6f14a60dff">
+<input id="14081d78-40d0-4b6e-93c6-42d121799a1b" name="9945f0c7-72ae-4d5e-b0e6-38aedd0b2ad4" type="radio">
+</input><label class="tabbed-label" for="14081d78-40d0-4b6e-93c6-42d121799a1b">
 Ejemplo</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">La resta</p>
 <p>Sabemos que 2-3 es diferente a 3-2.</p>
 </div>
 </div>
-<input id="529a0b82-f061-4fff-ba75-d9a816c13c6b" name="f247eeac-8585-46f3-8578-ca05fb95ff18" type="radio">
-</input><label class="tabbed-label" for="529a0b82-f061-4fff-ba75-d9a816c13c6b">
+<input id="c3ccf744-27b2-4771-b05d-cc00c596c9fe" name="9945f0c7-72ae-4d5e-b0e6-38aedd0b2ad4" type="radio">
+</input><label class="tabbed-label" for="c3ccf744-27b2-4771-b05d-cc00c596c9fe">
 Ejemplo</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Al vestirse</p>
@@ -435,7 +435,7 @@ Ejemplo</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<p>Nota que en la función anterior el segundo argumento tiene un valor predeterminado <code class="docutils literal notranslate"><span class="pre">propina=10</span></code>, esto quiere decir que, si no modificamos su valor, la función asumirá éste como el valor predeterminado, es decir, las propinas serán del <span class="math notranslate nohighlight">\(10\%\)</span> salvo que se indique algún otro valor. Por ejemplo si deseamos calcular el total de la cuenta con una propina del <span class="math notranslate nohighlight">\(7\%\)</span>, ejecutamos las siguientes líneas de código:</p>
+<p>Nota que en la función anterior el segundo argumento tiene un valor predeterminado <code class="docutils literal notranslate"><span class="pre">propina=10</span></code>, esto quiere decir que, si no modificamos su valor, la función asumirá este como el valor predeterminado, es decir, las propinas serán del <span class="math notranslate nohighlight">\(10\%\)</span> salvo que se indique algún otro valor. Por ejemplo si deseamos calcular el total de la cuenta con una propina del <span class="math notranslate nohighlight">\(7\%\)</span>, ejecutamos las siguientes líneas de código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">costos</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
@@ -468,9 +468,9 @@ Ejemplo</label><div class="tabbed-content docutils">
 </div>
 <p>Lo presentado en la línea anterior suele emplearse únicamente cuando se tienen diferentes variables predeterminadas y no con las variables obligatorias, esto con el fin de evitar malas interpretaciones de las entradas.</p>
 </div>
-<div class="section" id="argumentos-de-longitud-variable">
-<h2>Argumentos de longitud variable:<a class="headerlink" href="#argumentos-de-longitud-variable" title="Permalink to this headline">¶</a></h2>
-<p>En diversos lenguajes de programación existe dos tipos de argumentos ampliamente utilizados <code class="docutils literal notranslate"><span class="pre">args</span></code> y <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> (<strong>arg</strong>ument<strong>s</strong> y <strong>k</strong>ey<strong>w</strong>ord<strong>arg</strong>ument<strong>s</strong> ), en Python los <code class="docutils literal notranslate"><span class="pre">args</span></code> son tuplas y los <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> son diccionarios (estructuras que estudiaremos en profundidad más adelante), estos argumentos permiten agregar cualquier cantidad de entradas a las funciones como podemos ver en las siguientes funciones:</p>
+<div class="section" id="argumentos-opcionales">
+<h2>Argumentos opcionales:<a class="headerlink" href="#argumentos-opcionales" title="Permalink to this headline">¶</a></h2>
+<p>En diversos lenguajes de programación existe dos tipos de argumentos ampliamente utilizados <code class="docutils literal notranslate"><span class="pre">args</span></code> (<strong>arg</strong>ument<strong>s</strong>:  argumentos opcionales no nombrados) y <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> (<strong>k</strong>ey<strong>w</strong>ord<strong>arg</strong>ument<strong>s</strong>: argumentos opcionales nombrados), en Python los <code class="docutils literal notranslate"><span class="pre">args</span></code> son tuplas y los <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> son diccionarios (estructuras que estudiaremos en profundidad más adelante), estos argumentos permiten agregar cualquier cantidad de entradas a las funciones como podemos ver en las siguientes funciones:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
@@ -513,11 +513,11 @@ Ejemplo</label><div class="tabbed-content docutils">
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_30798</span><span class="o">/</span><span class="mf">1307643930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_459084</span><span class="o">/</span><span class="mf">1307643930.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Note que si se introduce un argumento no numérico la función generará un error</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">f1</span><span class="p">(</span><span class="s1">&#39;hola&#39;</span><span class="p">)</span>
 
-<span class="nn">/tmp/ipykernel_30798/3653633694.py</span> in <span class="ni">f1</span><span class="nt">(*args)</span>
+<span class="nn">/tmp/ipykernel_459084/3653633694.py</span> in <span class="ni">f1</span><span class="nt">(*args)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
@@ -548,7 +548,7 @@ Ejemplo</label><div class="tabbed-content docutils">
 </div>
 </div>
 <p>Es importante que note que en la definición de la función, el argumento que será una tupla de tamaño indefinido lleva un <code class="docutils literal notranslate"><span class="pre">*</span></code> antes, esto es lo que le indica a Python el tipo de variable que es, y dentro de la función se utiliza la variable sin el <code class="docutils literal notranslate"><span class="pre">*</span></code>. El nombre puede ser cualquiera pero por convención suele emplearse <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p>
-<p>Los tipos de entrada de éstas variables pueden ser diversos, por ejemplo:</p>
+<p>Los tipos de entrada de estas variables pueden ser diversos, por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imprime</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
@@ -586,7 +586,7 @@ En la entrada 1 se almacenó: 1 y es del tipo &lt;class &#39;int&#39;&gt;
 </div>
 </div>
 </div>
-<p>También podemos combinar las variables bien sean obligatorias u opcionales con éste tipo de argumentos, por ejemplo:</p>
+<p>También podemos combinar las variables bien sean obligatorias u opcionales con este tipo de argumentos, por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">argv</span><span class="p">):</span>
@@ -616,7 +616,7 @@ Siguiente argumento en la tupla *argv : Colombia
 </div>
 </div>
 </div>
-<p>Si intentamos escribir primero las variables de tamaño indefinido y luego las que necesitamos realmente obtendremos un error, ya que el Python no sabrá en qué momento debe parar de llenar la tupla y seguir con los argumentos fijos, salvo que se especifiquen sus valores como vimos anteriormente:</p>
+<p>Si intentamos escribir primero las variables de tamaño indefinido y luego las que necesitamos realmente obtendremos un error, ya que Python no sabrá en qué momento debe parar de llenar la tupla y seguir con los argumentos fijos, salvo que se especifiquen sus valores como vimos anteriormente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f3</span><span class="p">(</span><span class="o">*</span><span class="n">argv</span><span class="p">,</span><span class="n">argn</span><span class="p">):</span>
@@ -787,7 +787,7 @@ Los valores ingresados en el diccionario **kwargs son:  {&#39;val0&#39;: 0, &#39
 </div>
 <div class="section" id="comentarios-finales">
 <h2>Comentarios finales:<a class="headerlink" href="#comentarios-finales" title="Permalink to this headline">¶</a></h2>
-<p>Recuerda que para evitar confusiones en la ejecución de la función los parámetros de ésta deben ir así: variables, variables con asignaciones predeterminadas, args y kwargs</p>
+<p>Recuerda que para evitar confusiones en la ejecución de la función los parámetros de esta deben ir así: variables, variables con asignaciones predeterminadas, args y kwargs</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nombre_de_la_función</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">vn</span><span class="p">,</span><span class="n">vp1</span><span class="o">=</span><span class="s1">&#39;algo&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">vpm</span><span class="o">=</span><span class="s1">&#39;algo&#39;</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="n">lista_de_instrucciones</span>
     <span class="k">return</span> <span class="n">resultado</span>

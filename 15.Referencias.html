@@ -332,6 +332,11 @@
   <a class="reference internal nav-link" href="#todo-es-objeto">
    ¡Todo es objeto!
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diferencias-de-las-variables-entre-c-y-python">
+   Diferencias de las variables entre C y Python
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#objetos-mutables-vs-inmutables">
@@ -339,11 +344,6 @@
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diferencias-de-las-variables-entre-c-y-python">
-   Diferencias de las variables entre C y Python
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cierre">
@@ -368,16 +368,16 @@
 <p>¿Cómo vamos?</p>
 <p>Hasta el momento debemos tener claro lo siguiente:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2625a926-7859-4d79-9b79-fd7d18f1e7f1" name="8ca95d95-aba7-48e8-908e-5170a6b61ca1" type="radio">
-</input><label class="tabbed-label" for="2625a926-7859-4d79-9b79-fd7d18f1e7f1">
+<input checked="checked" id="de7734da-de10-484e-b67c-c79a7315e5f1" name="4f59b4d7-7257-406c-83ab-29b90042147e" type="radio">
+</input><label class="tabbed-label" for="de7734da-de10-484e-b67c-c79a7315e5f1">
 Funciones en Python</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
 <p>Hemos logrado crear funciones en Python, así mismo estudiamos como documentarlas y las diferentes formas de definirlas según los argumentos que reciben.</p>
 </div>
 </div>
-<input id="06f32522-9f8b-4e66-940b-d1b2db1af55c" name="8ca95d95-aba7-48e8-908e-5170a6b61ca1" type="radio">
-</input><label class="tabbed-label" for="06f32522-9f8b-4e66-940b-d1b2db1af55c">
+<input id="f0a6d873-f85c-4e1c-b129-563cf04bf186" name="4f59b4d7-7257-406c-83ab-29b90042147e" type="radio">
+</input><label class="tabbed-label" for="f0a6d873-f85c-4e1c-b129-563cf04bf186">
 Variables</label><div class="tabbed-content docutils">
 <div class="tip admonition">
 <p class="admonition-title">Recordemos…</p>
@@ -481,6 +481,28 @@ True
 <li><p><a class="reference external" href="https://docs.python.org/es/3/c-api/intro.html#reference-counts">Conteo de referencias</a>, para hacer gestión de memoria, ver <a class="reference external" href="https://realpython.com/python-memory-management/">https://realpython.com/python-memory-management/</a> y</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/es/3/reference/datamodel.html#types">Tipo</a> que determina qué tipo de objeto es (por ejemplo, un número entero, una lista o una función definida por el usuario).</p></li>
 </ul>
+</div>
+<div class="section" id="diferencias-de-las-variables-entre-c-y-python">
+<h2>Diferencias de las variables entre C y Python<a class="headerlink" href="#diferencias-de-las-variables-entre-c-y-python" title="Permalink to this headline">¶</a></h2>
+<p><strong>En el caso de C</strong></p>
+<p>Si hacemos lo siguiente:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">152</span>
+</pre></div>
+</div>
+<p>estamos siguiendo el siguiente proceso:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bd815ba39a10d85c08574" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<p>Lo que ocurre es que se asigna un espaciode memoria para un número entero, el valor 152 se almacena en ese espacio de memoria y se indica que <code class="docutils literal notranslate"><span class="pre">x</span></code> apunta a ese valor.</p>
+<p>Si cambiamos el valor de la variable,</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">898</span>
+</pre></div>
+</div>
+<p>entonces cambiamos el valor guardado en ese espacio de memoria:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bdc85672a090d98e7f21e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p><strong>En el caso de Python</strong></p>
+<p>El ejercicio análogo hace un proceso un poco más largo. Crea un <code class="docutils literal notranslate"><span class="pre">PyObject</span></code>, identifica que el tipo de ese elemento es entero indica que ese objeto tiene valor 152, por otro lado crea un nombre llamado <code class="docutils literal notranslate"><span class="pre">x</span></code>, apunta <code class="docutils literal notranslate"><span class="pre">x</span></code> a <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> y aumenta el contador de referencias del <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> en 1:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619beb4f672a090d98e7f3ad" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Observe que la memoria guarda el objeto 152, en este caso el nombre <code class="docutils literal notranslate"><span class="pre">x</span></code> no tiene dirección de memoria, si hacemos una actualización como  <code class="docutils literal notranslate"><span class="pre">x=153</span></code> ocurre lo siguiente:</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bf2d9672a090d98e7f4a0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Si hacemos algo más interesante, como por ejemplo <code class="docutils literal notranslate"><span class="pre">y=</span> <span class="pre">x</span> </code></p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619c230456355d0dcbd80610" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<p>Note que el contador de referencias se va actualizando cada vez que se hace una asignación nueva.</p>
 <div class="section" id="objetos-mutables-vs-inmutables">
 <h3>Objetos mutables vs inmutables<a class="headerlink" href="#objetos-mutables-vs-inmutables" title="Permalink to this headline">¶</a></h3>
 <p>Recuerdas la gran diferencia de la lista y la tupla, la lista se puede modificar cuando se quiera, en la tupla no puedo hacer eso, por ejemplo:</p>
@@ -515,7 +537,7 @@ True
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_30852</span><span class="o">/</span><span class="mf">3399445393.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_459166</span><span class="o">/</span><span class="mf">3399445393.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 
@@ -799,28 +821,6 @@ Su cuadrado es: 4 y su identidad es: 140227037911440
 </div>
 <p>Estos objetos cambian no solo en Python sino que en la memoria también, a diferencia de los elementos inmutables que asumen cambios en nuevos espacios de memoria, los elementos mutables cambian en ese mismo espacio.</p>
 </div>
-</div>
-<div class="section" id="diferencias-de-las-variables-entre-c-y-python">
-<h2>Diferencias de las variables entre C y Python<a class="headerlink" href="#diferencias-de-las-variables-entre-c-y-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>En el caso de C</strong></p>
-<p>Si hacemos lo siguiente:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">152</span>
-</pre></div>
-</div>
-<p>estamos siguiendo el siguiente proceso:</p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bd815ba39a10d85c08574" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-<p>Lo que ocurre es que se asigna un espaciode memoria para un número entero, el valor 152 se almacena en ese espacio de memoria y se indica que <code class="docutils literal notranslate"><span class="pre">x</span></code> apunta a ese valor.</p>
-<p>Si cambiamos el valor de la variable,</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">898</span>
-</pre></div>
-</div>
-<p>entonces cambiamos el valor guardado en ese espacio de memoria:</p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bdc85672a090d98e7f21e" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p><strong>En el caso de Python</strong></p>
-<p>El ejercicio análogo hace un proceso un poco más largo. Crea un <code class="docutils literal notranslate"><span class="pre">PyObject</span></code>, identifica que el tipo de ese elemento es entero indica que ese objeto tiene valor 152, por otro lado crea un nombre llamado <code class="docutils literal notranslate"><span class="pre">x</span></code>, apunta <code class="docutils literal notranslate"><span class="pre">x</span></code> a <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> y aumenta el contador de referencias del <code class="docutils literal notranslate"><span class="pre">PyObject</span></code> en 1:</p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619beb4f672a090d98e7f3ad" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Observe que la memoria guarda el objeto 152, en este caso el nombre <code class="docutils literal notranslate"><span class="pre">x</span></code> no tiene dirección de memoria, si hacemos una actualización como  <code class="docutils literal notranslate"><span class="pre">x=153</span></code> ocurre lo siguiente:</p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619bf2d9672a090d98e7f4a0" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div><p>Si hacemos algo más interesante, como por ejemplo <code class="docutils literal notranslate"><span class="pre">y=</span> <span class="pre">x</span> </code></p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/619c230456355d0dcbd80610" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
-<p>Note que el contador de referencias se va actualizando cada vexz que se hace una asignación nueva.</p>
 </div>
 <div class="section" id="cierre">
 <h2>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h2>
