@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Computación simbólica con Sympy &#8212; Programación 1</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,50 +20,66 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Matplotlib - Gráficos en Python" href="24.Matplotlib.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,9 +88,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -87,17 +106,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introducción a la programación
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introducción a la programación
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -226,107 +246,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/25.Sympy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
-                    class="fab fa-github"></i>repositorio</button></a>
-        <a class="issues-button"
-            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F25.Sympy.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-        title="Modo de pantalla completa"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/25.Sympy.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenido
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/25.Sympy.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F25.Sympy.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/25.Sympy.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computacion-simbolica">
    Computación simbólica
@@ -419,42 +541,132 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Computación simbólica con Sympy</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computacion-simbolica">
+   Computación simbólica
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceptos-basicos">
+   Conceptos básicos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simbolos">
+     Símbolos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sustitucion">
+     Sustitución
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convertir-cadenas-a-expresiones-sympy">
+       Convertir cadenas a expresiones SymPy
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#obtener-el-valor-en-punto-flotante">
+       Obtener el valor en punto flotante
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecuaciones">
+     Ecuaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#igualdad-de-expresiones-y-simplificacion">
+   Igualdad de expresiones y simplificación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simplificacion-de-funciones-polinomicas-racionales">
+     Simplificación de funciones polinómicas racionales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculo">
+   Cálculo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#derivadas">
+     Derivadas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integrales">
+     Integrales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limites">
+     Límites
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solucionar-ecuaciones">
+   Solucionar ecuaciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistemas-de-ecuaciones-lineales">
+     Sistemas de ecuaciones lineales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sistemas-no-lineales">
+     Sistemas no lineales
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="computacion-simbolica-con-sympy">
-<h1>Computación simbólica con Sympy<a class="headerlink" href="#computacion-simbolica-con-sympy" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="computacion-simbolica-con-sympy">
+<h1>Computación simbólica con Sympy<a class="headerlink" href="#computacion-simbolica-con-sympy" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Para tener presente</p>
 <p>El paquete <code class="docutils literal notranslate"><span class="pre">sympy</span></code> nos brinda la posibilidad de usar expresiones aproximadas de manera simbólica privilegiando el símbolo frente a la evaluación.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="44c946ec-aa13-47a0-9707-e2c35771a109" name="16dc7343-49eb-45c7-a73f-f1ed6ca2b3f8" type="radio">
-</input><label class="tabbed-label" for="44c946ec-aa13-47a0-9707-e2c35771a109">
-¿Para qué?</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Importante</p>
-<p>Para realizar cálculo simbólico y así apoyar el proceso de enseñanza-aprendizaje de las matemáticas y además solucionar algunos percances computacionales.</p>
 </div>
-</div>
-<input id="8566fe9d-8c53-4483-8682-6b7f97f479fd" name="16dc7343-49eb-45c7-a73f-f1ed6ca2b3f8" type="radio">
-</input><label class="tabbed-label" for="8566fe9d-8c53-4483-8682-6b7f97f479fd">
-¿Tiene documentación?</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Por supuesto:</p>
-<p>En la página del paquete <a class="reference external" href="https://docs.sympy.org/latest/index.html"><code class="docutils literal notranslate"><span class="pre">Sympy</span></code></a> podemos encontrar toda la información relevante.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="computacion-simbolica">
-<h2>Computación simbólica<a class="headerlink" href="#computacion-simbolica" title="Permalink to this headline">¶</a></h2>
+<section id="computacion-simbolica">
+<h2>Computación simbólica<a class="headerlink" href="#computacion-simbolica" title="Permalink to this headline">#</a></h2>
 <p>Hasta el momento hemos trabajado con varios elementos matemáticos que en ocasiones se toman de manera aproximada, por ejemplo, la raíz cuadrada de un número entero. Aunque hay algunos números cuya raíz es entera la mayoría tiene raices cuadradas irracionales y la máquina nos ofrece apenas una aproximación a esos valores.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -491,7 +703,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_459374</span><span class="o">/</span><span class="mf">115373397.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">sympy</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sympy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 
@@ -522,12 +734,12 @@
 <p><strong>El poder de la computación simbólica</strong></p>
 <p>El poder real de un sistema de cálculo simbólico como <strong>SymPy</strong> es la capacidad de hacer todo tipo de cálculos simbólicamente. SymPy puede simplificar expresiones, calcular derivadas, integrales y límites, resolver ecuaciones, trabajar con matrices y mucho, mucho más, y hacerlo todo simbólicamente. Incluye módulos para trazar, imprimir (como salida impresa en 2D de fórmulas matemáticas, LATEX), generación de código, física, estadística, combinatoria, teoría de números, geometría, lógica y más.</p>
 <p><em>Tomado de</em> <a class="reference external" href="https://docs.sympy.org/latest/tutorial/intro.html">https://docs.sympy.org/latest/tutorial/intro.html</a></p>
-</div>
-<div class="section" id="conceptos-basicos">
-<h2>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="conceptos-basicos">
+<h2>Conceptos básicos<a class="headerlink" href="#conceptos-basicos" title="Permalink to this headline">#</a></h2>
 <p>Para iniciar el trabajo con la librería sympy debemos aclarar rutinas que son fundamentales para iniciar cualquier trabajo con este paquete. En primer lugar, por ejemplo, hay que aclarar que vamos a usar un símbolo así mismo, las ecuaciones tienen que poder expresarse y no podemos usar ni <code class="docutils literal notranslate"><span class="pre">=</span></code> ni  <code class="docutils literal notranslate"><span class="pre">==</span></code>. Veamos algunos de estos conceptos básicos.</p>
-<div class="section" id="simbolos">
-<h3>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">¶</a></h3>
+<section id="simbolos">
+<h3>Símbolos<a class="headerlink" href="#simbolos" title="Permalink to this headline">#</a></h3>
 <p>Para usar variables simbólicas debemos definirlas, usamos la función symbols:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,9 +823,9 @@
 \[\displaystyle comoveo + 8\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="sustitucion">
-<h3>Sustitución<a class="headerlink" href="#sustitucion" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sustitucion">
+<h3>Sustitución<a class="headerlink" href="#sustitucion" title="Permalink to this headline">#</a></h3>
 <p>Para remplazar valores en una expresión usamos <code class="docutils literal notranslate"><span class="pre">subs</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -747,8 +959,8 @@
 \[\displaystyle 40\]</div>
 </div>
 </div>
-<div class="section" id="convertir-cadenas-a-expresiones-sympy">
-<h4>Convertir cadenas a expresiones SymPy<a class="headerlink" href="#convertir-cadenas-a-expresiones-sympy" title="Permalink to this headline">¶</a></h4>
+<section id="convertir-cadenas-a-expresiones-sympy">
+<h4>Convertir cadenas a expresiones SymPy<a class="headerlink" href="#convertir-cadenas-a-expresiones-sympy" title="Permalink to this headline">#</a></h4>
 <p>Usamos sympify para convertir cadenas en expresiones:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -799,9 +1011,9 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="obtener-el-valor-en-punto-flotante">
-<h4>Obtener el valor en punto flotante<a class="headerlink" href="#obtener-el-valor-en-punto-flotante" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="obtener-el-valor-en-punto-flotante">
+<h4>Obtener el valor en punto flotante<a class="headerlink" href="#obtener-el-valor-en-punto-flotante" title="Permalink to this headline">#</a></h4>
 <p>Usamos <code class="docutils literal notranslate"><span class="pre">evalf</span></code> para obtener el valor en punto flotante.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -882,10 +1094,10 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="ecuaciones">
-<h3>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="ecuaciones">
+<h3>Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permalink to this headline">#</a></h3>
 <p>Como sabemos <code class="docutils literal notranslate"><span class="pre">=</span></code> y <code class="docutils literal notranslate"><span class="pre">==</span></code> ya fueron usado en el lenguaje para unas operaciones específicas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -910,10 +1122,10 @@
 \[\displaystyle x + 1 = 4\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="igualdad-de-expresiones-y-simplificacion">
-<h2>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="igualdad-de-expresiones-y-simplificacion">
+<h2>Igualdad de expresiones y simplificación<a class="headerlink" href="#igualdad-de-expresiones-y-simplificacion" title="Permalink to this headline">#</a></h2>
 <p>Ahora saltemos y hagamos algunas matemáticas interesantes. Una de las características más útiles de un sistema de manipulación simbólica es la capacidad de simplificar expresiones matemáticas.</p>
 <p>SymPy tiene docenas de funciones para realizar varios tipos de simplificación, pero hay una función general llamada <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> que intenta aplicar todas estas funciones de manera inteligente para llegar a la forma más simple de una expresión. Aquí hay unos ejemplos:</p>
 <p>Es importante tener esta definición en cuenta cuando se presentan igualdades entre expresiones.</p>
@@ -973,8 +1185,8 @@
 </div>
 </div>
 <p>Un problema de <code class="docutils literal notranslate"><span class="pre">simplify()</span></code> es que puede ser innecesariamente lento, ya que intenta muchos tipos de simplificaciones antes de elegir la mejor. Si ya sabe exactamente qué tipo de simplificación está buscando, es mejor aplicar las funciones de simplificación específicas que aplican esas simplificaciones.</p>
-<div class="section" id="simplificacion-de-funciones-polinomicas-racionales">
-<h3>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">¶</a></h3>
+<section id="simplificacion-de-funciones-polinomicas-racionales">
+<h3>Simplificación de funciones polinómicas racionales<a class="headerlink" href="#simplificacion-de-funciones-polinomicas-racionales" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">expand()</span></code> es una de las funciones de simplificación más comunes en SymPy. Aunque tiene muchos ámbitos, por ahora, consideraremos su función en la expansión de expresiones polinómicas. Por ejemplo:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1238,10 +1450,10 @@
 \[\displaystyle \frac{1}{1 + \frac{1}{2 x + \frac{1}{3}}}\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="calculo">
-<h2>Cálculo<a class="headerlink" href="#calculo" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="calculo">
+<h2>Cálculo<a class="headerlink" href="#calculo" title="Permalink to this headline">#</a></h2>
 <p>SymPy también permite realizar tareas básicas del cálculo diferencial e integral.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1251,8 +1463,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="derivadas">
-<h3>Derivadas<a class="headerlink" href="#derivadas" title="Permalink to this headline">¶</a></h3>
+<section id="derivadas">
+<h3>Derivadas<a class="headerlink" href="#derivadas" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1">#derivadas en una sola variable</span>
@@ -1366,9 +1578,9 @@
 \[\displaystyle x z \left(x^{2} y^{2} z^{2} + 5 x y z + 4\right) e^{x y z}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="integrales">
-<h3>Integrales<a class="headerlink" href="#integrales" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="integrales">
+<h3>Integrales<a class="headerlink" href="#integrales" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span> <span class="c1"># Integrales</span>
@@ -1493,9 +1705,9 @@
 \[\displaystyle \log{\left(e^{x} + 1 \right)} + \frac{e^{x}}{x^{2} - 1}\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="limites">
-<h3>Límites<a class="headerlink" href="#limites" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="limites">
+<h3>Límites<a class="headerlink" href="#limites" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#Límites</span>
@@ -1576,10 +1788,10 @@
 \[\displaystyle -5 + \frac{\left(x - 6\right)^{2}}{2} + \frac{\left(x - 6\right)^{3}}{6} + \frac{\left(x - 6\right)^{4}}{24} + \frac{\left(x - 6\right)^{5}}{120} + \frac{\left(x - 6\right)^{6}}{720} + \frac{\left(x - 6\right)^{7}}{5040} + \frac{\left(x - 6\right)^{8}}{40320} + \frac{\left(x - 6\right)^{9}}{362880} + x + O\left(\left(x - 6\right)^{10}; x\rightarrow 6\right)\]</div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="solucionar-ecuaciones">
-<h2>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="solucionar-ecuaciones">
+<h2>Solucionar ecuaciones<a class="headerlink" href="#solucionar-ecuaciones" title="Permalink to this headline">#</a></h2>
 <p>Ahora hagamos una rápida exploración por las diferentes ecuaciones que se resuelven en Sympy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1763,8 +1975,8 @@
 \[\displaystyle \left\{x\; \middle|\; x \in \mathbb{C} \wedge - x + \cos{\left(x \right)} = 0 \right\}\]</div>
 </div>
 </div>
-<div class="section" id="sistemas-de-ecuaciones-lineales">
-<h3>Sistemas de ecuaciones lineales<a class="headerlink" href="#sistemas-de-ecuaciones-lineales" title="Permalink to this headline">¶</a></h3>
+<section id="sistemas-de-ecuaciones-lineales">
+<h3>Sistemas de ecuaciones lineales<a class="headerlink" href="#sistemas-de-ecuaciones-lineales" title="Permalink to this headline">#</a></h3>
 <p>Usamos <code class="docutils literal notranslate"><span class="pre">linsolve</span></code> para encontrar las soluciones:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1799,9 +2011,9 @@
 \[\displaystyle \emptyset\]</div>
 </div>
 </div>
-</div>
-<div class="section" id="sistemas-no-lineales">
-<h3>Sistemas no lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sistemas-no-lineales">
+<h3>Sistemas no lineales<a class="headerlink" href="#sistemas-no-lineales" title="Permalink to this headline">#</a></h3>
 <p>Usaremos <code class="docutils literal notranslate"><span class="pre">nonlinsolve</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1832,9 +2044,9 @@
 \[\displaystyle \left\{\left( 2, \  \frac{1}{2}\right)\right\}\]</div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1858,45 +2070,41 @@
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="24.Matplotlib.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Matplotlib - Gráficos en Python</p>
-            </div>
-        </a>
-    </div>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="24.Matplotlib.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Matplotlib - Gráficos en Python</p>
+        </div>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
-        
-            &copy; Derechos de autor 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

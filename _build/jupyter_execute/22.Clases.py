@@ -375,8 +375,6 @@ print(f2-f1)
 # In[ ]:
 
 
-
-
 class Humano(): #Creamos la clase Humano
     def __init__(self, edad, nombre, ocupacion): #Definimos el parámetro edad , nombre y ocupación
         self.edad = edad # Definimos que el atributo edad, sera la edad asignada

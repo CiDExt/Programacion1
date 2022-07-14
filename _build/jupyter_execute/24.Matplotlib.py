@@ -80,19 +80,19 @@ plt.plot([1, 2, 3, 4], [1, 4, 2, 3])
 
 # Sin necesidad de definir nuevas figuras veremos un ejemplo con algunos elementos descritos en la figura:
 
-# In[3]:
+# In[2]:
 
 
 x=np.linspace(0, 10, 101)
 
 
-# In[4]:
+# In[3]:
 
 
 np.sin(x)
 
 
-# In[5]:
+# In[4]:
 
 
 x = np.linspace(0, 10, 101)
@@ -132,7 +132,7 @@ from ipywidgets import interact
 from numpy import *
 
 
-# In[7]:
+# In[5]:
 
 
 def graficadoradefuncionestrigonometricas(t):
@@ -143,13 +143,13 @@ def graficadoradefuncionestrigonometricas(t):
     return
 
 
-# In[8]:
+# In[7]:
 
 
 graficadoradefuncionestrigonometricas('sin(x)')
 
 
-# In[9]:
+# In[8]:
 
 
 lista=["sin(x)","cos(x)","tan(x)"]
@@ -163,7 +163,7 @@ interact(graficadoradefuncionestrigonometricas,t=lista)
 # ## Figura y ejes como variables
 # Podemos usar instancias para expresar tanto a la figura como los ejes sobre la figura:
 
-# In[10]:
+# In[9]:
 
 
 fig = plt.figure()
@@ -179,7 +179,7 @@ plt.show()
 # 
 # En Matplotlib se puiede definir sobre una misma figura varias zonas de dibujo:
 
-# In[11]:
+# In[10]:
 
 
 x=np.linspace(0,10,100)
@@ -226,7 +226,7 @@ plt.show()
 # 
 # Veamos un ejemplo:
 
-# In[12]:
+# In[11]:
 
 
 fig = plt.figure(figsize=(10,5))
@@ -252,7 +252,7 @@ plt.show()
 
 # ### El commando `plt.plot()`
 
-# In[13]:
+# In[12]:
 
 
 plt.plot([1,2,4,3,1,2,8,7])
@@ -262,7 +262,7 @@ plt.show()
 
 # Notemos que el índice del valor aparece en el eje horizontal y el valor en el eje vertical.
 
-# In[14]:
+# In[13]:
 
 
 plt.plot([1,2,4,3,1,2,8,7])
@@ -294,7 +294,7 @@ plt.show()
 
 # No obstante podemos graficar sin unir los puntos:
 
-# In[17]:
+# In[44]:
 
 
 #Gráfica de una lista de puntos:
@@ -303,7 +303,7 @@ plt.axis([0, 6, 0, 20])#ajuste de valores de los ejes
 plt.show()
 
 
-# In[18]:
+# In[45]:
 
 
 #Gráfico de una función aplicada a una lista
@@ -316,14 +316,14 @@ plt.show()
 
 # **Varias funciones en un mismo gráfico:**
 
-# In[19]:
+# In[46]:
 
 
 plt.plot(x,np.sin(x)+np.cos(x) , 'r--', x, np.sin(x), 'bs', x, np.cos(x), 'g^')
 plt.show()
 
 
-# In[20]:
+# In[47]:
 
 
 x = np.linspace(0, 2, 100)
@@ -340,7 +340,7 @@ ax.legend()
 # ## ¿Qué estilos podemos agregar a las líneas?
 # Las líneas, como hemos visto, tienen muchas propiedades que podemos modificar, entre ellas están: el color, el tipo de trazado, el grosor, etc. Con las siguientes líneas de comando veremos otras propiedades y las posibles modificaciones a realizar:
 
-# In[21]:
+# In[48]:
 
 
 line,=plt.plot([1,2,3])
@@ -352,7 +352,7 @@ plt.setp(line)
 # 
 # Para dar un buen ejemplo, iniciemos definiendo una base de datos aleatoria:
 
-# In[22]:
+# In[2]:
 
 
 data={}
@@ -363,7 +363,7 @@ data['Eje y'] = data['Eje x'] + 10 * np.random.randn(50)
 data['Tamaño'] = np.abs(data['Tamaño']) * 100
 
 
-# In[23]:
+# In[3]:
 
 
 import pandas as pd
@@ -371,19 +371,19 @@ data=pd.DataFrame(data)
 data
 
 
-# In[24]:
+# In[4]:
 
 
 data['Eje x']
 
 
-# In[25]:
+# In[5]:
 
 
 data['Eje y']
 
 
-# In[26]:
+# In[7]:
 
 
 plt.scatter('Eje x', 'Eje y',data=data)
@@ -395,7 +395,7 @@ plt.show()
 
 # En los gráficos de dispersión, podemos agregar más variables al gráfico sin aumentar su dimensión. Introduzcamos una variable, el tamaño:
 
-# In[27]:
+# In[8]:
 
 
 plt.scatter('Eje x', 'Eje y',s='Tamaño',data=data)#1
@@ -408,7 +408,7 @@ plt.show()
 
 # Además podemos agregar una cuarta variable, por ejemplo, usemos colores:
 
-# In[28]:
+# In[9]:
 
 
 plt.scatter('Eje x', 'Eje y',s='Tamaño',c='Color',cmap='inferno',data=data)#1
@@ -425,7 +425,7 @@ plt.show()
 # 
 # Con `Matplotlib` también podemos hacer gráficos de variables categóricas. Un ejemplo simple:
 
-# In[29]:
+# In[10]:
 
 
 x=["María", "Pedro", "Juan"]
@@ -435,7 +435,7 @@ plt.bar(x,y)
 
 # Si deseamos las barras horizontales y cambiar el color:
 
-# In[30]:
+# In[11]:
 
 
 x=["María", "Pedro", "Juan"]
@@ -445,7 +445,7 @@ plt.barh(x,y,color='y')
 
 # También podemos unir los puntos con líneas como hicimos al principio:
 
-# In[31]:
+# In[63]:
 
 
 x=["María", "Pedro", "Juan"]
@@ -455,7 +455,7 @@ plt.plot(x,y)
 
 # O también podríamos realizar el gráfico de dispersión para las categorías, aunque no es muy utilizado:
 
-# In[32]:
+# In[64]:
 
 
 x=["María", "Pedro", "Juan"]
@@ -465,7 +465,7 @@ plt.scatter(y,x)
 
 # En algunas oportunidades, las variables que tratemos se prestan para realizar un gráfico de barras apilado, es decir, una barra sobre la otra separando los colores por categoría:
 
-# In[33]:
+# In[15]:
 
 
 #Definamos los elementos con los que trabajaremos:
@@ -484,14 +484,14 @@ ax.legend()
 
 # Ahora, vamos a realizar la gráfica con los datos agrupados:
 
-# In[34]:
+# In[13]:
 
 
 x = np.arange(len(labels)) 
 x
 
 
-# In[35]:
+# In[14]:
 
 
 width=0.35
@@ -510,7 +510,7 @@ ax.legend()
 # ## Histogramas
 # Son gráficos empleados para dar un primer vistazo del comportamiento de la variable. Se hace mediante barras, y la altura de cada barra depende de la frecuencia de los valores representados:
 
-# In[36]:
+# In[17]:
 
 
 #Generamos valores aleatorios:
@@ -527,21 +527,21 @@ plt.grid(True)
 plt.show()
 
 
-# In[37]:
+# In[18]:
 
 
 #Valor de la probabilidad
 n
 
 
-# In[38]:
+# In[19]:
 
 
 #Valores de los extremos de las barras
 bins
 
 
-# In[39]:
+# In[20]:
 
 
 #Son los contenedores que se utilizan para crear el histograma
@@ -550,7 +550,7 @@ patches
 
 # Vamos a definir una función en la que podamos controlar dos aspectos: el primero será la cantidad de barras que se graficarán y el segundo la intensidad del color:
 
-# In[40]:
+# In[21]:
 
 
 mu, sigma = 100, 15
@@ -566,7 +566,7 @@ def histograma(n,a):
     return
 
 
-# In[41]:
+# In[22]:
 
 
 histograma(5,0.5)
@@ -574,7 +574,7 @@ histograma(5,0.5)
 
 # Ahora agregaremos los componentes de interactividad vistos en el cuaderno anterior:
 
-# In[42]:
+# In[23]:
 
 
 import ipywidgets as widgets
@@ -585,7 +585,7 @@ interact(histograma,n=widgets.IntSlider(value=30,min=1,max=50,description="Inter
 
 # Importaremos el paquete `math` para hacer un ejercicio muy interesante:
 
-# In[43]:
+# In[24]:
 
 
 from math import sqrt
@@ -596,7 +596,7 @@ eval("sqrt(x)")
 # ## Graficador de funciones
 # Haremos un graficador de funciones, cuyas variables serán: el nombre de la función (`nf`), los valores mínimo y máximo en el eje x (`xmin`, `xmax`) y también los valores mínimo y máximo en el eje y (`ymin`, `ymax`):
 
-# In[44]:
+# In[25]:
 
 
 def graffun(nf,xmin,xmax,ymin,ymax):
@@ -617,7 +617,7 @@ interact(graffun,nf='(x-3)**2',xmin=-10,xmax=2*np.pi,ymin=-1,ymax=1)
 # 
 # Si necesitamos introducir elementos aclaratorios en nuestras gráficas, podemos usar el comando `plt.text()` o el comando `plt.annotate()`:
 
-# In[45]:
+# In[26]:
 
 
 ax = plt.subplot(111)
@@ -634,7 +634,7 @@ plt.show()
 # 1. Las primeras entradas son las coordenadas del texto y la tercera es el texto que se desea agregar.
 # 
 
-# In[46]:
+# In[27]:
 
 
 ax = plt.subplot(111)
@@ -651,7 +651,7 @@ plt.show()
 
 # Ahora con una anotación:
 
-# In[47]:
+# In[91]:
 
 
 ax = plt.subplot(111)
@@ -668,13 +668,13 @@ plt.ylim(-2, 2)
 plt.show()
 
 
-# In[48]:
+# In[28]:
 
 
 get_ipython().run_line_magic('pinfo', 'plt.annotate')
 
 
-# In[49]:
+# In[94]:
 
 
 ax = plt.subplot(111)
@@ -692,7 +692,7 @@ plt.show()
 
 # Veámos los diferentes tipos de flecha que podemos emplear en nuestras anotaciones:
 
-# In[50]:
+# In[29]:
 
 
 def estiloflecha(l):
@@ -710,7 +710,8 @@ def estiloflecha(l):
     return
 
 
-# In[51]:
+
+# In[30]:
 
 
 interact(estiloflecha,l=['-','->','-[','|-|','-|>','fancy','simple','wedge'])
@@ -724,13 +725,13 @@ interact(estiloflecha,l=['-','->','-[','|-|','-|>','fancy','simple','wedge'])
 # 
 # Para modificar el backend usado en Jupyter usamos un comándo mágico `%matplotlib`. Veamos algunos ejemplos:
 
-# In[52]:
+# In[31]:
 
 
 import matplotlib
 
 
-# In[53]:
+# In[32]:
 
 
 import matplotlib
@@ -738,7 +739,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-# In[54]:
+# In[5]:
 
 
 get_ipython().run_line_magic('matplotlib', 'notebook')
@@ -752,13 +753,13 @@ plt.ylim(-2, 2)
 line
 
 
-# In[55]:
+# In[35]:
 
 
 #!pip install mpld3
 
 
-# In[56]:
+# In[1]:
 
 
 #Reiniciar el Kernel

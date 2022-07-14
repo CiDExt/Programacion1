@@ -130,7 +130,6 @@ factorial_iterativo(5)
 # In[10]:
 
 
-
 def factorial_recursivo(n):
     if n==1:
         return 1
