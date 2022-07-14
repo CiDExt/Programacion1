@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Más sobre listas &#8212; Programación 1</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,51 +20,67 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Conjuntos" href="18.Conjuntos%20y%20Diccionarios.html" />
     <link rel="prev" title="Programación funcional" href="16.Programaci%C3%B3nFuncional.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +89,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -88,17 +107,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introducción a la programación
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introducción a la programación
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -227,107 +247,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/17.Más sobre listas.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
-                    class="fab fa-github"></i>repositorio</button></a>
-        <a class="issues-button"
-            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F17.Más sobre listas.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-        title="Modo de pantalla completa"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/17.Más sobre listas.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenido
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/17.Más sobre listas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F17.Más sobre listas.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/17.Más sobre listas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    Más sobre listas
@@ -434,57 +556,146 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Más sobre listas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Más sobre listas
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sub-listas">
+     Sub-listas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio">
+       Ejercicio:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eliminando-entradas-de-una-lista">
+     Eliminando entradas de una lista
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas-por-comprension">
+     Listas por Comprensión:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Ejercicio:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Ejercicio:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuplas">
+     Tuplas
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodos-de-ordenamiento">
+     Métodos de ordenamiento
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Ejercicio:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtros">
+     Filtros
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicios">
+       Ejercicios
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mapear">
+     Mapear
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Ejercicio
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reducir">
+     Reducir
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Ejercicios:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listas-n-dimensionales">
+     Listas n-dimensionales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cierre">
+   Cierre
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="mas-sobre-listas">
-<h1>Más sobre listas<a class="headerlink" href="#mas-sobre-listas" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="mas-sobre-listas">
+<h1>Más sobre listas<a class="headerlink" href="#mas-sobre-listas" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>¿Qué debemos recordar?</p>
 <p>Sobre listas debemos tener claro lo siguiente:</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="f7893742-4386-4d0e-96d4-0711f7cae035" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
-</input><label class="tabbed-label" for="f7893742-4386-4d0e-96d4-0711f7cae035">
-Como definir listas</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Recordemos…</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-</pre></div>
 </div>
-</div>
-</div>
-<input id="4d2981f6-b3a4-4853-a152-84351e99ccbf" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
-</input><label class="tabbed-label" for="4d2981f6-b3a4-4853-a152-84351e99ccbf">
-Índices en las listas</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">Recordemos…</p>
-<p>Los índices inician en 0 y aumentan de uno en uno, algunos índices negativos también se pueden utilizar, al emplear estos valores estamos indicando que la lista se recorre en orden inverso, es decir, el índice -1 es el último elemento de la lista, el -2 es el penúltimo, etc., como podemos ver a continuación:
-<img src="https://github.com/MRippe7/CienciaDatos/blob/main/Imagenes/listas.png?raw=true"  width=300 ></p>
-</div>
-</div>
-<input id="d3439ea0-9266-488f-8347-d1bc5995505a" name="f4ac9ff1-c771-426e-adde-64ab73942839" type="radio">
-</input><label class="tabbed-label" for="d3439ea0-9266-488f-8347-d1bc5995505a">
-Objetos mutables</label><div class="tabbed-content docutils">
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>¿Cómo así?
-El contenido de las listas se puede modificar, como por ejemplo con la lista anterior:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="sub-listas">
-<h2>Sub-listas<a class="headerlink" href="#sub-listas" title="Permalink to this headline">¶</a></h2>
+<section id="sub-listas">
+<h2>Sub-listas<a class="headerlink" href="#sub-listas" title="Permalink to this headline">#</a></h2>
 <p>Hay  oportunidades en las que nuestra necesidad sea extraer una sub-lista de la lista que tenemos, por ejemplo, de la lista <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span></code> requerimos los elementos desde el índice 2 hasta el 4 de nuestra lista, o los primeros <span class="math notranslate nohighlight">\(3\)</span> elementos  o los últimos <span class="math notranslate nohighlight">\(4\)</span>, estas tres sub-listas se obtienen así:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -540,8 +751,8 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 <p>Si el ínidice inicial se omite, la lista se considerará desde el primer elemento, de manera análoga ocurre con el índice final, si se omite la sub-lista llegará hasta el último elemento de la lista original.</p>
 <p>Los valores negativos se emplean cuando se desea hablar de los últimos elementos de una lista, con el fin de evitar confusiones.</p>
-<div class="section" id="ejercicio">
-<h3>Ejercicio:<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<section id="ejercicio">
+<h3>Ejercicio:<a class="headerlink" href="#ejercicio" title="Permalink to this headline">#</a></h3>
 <p>Extraiga tres sub-listas de una lista cuyos valores coinciden con el valor del índice, en ellas deberán estar:</p>
 <ol class="simple">
 <li><p>Los primeros 20 elementos.</p></li>
@@ -549,10 +760,10 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <li><p>Los últimos 30 elementos.</p></li>
 </ol>
 <p>Calcule el promedio de cada una de éstas listas.</p>
-</div>
-</div>
-<div class="section" id="eliminando-entradas-de-una-lista">
-<h2>Eliminando entradas de una lista<a class="headerlink" href="#eliminando-entradas-de-una-lista" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="eliminando-entradas-de-una-lista">
+<h2>Eliminando entradas de una lista<a class="headerlink" href="#eliminando-entradas-de-una-lista" title="Permalink to this headline">#</a></h2>
 <p>En otras ocasiones es muy necesario eliminar elementos de las listas, por ejemplo, vamos a eliminar el tercer elemento de la lista <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">'cuatro',</span> <span class="pre">1,</span> <span class="pre">1,</span> <span class="pre">5.1,</span> <span class="pre">id(l)]</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,7 +780,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 3, &#39;cuatro&#39;, 1, 1, 5.1, 139933661128896]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 3, &#39;cuatro&#39;, 1, 1, 5.1, 140420558589056]
 </pre></div>
 </div>
 </div>
@@ -579,9 +790,9 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </pre></div>
 </div>
 <p>se borra la entrada de la lista.</p>
-</div>
-<div class="section" id="listas-por-comprension">
-<h2>Listas por Comprensión:<a class="headerlink" href="#listas-por-comprension" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="listas-por-comprension">
+<h2>Listas por Comprensión:<a class="headerlink" href="#listas-por-comprension" title="Permalink to this headline">#</a></h2>
 <p>Las listas se pueden crear de una manera un poco más avanzada, empleando la característica que las define, si la hay. Si por ejemplo, deseamos crear la lista de los primeros <span class="math notranslate nohighlight">\(5\)</span> números pares podemos emplear el siguiente código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -651,8 +862,8 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">expresión_que_depende_de_i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lista_en_la_que_varía_i</span> <span class="k">if</span> <span class="n">condiciones</span><span class="p">]</span> 
 </pre></div>
 </div>
-<div class="section" id="id1">
-<h3>Ejercicio:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<section id="id1">
+<h3>Ejercicio:<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Crea una lista por comprensión cuya lista que recorre sea una cadena de caracteres arbitraria, y almacene las consonantes únicamente.</p></li>
 </ol>
@@ -679,16 +890,16 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
            <span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h3>Ejercicio:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Ejercicio:<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Crea dos listas de números enteros y haga una lista por comprensión en la que se almacenen los productos de los números en ellas que no sean pares.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="tuplas">
-<h2>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tuplas">
+<h2>Tuplas<a class="headerlink" href="#tuplas" title="Permalink to this headline">#</a></h2>
 <p>Las tuplas, a diferencia de las listas, son objetos inmutables en los cuales se almacenan datos, bien sean del mismo o de diferentes tipos, siendo éste último el uso más frecuente.</p>
 <p>De modo que definiremos nuestra primera tupa:</p>
 <div class="cell docutils container">
@@ -775,7 +986,7 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_459202</span><span class="o">/</span><span class="mf">1406467647.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">temperatura</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;hola&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -895,9 +1106,9 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 <p>En este cuaderno, hemos estudiado las herramientas básicas sobre las listas y las tuplas, para así poder tener un mejor desempeño a la hora de elaborar nuestros programas.</p>
-</div>
-<div class="section" id="metodos-de-ordenamiento">
-<h2>Métodos de ordenamiento<a class="headerlink" href="#metodos-de-ordenamiento" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="metodos-de-ordenamiento">
+<h2>Métodos de ordenamiento<a class="headerlink" href="#metodos-de-ordenamiento" title="Permalink to this headline">#</a></h2>
 <p>Una de las primeras tareas que se abordan cuando se trabaja con listas es la de <strong>ordenar</strong>, ya que para diversas labores es necesario que los elementos estén dispuestos de ésta manera.</p>
 <p>Para llevar a cabo ésta tarea existen diferentes formas de hacerlo, una forma conocida es mediante el <strong>método burbuja</strong>, el cual se basa en simples comparaciones e intercambios.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">Una</span> <span class="n">lista</span> <span class="n">de</span> <span class="n">n</span> <span class="n">valores</span> <span class="n">se</span> <span class="n">recorre</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="n">veces</span><span class="p">,</span> <span class="n">en</span> <span class="n">las</span> <span class="n">cuales</span> <span class="n">se</span> <span class="n">irán</span> <span class="n">comparando</span> <span class="n">los</span> <span class="n">términos</span> <span class="n">de</span> <span class="n">izquierda</span> <span class="n">a</span> <span class="n">derecha</span> <span class="n">con</span> <span class="n">el</span> <span class="n">siguiente</span><span class="p">,</span> <span class="n">de</span> <span class="n">tal</span> <span class="n">manera</span> <span class="n">que</span><span class="p">,</span> <span class="n">si</span> <span class="n">el</span> <span class="n">i</span><span class="o">-</span><span class="n">ésimo</span> <span class="n">término</span> <span class="n">es</span> <span class="n">mayor</span> <span class="n">que</span> <span class="n">el</span> <span class="n">que</span> <span class="n">se</span> <span class="n">ubica</span> <span class="n">en</span> <span class="n">la</span> <span class="n">posición</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">éstos</span> <span class="n">se</span> <span class="n">intercambian</span> <span class="n">de</span> <span class="n">lo</span> <span class="n">contrario</span> <span class="n">se</span> <span class="n">dejan</span> <span class="n">tal</span> <span class="n">cual</span><span class="o">.</span> <span class="n">En</span> <span class="n">otras</span> <span class="n">palabras</span><span class="p">,</span> <span class="n">el</span> <span class="n">método</span> <span class="n">lo</span> <span class="n">que</span> <span class="n">hace</span> <span class="n">es</span> <span class="n">ir</span> <span class="n">ubicando</span> <span class="n">el</span> <span class="n">término</span> <span class="n">más</span> <span class="n">grande</span> <span class="n">a</span> <span class="n">la</span> <span class="n">derecha</span> <span class="n">de</span> <span class="n">la</span> <span class="n">lista</span><span class="p">,</span> <span class="n">motivo</span> <span class="n">por</span> <span class="n">el</span> <span class="n">cual</span> <span class="n">las</span> <span class="n">comparaciones</span> <span class="n">se</span> <span class="n">van</span> <span class="n">reduciendo</span> <span class="n">en</span> <span class="n">cada</span> <span class="n">iteración</span><span class="o">.</span>
@@ -2162,15 +2373,15 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h3>Ejercicio:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<section id="id3">
+<h3>Ejercicio:<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Cree una lista de 400 valores, en los cuales estén almacenadas las ventas de la última semana de un almacén, aplique los métodos vistos en clase y determine cuál de ellos toma menos tiempo en hacerlo.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="filtros">
-<h2>Filtros<a class="headerlink" href="#filtros" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="filtros">
+<h2>Filtros<a class="headerlink" href="#filtros" title="Permalink to this headline">#</a></h2>
 <p>En muchas ocasiones nos será necesario elegir algunos valores de una lista que cumplan con un cierto criterio, por ejemplo de la lista <code class="docutils literal notranslate"><span class="pre">[10,20,50,70,90,60,40,30,40,8,95,74,69,45]</span></code>, extraigamos los valores que son mayores o iguales a 50:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2242,8 +2453,8 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">filter</span><span class="p">(</span><span class="n">función</span><span class="p">,</span><span class="n">lista</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="ejercicios">
-<h3>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h3>
+<section id="ejercicios">
+<h3>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Use la lista de las 400 ventas de la semana anterior creada anteriormente. Calcule el promedio de dicha lista y aplique un filtro sobre ella para conocer la cantidad de ventas que están por encima de dicho valor y las que están por debajo de él. Guarda estas listas como <em>ventassobreprom</em> y <em>ventasbajoprom</em>, respectivamente.</p></li>
 <li><p>Cree una función que filtre las vocales y aplique el filtro sobre la siguiente cadena:</p></li>
@@ -2252,10 +2463,10 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
                                                                 Don quijote de la mancha - Miguel de Cervantes Saavedra
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="mapear">
-<h2>Mapear<a class="headerlink" href="#mapear" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="mapear">
+<h2>Mapear<a class="headerlink" href="#mapear" title="Permalink to this headline">#</a></h2>
 <p>En otras oportunidades necesitaremos aplicar una función sobre todos los elementos de la lista, es allí cuando aplicamos la función <code class="docutils literal notranslate"><span class="pre">map</span></code>. El resultado de esta función  es un objeto tipo <code class="docutils literal notranslate"><span class="pre">map</span></code>  el cual se puede volver una lista de la misma manera como hicimos con los filtros, por ejemplo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2392,15 +2603,15 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </div>
 </div>
 </div>
-<div class="section" id="id4">
-<h3>Ejercicio<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<section id="id4">
+<h3>Ejercicio<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Aplica un mapeo sobre las listas ventassobreprom y ventasbajoprom, para obtener los valores de las ventas sin IVA, suponiendo que todos los productos consumidos están gravados con éste impuesto. A estas listas sería convieniente nombrarlas <em>ventassobreprom_iva</em> y <em>ventasbajoprom_iva</em>.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="reducir">
-<h2>Reducir<a class="headerlink" href="#reducir" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="reducir">
+<h2>Reducir<a class="headerlink" href="#reducir" title="Permalink to this headline">#</a></h2>
 <p>La función <code class="docutils literal notranslate"><span class="pre">reduce</span></code> del paquete <code class="docutils literal notranslate"><span class="pre">functools</span></code>, es una útil herramienta cuando deseamos aplicar una función sobre una lista y sus resultados de manera sucesiva. Por ejemplo, para calcular la suma de los elementos de una lista sabemos que existe la función <code class="docutils literal notranslate"><span class="pre">sum</span></code>, pero de manera alternativa podemos ejecutar el siguiente código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2462,8 +2673,8 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 <span class="n">reduce</span><span class="p">(</span><span class="n">función</span><span class="p">,</span><span class="n">lista</span><span class="p">,</span><span class="n">valor_inicial</span><span class="p">(</span><span class="n">opcional</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="section" id="id5">
-<h3>Ejercicios:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<section id="id5">
+<h3>Ejercicios:<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Halle el mínimo de las listas <em>ventassobreprom_iva</em> y <em>ventasbajoprom_iva</em>, empleando <code class="docutils literal notranslate"><span class="pre">reduce</span></code> y una función lambda.</p></li>
 <li><p>Halle el máximo de las listas <em>ventassobreprom_iva</em> y <em>ventasbajoprom_iva</em>, empleando <code class="docutils literal notranslate"><span class="pre">reduce</span></code> y una función lambda.</p></li>
@@ -2495,11 +2706,11 @@ El contenido de las listas se puede modificar, como por ejemplo con la lista ant
 </table>
 <hr class="docutils" />
 <p><strong>Observación:</strong> Los filtros, mapeos y reducciones que vimos específicamente para listas, se pueden aplicar también sobre cualquier objeto iterable, es decir, <em>listas</em>, <em>tuplas</em>, <em>diccionarios</em> y <em>conjuntos</em>.</p>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="listas-n-dimensionales">
-<h2>Listas n-dimensionales<a class="headerlink" href="#listas-n-dimensionales" title="Permalink to this headline">¶</a></h2>
+<section id="listas-n-dimensionales">
+<h2>Listas n-dimensionales<a class="headerlink" href="#listas-n-dimensionales" title="Permalink to this headline">#</a></h2>
 <p>Para darnos una idea, iniciaremos tratando lo que son listas bidimensionales.</p>
 <p>Consideremos las siguientes listas:</p>
 <div class="cell docutils container">
@@ -2615,12 +2826,12 @@ es decir, es un arreglo de matrices, como por ejemplo:</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="cierre">
-<h1>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cierre">
+<h1>Cierre<a class="headerlink" href="#cierre" title="Permalink to this headline">#</a></h1>
 <p>Las listas y las tuplas tienen una gran cantidad de aplicaciones, por eso entender el momento y la forma de usarlas es muy importante, ya que las listas son objetos mutables, mientras que las tuplas no, es por esto que si necesitamos modificar alguna de nuestras entradas luego de haber definido el objeto, se debe emplear una lista, pero si deseamos “proteger” las entradas de nuesto objeto, debemos emplear una tupla.</p>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2644,54 +2855,48 @@ es decir, es un arreglo de matrices, como por ejemplo:</p>
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="16.Programaci%C3%B3nFuncional.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Programación funcional</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="16.Programaci%C3%B3nFuncional.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Programación funcional</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="18.Conjuntos%20y%20Diccionarios.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conjuntos</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="18.Conjuntos%20y%20Diccionarios.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Conjuntos</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
-        
-            &copy; Derechos de autor 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

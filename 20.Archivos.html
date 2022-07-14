@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Archivos &#8212; Programación 1</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,49 +20,65 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Excepciones" href="21.%20Excepciones.html" />
     <link rel="prev" title="Iteración y Recursión" href="19.Iteracion_Recursion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -69,9 +87,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -86,17 +105,18 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Buscar este libro ..." aria-label="Buscar este libro ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introducción a la programación
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Introducción a la programación
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1.Consola.html">
    Buscar, borrar y mover archivos en CLI
@@ -225,107 +245,209 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navegación de palanca" aria-controls="site-navigation"
-                title="Navegación de palanca" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Descarga esta pagina"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/20.Archivos.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Descargar archivo fuente" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir en PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/CiDExt/Programacion1"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Repositorio de origen"><i
-                    class="fab fa-github"></i>repositorio</button></a>
-        <a class="issues-button"
-            href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F20.Archivos.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Abrir un problema"><i class="fas fa-lightbulb"></i>Tema abierto</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo de pantalla completa"
-        title="Modo de pantalla completa"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/20.Archivos.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Lanzamiento Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contenido
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/CiDExt/Programacion1/master?urlpath=tree/docs/20.Archivos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/CiDExt/Programacion1/issues/new?title=Issue%20on%20page%20%2F20.Archivos.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/20.Archivos.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creando-un-txt">
    Creando un .txt
@@ -396,46 +518,114 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Archivos</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creando-un-txt">
+   Creando un .txt
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#with">
+     With
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open">
+     Open
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write">
+     Write
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leyendo-archivos">
+   Leyendo archivos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#actualizando-archivos">
+   Actualizando archivos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejercicio">
+     Ejercicio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Ejercicio
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serializacion-con-json">
+   Serialización con JSON
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deserializar">
+     Deserializar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#archivos-csv">
+   Archivos CSV
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Ejercicio
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="archivos">
-<h1>Archivos<a class="headerlink" href="#archivos" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="archivos">
+<h1>Archivos<a class="headerlink" href="#archivos" title="Permalink to this headline">#</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>¿Qué aprenderemos?</p>
 <p>Crear y manipular archivos</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="19dc0459-41f4-4ce7-9f5c-40045fbc62a1" name="135835e3-9b78-4586-9e97-cd27bea3b3c9" type="radio">
-</input><label class="tabbed-label" for="19dc0459-41f4-4ce7-9f5c-40045fbc62a1">
-JSON</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">¿Qué son?</p>
-<p>Es un tipo de archivos que permiten almacenar información y su estructura, además son legibles por humanos.</p>
-</div>
-</div>
-<input id="48c04c5d-fd5f-4231-b902-91ba4fdaecd1" name="135835e3-9b78-4586-9e97-cd27bea3b3c9" type="radio">
-</input><label class="tabbed-label" for="48c04c5d-fd5f-4231-b902-91ba4fdaecd1">
-CSV</label><div class="tabbed-content docutils">
-<div class="tip admonition">
-<p class="admonition-title">¿Qué son?</p>
-<p>Archivos legibles por humanos pero que no mantienen la estructura de los datos.</p>
-</div>
-</div>
-</div>
 </div>
 <p>Cuando el programa con el que estamos ejecutando estos cuadernos se cierra, las variables, listas, tuplas, ect, que hemos creado y manipulado se pierden. Es por esto que los archivos toman una gran relevancia, pues perminten mantener la información generada en el largo plazo. Por ello, en el presente cuaderno nos centraremos en la creación, modificación y actualización de archivos.</p>
 <p>La manera en que Python ve un <strong>archivo de texto</strong> es como un arreglo o lista de carácteres, mientras que un <strong>archivo binario</strong> (imágenes, videos, etc.) lo ve como un arreglo de bytes; en ambos casos el primer elemento esta ubicado en la posición 0, es por ello que un archivo con n carácteres o bytes el último elemento esta ubicado en la posición n-1.</p>
 <p>Cada uno de los archivos que se abran en Python generarán un <code class="docutils literal notranslate"><span class="pre">file</span> <span class="pre">object</span></code>, el cual permite nuestra interacción con el archivo.</p>
 <p>Cada sistema operativo tiene su propia manera de identificar el final de un archivo, puede ser mediante un marcador específico o mediante el conteo del total de carácteres que tiene el archivo.</p>
-<div class="section" id="creando-un-txt">
-<h2>Creando un .txt<a class="headerlink" href="#creando-un-txt" title="Permalink to this headline">¶</a></h2>
+<section id="creando-un-txt">
+<h2>Creando un .txt<a class="headerlink" href="#creando-un-txt" title="Permalink to this headline">#</a></h2>
 <p>Con las siguientes líneas crearemos un archivo con cinco entradas (filas), cada una de ellas contendrá el código de una persona, su apellido y el dinero que adeuda a un pequeño fondo de ahorros:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -458,17 +648,17 @@ CSV</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<div class="section" id="with">
-<h3>With<a class="headerlink" href="#with" title="Permalink to this headline">¶</a></h3>
+<section id="with">
+<h3>With<a class="headerlink" href="#with" title="Permalink to this headline">#</a></h3>
 <p>Así como este pequeño bloque de código, muchas de las aplicaciones que como científicos de datos realizarán en un futuro, requieren establecer conecciones a archivos, redes, bases de datos, etc. y siempre se deben liberar los recursos tan pronto como ya no se requieren, esto con el fin de que otras alpicaciones puedan acceder a ellos, es por ello que <code class="docutils literal notranslate"><span class="pre">with</span></code> realiza las siguientes labores:</p>
 <ol class="simple">
 <li><p>Adquiere el recurso (en nuestro ejemplo <code class="docutils literal notranslate"><span class="pre">fondo.txt</span></code>)  y asigna su correspondiente objeto a una variable (<code class="docutils literal notranslate"><span class="pre">fondo</span></code>).</p></li>
 <li><p>Permite el uso del recurso mediante la variable (<code class="docutils literal notranslate"><span class="pre">write</span></code> y <code class="docutils literal notranslate"><span class="pre">print</span></code>).</p></li>
 <li><p>Invoca al método <code class="docutils literal notranslate"><span class="pre">close</span></code> para liberar el recurso, cuando se alcanza el final del <code class="docutils literal notranslate"><span class="pre">with</span></code>.</p></li>
 </ol>
-</div>
-<div class="section" id="open">
-<h3>Open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="open">
+<h3>Open<a class="headerlink" href="#open" title="Permalink to this headline">#</a></h3>
 <p>La función <code class="docutils literal notranslate"><span class="pre">open</span></code> abre un archivo (en nuestro ejemplo <code class="docutils literal notranslate"><span class="pre">fondo.txt</span></code>) y le asigna un objeto de archivo. El modo asigna las tareas que se pueden realizar cuando se abre el archivo <em>leer</em>, <em>escrbir</em>, etc. los posibles modos son:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -500,14 +690,14 @@ CSV</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="write">
-<h3>Write<a class="headerlink" href="#write" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="write">
+<h3>Write<a class="headerlink" href="#write" title="Permalink to this headline">#</a></h3>
 <p>En el ejemplo hemos visto que, con <code class="docutils literal notranslate"><span class="pre">with</span></code> hemos podido asignar el objeto que regresa <code class="docutils literal notranslate"><span class="pre">open</span></code> a la variable <code class="docutils literal notranslate"><span class="pre">fondo</span></code> con la cláusula <code class="docutils literal notranslate"><span class="pre">as</span></code>, dicha variable <code class="docutils literal notranslate"><span class="pre">fondo</span></code> permite la interacción con el archivo. Posteriormente empleamos el método <code class="docutils literal notranslate"><span class="pre">write</span></code> para escribir cinco registros en nuestro archivo, el método tiene como argumento la cadena de carácteres que deseamos incluir en el archivo.</p>
-</div>
-</div>
-<div class="section" id="leyendo-archivos">
-<h2>Leyendo archivos<a class="headerlink" href="#leyendo-archivos" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="leyendo-archivos">
+<h2>Leyendo archivos<a class="headerlink" href="#leyendo-archivos" title="Permalink to this headline">#</a></h2>
 <p>Con el código que ejecutamos anteriormente, hemos creado un archivo (fondo.txt) en nuestra actual ubicación. Ahora veremos la manera de leer tal información:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -551,9 +741,9 @@ CSV</label><div class="tabbed-content docutils">
 </div>
 </div>
 <p>Este método es útil en archivos pequeños, pero cuando se trata de archivos de gran tamaño, es mejor hacer la iteración que mostramos al principio.</p>
-</div>
-<div class="section" id="actualizando-archivos">
-<h2>Actualizando archivos<a class="headerlink" href="#actualizando-archivos" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="actualizando-archivos">
+<h2>Actualizando archivos<a class="headerlink" href="#actualizando-archivos" title="Permalink to this headline">#</a></h2>
 <p>Si en nuestro archivos quisiéramos cambiar el apellido ‘Blanco’ por el apellido ‘Cervantes’, el registro original es:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="n">Blanco</span> <span class="mi">793000</span>
 </pre></div>
@@ -563,8 +753,8 @@ CSV</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 <p>Esto ocurre por el tamaño del apellido con el que se esta actualizando el registro, tiene tres carácteres más.</p>
-<div class="section" id="ejercicio">
-<h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<section id="ejercicio">
+<h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>¿Qué ideas propone para solucionar este problema?</p></li>
 </ol>
@@ -601,16 +791,16 @@ CSV</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id1">
-<h3>Ejercicio<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id1">
+<h3>Ejercicio<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>En el diligenciamento de los datos del fondo a habido un error, los registros 5 y 6 tienen los apellidos intercambiados. Modifica el código anterior para arreglar este asunto (utiliza las variables <code class="docutils literal notranslate"><span class="pre">codigo</span></code> y <code class="docutils literal notranslate"><span class="pre">balance</span></code> durante el proceso).</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="serializacion-con-json">
-<h2>Serialización con JSON<a class="headerlink" href="#serializacion-con-json" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="serializacion-con-json">
+<h2>Serialización con JSON<a class="headerlink" href="#serializacion-con-json" title="Permalink to this headline">#</a></h2>
 <p>Los archivos <code class="docutils literal notranslate"><span class="pre">JSON</span> <span class="pre">(JavaScript</span> <span class="pre">Object</span> <span class="pre">Notation)</span></code> son ampliamente utilizados para serializar y transmitir datos estructurados a través de una conexión de red, es por ello que muchos de los servicios basados en la nube los emplean, además no sólo permiten enviar la estructura de los datos (listas, conjuntos, diccionarios y más), son también legibles por los humanos.</p>
 <p>Los objetos JSON son similares a los diccionarios en Python, ya que son <code class="docutils literal notranslate"><span class="pre">property</span> <span class="pre">names</span></code> y <code class="docutils literal notranslate"><span class="pre">values</span></code> separados por coma entre llaves, así:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;Código&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Apellido&quot;</span><span class="p">:</span> <span class="s2">&quot;Morales&quot;</span><span class="p">,</span> <span class="s2">&quot;Balance&quot;</span><span class="p">:</span> <span class="mi">240000</span><span class="p">}</span>
@@ -653,8 +843,8 @@ CSV</label><div class="tabbed-content docutils">
 <img src="https://github.com/CiDExt/Programacion1/blob/master/images/json2.png?raw=true" width="600">
 <p>Note que las cadenas de texto en JSON van siempre entre comillas dobles.</p>
 <p>La función <code class="docutils literal notranslate"><span class="pre">dumps</span></code> convierte un objeto de Python en objetos de JSON.</p>
-<div class="section" id="deserializar">
-<h3>Deserializar<a class="headerlink" href="#deserializar" title="Permalink to this headline">¶</a></h3>
+<section id="deserializar">
+<h3>Deserializar<a class="headerlink" href="#deserializar" title="Permalink to this headline">#</a></h3>
 <p>La función <code class="docutils literal notranslate"><span class="pre">load</span></code>, del paquete <code class="docutils literal notranslate"><span class="pre">json</span></code>, permite leer todo el contenido del archivo que se ingresa como argumento de ella y convertir los objetos tipo JSON a objetos de Python. Este proceso se conoce como deserializar los datos. Vamos a utilizar el ejemplo anterior para reconstruir nuestro diccionario original:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -761,10 +951,10 @@ CSV</label><div class="tabbed-content docutils">
 </div>
 </div>
 <p>el argumento adicional que hemos empleado <code class="docutils literal notranslate"><span class="pre">indent</span></code>, se puede utilizar cuando se almacena la información en el archivo. Sirve para dar el tamaño de la sangría a la hora de imprimir la información.</p>
-</div>
-</div>
-<div class="section" id="archivos-csv">
-<h2>Archivos CSV<a class="headerlink" href="#archivos-csv" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="archivos-csv">
+<h2>Archivos CSV<a class="headerlink" href="#archivos-csv" title="Permalink to this headline">#</a></h2>
 <p>En ciencia de datos es muy común trabajar con archivos CSV (comma-separated values), ya que son legibles por humanos pero tienen la desventaja que no guardan la estructura de la información. El paquete <code class="docutils literal notranslate"><span class="pre">csv</span></code> tiene funciones para trabajar con este tipo de archivos, sin embargo no es el único ya que paquetes como <code class="docutils literal notranslate"><span class="pre">pandas</span></code> tienen sus funciones para manipularlos también.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -827,14 +1017,14 @@ CSV</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 <p>genera una lista de 7 valores, 6 enteros y uno <em>vacío</em>.</p>
-<div class="section" id="id2">
-<h3>Ejercicio<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<section id="id2">
+<h3>Ejercicio<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Busca la manera de escribir y leer la información en un archivo CSV empleando la librería <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -858,54 +1048,48 @@ CSV</label><div class="tabbed-content docutils">
 
               </div>
               
-        
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="19.Iteracion_Recursion.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Iteración y Recursión</p>
-            </div>
-        </a>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="19.Iteracion_Recursion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Iteración y Recursión</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="21.%20Excepciones.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Excepciones</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="21.%20Excepciones.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Excepciones</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Por Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
-        
-            &copy; Derechos de autor 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Carlos Isaac Zainea/ Miguel Ángel Rippe<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>
